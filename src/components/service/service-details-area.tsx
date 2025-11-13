@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 // images
-import sv_1 from "@/assets/img/inner-service/sercive-details/sv-details-1.jpg";
-import sv_2 from "@/assets/img/inner-service/sercive-details/sv-details-2.jpg";
+import sv_1 from "@/assets/img/inner-service/sercive-details/s11.png";
+import sv_2 from "@/assets/img/inner-service/sercive-details/seo1.png";
 import sv_3 from "@/assets/img/inner-service/sercive-details/sv-details-3.jpg";
 
 interface ServiceData {
