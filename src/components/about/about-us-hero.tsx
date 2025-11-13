@@ -39,7 +39,7 @@ export default function AboutUsHero() {
                 Digital <br /> creative agency
               </span>
               <h1 className="ab-inner-hero-title tp-char-animation">
-                Building Digital Presence
+               Global Creative Partner
               </h1>
               <p>Digital experiences with maximum emotional impact</p>
             </div>
@@ -53,10 +53,10 @@ export default function AboutUsHero() {
               data-stagger="0.08"
             >
               <p>
-                Liko develops, designs & delivers websites & creative campaigns
-                that drive results,
+                Netpulse Digitals develops, designs & delivers websites & creative campaigns
+                that drive results
               </p>
-               <Link className="tp-btn-white-sm border-style" href="#">Our Story</Link>
+               
             </div>
           </div>
         </div>

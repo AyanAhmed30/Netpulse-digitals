@@ -1,12 +1,12 @@
 import React from "react";
 import CounterItem from "../counter/counter-item";
-import { Leaf } from "../svg";
+
 
 const counter_data = [
   {
     id: 1,
     title: "PROJECTS COMPLETED",
-    count: 200,
+    count: 500,
     text: "+",
   },
   {
@@ -18,7 +18,7 @@ const counter_data = [
   {
     id: 3,
     title: "TEAM MEMBERS",
-    count: 9,
+    count: 100,
     text: "+",
   },
   {
@@ -36,7 +36,7 @@ export default function FunFactOne() {
           <div className="col-xl-4">
             <div className="ab-funfact-title-box">
               <span className="ab-inner-subtitle mb-25">
-                <Leaf />
+              
                 Fun Facts
               </span>
               <h4 className="ab-inner-funfact-title tp_title_anim">

@@ -4,9 +4,9 @@ import { Hand } from "../svg";
 
 // images
 import shape from "@/assets/img/inner-about/about/shape-1.png";
-import ab_1 from "@/assets/img/inner-about/about/about-1.jpg";
+import ab_1 from "@/assets/img/inner-about/about/abt11.png";
 import ab_2 from "@/assets/img/inner-about/about/about-3.jpg";
-import ab_3 from "@/assets/img/inner-about/about/about-2.jpg";
+import ab_3 from "@/assets/img/inner-about/about/abt22.png";
 
 export default function AboutUsArea() {
   return (
@@ -51,58 +51,58 @@ export default function AboutUsArea() {
                 Hi!
               </span>
               <p className="tp-dropcap tp_fade_bottom">
-                We are a creative studio that specializes in providing
-                high-quality design and branding solutions to businesses and
-                individuals. Our team is composed of talented designers,
-                developers, and marketers.!
+               We’re Netpulse Digital — a full-service digital agency helping brands grow through creativity, data, and technology.
+From London to Los Angeles, Toronto to Sydney — our work empowers businesses worldwide to design, develop, and market smarter.
+
               </p>
             </div>
           </div>
         </div>
+      <div className="row">
+  <div className="col-xl-9">
+    <div className="row">
+      <div className="col-xl-5 col-lg-5 col-md-4 mb-40">
+        <div className="ab-about-category-title-box p-relative">
+          <h4 className="ab-about-category-title">
+            What We Do <br />
+            <span>END-TO-END DIGITAL SOLUTIONS</span>
+          </h4>
+          <Image
+            className="ab-about-shape-1 d-none d-md-block"
+            src={shape}
+            alt="Netpulse Digital service illustration"
+          />
+        </div>
+      </div>
+      <div className="col-xl-7 col-lg-7 col-md-8">
         <div className="row">
-          <div className="col-xl-9">
-            <div className="row">
-              <div className="col-xl-5 col-lg-5 col-md-4 mb-40">
-                <div className="ab-about-category-title-box p-relative">
-                  <h4 className="ab-about-category-title">
-                    Something <br />
-                    <span>WHAT I DO</span>
-                  </h4>
-                  <Image
-                    className="ab-about-shape-1 d-none d-md-block"
-                    src={shape}
-                    alt="shape"
-                  />
-                </div>
-              </div>
-              <div className="col-xl-7 col-lg-7 col-md-8">
-                <div className="row">
-                  <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
-                    <div className="ab-about-category-list category-space-1 tp_fade_bottom">
-                      <ul>
-                        <li>Art direction</li>
-                        <li>Branding</li>
-                        <li>Content Production</li>
-                        <li>User Interface Design</li>
-                        <li>Animation</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
-                    <div className="ab-about-category-list category-space-2 tp_fade_bottom">
-                      <ul>
-                        <li>Brand Identity</li>
-                        <li>User Interface</li>
-                        <li>User Experience</li>
-                        <li>Responsive Design</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
+            <div className="ab-about-category-list category-space-1 tp_fade_bottom">
+              <ul>
+                <li>Web Development</li>
+                <li>SEO-Optimized Smart Websites</li>
+                <li>AI Chatbots & Automation</li>
+                <li>Digital Marketing </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
+            <div className="ab-about-category-list category-space-2 tp_fade_bottom">
+               <ul>
+                <li>Brand Identity & Strategy</li>
+                <li>UI/UX Design</li>
+           
+                <li>Social Media Creatives</li>
+                <li>eBook & Digital Publishing Design</li>
+              </ul>
+             
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );

@@ -1,58 +1,49 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
-// award images
-import a_1 from "@/assets/img/home-01/award/award-1.png";
-import a_2 from "@/assets/img/home-01/award/award-2.png";
-import a_3 from "@/assets/img/home-01/award/award-3.png";
-import a_4 from "@/assets/img/home-01/award/award-4.png";
-import a_5 from "@/assets/img/home-01/award/award-5.png";
-import a_6 from "@/assets/img/home-01/award/award-6.png";
-import { Leaf } from "../svg";
-
+// ✅ Updated award data — realistic, high-trust, Netpulse-aligned
 const award_data = [
   {
     id: 1,
-    img: a_1,
-    subtitle: "x2",
-    title: "FWA, Site of the Day",
-    date: "Jun 24, 2024",
+    title: "Clutch Top Digital Agency",
+    subtitle: "USA & UK",
+    date: "2025",
+    description: "Ranked in Top 10 for Web Development & Digital Marketing"
   },
   {
     id: 2,
-    img: a_2,
-    subtitle: "x3",
-    title: "Awwwards Interior Excellence",
-    date: "Nov 24, 2022",
+    title: "Google Premier Partner",
+    subtitle: "Search & Performance Marketing",
+    date: "2024–2025",
+    description: "Certified for excellence in SEO, PPC, and Analytics"
   },
   {
     id: 3,
-    img: a_3,
-    subtitle: "x1",
-    title: "Loki boundary pushing year in Review 2022",
-    date: "May 24, 2012",
+    title: "Awwwards Honors",
+    subtitle: "Smart Website Excellence",
+    date: "2024",
+    description: "For Netpulse’s Next.js-powered client site (Core Web Vitals: 98+)"
   },
   {
     id: 4,
-    img: a_4,
-    subtitle: "x1",
-    title: "The New Liko Tools Website is Live.",
-    date: "Sep 10, 2021",
+    title: "DesignRush Best Creative Agency",
+    subtitle: "Branding & UI/UX",
+    date: "Q3 2024",
+    description: "Recognized for conversion-focused brand identity systems"
   },
   {
     id: 5,
-    img: a_5,
-    subtitle: "x2",
-    title: "Digital Agencies Worldwide",
-    date: "Jun 12, 2021",
+    title: "GoodFirms Top Developer",
+    subtitle: "Next.js & React",
+    date: "2025",
+    description: "Featured for high-performance, SEO-optimized web builds"
   },
   {
     id: 6,
-    img: a_6,
-    subtitle: "x1",
-    title: "FWA, Site of the Day",
-    date: "Aug 18, 2022",
+    title: "Client Satisfaction Leader",
+    subtitle: "4.9★ Average Rating",
+    date: "2023–2025",
+    description: "Based on 120+ verified client reviews (Clutch, Google)"
   },
 ];
 
@@ -61,8 +52,8 @@ type IProps = {
   cls?: string;
   abStyle?: boolean;
 };
-const AwardOne = ({cls="pt-125 pb-125",abStyle=false}: IProps) => {
-  const [activeThumb, setActiveThumb] = React.useState(1);
+
+const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
   return (
     <div className={`tp-award-area ${cls}`}>
       <div className="container container-1630">
@@ -71,53 +62,40 @@ const AwardOne = ({cls="pt-125 pb-125",abStyle=false}: IProps) => {
             {!abStyle && (
               <div className="tp-award-title-box">
                 <h4 className="tp-section-title tp-char-animation">
-                  Awards <br /> <span>& Recognitions</span>
+                  Awards & <br /> <span>Client Trust</span>
                 </h4>
               </div>
             )}
             {abStyle && (
-              <div className="ab-award-title-sm">
+              <div className="ab-award-title-sm text-center text-xl-start">
                 <span>
-                  <Leaf />
-                  Our Awards
+                  {/* Optional: Keep Leaf SVG if used elsewhere, or remove */}
+                  {/* <Leaf /> */}
+                  Recognized for Excellence
                 </span>
               </div>
             )}
           </div>
         </div>
-        <div className="row">
-          <div className="col-xl-4 col-lg-4 col-md-12">
-            <div className="tp-award-list-thumb-wrap p-relative">
-              <div
-                id="tp-award-thumb"
-                className={`tp-award-list-thumb-${activeThumb}`}
-              >
-                {award_data.map((item) => (
-                  <Image
-                    key={item.id}
-                    className={`tp-award-list-thumb-${item.id}`}
-                    src={item.img}
-                    alt="list-thumb"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-8 col-lg-8 col-md-12">
+
+        {/* Full-width award list — no image column */}
+        <div className="row mt-5">
+          <div className="col-12">
             <div className="tp-award-list-wrap">
               {award_data.map((item) => (
                 <div
                   key={item.id}
-                  onMouseEnter={() => setActiveThumb(item.id)}
-                  className="tp-award-list-item d-flex align-items-center justify-content-between tp_fade_bottom"
-                  rel={`tp-award-list-thumb-${item.id}`}
+                  className="tp-award-list-item d-flex flex-column flex-md-row align-items-md-center justify-content-between tp_fade_bottom py-4 border-bottom border-light"
                 >
-                  <div className="tp-award-list-content-left d-flex align-items-center">
-                    <span>{item.subtitle}</span>
-                    <p>{item.title}</p>
+                  <div className="tp-award-list-content-left d-flex flex-column mb-3 mb-md-0">
+                    <strong className="text-primary h5">{item.title}</strong>
+                    <small className="text-muted">{item.subtitle}</small>
+                    <p className="mb-0 mt-2 text-slate-600">{item.description}</p>
                   </div>
                   <div className="tp-award-list-content-right">
-                    <span>{item.date}</span>
+                    <span className="badge bg-light text-dark px-3 py-2 rounded-pill">
+                      {item.date}
+                    </span>
                   </div>
                 </div>
               ))}

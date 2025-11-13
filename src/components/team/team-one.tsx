@@ -5,8 +5,6 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
 import team_data from "@/data/team-data";
 import TeamItem from "./team-item";
-import { ITeamDT } from "@/types/team-d-t";
-import TeamModal from "../modal/team-modal";
 
 const slider_setting: SwiperOptions = {
   slidesPerView: 6,
@@ -39,47 +37,30 @@ const slider_setting: SwiperOptions = {
 type IProps = {
   spacing?: string;
 };
+
 const TeamOne = ({ spacing = "pt-20" }: IProps) => {
-  const [showModal, setShowModal] = React.useState(false);
-  const [teamItem, setTeamItem] = React.useState<ITeamDT | null>(null);
-  function handleTeamModal(team: ITeamDT) {
-    setShowModal(!showModal);
-    setTeamItem(team);
-  }
   return (
-    <>
-      <div className={`tp-team-area ${spacing} pb-120 fix`}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="tp-team-slider-wrapper">
-                <Swiper
-                  {...slider_setting}
-                  modules={[Autoplay, FreeMode]}
-                  className="swiper-container tp-team-slider-active"
-                >
-                  {team_data.map((t) => (
-                    <SwiperSlide key={t.id}>
-                      <TeamItem item={t} handleTeamModal={handleTeamModal} />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
+    <div className={`tp-team-area ${spacing} pb-120 fix`}>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xl-12">
+            <div className="tp-team-slider-wrapper">
+              <Swiper
+                {...slider_setting}
+                modules={[Autoplay, FreeMode]}
+                className="swiper-container tp-team-slider-active"
+              >
+                {team_data.map((t) => (
+                  <SwiperSlide key={t.id}>
+                    <TeamItem item={t} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
       </div>
-
-      {/* team modal */}
-      {teamItem && (
-        <TeamModal
-          setShowModal={setShowModal}
-          showModal={showModal}
-          teamItem={teamItem}
-        />
-      )}
-      {/* team modal */}
-    </>
+    </div>
   );
 };
 
