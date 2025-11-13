@@ -79,12 +79,12 @@ const menu_data: IMenuDT[] = [
     title: "Services",
     link: "/service",
     dropdown_menus: [
-      { title: "Digital Marketing", link: "/service-details" },
-      { title: "Creative Design", link: "/service-details" },
-      { title: "Web Development", link: "/service-details" },
-      { title: "AI Automation", link: "/service-details" },
-      { title: "E-Books", link: "/service-details" },
-      { title: "Mobile App Development", link: "/service-details" },
+      { title: "Digital Marketing", link: "/services/digital-marketing" },
+      { title: "Creative Design", link: "/services/creative-design" },
+      { title: "Web Development", link: "/services/web-development" },
+      { title: "AI Automation", link: "/services/ai-automation" },
+      { title: "E-Books", link: "/services/ebooks" },
+      { title: "Mobile App Development", link: "/services/mobile-development" },
     ],
   },
   {
