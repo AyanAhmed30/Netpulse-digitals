@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 
 // images
-import ser_img_1 from "@/assets/img/inner-service/service/service-1.jpg";
-import ser_img_2 from "@/assets/img/inner-service/service/service-2.jpg";
-import ser_img_3 from "@/assets/img/inner-service/service/service-3.jpg";
-import ser_img_4 from "@/assets/img/inner-service/service/service-4.jpg";
-// import ser_img_5 from "@/assets/img/inner-service/service/service-5.jpg";
-// import ser_img_6 from "@/assets/img/inner-service/service/service-6.jpg";
+import ser_img_1 from "@/assets/img/inner-service/service/s11.png";
+import ser_img_2 from "@/assets/img/inner-service/service/s22.png";
+import ser_img_3 from "@/assets/img/inner-service/service/s33.png";
+import ser_img_4 from "@/assets/img/inner-service/service/s44.png";
+import ser_img_5 from "@/assets/img/inner-service/service/s55.png";
+import ser_img_6 from "@/assets/img/inner-service/service/s66.png";
 import { RightArrow, ShapeTwo } from "../svg";
 import Link from "next/link";
 
@@ -57,7 +57,7 @@ const service_data = [
   },
   {
     id: 5,
-    img: ser_img_3,
+    img: ser_img_5,
     subtitle: "AI Solutions",
     title: "AI & Chatbots",
     text: "Automate conversations and scale support with AI bots that engage users and qualify leads effortlessly.",
@@ -69,7 +69,7 @@ const service_data = [
   },
   {
     id: 6,
-    img: ser_img_4,
+    img: ser_img_6,
     subtitle: "Publishing Studio",
     title: "eBook Solutions",
     text: "We help authors and businesses create professional eBooks ready for Amazon KDP and other platforms.",
