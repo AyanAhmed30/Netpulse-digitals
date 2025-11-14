@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import { useTheme } from "next-themes";
 
 // images
 import logo from "@/assets/img/logo/logo.png";
+import logoWhite from "@/assets/img/logo/logo-white.png";
 import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
 import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
 import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
@@ -20,6 +22,8 @@ type IProps = {
 };
 
 export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IProps) {
+  const { theme } = useTheme();
+  
   return (
     <>
       <div className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}>
@@ -27,7 +31,10 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
               <Link href="#">
-                <Image src={logo} alt="logo" />
+                <Image 
+                  src={theme === "dark" ? logoWhite : logo} 
+                  alt="logo" 
+                />
               </Link>
             </div>
             <div className="tp-offcanvas-close">

@@ -10,6 +10,7 @@ import ser_img_5 from "@/assets/img/inner-service/service/s55.png";
 import ser_img_6 from "@/assets/img/inner-service/service/s66.png";
 import { RightArrow, ShapeTwo } from "../svg";
 import Link from "next/link";
+import { linkSync } from "fs";
 
 const service_data = [
   {
@@ -25,6 +26,7 @@ const service_data = [
       "Motion graphics",
       "UI/UX design",
     ],
+    links: "/services/creative-design",
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ const service_data = [
       "eCommerce",
       "SEO optimization",
     ],
+    links: "/services/web-development",
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ const service_data = [
     title: "Mobile App Development",
     text: "We design and develop intuitive, high-performance mobile apps tailored for scalability and smooth user experience.",
     lists: ["Cross-platform apps", "UI/UX mobile design"],
+    links: "/services/mobile-development",
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ const service_data = [
     title: "Digital Marketing",
     text: "More clicks, more sales — our SEO, PPC, and social strategies grow your brand’s digital reach and engagement.",
     lists: ["SEO", "Google Ads", "Social Media Marketing", "Email Automation"],
+    links: "/services/digital-marketing",
   },
   {
     id: 5,
@@ -66,6 +71,7 @@ const service_data = [
       "ChatGPT API integration",
       "Automation workflows",
     ],
+    links: "/services/ai-automation",
   },
   {
     id: 6,
@@ -74,6 +80,7 @@ const service_data = [
     title: "eBook Solutions",
     text: "We help authors and businesses create professional eBooks ready for Amazon KDP and other platforms.",
     lists: ["Editing", "Cover design", "Layout", "Publishing support"],
+    links: "/services/ebooks",
   },
 ];
 
@@ -117,7 +124,7 @@ export default function ServiceSix() {
                       <div className="sv-service-btn">
                         <Link
                           className="tp-btn-zikzak zikzak-inner p-relative"
-                          href="/service-details"
+                          href={item.links}
                         >
                           <span className="zikzak-content">
                             See <br /> Details

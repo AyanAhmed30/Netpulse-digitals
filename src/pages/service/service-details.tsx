@@ -17,7 +17,7 @@ import FooterTwo from "@/layouts/footers/footer-two";
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import HeaderOne from "@/layouts/headers/header-one";
 
-const ServiceDetailsMain = () => {
+const ServiceDetailsMain = ({ slug }: { slug: string }) => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -38,7 +38,7 @@ const ServiceDetailsMain = () => {
         <div id="smooth-content">
           <main>
             {/* service details area */}
-            <ServiceDetailsArea />
+            <ServiceDetailsArea slug={slug} />
             {/* service details area */}
 
             {/* line image slider  */}
