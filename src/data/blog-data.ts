@@ -9,12 +9,12 @@ import blog_3 from "@/assets/img/home-05/blog/blog-3.jpg";
 import blog_4 from "@/assets/img/home-05/blog/blog-4.jpg";
 // blog modern 
 import b_m_1 from "@/assets/img/inner-blog/blog-standard/blog-1.jpg";
-import b_m_2 from "@/assets/img/inner-blog/blog-standard/blog-2.jpg";
+import b_m_2 from "@/assets/img/inner-blog/blog-standard/dg1.png";
 import b_m_3 from "@/assets/img/inner-blog/blog-standard/blog-3.jpg";
-import b_m_4 from "@/assets/img/inner-blog/blog-standard/blog-4.jpg";
-import b_m_5 from "@/assets/img/inner-blog/blog-standard/blog-5.jpg";
-import b_m_6 from "@/assets/img/inner-blog/blog-standard/blog-6.jpg";
-import b_m_7 from "@/assets/img/inner-blog/blog-standard/blog-7.jpg";
+import b_m_4 from "@/assets/img/inner-blog/blog-standard/dg2.png";
+import b_m_5 from "@/assets/img/inner-blog/blog-standard/dg3.png";
+import b_m_6 from "@/assets/img/inner-blog/blog-standard/dg4.png";
+import b_m_7 from "@/assets/img/inner-blog/blog-standard/dg5.png";
 
 // avatar
 import avatar from "@/assets/img/inner-blog/blog-sidebar/avatar/avata-1.jpg";
@@ -74,57 +74,57 @@ export const blog_modern: IBlogDT[] = [
   {
     id: 5,
     img: b_m_1,
-    title: 'Our New Projects With <br> Local Community',
-    date: '21. OCT. 2023',
+    title: 'Insights, Ideas & Innovation  <br> for the Digital World.',
+    date: '21. OCT. 2025',
     category: 'Marketing / Strategy',
     author: 'John Doe',
   },
   {
     id: 6,
     img: b_m_2,
-    title: 'Future Business Ideas.',
-    date: '01. FEB. 2022',
-    category: 'Marketing / Strategy',
+    title: 'Digital Marketing',
+    date: '01. FEB. 2025',
+    category: 'Marketing',
     author: 'John Doe',
   },
   {
     id: 7,
     img: b_m_3,
-    title: 'Start Unique Experience.',
-    date: '09. MAY. 2022',
-    category: 'Branding / Creative',
+    title: 'Web Design Trends 2025',
+    date: '09. MAY. 2025',
+    category: 'Software Applications Development',
     author: 'John Doe',
   },
   {
     id: 8,
     img: b_m_4,
-    title: 'Is It Time To Rebrand?',
-    date: '30. AUG. 2022',
-    category: 'Marketing / Strategy',
+    title: 'Modern SEO Techniques',
+    date: '30. AUG. 2025',
+    category: 'SEO Optimization',
     author: 'John Doe',
   },
   {
     id: 9,
     img: b_m_5,
-    title: 'Setting up the creativity.',
-    date: '11. JAN. 2022',
-    category: 'Branding / Creative',
+    title: 'Future Advertising Trends',
+    date: '11. JAN. 2025',
+    category: 'Advertising',
     author: 'John Doe',
   },
   {
     id: 10,
     img: b_m_6,
-    title: 'Design to remember',
-    date: '15. OCT. 2023',
-    category: 'Marketing / Strategy',
+    title: 'Create Best eBooks',
+    date: '15. OCT. 2025',
+    category: 'e-book',
     author: 'John Doe',
   },
   {
     id: 11,
     img: b_m_7,
-    title: 'Endless Road Stories',
-    date: '20. NOV. 2023',
-    category: 'Branding / Strategy',
+    title: 'AI Innovation Trends',
+    date: '20. NOV. 2025',
+    category: 'Artificial Inteligence',
     author: 'John Doe',
   },
 

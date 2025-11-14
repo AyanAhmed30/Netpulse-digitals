@@ -38,7 +38,7 @@ const BlogModernMain = () => {
             <BlogModern />
             {/* blog modern area end */}
 
-            {/* big text area */}
+            {/* big text area contact pr le kr ja rha hai */}
             <BigText />
             {/* big text area */}
           </main>

@@ -47,7 +47,7 @@ const ContactTwoMain = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="tm-hero-content">
-                        <span className="tm-hero-subtitle">Liko Studio</span>
+                        <span className="tm-hero-subtitle">Netpulse Digitals</span>
                         <h4 className="tm-hero-title-big tp-char-animation">
                           Get <br /> in touch
                         </h4>
@@ -95,9 +95,7 @@ const ContactTwoMain = () => {
                         <div className="col-xl-10">
                            <div className="cn-contactform-support-bg d-flex align-items-center justify-content-center" style={{backgroundImage: "url(/assets/img/inner-contact/contact/contact-bg.png)"}}>
                               <div className="cn-contactform-support-text text-center">
-                                 <span>Or, you can contact one of our studios
-                                    directly below. We aim to respond
-                                    within 24 hours.</span>
+                                 <span>We respond within 24 hours</span>
                               </div>
                            </div>
                         </div>

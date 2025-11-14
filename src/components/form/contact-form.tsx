@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -13,32 +13,67 @@ type FormData = {
 
 const schema = yup.object().shape({
   name: yup.string().required().label("Name"),
-  subject: yup.string().required().label("subject"),
+  subject: yup.string().required().label("Subject"),
   message: yup.string().required().label("Message"),
 });
 
 // prop type 
 type IProps = {
-  btnCls?:string;
+  btnCls?: string;
 }
-export default function ContactForm({btnCls=''}:IProps) {
-  const {register,handleSubmit,reset,formState: { errors }} = useForm<FormData>({
+
+export default function ContactForm({ btnCls = '' }: IProps) {
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
-  const onSubmit = handleSubmit((data:FormData) => {
-    alert(JSON.stringify(data))
-    reset()
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const onSubmit = handleSubmit(async (data: FormData) => {
+    setLoading(true);
+    setSuccess(null);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "2dae9214-1666-491e-bca6-40687d54c111", // Your access key
+          to: "netpulsedigitals@gmail.com", // Updated email address
+          subject: data.subject,
+          name: data.name,
+          message: data.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSuccess("Message sent successfully!");
+        reset();
+      } else {
+        setSuccess("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setSuccess("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   });
+
   return (
     <form onSubmit={onSubmit}>
       <div className="cn-contactform-input mb-25">
         <label>Name</label>
-        <input id='name' {...register("name")} type="text" placeholder="John Doe" />
+        <input id='name' {...register("name")} type="text" placeholder="Netpulse Digitals" />
         <ErrorMsg msg={errors.name?.message!} />
       </div>
       <div className="cn-contactform-input mb-25">
         <label>Subject</label>
-        <input id='subject' {...register("subject")} type="text" placeholder="Your@email.com" />
+        <input id='subject' {...register("subject")} type="text" placeholder="Your@netpulsedigitals.com" />
         <ErrorMsg msg={errors.subject?.message!} />
       </div>
       <div className="cn-contactform-input mb-25">
@@ -47,10 +82,11 @@ export default function ContactForm({btnCls=''}:IProps) {
         <ErrorMsg msg={errors.message?.message!} />
       </div>
       <div className="cn-contactform-btn">
-        <button className={`tp-btn-black-md ${btnCls} w-100`} type="submit">
-          Send Message
+        <button className={`tp-btn-black-md ${btnCls} w-100`} type="submit" disabled={loading}>
+          {loading ? "Sending..." : "Send Message"}
         </button>
       </div>
+      {success && <p className="mt-4 text-center text-green-600">{success}</p>}
     </form>
   );
 }
