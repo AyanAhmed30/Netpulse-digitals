@@ -1,3 +1,4 @@
+// pages/blog/blog-details.tsx
 "use client";
 import { gsap } from "gsap";
 import React from "react";
@@ -17,7 +18,11 @@ import BlogDetailsRelatedPosts from "@/components/blog/details/blog-details-rela
 import { charAnimation } from "@/utils/title-animation";
 import { IdProps } from "@/types/custom-d-t";
 
-const BlogDetailsMain = ({ id }: IdProps) => {
+interface BlogDetailsMainProps {
+  id: string; // Use string to handle both ID and slug
+}
+
+const BlogDetailsMain = ({ id }: BlogDetailsMainProps) => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -41,11 +46,11 @@ const BlogDetailsMain = ({ id }: IdProps) => {
             {/* blog details hero */}
 
             {/* blog details area */}
-            <BlogDetailsArea/>
+            <BlogDetailsArea id={id}/>
             {/* blog details area */}
 
             {/* related posts */}
-            <BlogDetailsRelatedPosts/>
+            <BlogDetailsRelatedPosts id={id}/>
             {/* related posts */}
           </main>
 

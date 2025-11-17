@@ -1,14 +1,15 @@
+// app/blog-details/page.tsx
 import React from "react";
 import { Metadata } from "next";
 import BlogDetailsMain from "@/pages/blog/blog-details";
 
 export const metadata: Metadata = {
-  title: "Liko - Blog Classic page",
+  title: "Liko - Blog Details",
 };
 
 const BlogDetailsPage = () => {
   return (
-    <BlogDetailsMain id={1} />
+    <BlogDetailsMain id="1" />
   );
 };
 

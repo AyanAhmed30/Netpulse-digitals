@@ -1,3 +1,4 @@
+// components/blog/details/blog-details-area.tsx
 import React from "react";
 import Image from "next/image";
 import BlogSidebar from "../blog-sidebar";
@@ -6,127 +7,57 @@ import BlogDetailsAuthor from "./blog-details-author";
 import BlogDetailsNavigation from "./blog-details-navigation";
 import BlogDetailsComments from "./blog-details-comments";
 import BlogReplyForm from "@/components/form/blog-reply-form";
-import details_thumb_1 from "@/assets/img/inner-blog/blog-details/blog-details-2.jpg";
-import details_thumb_2 from "@/assets/img/inner-blog/blog-details/blog-details-3.jpg";
-import details_thumb_3 from "@/assets/img/inner-blog/blog-details/blog-details-4.jpg";
 import Link from "next/link";
+import { blog_data } from "@/data/blog-data";
+import { IBlogDT } from "@/types/blog-d-t";
 
-export default function BlogDetailsArea() {
+interface BlogDetailsAreaProps {
+  id: string; // Accept string
+}
+
+export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
+  // Find the blog by either slug or id
+  let blog: IBlogDT | undefined = blog_data.find((item) => item.slug === id);
+  if (!blog) {
+    blog = blog_data.find((item) => item.id == Number(id));
+  }
+
+  if (!blog) {
+    return (
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-xl-8">
+            <div className="text-center py-5">
+              <h2>Blog Not Found</h2>
+              <p>The requested blog post could not be found.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section className="postbox__area tp-blog-sidebar-sticky-area pt-120 pb-120">
       <div className="container">
         <div className="row">
           <div className="col-xxl-8 col-xl-8 col-lg-8">
             <div className="postbox__wrapper">
-              <div className="blog-details-top-text">
-                <p>
-                  The metaverse can be viewed as an evolution of today’s
-                  internet, which in turn evolved from passive media that we
-                  simply consumed. In the age of radio and television, the
-                  consumer’s only job was to listen and decide if they wanted to
-                  buy.{" "}
-                </p>
-              </div>
-              <div className="blog-details-left-content">
-                <h4 className="blog-details-left-title">
-                  What is Lorem Ipsum?
-                </h4>
-                <p className="mb-20">
-                  <span>Lorem Ipsum</span> is simply dummy text of the printing
-                  and typesetting industry. Lorem Ipsum has been the industry
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-                <p>
-                  It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged
-                </p>
-              </div>
-              <div className="blog-details-thumb-box">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="blog-details-thumb">
-                      <Image
-                        className="w-100 mb-20"
-                        src={details_thumb_1}
-                        alt="details-thumb"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="blog-details-thumb">
-                      <Image
-                        className="w-100 mb-20"
-                        src={details_thumb_2}
-                        alt="details-thumb"
-                      />
-                    </div>
-                  </div>
+              {/* Dynamic blog content */}
+              {blog.content ? (
+                <div 
+                  className="blog-details-content"
+                  dangerouslySetInnerHTML={{ __html: blog.content }} 
+                />
+              ) : (
+                <div className="blog-details-top-text">
+                  <p>
+                    {blog.desc || 'No detailed content available for this blog post.'}
+                  </p>
                 </div>
-              </div>
-              <div className="blog-details-left-content">
-                <h4 className="blog-details-left-title">
-                  Relationship & Communication
-                </h4>
-                <p>
-                  But, like most politicians, he promised more than he could
-                  deliver. Why not indeed! Daylight and everything. And then the
-                  battle’s not so bad? Hello, little man. I will destroy you!
-                  No, I’m Santa Claus! Kif might! Man, I’m sore all over. I feel
-                  like I just went ten rounds with mighty Thor. I found what I
-                  need. And it’s not friends, it’s things. Then we’ll go with
-                  that data file!
-                </p>
-              </div>
-              <div className="blog-details-blockquote">
-                <blockquote>
-                  <span className="quote-icon">
-                    <QuoteThree />
-                  </span>
-                  <p>{"Don't"} watch the clock; do what it does. keep going.</p>
-                  <span className="blockquote-info">Sam Levenson</span>
-                </blockquote>
-              </div>
-              <div className="blog-details-left-content">
-                <p>
-                  With any accomplished project, great time management is an
-                  essential component. We business owners hire product
-                  designers, they expect them to not only perform well, but also
-                  on time. At Stan Vision, we provide you with an experienced
-                  design team, led by an expert PM who knows how to prioritise
-                  your platform and product.
-                </p>
-              </div>
-              <div className="blog-details-thumb-box">
-                <div className="row">
-                  <div className="col-xl-12">
-                    <div className="blog-details-thumb">
-                      <Image
-                        src={details_thumb_3}
-                        alt="details-thumb"
-                        style={{ height: "auto" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="blog-details-left-content">
-                <h4 className="blog-details-left-title">
-                  What is Lorem Ipsum?
-                </h4>
-                <p>
-                  <span>Lorem Ipsum</span> is simply dummy text of the printing
-                  and typesetting industry. Lorem Ipsum has been the industry
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-                <p>
-                  It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged
-                </p>
-              </div>
+              )}
+
+              {/* Tags and sharing */}
               <div className="blog-details-share-wrap mb-40">
                 <div className="row">
                   <div className="col-xl-8 col-lg-8">
@@ -134,9 +65,12 @@ export default function BlogDetailsArea() {
                       <span>
                         <Tag />
                       </span>
-                      <Link href="#">Creative</Link>
-                      <Link href="#">Photography</Link>
-                      <Link href="#">Lifestyle</Link>
+                      <Link href={`/blog?category=${encodeURIComponent(blog.category)}`}>
+                        {blog.category}
+                      </Link>
+                      <Link href={`/blog?author=${encodeURIComponent(blog.author)}`}>
+                        {blog.author}
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-4">
@@ -149,16 +83,17 @@ export default function BlogDetailsArea() {
                   </div>
                 </div>
               </div>
+
               {/* blog details author */}
-              <BlogDetailsAuthor />
+              <BlogDetailsAuthor author={blog.author} />
               {/* blog details author */}
 
               {/* blog details navigation */}
-              <BlogDetailsNavigation />
+              <BlogDetailsNavigation currentBlogId={blog.id} />
               {/* blog details navigation */}
 
               <div className="postbox__comment mb-100">
-                <h3 className="postbox__comment-title">3 Comments</h3>
+                <h3 className="postbox__comment-title">Comments</h3>
                 {/* blog details comments */}
                 <BlogDetailsComments />
                 {/* blog details comments */}

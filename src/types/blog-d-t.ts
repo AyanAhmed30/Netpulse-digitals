@@ -1,3 +1,4 @@
+// types/blog-d-t.ts
 import { StaticImageData } from "next/image";
 
 export interface IBlogDT {
@@ -5,6 +6,7 @@ export interface IBlogDT {
   img?: StaticImageData;
   images?: StaticImageData[];
   title: string;
+  slug: string;
   date: string;
   category: string;
   author: string;
@@ -16,4 +18,5 @@ export interface IBlogDT {
   blogQuoteTwo?: boolean;
   blogHeroSlider?: boolean;
   desc?: string;
+  content?: string; // Add content field for detailed blog content
 }

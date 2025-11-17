@@ -1,16 +1,21 @@
+// components/blog/details/blog-details-author.tsx
 import React from "react";
 import Image from "next/image";
 import avatar from '@/assets/img/inner-blog/blog-details/avatar/avatar-1.jpg'
 import Link from "next/link";
 
-export default function BlogDetailsAuthor() {
+interface BlogDetailsAuthorProps {
+  author?: string;
+}
+
+export default function BlogDetailsAuthor({ author }: BlogDetailsAuthorProps) {
   return (
     <div className="blog-details-author d-flex mb-60">
       <div className="blog-details-author-img">
         <Image
           style={{ width: "100%", height: "auto" }}
           src={avatar}
-          alt=""
+          alt={author || "author"}
         />
       </div>
       <div className="blog-details-author-content-wrap">
@@ -26,7 +31,7 @@ export default function BlogDetailsAuthor() {
           </Link>
         </div>
         <div className="blog-details-author-content">
-          <h4 className="blog-details-author-title">Lea Cohen</h4>
+          <h4 className="blog-details-author-title">{author || "Lea Cohen"}</h4>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor.!

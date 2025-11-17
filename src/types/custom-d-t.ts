@@ -1,9 +1,8 @@
-//define interface for PageParams props
-export interface PageParamsProps {
-  params: Promise<{ id: number }>;
+// types/custom-d-t.ts
+export interface IdProps {
+  id: string; // Change from number to string to handle both id and slug
 }
 
-// Fetch the data based on the provided 'id' prop
-export interface IdProps {
-  id: number;
-};
+export interface PageParamsProps {
+  params: Promise<{ id?: string; slug?: string }>; // Add slug parameter
+}

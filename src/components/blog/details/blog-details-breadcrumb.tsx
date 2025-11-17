@@ -1,20 +1,36 @@
+// components/blog/details/blog-details-breadcrumb.tsx
 import React from "react";
 import Image from "next/image";
 import overlay from "@/assets/img/inner-blog/blog-details/bg-shape/overly.png";
 import avatar from "@/assets/img/inner-blog/blog-details/avatar/avatar-2.jpg";
-import { IdProps } from "@/types/custom-d-t";
 import { blog_data } from "@/data/blog-data";
 
-export default function BlogDetailsBreadcrumb({ id }: IdProps) {
-  // Find the blog that matches the given ID
-  const blog = blog_data.find((team) => team.id == id);
+interface BlogDetailsBreadcrumbProps {
+  id: string; // Accept string for both ID and slug
+}
+
+export default function BlogDetailsBreadcrumb({
+  id,
+}: BlogDetailsBreadcrumbProps) {
+  // First try to find by slug, then by ID
+  let blog = blog_data.find((item) => item.slug === id);
+
+  // If not found by slug, try to find by ID
+  if (!blog) {
+    blog = blog_data.find((item) => item.id == Number(id));
+  }
 
   return (
     <div className="blog-details-area">
       <div
         className="blog-details-bg blog-details-bg-height blog-details-overlay p-relative d-flex align-items-end pt-170 pb-170"
         style={{
-          backgroundImage: `url(/assets/img/inner-blog/blog-details/blog-details-1.jpg)`,
+          backgroundImage: blog?.img
+            ? `url(${blog.img.src})`
+            : `url(/assets/img/inner-blog/blog-details/blog-details-1.jpg) `,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="blog-details-overlay-shape">
@@ -25,15 +41,18 @@ export default function BlogDetailsBreadcrumb({ id }: IdProps) {
             <div className="col-xl-11">
               <div className="blog-details-content z-index-5">
                 <span className="blog-details-meta">
-                  Creative <i>. 01 Oct, 2022</i>
+                  {blog?.category} <i>{blog?.date}</i>
                 </span>
                 <h4 className="blog-details-title tp-char-animation">
                   {blog?.title}
                 </h4>
                 <div className="blog-details-top-author d-flex align-items-center">
-                  <Image src={avatar} alt="avatar" />
+                  <Image
+                    src={blog?.avatar || avatar}
+                    alt={blog?.author || "author"}
+                  />
                   <span>
-                    Mike Granetz / <i>5 min</i>
+                    {blog?.author} / <i>5 min</i>
                   </span>
                 </div>
               </div>
