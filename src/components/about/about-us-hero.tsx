@@ -53,7 +53,7 @@ export default function AboutUsHero() {
               data-stagger="0.08"
             >
               <p>
-                Netpulse Digitals develops, designs & delivers websites & creative campaigns
+                Netpulse Digital develops, designs & delivers websites & creative campaigns
                 that drive results
               </p>
                
