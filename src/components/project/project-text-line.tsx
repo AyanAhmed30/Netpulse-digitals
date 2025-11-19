@@ -31,37 +31,29 @@ const ProjectTextLine = () => {
       data-scrub="0.0001"
     >
       <span className="textline-1">
-        Co
-        <span>
-          <Image src={shape} alt="shape" />
-        </span>
-        lest
+        Net
+       
+        pulse
       </span>
-      <span className="textline-2">Project</span>
+      <span className="textline-2">Digital</span>
       <span className="textline-1">
-        Co
-        <span>
-          <Image src={shape} alt="shape" />
-        </span>
-        lest
+        Net
+       
+        pulse
       </span>
-      <span className="textline-2">Project</span>
+      <span className="textline-2">Digital</span>
       <span className="textline-1">
-        Co
-        <span>
-          <Image src={shape} alt="shape" />
-        </span>
-        lest
+        Net
+       
+        pulse
       </span>
-      <span className="textline-2">Project</span>
+      <span className="textline-2">Digital</span>
       <span className="textline-1">
-        Co
-        <span>
-          <Image src={shape} alt="shape" />
-        </span>
-        lest
+        Net
+       
+        pulse
       </span>
-      <span className="textline-2">Project</span>
+      <span className="textline-2">Digital</span>
     </div>
   );
 };
