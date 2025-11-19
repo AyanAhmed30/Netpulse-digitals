@@ -15,46 +15,42 @@ const HeroBannerOne = () => {
 
   useGSAP(() => {
     if (typeof window !== "undefined") {
-      setTimeout(() => {
-        fadeAnimation();
-      }, 100);
+      setTimeout(() => fadeAnimation(), 100);
 
-      // Title ko left drag karna on scroll
+      // Title dragging to the left
       const heroTitle = heroTitleRef.current;
       if (heroTitle) {
-        gsap.fromTo(heroTitle, 
+        gsap.fromTo(
+          heroTitle,
+          { x: 0 },
           {
-            x: 0 // Starting position - center mein
-          },
-          {
-            x: -200, // Left side ke liye negative value
+            x: -200,
             scrollTrigger: {
               trigger: heroTitle,
-              start: "top top", // Jab section top pe aaye tab animation start
+              start: "top top",
               end: "bottom top",
               scrub: 1.5,
               markers: false,
-            }
+            },
           }
         );
       }
 
-      // Paragraph aur button ko right drag karna on scroll
+      // Content dragging to the right
       const heroContent = heroContentRef.current;
       if (heroContent) {
-        gsap.fromTo(heroContent,
+        gsap.fromTo(
+          heroContent,
+          { x: 0 },
           {
-            x: 0 // Starting position - center mein
-          },
-          {
-            x: 200, // Right side ke liye positive value
+            x: 200,
             scrollTrigger: {
               trigger: heroContent,
-              start: "top center", // Jab content center mein aaye
+              start: "top center",
               end: "bottom top",
               scrub: 1.5,
               markers: false,
-            }
+            },
           }
         );
       }
@@ -76,17 +72,17 @@ const HeroBannerOne = () => {
                   style={{ height: "auto" }}
                 />
               </div>
-              <div className="tp-hero-title-box text-center p-relative" ref={heroTitleRef}>
+
+              <div
+                className="tp-hero-title-box text-center p-relative"
+                ref={heroTitleRef}
+              >
                 <h1 className="tp-hero-title tp_fade_bottom">
                   <span className="p-relative">
                     Creative
-                    <span className="tp-hero-subtitle d-none d-lg-block ">
+                    <span className="tp-hero-subtitle d-none d-lg-block">
                       Hello <br /> People! We're
                     </span>
-<<<<<<< HEAD
-=======
-                 
->>>>>>> 1a0c32ab84c32b3ec682663a6bd0aee4dc260030
                   </span>
                   <br />
                   Digital
@@ -101,22 +97,28 @@ const HeroBannerOne = () => {
                     />
                   </span>
                   Agency
-                  <span className="d-block" style={{
-                    fontSize: '0.25em',
-                    fontWeight: '400',
-                    marginTop: '20px',
-                    letterSpacing: '0.5px'
-                  }}>
+                  <span
+                    className="d-block"
+                    style={{
+                      fontSize: "0.25em",
+                      fontWeight: "400",
+                      marginTop: "20px",
+                      letterSpacing: "0.5px",
+                    }}
+                  >
                     We design, develop and market digital experiences that convert
                   </span>
                 </h1>
               </div>
             </div>
+
             <div className="tp-hero-content tp_fade_bottom" ref={heroContentRef}>
               <p>
-                <span></span>
-                From concept to code - Netpulse Digital helps businesses across the USA, UK, Canada, and Australia scale through powerful design, development, and marketing.
+                From concept to code - Netpulse Digital helps businesses across
+                the USA, UK, Canada, and Australia scale through powerful design,
+                development, and marketing.
               </p>
+
               <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
                 <Link className="tp-btn-border" href="/contact-2">
                   <span className="tp-btn-border-wrap">
@@ -128,6 +130,7 @@ const HeroBannerOne = () => {
             </div>
           </div>
         </div>
+
         <div className="row">
           <div className="col-xl-12"></div>
         </div>
