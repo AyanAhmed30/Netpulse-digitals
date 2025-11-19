@@ -34,21 +34,13 @@ const HeroBannerOne = () => {
                     <span className="tp-hero-subtitle d-none d-lg-block ">
                       Hello <br /> People! We're
                     </span>
-                    <span className="tp-hero-shape-2 d-none d-md-block">
-                      <Image
-                        src="/assets/img/home-01/hero/hero-shape-1-1.png"
-                        alt="shape"
-                        width={40}
-                        height={40}
-                      />
-                    </span>
                   </span>
                   <br />
                   Digital
                   <span className="tp-hero-title-img">
                     <Image
                       className="tp-zoom-img"
-                      src="/assets/img/home-01/hero/hero-1-1.png"
+                      src="/assets/img/home-01/hero/hero-1-2.png"
                       alt="hero-img"
                       width={270}
                       height={160}
