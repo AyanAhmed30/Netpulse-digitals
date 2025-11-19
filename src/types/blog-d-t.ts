@@ -18,5 +18,6 @@ export interface IBlogDT {
   blogQuoteTwo?: boolean;
   blogHeroSlider?: boolean;
   desc?: string;
-  content?: string; // Add content field for detailed blog content
+  content?: string;
+  tags?: string[]; // Add tags array
 }

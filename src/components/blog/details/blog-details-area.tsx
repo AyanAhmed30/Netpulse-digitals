@@ -45,14 +45,15 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
             <div className="postbox__wrapper">
               {/* Dynamic blog content */}
               {blog.content ? (
-                <div 
+                <div
                   className="blog-details-content"
-                  dangerouslySetInnerHTML={{ __html: blog.content }} 
+                  dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
               ) : (
                 <div className="blog-details-top-text">
                   <p>
-                    {blog.desc || 'No detailed content available for this blog post.'}
+                    {blog.desc ||
+                      "No detailed content available for this blog post."}
                   </p>
                 </div>
               )}
@@ -65,10 +66,16 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
                       <span>
                         <Tag />
                       </span>
-                      <Link href={`/blog?category=${encodeURIComponent(blog.category)}`}>
+                      <Link
+                        href={`/blog?category=${encodeURIComponent(
+                          blog.category
+                        )}`}
+                      >
                         {blog.category}
                       </Link>
-                      <Link href={`/blog?author=${encodeURIComponent(blog.author)}`}>
+                      <Link
+                        href={`/blog?author=${encodeURIComponent(blog.author)}`}
+                      >
                         {blog.author}
                       </Link>
                     </div>
@@ -113,7 +120,7 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
             </div>
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-4">
-            <BlogSidebar />
+            <BlogSidebar currentBlogId={id} />
           </div>
         </div>
       </div>

@@ -11,7 +11,10 @@ type IProps = {
   topCls?: string;
 };
 
-export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: IProps) {
+export default function FooterTwo({
+  whiteFooter = false,
+  topCls = "footer-top",
+}: IProps) {
   return (
     <footer className={`${topCls}`}>
       <div
@@ -52,11 +55,22 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                 <div className="tp-footer-2-widget-menu">
                   <h4 className="tp-footer-2-widget-title">Sitemap</h4>
                   <ul>
-                    <li><Link href="#">Home</Link></li>
-                    <li><Link href="#">About</Link></li>
-                    <li><Link href="#">Contact</Link></li>
-                    <li> <Link href="#">Blog</Link></li>
-                    <li><Link href="#">Landing</Link></li>
+                    <li>
+                      <Link href="#">Home</Link>
+                    </li>
+                    <li>
+                      <Link href="#">About</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Contact</Link>
+                    </li>
+                    <li>
+                      {" "}
+                      <Link href="#">Blog</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Landing</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -70,18 +84,20 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                       href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
                       target="_blank"
                     >
-                      740 NEW SOUTH HEAD RD, TRIPLE BAY SWFW 3108, NEW YORK
+                      15631 Blue Ash Dr, Houston, TX 77090, United States
                     </Link>
                   </span>
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="tel:+725214456">P: + 725 214 456</Link>
+                    <Link href="tel:+18322208552">P: +1 832 220 8552</Link>
                   </span>
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="mailto:contact@liko.com">E: contact@liko.com</Link>
+                    <Link href="mailto:netpulsedigitalS@gmail.com">
+                      E: netpulsedigitalS@gmail.com
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -96,7 +112,9 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                     <div className="tp-footer-2-input p-relative">
                       <input type="text" placeholder="Enter your email..." />
                       <button>
-                        <RightArrow clr={whiteFooter?"currentcolor":'#F3F3F4'}/>
+                        <RightArrow
+                          clr={whiteFooter ? "currentcolor" : "#F3F3F4"}
+                        />
                       </button>
                     </div>
                   </form>
@@ -123,9 +141,15 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
             </div>
             <div className="col-xl-8 col-lg-7">
               <div className="tp-copyright-2-social text-center text-lg-end">
-                <Link className="mb-10" href="#">Linkedin</Link>
-                <Link className="mb-10" href="#">Twitter</Link>
-                <Link className="mb-10" href="#">Instagram</Link>
+                <Link className="mb-10" href="#">
+                  Linkedin
+                </Link>
+                <Link className="mb-10" href="#">
+                  Twitter
+                </Link>
+                <Link className="mb-10" href="#">
+                  Instagram
+                </Link>
               </div>
             </div>
           </div>
