@@ -8,19 +8,15 @@ import { SwiperOptions } from "swiper/types";
 const testimonial_data = [
   {
     id: 1,
-    desc: `“Nulla ut enim non magna placerat scelerisque sed eu dolor. Sed eu faucibus
-    turpis. Ut bibendum tempor tempus. Ut scelerisque est
-    posuere ex pretium laoreet.”`,
-    name: "Louis Fantun",
-    designation: "Designer",
+    desc: `"Netpulse rebuilt our e-commerce site using Next.js — conversions jumped by 250% in 3 months, and load time dropped to under 1 second. Their blend of design and technical SEO is unmatched."`,
+    name: "Sarah Mitchell",
+    designation: "Growth Director, UK Retail Brand",
   },
   {
     id: 2,
-    desc: `“Nulla ut enim non magna placerat scelerisque sed eu dolor. Sed eu faucibus
-    turpis. Ut bibendum tempor tempus. Ut scelerisque est
-    posuere ex pretium laoreet.”`,
-    name: "Robert Smith",
-    designation: "Developer",
+    desc: `"We needed a partner who could handle branding, web dev, and digital marketing — all under one roof. Netpulse delivered a full rebrand + AI chatbot that cut support tickets by 40%. Truly an end-to-end growth partner."`,
+    name: "Michael Chen",
+    designation: "Founder, SaaS Startup (Toronto)",
   },
 ];
 

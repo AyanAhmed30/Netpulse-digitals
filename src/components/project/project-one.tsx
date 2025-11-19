@@ -5,7 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 // project images
-import p_1 from "@/assets/img/home-01/project/project-1-1.jpg";
+import p_1 from "@/assets/img/home-01/project/fast.jpg";
 import p_2 from "@/assets/img/home-01/project/project-1-2.jpg";
 import p_3 from "@/assets/img/home-01/project/project-1-3.jpg";
 import p_4 from "@/assets/img/home-01/project/project-1-4.jpg";

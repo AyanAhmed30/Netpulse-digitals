@@ -5,7 +5,13 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 // images
-import sv_1 from "@/assets/img/inner-service/sercive-details/s11.png";
+import s11 from "@/assets/img/inner-service/service/s11.png";
+import s22 from "@/assets/img/inner-service/service/s22.png";
+import s33 from "@/assets/img/inner-service/service/s33.png";
+import s44 from "@/assets/img/inner-service/service/s44.png";
+import s55 from "@/assets/img/inner-service/service/s55.png";
+import s66 from "@/assets/img/inner-service/service/s66.png";
+
 import sv_2 from "@/assets/img/inner-service/sercive-details/seo1.png";
 import sv_3 from "@/assets/img/inner-service/sercive-details/sv-details-3.jpg";
 
@@ -121,7 +127,17 @@ const serviceData: Record<string, ServiceData> = {
 export default function ServiceDetailsArea({ slug }: { slug: string }) {
   const router = useRouter();
   const pathname = usePathname();
-  
+
+  // image map
+  const serviceImageMap: Record<keyof typeof serviceData, any> = {
+    "digital-marketing": s44,
+    "creative-design": s11,
+    "web-development": s22,
+    "mobile-development": s33,
+    "ai-automation": s55,
+    "ebooks": s66,
+  };
+
   // Extract service slug from pathname
   const extractServiceSlug = () => {
     if (pathname) {
@@ -135,11 +151,11 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
   // Normalize slug to match serviceData keys with fallback
   const normalizedSlug = extractServiceSlug();
   const [activeService, setActiveService] = useState<keyof typeof serviceData>(
-    serviceData[normalizedSlug as keyof typeof serviceData] 
-      ? normalizedSlug as keyof typeof serviceData 
+    serviceData[normalizedSlug as keyof typeof serviceData]
+      ? normalizedSlug as keyof typeof serviceData
       : "digital-marketing"
   );
-  
+
   // Update active service when pathname changes
   useEffect(() => {
     const serviceSlug = extractServiceSlug();
@@ -151,7 +167,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
   }, [pathname]);
 
   const currentService = serviceData[activeService];
-  
+
   // Get display title from service name
   const getDisplayTitle = () => {
     const title = activeService.replace(/-/g, " ");
@@ -199,9 +215,12 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               <div className="service-details__tab-thumb">
                 <Image
                   data-speed="0.4"
-                  src={sv_1}
-                  alt="service-img"
+                  src={serviceImageMap[activeService]}
+                  alt={`${currentService.title} service illustration`}
                   style={{ height: "auto" }}
+                  // Optional: add width/height for Next.js optimization
+                  width={800}
+                  height={500}
                 />
               </div>
             </div>
@@ -262,43 +281,43 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                 <span>Full list of services</span>
               </div>
               <div className="service-details__right-category">
-                <Link 
-                  href="/services/digital-marketing" 
+                <Link
+                  href="/services/digital-marketing"
                   onClick={(e) => handleCategoryClick("digital-marketing", e)}
                   className={activeService === "digital-marketing" ? "active" : ""}
                 >
                   Digital Marketing
                 </Link>
-                <Link 
-                  href="/services/creative-design" 
+                <Link
+                  href="/services/creative-design"
                   onClick={(e) => handleCategoryClick("creative-design", e)}
                   className={activeService === "creative-design" ? "active" : ""}
                 >
                   Creative Design
                 </Link>
-                <Link 
-                  href="/services/web-development" 
+                <Link
+                  href="/services/web-development"
                   onClick={(e) => handleCategoryClick("web-development", e)}
                   className={activeService === "web-development" ? "active" : ""}
                 >
                   Web Development
                 </Link>
-                <Link 
-                  href="/services/ai-automation" 
+                <Link
+                  href="/services/ai-automation"
                   onClick={(e) => handleCategoryClick("ai-automation", e)}
                   className={activeService === "ai-automation" ? "active" : ""}
                 >
                   AI Automation
                 </Link>
-                <Link 
-                  href="/services/ebooks" 
+                <Link
+                  href="/services/ebooks"
                   onClick={(e) => handleCategoryClick("ebooks", e)}
                   className={activeService === "ebooks" ? "active" : ""}
                 >
                   E-Books
                 </Link>
                 <Link
-                  href="/services/mobile-development" 
+                  href="/services/mobile-development"
                   onClick={(e) => handleCategoryClick("mobile-development", e)}
                   className={activeService === "mobile-development" ? "active" : ""}
                 >
@@ -307,19 +326,19 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               </div>
               <div className="service-details__right-text-box">
                 <h4>
-                  {activeService === "digital-marketing" ? "Digital" : 
-                   activeService === "creative-design" ? "Creative" : 
-                   activeService === "web-development" ? "Web" : 
-                   activeService === "ai-automation" ? "AI" : 
-                   activeService === "ebooks" ? "EBook" : 
-                   "Mobile"}
-                  <br /> 
-                  {activeService === "digital-marketing" ? "Marketing" : 
-                   activeService === "creative-design" ? "Design" : 
-                   activeService === "web-development" ? "Development" : 
-                   activeService === "ai-automation" ? "Automation" : 
-                   activeService === "ebooks" ? "Creation" : 
-                   "Apps"}
+                  {activeService === "digital-marketing" ? "Digital" :
+                    activeService === "creative-design" ? "Creative" :
+                      activeService === "web-development" ? "Web" :
+                        activeService === "ai-automation" ? "AI" :
+                          activeService === "ebooks" ? "EBook" :
+                            "Mobile"}
+                  <br />
+                  {activeService === "digital-marketing" ? "Marketing" :
+                    activeService === "creative-design" ? "Design" :
+                      activeService === "web-development" ? "Development" :
+                        activeService === "ai-automation" ? "Automation" :
+                          activeService === "ebooks" ? "Creation" :
+                            "Apps"}
                 </h4>
                 <p className="mb-20">
                   {currentService.rightDescription}
