@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from '@/assets/img/logo/logo-white.png';
+import logo from "@/assets/img/logo/logo-white.png";
 import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
 
 const footer_links = [
@@ -16,7 +16,7 @@ export default function FooterOne() {
   const [isActive, setIsActive] = React.useState(false);
   useEffect(() => {
     footerOneAnimation();
-  },[])
+  }, []);
   return (
     <footer>
       {/* footer area start */}
@@ -43,7 +43,9 @@ export default function FooterOne() {
               <div className="col-xl-5 col-lg-6">
                 <div className="tp-footer-middle-wrap">
                   <div className="tp-footer-content">
-                    <h4 className="tp-footer-big-title footer-big-text">{"Let's"} Contact!</h4>
+                    <h4 className="tp-footer-big-title footer-big-text">
+                      {"Let's"} Contact!
+                    </h4>
                   </div>
                   <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-6">
@@ -59,11 +61,11 @@ export default function FooterOne() {
                           </div>
                           <div className="tp-footer-widget-info-location tp_fade_bottom">
                             <Link
-                              href="https://www.google.com/maps/@54.581385,-101.7562167,7.5z?entry=ttu"
+                              href="https://maps.app.goo.gl/WFVCTF3hBK2Bse8ZA"
                               target="_blank"
                             >
-                              15631 Blue Ash Dr, Houston, <br /> TX 77090, United States
-
+                              15631 Blue Ash Dr, Houston, <br /> TX 77090,
+                              United States
                             </Link>
                           </div>
                         </div>
@@ -76,17 +78,40 @@ export default function FooterOne() {
                         </h4>
                         <ul className="tp-footer-widget-social">
                           <li className="tp_fade_bottom">
-                            <Link href="#">Facebook</Link>
+                            <Link
+                              target="_blank"
+                              href="https://www.facebook.com/NetpulseDigital"
+                            >
+                              Facebook
+                            </Link>
                           </li>
                           <li className="tp_fade_bottom">
-                            <Link href="#">Instagram</Link>
+                            <Link
+                              target="_blank"
+                              href="https://www.instagram.com/netpulsedigitals/"
+                            >
+                              Instagram
+                            </Link>
                           </li>
                           <li className="tp_fade_bottom">
-                            <Link href="#">Behance</Link>
+                            <Link
+                              target="_blank"
+                              href="https://www.linkedin.com/company/net-pulse-digital"
+                            >
+                              Linkedin
+                            </Link>
                           </li>
                           <li className="tp_fade_bottom">
+                            <Link
+                              target="_blank"
+                              href="https://www.x.com/@netpulsedigital"
+                            >
+                              Twitter
+                            </Link>
+                          </li>
+                          {/* <li className="tp_fade_bottom">
                             <Link href="#">Dribbble</Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </div>
                     </div>
@@ -112,8 +137,8 @@ export default function FooterOne() {
               <div className="col-xl-6 col-md-8">
                 <div className="tp-copyright-text text-center text-md-end">
                   <p>
-                    Copyright © {new Date().getFullYear()} Themepure. All rights
-                    reserved.
+                    Copyright © {new Date().getFullYear()} Netpulse Digital. All
+                    rights reserved.
                   </p>
                 </div>
               </div>

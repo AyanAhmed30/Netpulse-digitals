@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 const VideOne = () => {
   return (
@@ -12,7 +12,10 @@ const VideOne = () => {
           playsInline
           style={{ width: "100%", height: "auto" }}
         >
-          <source src="https://raw.githubusercontent.com/AyanAhmed30/hosted-video/main/video111.mp4" type="video/mp4" />
+          <source
+            src="/assets/video/netpulse-digital-video.mov"
+            type="video/mp4"
+          />
         </video>
       </div>
     </div>

@@ -81,7 +81,7 @@ export default function FooterTwo({
                 <div className="tp-footer-2-contact-item">
                   <span>
                     <Link
-                      href="https://www.google.com/maps/@23.8223596,90.3656686,15z?entry=ttu"
+                      href="https://maps.app.goo.gl/WFVCTF3hBK2Bse8ZA"
                       target="_blank"
                     >
                       15631 Blue Ash Dr, Houston, TX 77090, United States
@@ -135,20 +135,40 @@ export default function FooterTwo({
             <div className="col-xl-4 col-lg-5">
               <div className="tp-copyright-2-left text-center text-lg-start">
                 <p>
-                  All rights reserved — {new Date().getFullYear()} © Themepure
+                  All rights reserved — {new Date().getFullYear()} © Netpulse
+                  Digital
                 </p>
               </div>
             </div>
             <div className="col-xl-8 col-lg-7">
               <div className="tp-copyright-2-social text-center text-lg-end">
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  target="_blank"
+                  href="https://www.facebook.com/NetpulseDigital"
+                >
+                  Facebook
+                </Link>
+                <Link
+                  className="mb-10"
+                  target="_blank"
+                  href="https://www.instagram.com/netpulsedigitals/"
+                >
+                  Instagram
+                </Link>
+                <Link
+                  target="_blank"
+                  className="mb-10"
+                  href="https://www.linkedin.com/company/net-pulse-digital"
+                >
                   Linkedin
                 </Link>
-                <Link className="mb-10" href="#">
+                <Link
+                  target="_blank"
+                  className="mb-10"
+                  href="https://www.x.com/@netpulsedigital"
+                >
                   Twitter
-                </Link>
-                <Link className="mb-10" href="#">
-                  Instagram
                 </Link>
               </div>
             </div>
