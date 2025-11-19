@@ -97,7 +97,7 @@ const BlogDetailsTwoMain = () => {
             {/* blog details area */}
 
             {/* related posts */}
-            <BlogDetailsRelatedPosts />
+            <BlogDetailsRelatedPosts id={""} />
             {/* related posts */}
           </main>
 

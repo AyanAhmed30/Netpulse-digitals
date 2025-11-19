@@ -90,13 +90,13 @@ export default function FooterTwo({
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="tel:+18322208552">P: +1 832 220 8552</Link>
+                    <Link href="tel:+18322208552">+1 832 220 8552</Link>
                   </span>
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
                     <Link href="mailto:netpulsedigitalS@gmail.com">
-                      E: netpulsedigitalS@gmail.com
+                      netpulsedigitalS@gmail.com
                     </Link>
                   </span>
                 </div>

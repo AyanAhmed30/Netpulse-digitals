@@ -86,16 +86,7 @@ const HeroBannerOne = () => {
                   </span>
                   <br />
                   Digital
-                  <span className="tp-hero-title-img">
-                    <Image
-                      className="tp-zoom-img"
-                      src="/assets/img/home-01/hero/hero-1-2.png"
-                      alt="hero-img"
-                      width={270}
-                      height={160}
-                      style={{ height: "auto" }}
-                    />
-                  </span>
+                
                   Agency
                   <span
                     className="d-block"
