@@ -46,7 +46,7 @@ export default function RegisterForm() {
             <label htmlFor="email">Your Email</label>
           </div>
           <div className="tp-login-input">
-            <input id="email" {...register("email")} type="email" placeholder="liko@mail.com" />
+            <input id="email" {...register("email")} type="email" placeholder="Netpulse Digital@mail.com" />
           </div>
           <ErrorMsg msg={errors.email?.message!} />
         </div>

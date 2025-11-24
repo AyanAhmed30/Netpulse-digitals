@@ -4,7 +4,7 @@ import PortfolioDetailsVideoMain from "@/pages/portfolio/details/portfolio-detai
 
 
 export const metadata: Metadata = {
-  title: "Liko - Portfolio Details video page",
+  title: "Netpulse Digital - Portfolio Details video page",
 };
 
 const PortfolioDetailsVideoPage = () => {

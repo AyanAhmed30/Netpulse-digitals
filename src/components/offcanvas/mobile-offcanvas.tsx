@@ -2,7 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
-import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import {
+  Behance,
+  CloseTwo,
+  Dribble,
+  Facebook,
+  InstagramTwo,
+  Twitter,
+  Youtube,
+} from "../svg";
 import { useTheme } from "next-themes";
 
 // images
@@ -14,6 +22,7 @@ import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
 import gallery_4 from "@/assets/img/menu/offcanvas/offcanvas-4.jpg";
 import MobileMenus from "./mobile-menus";
 import Link from "next/link";
+import { LinkedIn, TwitterX } from "../svg/social";
 
 const gallery_images = [gallery_1, gallery_2, gallery_3, gallery_4];
 
@@ -22,7 +31,10 @@ type IProps = {
   setOpenOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IProps) {
+export default function MobileOffcanvas({
+  openOffcanvas,
+  setOpenOffcanvas,
+}: IProps) {
   const { theme } = useTheme();
 
   // Fix hydration mismatch:
@@ -43,9 +55,7 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
         <div className="tp-offcanvas-wrapper">
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
-              <Link href="#">
-                {renderLogo()}
-              </Link>
+              <Link href="#">{renderLogo()}</Link>
             </div>
 
             <div className="tp-offcanvas-close">
@@ -61,7 +71,10 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
               <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+              <p>
+                Netpulse Digital develops, designs & delivers websites &
+                creative campaigns that drive results
+              </p>
             </div>
 
             <div className="tp-main-menu-mobile d-xl-none">
@@ -89,19 +102,60 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
             <div className="tp-offcanvas-contact">
               <h3 className="tp-offcanvas-title sm">Information</h3>
               <ul>
-                <li><Link href="tel:1245654">+ 4 20 7700 1007</Link></li>
-                <li><Link href="mailto:hello@diego.com">hello@diego.com</Link></li>
-                <li><Link href="#">Avenue de Roma 158b, Lisboa</Link></li>
+                <li>
+                  <Link href="tel:+18322208552">+1 832 220 8552</Link>
+                </li>
+                <li>
+                  <Link href="mailto:netpulsedigitalS@gmail.com">
+                    netpulsedigitalS@gmail.com
+                  </Link>{" "}
+                </li>
+                <li>
+                  <Link
+                    href="https://maps.app.goo.gl/WFVCTF3hBK2Bse8ZA"
+                    target="_blank"
+                  >
+                    15631 Blue Ash Dr, Houston, <br /> TX 77090, United States
+                  </Link>
+                </li>
               </ul>
             </div>
 
             <div className="tp-offcanvas-social">
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
               <ul>
-                <li><Link href="#"><InstagramTwo /></Link></li>
-                <li><Link href="#"><Dribble /></Link></li>
-                <li><Link href="#"><Behance /></Link></li>
-                <li><Link href="#"><Youtube /></Link></li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href="https://www.facebook.com/NetpulseDigital"
+                  >
+                    <Facebook />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href="https://www.instagram.com/netpulsedigitals"
+                  >
+                    <InstagramTwo />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com/company/net-pulse-digital"
+                  >
+                    <LinkedIn />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href="https://www.x.com/@netpulsedigital"
+                  >
+                    <TwitterX />
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

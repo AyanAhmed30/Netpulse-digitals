@@ -3,15 +3,26 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 // images
-import b_1 from "@/assets/img/inner-about/brand/brand-1.png";
-import b_2 from "@/assets/img/inner-about/brand/brand-2.png";
-import b_3 from "@/assets/img/inner-about/brand/brand-3.png";
-import b_4 from "@/assets/img/inner-about/brand/brand-4.png";
-import b_5 from "@/assets/img/inner-about/brand/brand-5.png";
-import b_6 from "@/assets/img/inner-about/brand/brand-2.png";
+// import b_1 from "@/assets/img/inner-about/brand/brand-1.png";
+// import b_2 from "@/assets/img/inner-about/brand/brand-2.png";
+// import b_3 from "@/assets/img/inner-about/brand/brand-3.png";
+// import b_4 from "@/assets/img/inner-about/brand/brand-4.png";
+// import b_5 from "@/assets/img/inner-about/brand/brand-5.png";
+// import b_6 from "@/assets/img/inner-about/brand/brand-2.png";
+import b_1 from "@/assets/img/home-01/brand/logo1.png";
+import b_2 from "@/assets/img/home-01/brand/logo2.png";
+import b_3 from "@/assets/img/home-01/brand/logo3.png";
+import b_4 from "@/assets/img/home-01/brand/logo4.png";
+import b_5 from "@/assets/img/home-01/brand/logo5.png";
+import b_6 from "@/assets/img/home-01/brand/logo6.png";
+import b_7 from "@/assets/img/home-01/brand/logo7.png";
+import b_8 from "@/assets/img/home-01/brand/logo8.png";
+import b_9 from "@/assets/img/home-01/brand/logo9.png";
+import b_10 from "@/assets/img/home-01/brand/logo10.png";
+import b_11 from "@/assets/img/home-01/brand/logo11.png";
 
 // brand images
-const brand_images = [b_1, b_2, b_3, b_4, b_5, b_6];
+const brand_images = [b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_10, b_11];
 
 export default function BrandFive() {
   return (
@@ -40,7 +51,7 @@ export default function BrandFive() {
                       key={i}
                       className="ab-brand-item"
                     >
-                      <Image src={b} alt="brand" />
+                      <Image src={b} height={60} alt="brand" />
                     </div>
                   ))}
                 </Marquee>
@@ -56,7 +67,6 @@ export default function BrandFive() {
                 connection. That is why some of the biggest companies stayed with
                 us for years.
               </p>
-              <span>More about us</span>
             </div>
           </div>
         </div>

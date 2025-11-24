@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 // internal imports
 import Wrapper from "@/layouts/wrapper";
 import HeaderEleven from "@/layouts/headers/header-eleven";
-import ContactTwo from "@/components/contact/contact-two";
-import ContactLocation from "@/components/contact/contact-location";
 import FooterTwo from "@/layouts/footers/footer-two";
 // animation
 import { charAnimation } from "@/utils/title-animation";
+import ContactForm from "@/components/form/contact-form";
+import ContactLocationTwo from "@/components/contact/contact-location-2";
 
 const ContactMain = () => {
   useScrollSmooth();
@@ -47,9 +47,11 @@ const ContactMain = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="tm-hero-content">
-                        <span className="tm-hero-subtitle">Liko Studio</span>
+                        <span className="tm-hero-subtitle">
+                          Netpulse Digital
+                        </span>
                         <h4 className="tm-hero-title-big tp-char-animation">
-                          Get in touch
+                          Get <br /> in touch
                         </h4>
                       </div>
                     </div>
@@ -59,16 +61,64 @@ const ContactMain = () => {
               {/* hero area end */}
 
               {/* contact area */}
-              <ContactTwo/>
+              <div className="cn-contactform-area cn-contactform-style p-relative pb-100">
+                <div className="container container-1840">
+                  <div className="cn-contactform-2-bg black-bg">
+                    <div className="row">
+                      <div className="col-xl-6">
+                        <div className="cn-contactform-2-map">
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3455.4378955566353!2d-95.4280951!3d29.9955803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640cb001f083381%3A0x2fbef53dc2faadf8!2sNetpulse%20Digital!5e0!3m2!1sen!2s!4v1763652845445!5m2!1sen!2s"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                          ></iframe>
+                        </div>
+                      </div>
+                      <div className="col-xl-6">
+                        <div className="cn-contactform-wrap">
+                          <h4 className="cn-contactform-2-title">
+                            Send a Message
+                          </h4>
+                          <ContactForm btnCls="white-bg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               {/* contact area */}
 
+              {/* about area start */}
+              <div className="cn-contactform-support-area mb-120">
+                <div className="container">
+                  <div className="row justify-content-center">
+                    <div className="col-xl-10">
+                      <div
+                        className="cn-contactform-support-bg d-flex align-items-center justify-content-center"
+                        style={{
+                          backgroundImage:
+                            "url(/assets/img/inner-contact/contact/contact-bg.png)",
+                        }}
+                      >
+                        <div className="cn-contactform-support-text text-center">
+                          <span>We respond within 24 hours</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* about area end */}
+
               {/* contact location */}
-              <ContactLocation/>
+              <ContactLocationTwo />
               {/* contact location */}
             </main>
 
             {/* footer area */}
-            <FooterTwo topCls="" whiteFooter={true} />
+            <FooterTwo topCls="" />
             {/* footer area */}
           </div>
         </div>

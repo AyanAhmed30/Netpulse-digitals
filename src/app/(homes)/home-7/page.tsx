@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import HomeSevenMain from '@/pages/homes/home-7';
 
 export const metadata: Metadata = {
-  title: "Liko - Home Seven Page",
+  title: "Netpulse Digital - Home Seven Page",
 };
 
 const HomePageSeven = () => {

@@ -10,7 +10,7 @@ export async function generateMetadata({
   const slug = params.slug || "digital-marketing"; // fallback to digital-marketing if slug is undefined
   const title = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, " ");
   return {
-    title: `Liko - ${title} Details page`,
+    title: `Netpulse Digital - ${title} Details page`,
   };
 }
 

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import PortfolioShowcaseMain from "@/pages/portfolio/portfolio-showcase-main";
 
 export const metadata: Metadata = {
-  title: "Liko - Portfolio Showcase page",
+  title: "Netpulse Digital - Portfolio Showcase page",
 };
 
 const PortfolioShowcasePage = () => {

@@ -64,7 +64,7 @@ const PortfolioDetailsVideoMain = () => {
                               <div className="project-details-1-info-wrap mb-90 flex-wrap d-flex justify-content-between align-items-center">
                                  <div className="project-details-1-info">
                                     <span>Client</span>
-                                    <h4>LikoTheme</h4>
+                                    <h4>Netpulse Digital Theme</h4>
                                  </div>
                                  <div className="project-details-1-info">
                                     <span>Date</span>

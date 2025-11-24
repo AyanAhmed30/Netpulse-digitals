@@ -1,15 +1,14 @@
-@forward '../../public/assets/css/bootstrap.min.css'; 
-@forward '../../public/assets/scss/main.scss';
+@forward "../../public/assets/css/bootstrap.min.css";
+@forward "../../public/assets/scss/main.scss";
 
-
-// Video modal style 
+// Video modal style
 .video-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -18,7 +17,7 @@
 
 .video-modal-container {
   width: 90%;
-  max-width: 1200px; 
+  max-width: 1200px;
   position: relative;
 }
 
@@ -54,4 +53,56 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+
+/***========================
+  Brand 02 Brand Style
+==========================***/
+
+.tp-brand-4-item {
+  border: 1px solid rgba(245, 247, 245, 0.1);
+
+  background: transparent !important;
+  opacity: 1 !important;
+  transform: none !important;
+
+  &::before,
+  &::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    // ❌ DO NOT REMOVE FILTER — IMPORTANT FOR LIGHT THEME
+  }
+
+  &:hover {
+    background: transparent !important;
+    opacity: 1 !important;
+    transform: none !important;
+
+    &::before,
+    &::after {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      display: none !important;
+    }
+
+    img {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      // ❌ FILTER NOT OVERRIDDEN HERE — FIX FOR LIGHT THEME
+    }
+  }
+
+  * {
+    pointer-events: none !important;
+  }
 }

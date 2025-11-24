@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import AccountMain from "@/pages/account/account-main";
 
 export const metadata: Metadata = {
-  title: "Liko - Account page",
+  title: "Netpulse Digital - Account page",
 };
 
 const AccountPage = () => {

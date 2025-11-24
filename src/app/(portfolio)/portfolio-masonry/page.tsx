@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import PortfolioMasonryMain from "@/pages/portfolio/portfolio-masonry-main";
 
 export const metadata: Metadata = {
-  title: "Liko - Portfolio Masonry page",
+  title: "Netpulse Digital - Portfolio Masonry page",
 };
 
 const PortfolioMasonryPage = () => {

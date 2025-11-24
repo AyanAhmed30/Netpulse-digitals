@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import ServiceMain from "@/pages/service/service";
 
 export const metadata: Metadata = {
-  title: "Liko - Service page",
+  title: "Netpulse Digital - Service page",
 };
 
 const ServicePage = () => {

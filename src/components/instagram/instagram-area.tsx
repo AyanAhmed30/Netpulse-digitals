@@ -47,7 +47,7 @@ export default function InstagramArea() {
         <div className="tp-instagram-content-wrap text-start">
           <div className="tp-instagram-title-box">
             <span className="tp-instagram-subtitle">INSTAGRAM</span>
-            <h4 className="tp-instagram-title">@likoagency</h4>
+            <h4 className="tp-instagram-title">@NetpulseDigitalS</h4>
           </div>
           <div className="tp-instagram-content">
             <p>

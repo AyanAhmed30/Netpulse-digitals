@@ -1,3 +1,4 @@
+// FooterOne component with reduced font size for .footer-big-text
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
@@ -6,17 +7,20 @@ import logo from "@/assets/img/logo/logo-white.png";
 import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
 
 const footer_links = [
-  { link: "/portfolio-details-1", title: "Projects" },
+  { link: "/portfolio-standard", title: "Projects" },
   { link: "/service", title: "What we do" },
   { link: "/about-us", title: "About" },
   { link: "/blog-modern", title: "Blog" },
   { link: "/contact", title: "Contact" },
 ];
+
 export default function FooterOne() {
   const [isActive, setIsActive] = React.useState(false);
+
   useEffect(() => {
     footerOneAnimation();
   }, []);
+
   return (
     <footer>
       {/* footer area start */}

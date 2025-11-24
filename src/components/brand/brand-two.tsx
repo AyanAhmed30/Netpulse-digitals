@@ -1,129 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 import { Leaf } from "../svg";
-// images
-import b_1 from "@/assets/img/home-04/brand/brand-1.png";
-import b_2 from "@/assets/img/home-04/brand/brand-2.png";
-import b_3 from "@/assets/img/home-04/brand/brand-3.png";
-import b_4 from "@/assets/img/home-04/brand/brand-4.png";
-import b_5 from "@/assets/img/home-04/brand/brand-5.png";
-import b_6 from "@/assets/img/home-04/brand/brand-6.png";
-import b_7 from "@/assets/img/home-04/brand/brand-7.png";
-import b_8 from "@/assets/img/home-04/brand/brand-8.png";
 
-// brand_data
+import b_1 from "@/assets/img/home-01/brand/logo1.png";
+import b_2 from "@/assets/img/home-01/brand/logo2.png";
+import b_3 from "@/assets/img/home-01/brand/logo3.png";
+import b_4 from "@/assets/img/home-01/brand/logo4.png";
+import b_5 from "@/assets/img/home-01/brand/logo5.png";
+import b_6 from "@/assets/img/home-01/brand/logo6.png";
+import b_7 from "@/assets/img/home-01/brand/logo7.png";
+import b_8 from "@/assets/img/home-01/brand/logo8.png";
+import b_9 from "@/assets/img/home-01/brand/logo9.png";
+import b_10 from "@/assets/img/home-01/brand/logo10.png";
+import b_11 from "@/assets/img/home-01/brand/logo11.png";
+
 const brand_data = [
-  {
-    id: 1,
-    brand: b_1,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 2,
-    brand: b_2,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 3,
-    brand: b_3,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 4,
-    brand: b_4,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 5,
-    brand: b_5,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 6,
-    brand: b_6,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 7,
-    brand: b_7,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
-  {
-    id: 8,
-    brand: b_8,
-    texts: [
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-      "TopoChico.com",
-    ],
-  },
+  { id: 1, brand: b_1 },
+  { id: 2, brand: b_2 },
+  { id: 3, brand: b_3 },
+  { id: 4, brand: b_4 },
+  { id: 5, brand: b_5 },
+  { id: 6, brand: b_6 },
+  { id: 7, brand: b_7 },
+  { id: 8, brand: b_8 },
+  { id: 9, brand: b_9 },
+  { id: 10, brand: b_10 },
+  { id: 11, brand: b_11 },
 ];
 
-// brand items
 export function BrandItems() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Fix hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Until mounted, do NOT invert (prevents hydration mismatch)
+  const wrapperStyle = mounted
+    ? theme === "light"
+      ? { filter: "invert(1)" }
+      : { filter: "invert(0)" }
+    : { filter: "invert(0)" };
+
   return (
     <>
       {brand_data.map((item) => (
         <div key={item.id} className="col-xl-3 col-lg-3 col-md-6">
-          <div className="tp-brand-4-item p-relative">
+          <div
+            className="tp-brand-4-item p-relative brand-no-hover"
+            style={wrapperStyle}
+          >
             <Image src={item.brand} alt="brand" style={{ height: "auto" }} />
-            <div className="tp-brand-4-line-text d-flex align-items-center">
-              {item.texts.map((text, index) => (
-                <span key={index}>{text}</span>
-              ))}
-            </div>
           </div>
         </div>
       ))}

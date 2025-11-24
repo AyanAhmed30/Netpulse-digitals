@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import BlogDetailsMain from "@/pages/blog/blog-details";
 
 export const metadata: Metadata = {
-  title: "Liko - Blog Details",
+  title: "Netpulse Digital - Blog Details",
 };
 
 const BlogDetailsPage = () => {

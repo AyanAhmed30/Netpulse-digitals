@@ -34,7 +34,7 @@ export default function FooterSix() {
                         </span>
                       </div>
                       <div className="tp-footer-6-contact-content">
-                        <Link href="mailto:liko@gmail.com">liko@gmail.com</Link>
+                        <Link href="mailto:NetpulseDigitalS@gmail.com">NetpulseDigitalS@gmail.com</Link>
                       </div>
                     </div>
                     <div className="tp-footer-6-contact-item d-flex align-items-start">

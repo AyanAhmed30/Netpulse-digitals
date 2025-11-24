@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import BlogListMain from "@/pages/blog/blog-list";
 
 export const metadata: Metadata = {
-  title: "Liko - Blog List page",
+  title: "Netpulse Digital - Blog List page",
 };
 
 const BlogListPage = () => {

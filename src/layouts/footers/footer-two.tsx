@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/img/logo/logo-white.png";
@@ -15,6 +15,37 @@ export default function FooterTwo({
   whiteFooter = false,
   topCls = "footer-top",
 }: IProps) {
+  const [result, setResult] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    // set replyto to user email
+    const userEmail = formData.get("email") as string;
+    formData.set("replyto", userEmail);
+
+    formData.append("access_key", "1bb5a4c4-c414-4070-9637-5a6a7228146e");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Subscribed successfully!");
+        form.reset();
+      } else {
+        setResult("Something went wrong, try again!");
+      }
+    } catch (error) {
+      setResult("Error submitting form!");
+    }
+  };
+
   return (
     <footer className={`${topCls}`}>
       <div
@@ -45,36 +76,37 @@ export default function FooterTwo({
                 )}
                 <div className="tp-footer-2-widget-text">
                   <p>
-                    Drop us a line sed id semper <br /> risus in hend rerit.
+                    Ready to boost your digital presence? Reach out and let’s make it happen.
                   </p>
                 </div>
               </div>
             </div>
+
             <div className="col-xl-2 col-lg-3 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-2">
                 <div className="tp-footer-2-widget-menu">
                   <h4 className="tp-footer-2-widget-title">Sitemap</h4>
                   <ul>
                     <li>
-                      <Link href="#">Home</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <Link href="#">About</Link>
+                      <Link href="/about-us">About</Link>
                     </li>
                     <li>
-                      <Link href="#">Contact</Link>
+                      <Link href="/service">Services</Link>
                     </li>
                     <li>
-                      {" "}
-                      <Link href="#">Blog</Link>
+                      <Link href="/contact-2">Contact</Link>
                     </li>
                     <li>
-                      <Link href="#">Landing</Link>
+                      <Link href="/blog-modern">Blog</Link>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
+
             <div className="col-xl-3 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-3">
                 <h4 className="tp-footer-2-widget-title">Office</h4>
@@ -102,25 +134,45 @@ export default function FooterTwo({
                 </div>
               </div>
             </div>
+
+            {/* Newsletter Section */}
             <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-4">
                 <div className="tp-footer-2-widget-newslatter">
                   <h4 className="tp-footer-2-widget-title">
                     Subscribe to our newsletter
                   </h4>
-                  <form action="#">
+
+                  <form onSubmit={handleSubmit}>
                     <div className="tp-footer-2-input p-relative">
-                      <input type="text" placeholder="Enter your email..." />
-                      <button>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email..."
+                        required
+                      />
+                      <input
+                        type="hidden"
+                        name="replyto"
+                        value="Thanks for subscribing to our newsletter! We will keep you updated with the latest news. — Netpulse Digital" // will set dynamically in handleSubmit
+                      />
+                      <input
+                        type="hidden"
+                        name="autoresponse"
+                        value="Thanks for subscribing to our newsletter! We will keep you updated with the latest news. — Netpulse Digital"
+                      />
+                      <button type="submit">
                         <RightArrow
                           clr={whiteFooter ? "currentcolor" : "#F3F3F4"}
                         />
                       </button>
                     </div>
+                    {result && <p className="mt-2 text-success">{result}</p>}
                   </form>
                 </div>
               </div>
             </div>
+            {/* End Newsletter */}
           </div>
         </div>
       </div>
@@ -175,7 +227,6 @@ export default function FooterTwo({
           </div>
         </div>
       </div>
-      {/* <!-- footer area end --> */}
     </footer>
   );
 }

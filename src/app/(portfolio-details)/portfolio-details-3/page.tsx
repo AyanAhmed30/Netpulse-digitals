@@ -4,7 +4,7 @@ import PortfolioDetailsThreeMain from "@/pages/portfolio/details/portfolio-detai
 
 
 export const metadata: Metadata = {
-  title: "Liko - Portfolio Details 3 page",
+  title: "Netpulse Digital - Portfolio Details 3 page",
 };
 
 const PortfolioDetailsThreePage = () => {

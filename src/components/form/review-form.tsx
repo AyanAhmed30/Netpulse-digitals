@@ -45,7 +45,7 @@ export default function ReviewForm() {
               name="email"
               id="email"
               type="email"
-              placeholder="liko@mail.com"
+              placeholder="Netpulse Digital@mail.com"
             />
           </div>
         </div>

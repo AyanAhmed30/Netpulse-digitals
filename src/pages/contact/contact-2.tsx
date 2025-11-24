@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 // internal imports
 import Wrapper from "@/layouts/wrapper";
 import HeaderEleven from "@/layouts/headers/header-eleven";
+import ContactTwo from "@/components/contact/contact-two";
+import ContactLocation from "@/components/contact/contact-location";
 import FooterTwo from "@/layouts/footers/footer-two";
 // animation
 import { charAnimation } from "@/utils/title-animation";
-import ContactForm from "@/components/form/contact-form";
-import ContactLocationTwo from "@/components/contact/contact-location-2";
 
 const ContactTwoMain = () => {
   useScrollSmooth();
@@ -47,9 +47,9 @@ const ContactTwoMain = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="tm-hero-content">
-                        <span className="tm-hero-subtitle">Netpulse Digital</span>
+                        <span className="tm-hero-subtitle">Netpulse Digital Studio</span>
                         <h4 className="tm-hero-title-big tp-char-animation">
-                          Get <br /> in touch
+                          Get in touch
                         </h4>
                       </div>
                     </div>
@@ -59,58 +59,16 @@ const ContactTwoMain = () => {
               {/* hero area end */}
 
               {/* contact area */}
-              <div className="cn-contactform-area cn-contactform-style p-relative pb-100">
-                <div className="container container-1840">
-                  <div className="cn-contactform-2-bg black-bg">
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div className="cn-contactform-2-map">
-                          <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d37866.42024631252!2d90.04636289871837!3d23.823039160865342!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1699251079678!5m2!1sen!2sbd"
-                            style={{border:0}}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                          ></iframe>
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="cn-contactform-wrap">
-                          <h4 className="cn-contactform-2-title">
-                            Send a Message
-                          </h4>
-                          <ContactForm btnCls="white-bg" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ContactTwo/>
               {/* contact area */}
 
-              {/* about area start */}
-               <div className="cn-contactform-support-area mb-120">
-                  <div className="container">
-                     <div className="row justify-content-center">
-                        <div className="col-xl-10">
-                           <div className="cn-contactform-support-bg d-flex align-items-center justify-content-center" style={{backgroundImage: "url(/assets/img/inner-contact/contact/contact-bg.png)"}}>
-                              <div className="cn-contactform-support-text text-center">
-                                 <span>We respond within 24 hours</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               {/* about area end */}
-
               {/* contact location */}
-              <ContactLocationTwo/>
+              <ContactLocation/>
               {/* contact location */}
             </main>
 
             {/* footer area */}
-            <FooterTwo topCls="" />
+            <FooterTwo topCls="" whiteFooter={true} />
             {/* footer area */}
           </div>
         </div>

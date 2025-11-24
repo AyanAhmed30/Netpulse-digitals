@@ -19,8 +19,8 @@ export default function FooterFive() {
                   </h4>
                 </div>
                 <div className="tp-footer-5-info d-flex align-items-center justify-content-start justify-content-md-end">
-                  <Link className="tp-footer-5-mail" href="mailto:info@liko.com">
-                    info@liko.com
+                  <Link className="tp-footer-5-mail" href="mailto:info@NetpulseDigitalS.com">
+                    info@NetpulseDigitalS.com
                   </Link>
                   <Link className="tp-footer-5-link" href="#">
                     <UpArrow clr="#19191A" />
