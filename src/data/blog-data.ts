@@ -128,7 +128,9 @@ export const blog_home_five: IBlogDT[] = [
       <p>
         Leadership plays a crucial role in building organizational resilience. Effective leaders foster cultures of trust, encourage experimentation, and empower employees to take initiative. They communicate vision clearly while remaining open to feedback and willing to pivot when necessary. By creating environments where people feel valued and supported, leaders can unlock the full potential of their teams.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 2,
@@ -172,7 +174,9 @@ export const blog_home_five: IBlogDT[] = [
         <p>\"Customers don't expect you to be perfect. They do expect you to fix things when they go wrong.\"</p>
         <span class="blockquote-info">Donald Porter</span>
       </blockquote>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 3,
@@ -209,7 +213,9 @@ export const blog_home_five: IBlogDT[] = [
       <p>
         Developing the new brand identity involves defining core values, mission, and personality traits that align with business goals and resonate with target audiences. Visual elements such as logos, color palettes, typography, and imagery should reflect these attributes consistently across all touchpoints. Messaging guidelines ensure that communication remains coherent and authentic.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 4,
@@ -236,7 +242,9 @@ export const blog_home_five: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_4.src}" alt="creative-environment" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   }
 ];
 
@@ -244,7 +252,7 @@ export const blog_modern: IBlogDT[] = [
   {
     id: 5,
     img: b_m_1,
-    title: 'Insights, Ideas & Innovation  <br> for the Digital World.',
+    title: 'Insights, Ideas & Innovation  for the Digital World.',
     slug: createSlug('Insights, Ideas & Innovation for the Digital World.'),
     date: '21. OCT. 2025',
     category: 'Marketing / Strategy',
@@ -266,7 +274,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_1.src}" alt="digital-insights" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 6,
@@ -293,7 +303,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_2.src}" alt="digital-marketing-strategy" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 7,
@@ -320,7 +332,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_3.src}" alt="web-design-trends" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 8,
@@ -347,7 +361,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_4.src}" alt="seo-techniques" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 9,
@@ -374,7 +390,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_5.src}" alt="advertising-trends" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 10,
@@ -401,7 +419,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_6.src}" alt="ebook-creation" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 11,
@@ -428,7 +448,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_7.src}" alt="ai-innovation" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 12,
@@ -455,7 +477,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_2.src}" alt="future-business-ideas" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 13,
@@ -482,7 +506,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_5.src}" alt="unique-experience-design" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 14,
@@ -509,7 +535,9 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_4.src}" alt="rebranding-strategy" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
 ];
 
@@ -534,7 +562,9 @@ export const blog_classic: IBlogDT[] = [
       <p>
         Mindfulness practices and regular breaks during learning sessions enhance focus and prevent mental fatigue. Physical movement, natural light, and comfortable environments contribute to better concentration and information retention. These factors create ideal conditions for absorbing complex design concepts and applying them creatively.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 16,
@@ -556,7 +586,9 @@ export const blog_classic: IBlogDT[] = [
       <p>
         Feedback from peers, mentors, and users provides valuable perspectives that challenge assumptions and reveal blind spots. Constructive criticism, when received with an open mind, accelerates learning and helps designers refine their unique voice. This collaborative aspect of design education emphasizes that growth happens through dialogue and shared exploration.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 17,
@@ -584,7 +616,9 @@ export const blog_classic: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_post_1.src}" alt="memorable-design" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 18,
@@ -614,7 +648,9 @@ export const blog_classic: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_post_2.src}" alt="desert-adventure" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 19,
@@ -636,7 +672,9 @@ export const blog_classic: IBlogDT[] = [
       <p>
         Personalization algorithms have revolutionized playlist creation, analyzing listening habits to suggest new music and assemble custom collections. However, human curators still bring unique value through contextual understanding, cultural knowledge, and emotional intelligence that machines cannot replicate. The best playlists often result from combining algorithmic suggestions with human judgment.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 20,
@@ -659,7 +697,9 @@ export const blog_classic: IBlogDT[] = [
       <p>
         Cross-industry analysis reveals transferable solutions—applying successful models from one sector to challenges in another. For example, subscription services originally popularized in software have expanded to physical products, entertainment, and even transportation. These adaptations demonstrate how core concepts can be modified for different contexts while maintaining their fundamental value proposition.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 21,
@@ -681,7 +721,9 @@ export const blog_classic: IBlogDT[] = [
       <p>
         Professional development opportunities, exposure to inspiring work, and recognition of achievements motivate team members to excel. Creative leaders advocate for their teams within the organization, securing resources and buy-in for innovative initiatives. They also manage client relationships, translating creative concepts into business value that stakeholders can appreciate.
       </p>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 22,
@@ -709,7 +751,9 @@ export const blog_classic: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_post_4.src}" alt="minimalist-photography" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
 ];
 
@@ -739,7 +783,9 @@ export const blog_lists: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_list_1.src}" alt="memorable-branding" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 24,
@@ -766,7 +812,9 @@ export const blog_lists: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_list_2.src}" alt="simple-photo-setup" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 25,
@@ -793,7 +841,9 @@ export const blog_lists: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_list_3.src}" alt="sustainable-business" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 26,
@@ -820,7 +870,9 @@ export const blog_lists: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_list_4.src}" alt="brand-evolution" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 27,
@@ -847,7 +899,9 @@ export const blog_lists: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_list_5.src}" alt="adventure-storytelling" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
   {
     id: 28,
@@ -874,7 +928,9 @@ export const blog_lists: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${blog_list_2.src}" alt="brand-visualization" />
       </div>
-    </div>`
+    </div>`,
+    status: "",
+    featured: undefined
   },
 ];
 
