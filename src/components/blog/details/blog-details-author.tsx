@@ -1,7 +1,7 @@
 // components/blog/details/blog-details-author.tsx
 import React from "react";
 import Image from "next/image";
-import avatar from '@/assets/img/inner-blog/blog-details/avatar/avatar-1.jpg'
+import avatar from "@/assets/img/logo/logo.png"
 import Link from "next/link";
 
 interface BlogDetailsAuthorProps {
@@ -13,28 +13,27 @@ export default function BlogDetailsAuthor({ author }: BlogDetailsAuthorProps) {
     <div className="blog-details-author d-flex mb-60">
       <div className="blog-details-author-img">
         <Image
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "130px", height: "auto" }}
           src={avatar}
           alt={author || "author"}
         />
       </div>
       <div className="blog-details-author-content-wrap">
         <div className="blog-details-author-social text-end">
-          <Link href="#">
+          <Link href="https://www.facebook.com/NetpulseDigital">
             <i className="fab fa-facebook-f"></i>
           </Link>
-          <Link href="#">
+          <Link href="https://www.x.com/@netpulsedigital">
             <i className="fab fa-twitter"></i>
           </Link>
-          <Link href="#">
+          <Link href="https://www.linkedin.com/company/net-pulse-digital">
             <i className="fab fa-linkedin-in"></i>
           </Link>
         </div>
         <div className="blog-details-author-content">
-          <h4 className="blog-details-author-title">{author || "Lea Cohen"}</h4>
+          <h4 className="blog-details-author-title">From Build to Scale it</h4>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor.!
+           MVP ≠ forever. Discover the telltale signs your monolithic architecture is maxing out — slow deploys, fragile APIs, scaling bottlenecks — and how modular, cloud-native refactoring fuels sustainable growth without rewriting from scratch. 
           </p>
         </div>
       </div>

@@ -169,14 +169,14 @@ export default function BlogDetailsAreaTwo() {
                           <Link href="#">Lifestyle</Link>
                         </div>
                       </div>
-                      <div className="col-xl-4">
+                      {/* <div className="col-xl-4">
                         <div className="blog-details-share text-md-end text-start">
                           <span>
                             <Share />
                           </span>
                           <Link href="#">Share Post</Link>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   {/* blog details author */}
@@ -184,7 +184,7 @@ export default function BlogDetailsAreaTwo() {
                   {/* blog details author */}
 
                   {/* blog details navigation */}
-                  <BlogDetailsNavigation />
+                  <BlogDetailsNavigation currentBlogId={0} />
                   {/* blog details navigation */}
                   <div className="postbox__comment mb-100">
                     <h3 className="postbox__comment-title">3 Comments</h3>
@@ -192,18 +192,7 @@ export default function BlogDetailsAreaTwo() {
                     <BlogDetailsComments />
                     {/* blog details comments */}
                   </div>
-                  <div className="tp-postbox-details-form">
-                    <h3 className="tp-postbox-details-form-title">
-                      Leave a Reply
-                    </h3>
-                    <p>
-                      Your email address will not be published. Required fields
-                      are marked *
-                    </p>
-                    {/* blog reply form */}
-                    <BlogReplyForm />
-                    {/* blog reply form */}
-                  </div>
+                  
                 </div>
               </div>
             </div>

@@ -1,8 +1,8 @@
 // components/blog/details/blog-sidebar.tsx
 import React from "react";
 import Image from "next/image";
-import avatar from "@/assets/img/inner-blog/blog-sidebar/avatar/avata-2.jpg";
-import banner from "@/assets/img/inner-blog/blog-sidebar/banner/banner.jpg";
+import avatar from "@/assets/img/logo/logo.png";
+import banner from "@/assets/img/logo/logo.png";
 import { Search } from "../svg";
 import { blog_data } from "@/data/blog-data";
 import Link from "next/link";
@@ -22,7 +22,27 @@ export default function BlogSidebar({ currentBlogId }: BlogSidebarProps) {
   const blogTags = currentBlog?.tags || [];
   
   // Get recent posts with images
-  const rc_posts = [...blog_data.filter((b) => b.img)].slice(0, 3);
+// Get recent posts with images - UPDATED for Netpulse Digital
+const rc_posts = [...blog_data.filter((b) => b.img && b.status !== "draft")]
+  .sort((a, b) => {
+    // Featured first, then by date (desc)
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  })
+  .map(post => {
+    // Replace titles based on your request
+    let title = post.title;
+    if (title === "Design To Remember") {
+      title = "Digital Marketing";
+    } else if (title === "Simplistic photo setup") {
+      title = "Web Development";
+    } else if (title === "Future Business Ideas.") {
+      title = "AI Automation";
+    }
+    return { ...post, title };
+  })
+  .slice(0, 3);
   
   // Get categories
   const categories = Array.from(new Set(blog_data.map(blog => blog.category)));
@@ -30,43 +50,78 @@ export default function BlogSidebar({ currentBlogId }: BlogSidebarProps) {
   return (
     <div className="sidebar__wrapper">
       <div className="sidebar__widget mb-45">
-        <div className="sidebar__author text-center">
-          <div className="sidebar__author-thumb">
-            <Image src={avatar} alt="avatar" style={{ height: "auto" }} />
-          </div>
-          <div className="sidebar__author-content">
-            <h4 className="sidebar__author-title">Mark Hopkins</h4>
-            <p>Lorem ipsum dolor consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div className="sidebar__widget mb-65">
-        <div className="sidebar__widget-content">
-          <div className="sidebar__search">
-            <form action="#">
-              <div className="sidebar__search-input-2">
-                <input type="text" placeholder="Search product" />
-                <button type="submit">
-                  <Search />
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+  <div className="sidebar__author text-center">
+    <div className="sidebar__author-thumb">
+      <Image 
+        src={avatar} 
+        alt="Alex Morgan, Senior Growth Strategist at Netpulse Digital" 
+        width={100}
+        height={100}
+        style={{ 
+          height: "auto", 
+          borderRadius: "50%",
+          border: "3px solid #f1f5f9",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.05)"
+        }} 
+      />
+    </div>
+    <div className="sidebar__author-content mt-3">
+      <h4 className="sidebar__author-title" style={{ 
+        fontSize: '1.3rem', 
+        fontWeight: 700, 
+        color: '#0f172a',
+        marginBottom: '0.25rem'
+      }}>
+        Alex Morgan
+      </h4>
+      <p className="text-muted mb-2" style={{ 
+        fontSize: '0.9rem', 
+        fontWeight: 500, 
+        color: '#475569'
+      }}>
+        Senior Growth Strategist
+      </p>
+      <p style={{ 
+        fontSize: '0.95rem', 
+        lineHeight: 1.6, 
+        color: '#334155',
+        margin: 0 
+      }}>
+        Helping SaaS and e-commerce brands scale with data-led design, conversion-focused development, and performance marketing.
+      </p>
+    </div>
+  </div>
+</div>
+     
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Category</h3>
-        <div className="sidebar__widget-content">
-          <ul>
-            {categories.map((category, index) => (
-              <li key={index}>
-                <Link href={`/blog?category=${encodeURIComponent(category)}`}>
-                  {category}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+       <div className="sidebar__widget-content">
+  <ul 
+    style={{
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '16px', // ← adds consistent spacing between items
+    }}
+  >
+    {categories.map((category, index) => (
+      <li 
+        key={index}
+        style={{
+          fontSize: '1rem',        // ← larger text (≈17.6px)
+          fontWeight: 400,           // semi-bold for emphasis
+          color: '#0f172a',          // dark slate (Netpulse professional tone)
+          letterSpacing: '-0.01em',
+          padding: '6px 0',          // subtle vertical padding for balance
+        }}
+      >
+        {category}
+      </li>
+    ))}
+  </ul>
+</div>
       </div>
       <div className="sidebar__widget mb-65">
         <h3 className="sidebar__widget-title">Recent Post</h3>
@@ -128,14 +183,17 @@ export default function BlogSidebar({ currentBlogId }: BlogSidebarProps) {
         <h3 className="sidebar__widget-title">Follow Us</h3>
         <div className="sidebar__widget-content">
           <div className="sidebar__social">
-            <Link href="#">
+            <Link target="_blank" href="https://www.facebook.com/NetpulseDigital" >
               <i className="fa-brands fa-facebook"></i>
             </Link>
-            <Link href="#">
+            <Link target="_blank" href="https://www.x.com/@netpulsedigital">
               <i className="fa-brands fa-twitter"></i>
             </Link>
-            <Link href="#">
+            <Link target="_blank" href="https://www.linkedin.com/company/net-pulse-digital">
               <i className="fa-brands fa-linkedin-in"></i>
+            </Link>
+            <Link target="_blank" href="https://www.instagram.com/netpulsedigitals">
+              <i className="fa-brands fa-instagram" ></i>
             </Link>
           </div>
         </div>

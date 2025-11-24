@@ -80,14 +80,14 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-lg-4">
+                  {/* <div className="col-xl-4 col-lg-4">
                     <div className="blog-details-share text-start text-md-end">
                       <span>
                         <Share />
                       </span>
                       <Link href="#">Share Post</Link>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -106,17 +106,7 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
                 {/* blog details comments */}
               </div>
 
-              <div className="tp-postbox-details-form">
-                <h3 className="tp-postbox-details-form-title">Leave a Reply</h3>
-                <p>
-                  Your email address will not be published. Required fields are
-                  marked *
-                </p>
-
-                {/* blog reply form */}
-                <BlogReplyForm />
-                {/* blog reply form */}
-              </div>
+             
             </div>
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-4">
