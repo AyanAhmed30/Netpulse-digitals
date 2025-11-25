@@ -5,57 +5,71 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 // project images
-import p_1 from "@/assets/img/home-01/project/fast.jpg";
-import p_2 from "@/assets/img/home-01/project/project-1-2.jpg";
-import p_3 from "@/assets/img/home-01/project/project-1-3.jpg";
-import p_4 from "@/assets/img/home-01/project/project-1-4.jpg";
-import p_5 from "@/assets/img/home-01/project/project-1-5.jpg";
-import p_6 from "@/assets/img/home-01/project/project-1-6.jpg";
+import p_1 from "@/assets/img/home-01/project/fast.png";
+import p_2 from "@/assets/img/home-01/project/ai.png";
+import p_3 from "@/assets/img/home-01/project/design.png";
+import p_4 from "@/assets/img/home-01/project/digital.png";
+import p_5 from "@/assets/img/home-01/project/mobile.jpg";
+import p_6 from "@/assets/img/home-01/project/ebook.png";
 
-// type
-type IProject = {
+// Type
+export type IProject = {
   id: number;
   cls: string;
   cls_2: string;
   img: StaticImageData;
+  title: string;
+  category: string;
 };
 
-const project_data: IProject[] = [
+export const project_data: IProject[] = [
   {
     id: 1,
     cls: "tp-project-mr",
     cls_2: "height-1",
     img: p_1,
+    title: "Fast Web Development",
+    category: "Web Development",
   },
   {
     id: 2,
     cls: "text-end",
     cls_2: "height-2 d-inline-flex justify-content-end",
     img: p_2,
+    title: "AI Automation",
+    category: "AI & Automation",
   },
   {
     id: 3,
     cls: "tp-project-mr",
     cls_2: "height-3",
     img: p_3,
+    title: "Creative Design",
+    category: "UI/UX Design",
   },
   {
     id: 4,
     cls: "",
     cls_2: "height-4",
     img: p_4,
+    title: "Digital Marketing",
+    category: "Digital Marketing",
   },
   {
     id: 5,
     cls: "tp-project-ml",
     cls_2: "height-5",
     img: p_5,
+    title: "Mobile Application",
+    category: "Mobile Development",
   },
   {
     id: 6,
     cls: "",
     cls_2: "height-6",
     img: p_6,
+    title: "Interactive eBook",
+    category: "Content Platform",
   },
 ];
 
@@ -66,8 +80,17 @@ function ProjectItem({ item }: { item: IProject }) {
         className={`tp-project-img ${item.cls_2} fix not-hide-cursor`}
         data-cursor="View<br>Demo"
       >
-        <Link className="cursor-hide" href="/portfolio-details-3">
-          <Image data-speed=".8" src={item.img} alt="project-img" style={{ height: "auto" }} />
+        <Link
+          className="cursor-hide"
+          href={`/portfolio-details-3?project=${item.id}`}
+        >
+          <Image
+            data-speed=".8"
+            src={item.img}
+            alt={item.title}
+            style={{ height: "auto", width: "100%" }}
+            placeholder="blur"
+          />
         </Link>
       </div>
     </div>
@@ -78,7 +101,8 @@ function ProjectItem({ item }: { item: IProject }) {
 type IProps = {
   style_2?: boolean;
 };
-const ProjectOne = ({style_2=false}:IProps) => {
+
+const ProjectOne = ({ style_2 = false }: IProps) => {
   return (
     <>
       <div className={`${style_2 ? "tp-project-area-2" : "tp-project-area"} fix`}>
@@ -97,7 +121,7 @@ const ProjectOne = ({style_2=false}:IProps) => {
               <div className="row">
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="tp-project-left-wrap">
-                    {project_data.slice(0, 3).map((item, i) => (
+                    {project_data.slice(0, 3).map((item) => (
                       <ProjectItem key={item.id} item={item} />
                     ))}
                   </div>
