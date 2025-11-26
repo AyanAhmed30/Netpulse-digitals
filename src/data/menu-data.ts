@@ -206,7 +206,7 @@ const menu_data: IMenuDT[] = [
   {
     id: 7,
     title: "Contact",
-    link: "/contact-2",
+    link: "/contact",
     // dropdown_menus: [
     //   { title: "Contact", link: "/contact" },
     //   { title: "Get IN touch", link: "/contact-2" },
