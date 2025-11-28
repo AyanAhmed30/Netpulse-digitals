@@ -15,7 +15,7 @@ export default function BlogItemTwo({ item }: { item: IBlogDT }) {
       <div className="tp-blog-content">
         <span>{item.category}</span>
         <h4 className="tp-blog-title-sm">
-          <Link href={`/blog-details/${item.id}`}>{item.title}</Link>
+          <Link href={`/blog-details/${item.slug}`}>{item.title}</Link>
         </h4>
       </div>
     </div>

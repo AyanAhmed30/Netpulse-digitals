@@ -40,7 +40,7 @@ const location_data = [
     address:
       "We're always looking for bright new talent. If you're keen. drop us a note:",
     note: "( no 100mb PDFs please )",
-    email: "Hello@contact.com",
+   
   },
 ];
 const ContactLocationTwo = () => {

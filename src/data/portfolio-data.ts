@@ -34,9 +34,9 @@ import mobile_5 from "@/assets/img/inner-project/portfolio-details-3/mb5.png";
 
 import ebook_1 from "@/assets/img/inner-project/portfolio-details-3/e1.jpg";
 import ebook_2 from "@/assets/img/inner-project/portfolio-details-3/e2.png";
-import ebook_3 from "@/assets/img/inner-project/portfolio-details-3/e2.png";
-import ebook_4 from "@/assets/img/inner-project/portfolio-details-3/e3.png";
-import ebook_5 from "@/assets/img/inner-project/portfolio-details-3/e4.png";
+import ebook_3 from "@/assets/img/inner-project/portfolio-details-3/e3.png";
+import ebook_4 from "@/assets/img/inner-project/portfolio-details-3/e4.png";
+import ebook_5 from "@/assets/img/inner-project/portfolio-details-3/e5.png";
 
 // Category thumbnails (for main portfolio page)
 import p_img_1 from "@/assets/img/home-01/project/fast.png";

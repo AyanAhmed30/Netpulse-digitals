@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // image
 import ser_hero from "@/assets/img/inner-service/hero/hero-1.jpg";
+import Link from "next/link";
 
 export default function ServiceHero() {
   return (
@@ -18,7 +19,9 @@ export default function ServiceHero() {
                 Fulfilled direction use continual set him propriety continued.
               </p>
             </div>
+            
           </div>
+        
         </div>
         <div className="row">
           <div className="col-xl-12">
@@ -35,6 +38,7 @@ export default function ServiceHero() {
             </div>
           </div>
         </div>
+     
       </div>
     </div>
   );

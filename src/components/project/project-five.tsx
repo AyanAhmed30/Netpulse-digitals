@@ -57,11 +57,8 @@ export default function ProjectFive({ style_2 = false }: IProps) {
                   </div>
                   
                   <div className="tp-project-5-2-content tp_fade_anim">
-                    <span className="tp-project-5-2-meta">{category.year}</span>
                     <h4 className="tp-project-5-2-title-sm">{category.title}</h4>
-                    <p className="tp-project-5-2-count text-muted mt-2 mb-0">
-                      {category.projects.length} Projects
-                    </p>
+                   
                   </div>
                 </Link>
               </div>
@@ -71,24 +68,7 @@ export default function ProjectFive({ style_2 = false }: IProps) {
         
         <div className="row">
           <div className="col-xl-12">
-            <div className="tp-projct-5-2-btn-box d-flex justify-content-center">
-              <div className="tp-hover-btn-wrapper">
-                <Link
-                  className={`tp-btn-circle ${
-                    style_2 ? "style-2" : ""
-                  } tp-hover-btn-item tp-hover-btn`}
-                  href="/portfolio-details-1"
-                >
-                  <span className="tp-btn-circle-text">
-                    More <br /> Projects
-                  </span>
-                  <span className="tp-btn-circle-icon">
-                    <UpArrow />
-                  </span>
-                  <i className="tp-btn-circle-dot"></i>
-                </Link>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>

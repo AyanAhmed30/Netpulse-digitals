@@ -7,6 +7,7 @@ import shape from "@/assets/img/inner-about/about/shape-1.png";
 import ab_1 from "@/assets/img/inner-about/about/abt11.png";
 import ab_2 from "@/assets/img/inner-about/about/about-3.jpg";
 import ab_3 from "@/assets/img/inner-about/about/abt22.png";
+import Link from "next/link";
 
 export default function AboutUsArea() {
   return (
@@ -80,7 +81,6 @@ From London to Los Angeles, Toronto to Sydney — our work empowers businesses w
             <div className="ab-about-category-list category-space-1 tp_fade_bottom">
               <ul>
                 <li>Web Development</li>
-                <li>SEO-Optimized Smart Websites</li>
                 <li>AI Chatbots & Automation</li>
                 <li>Digital Marketing </li>
               </ul>
@@ -89,15 +89,23 @@ From London to Los Angeles, Toronto to Sydney — our work empowers businesses w
           <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
             <div className="ab-about-category-list category-space-2 tp_fade_bottom">
                <ul>
-                <li>Brand Identity & Strategy</li>
-                <li>UI/UX Design</li>
-           
-                <li>Social Media Creatives</li>
+                <li>Mobile Application Development</li>
+                <li>Creative Design</li>
                 <li>eBook & Digital Publishing Design</li>
               </ul>
              
+             
             </div>
+            
           </div>
+            <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
+                <Link className="tp-btn-border" href="/contact">
+                  <span className="tp-btn-border-wrap">
+                    <span className="text-1">Talk to Our Experts</span>
+                    <span className="text-2">Talk to Our Experts</span>
+                  </span>
+                </Link>
+              </div>
         </div>
       </div>
     </div>

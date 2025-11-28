@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 // ✅ Updated award data — realistic, high-trust, Netpulse-aligned
@@ -55,6 +56,7 @@ type IProps = {
 
 const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
   return (
+    <>
     <div className={`tp-award-area ${cls}`}>
       <div className="container container-1630">
         <div className="row">
@@ -79,7 +81,7 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
         </div>
 
         {/* Full-width award list — no image column */}
-        <div className="row mt-5">
+        <div className="row mt-5 mb-3">
           <div className="col-12">
             <div className="tp-award-list-wrap">
               {award_data.map((item) => (
@@ -100,10 +102,23 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
                 </div>
               ))}
             </div>
+           
           </div>
         </div>
+        
       </div>
+      
     </div>
+<div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce  mb-4">
+  <Link className="tp-btn-border" href="/contact">
+    <span className="tp-btn-border-wrap">
+      <span className="text-1">Start Your Journey with us</span>
+      <span className="text-2">Start Your Journey with us</span>
+    </span>
+  </Link>
+</div>
+    </>
+    
   );
 };
 

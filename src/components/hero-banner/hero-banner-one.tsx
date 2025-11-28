@@ -111,7 +111,7 @@ const HeroBannerOne = () => {
               </p>
 
               <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
-                <Link className="tp-btn-border" href="/contact-2">
+                <Link className="tp-btn-border" href="/contact">
                   <span className="tp-btn-border-wrap">
                     <span className="text-1">Talk to Our Experts</span>
                     <span className="text-2">Talk to Our Experts</span>

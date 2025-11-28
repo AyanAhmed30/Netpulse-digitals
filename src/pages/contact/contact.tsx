@@ -113,7 +113,7 @@ const ContactMain = () => {
               {/* about area end */}
 
               {/* contact location */}
-              <ContactLocationTwo />
+              {/* <ContactLocationTwo /> */}
               {/* contact location */}
             </main>
 

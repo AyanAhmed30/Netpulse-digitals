@@ -4,6 +4,7 @@ import { NextIcon, PrevIcon } from "../svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
+import Link from "next/link";
 
 const testimonial_data = [
   {
@@ -82,9 +83,18 @@ const TestimonialOne = () => {
                         <em>{item.name}</em> - {item.designation}
                       </span>
                     </div>
+                 
                   </SwiperSlide>
                 ))}
               </Swiper>
+                  <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
+                <Link className="tp-btn-border" href="/contact">
+                  <span className="tp-btn-border-wrap">
+                    <span className="text-1">Start Your Journey with us</span>
+                    <span className="text-2">Start Your Journey with us</span>
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -67,7 +67,7 @@ export default function FooterTwo({
                       <Link href="/service">Services</Link>
                     </li>
                     <li>
-                      <Link href="/contact-2">Contact</Link>
+                      <Link href="/contact">Contact</Link>
                     </li>
                     <li>
                       <Link href="/blog-modern">Blog</Link>

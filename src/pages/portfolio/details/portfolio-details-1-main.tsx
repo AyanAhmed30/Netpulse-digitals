@@ -10,7 +10,7 @@ import FooterTwo from "@/layouts/footers/footer-three";
 
 export default function PortfolioDetails() {
   const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const id = searchParams?.get("id");
   const [category, setCategory] = useState<PortfolioCategory | null>(null);
   const [loading, setLoading] = useState(true);
   const [scrollY, setScrollY] = useState(0);
@@ -50,46 +50,7 @@ export default function PortfolioDetails() {
 
   if (loading) {
     return (
-      <div className="loading-container">
-        <div className="loading-spinner">
-          <div className="spinner"></div>
-          <p className="loading-text">Loading Portfolio...</p>
-        </div>
-        <style jsx>{`
-          .loading-container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          }
-          .loading-spinner {
-            text-align: center;
-          }
-          .spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-          }
-          .loading-text {
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            animation: pulse 2s ease-in-out infinite;
-          }
-          @keyframes spin {
-            to { transform: rotate(360deg); }
-          }
-          @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-          }
-        `}</style>
-      </div>
+      <> </>
     );
   }
 
@@ -177,27 +138,27 @@ export default function PortfolioDetails() {
         </div>
 
         {/* Portfolio Header Section */}
-<div className="portfolio-header">
-  <div className="container container-1530">
+        <div className="portfolio-header">
+          <div className="container container-1530">
 
-    <div className="sv-small-text-box vertical">
-      <span>Explore Our Amazing Portfolio</span>
-    
-    </div>
+            <div className="sv-small-text-box vertical">
+              <span>Explore Our Amazing Portfolio</span>
 
-    <div className="sv-big-text-box center">
-      <h4 className="sv-big-text tp-char-animation">
-        {category.title}
-      </h4>
-    </div>
+            </div>
 
-  </div>
-</div>
+            <div className="sv-big-text-box center">
+              <h4 className="sv-big-text tp-char-animation">
+                {category.title}
+              </h4>
+            </div>
+
+          </div>
+        </div>
 
 
 
         {/* Projects Grid */}
-        <div className="projects-section">
+        <div className="projects-section ">
           <div className="container">
             {category.projects.map((project, index) => (
               <div key={project.id} className="project-item animate-on-scroll">
@@ -229,11 +190,11 @@ export default function PortfolioDetails() {
                       <span className="project-number">
                         {String(index + 1).padStart(2, '0')}
                       </span>
-                      
+
                       <h2 className="project-title">
                         {project.title}
                       </h2>
-                      
+
                       <p className="project-description">
                         {project.description}
                       </p>
@@ -272,25 +233,18 @@ export default function PortfolioDetails() {
             ))}
 
             {/* Back to Portfolio Button */}
-            <div className="back-button-section">
-              <Link href="/portfolio-standard" className="back-button">
-                <svg 
-                  width="20" 
-                  height="20" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2"
-                >
-                  <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                Back to Portfolio
+            <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
+              <Link className="tp-btn-border" href="/contact">
+                <span className="tp-btn-border-wrap">
+                  <span className="text-1">let's Start</span>
+                  <span className="text-2">let's Start</span>
+                </span>
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <FooterTwo />
+      <FooterTwo topCls={""} />
 
       <style jsx>{`
         .tp-portfolio-details-area {

@@ -20,6 +20,7 @@ export default function BigText({ cls = "" }: IProps) {
           </h4>
         </div>
       </div>
+      
     </div>
   );
 }
