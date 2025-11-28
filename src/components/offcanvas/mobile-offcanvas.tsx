@@ -16,10 +16,10 @@ import { useTheme } from "next-themes";
 // images
 import logo from "@/assets/img/logo/logo.png";
 import logoWhite from "@/assets/img/logo/logo-white.png";
-import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
-import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
-import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
-import gallery_4 from "@/assets/img/menu/offcanvas/offcanvas-4.jpg";
+import gallery_1 from "@/assets/img/inner-project/portfolio-details-3/medical_ai_automation.png";
+import gallery_2 from "@/assets/img/inner-project/portfolio-details-3/cr5.png";
+import gallery_3 from "@/assets/img/inner-project/portfolio-details-3/dg3.png";
+import gallery_4 from "@/assets/img/inner-project/portfolio-details-3/mb4.png";
 import MobileMenus from "./mobile-menus";
 import Link from "next/link";
 import { LinkedIn, TwitterX } from "../svg/social";
