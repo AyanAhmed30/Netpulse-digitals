@@ -137,7 +137,7 @@ export const portfolioData: PortfolioCategory[] = [
   },
   {
     id: 2,
-    title: "AI Automation and Chatbots",
+    title: "AI & Automations ",
     thumbnail: p_img_2,
     year: 2025,
     category: "AI & ML",

@@ -4,7 +4,7 @@ import { StaticImageData } from "next/image";
 export interface IBlogDT {
   status: string;
   featured: any;
-  featured: boolean;
+  // featured: boolean;
   id: number;
   img?: StaticImageData;
   images?: StaticImageData[];

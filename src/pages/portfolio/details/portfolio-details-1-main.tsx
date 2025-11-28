@@ -61,7 +61,7 @@ export default function PortfolioDetails() {
           <div className="not-found-icon">404</div>
           <h2 className="not-found-title">Portfolio Category Not Found</h2>
           <p className="not-found-text">
-            The portfolio category you're looking for doesn't exist.
+            The portfolio category you&apos;re looking for doesn&apos;t exist.
           </p>
           <Link href="/" className="not-found-button">
             ← Back to Home
@@ -236,8 +236,8 @@ export default function PortfolioDetails() {
             <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
               <Link className="tp-btn-border" href="/contact">
                 <span className="tp-btn-border-wrap">
-                  <span className="text-1">let's Start</span>
-                  <span className="text-2">let's Start</span>
+                  <span className="text-1">let&apos;s Start Your Project</span>
+                  <span className="text-2">let&apos;s Start Your Project</span>
                 </span>
               </Link>
             </div>

@@ -7,12 +7,13 @@ import s_2 from "@/assets/img/home-01/service/service-icon-2.png";
 import s_3 from "@/assets/img/home-01/service/service-icon-3.png";
 
 const service_data = [
-  {
-    id: 1,
-    title: "Branding",
-    desc: "Branding is one of the most important ingredients for the success of any business.",
-    icon: s_2,
-  },
+{
+  id: 1,
+  title: "AI Automation",
+  desc: "AI automation helps businesses streamline workflows, reduce manual tasks, and boost efficiency using intelligent tools and automated systems.",
+  icon: s_2,
+},
+
   {
     id: 2,
     title: "Website design",
