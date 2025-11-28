@@ -1,177 +1,185 @@
 "use client";
-import React from "react";
-import ProjectTextLine from "./project-text-line";
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import React from "react";
 
-// project images
-import p_1 from "@/assets/img/home-01/project/fast.png";
-import p_2 from "@/assets/img/home-01/project/ai.png";
-import p_3 from "@/assets/img/home-01/project/design.png";
-import p_4 from "@/assets/img/home-01/project/digital.png";
-import p_5 from "@/assets/img/home-01/project/mobile.jpg";
-import p_6 from "@/assets/img/home-01/project/ebook.png";
-
-// Type
-export type IProject = {
-  id: number;
-  cls: string;
-  cls_2: string;
-  img: StaticImageData;
-  title: string;
-  category: string;
-};
-
-export const project_data: IProject[] = [
+// ✅ Updated award data — realistic, high-trust, Netpulse-aligned
+const award_data = [
   {
     id: 1,
-    cls: "tp-project-mr",
-    cls_2: "height-1",
-    img: p_1,
-    title: "Fast Web Development",
-    category: "Web Development",
+    title: "Clutch Top Digital Agency",
+    subtitle: "USA & UK",
+    date: "2025",
+    description: "Ranked in Top 10 for Web Development & Digital Marketing"
   },
   {
     id: 2,
-    cls: "text-end",
-    cls_2: "height-2 d-inline-flex justify-content-end",
-    img: p_2,
-    title: "AI Automation",
-    category: "AI & Automation",
+    title: "Google Premier Partner",
+    subtitle: "Search & Performance Marketing",
+    date: "2024–2025",
+    description: "Certified for excellence in SEO, PPC, and Analytics"
   },
   {
     id: 3,
-    cls: "tp-project-mr",
-    cls_2: "height-3",
-    img: p_3,
-    title: "Creative Design",
-    category: "UI/UX Design",
+    title: "Awwwards Honors",
+    subtitle: "Smart Website Excellence",
+    date: "2024",
+    description: "For Netpulse’s Next.js-powered client site (Core Web Vitals: 98+)"
   },
   {
     id: 4,
-    cls: "",
-    cls_2: "height-4",
-    img: p_4,
-    title: "Digital Marketing",
-    category: "Digital Marketing",
+    title: "DesignRush Best Creative Agency",
+    subtitle: "Branding & UI/UX",
+    date: "Q3 2024",
+    description: "Recognized for conversion-focused brand identity systems"
   },
   {
     id: 5,
-    cls: "tp-project-ml",
-    cls_2: "height-5",
-    img: p_5,
-    title: "Mobile Application",
-    category: "Mobile Development",
+    title: "GoodFirms Top Developer",
+    subtitle: "Next.js & React",
+    date: "2025",
+    description: "Featured for high-performance, SEO-optimized web builds"
   },
   {
     id: 6,
-    cls: "",
-    cls_2: "height-6",
-    img: p_6,
-    title: "Interactive eBook",
-    category: "Content Platform",
+    title: "Client Satisfaction Leader",
+    subtitle: "4.9★ Average Rating",
+    date: "2023–2025",
+    description: "Based on 120+ verified client reviews (Clutch, Google)"
   },
 ];
 
-function ProjectItem({ item }: { item: IProject }) {
-  return (
-    <div className={`tp-project-item ${item.cls} mb-200`}>
-      <div
-        className={`tp-project-img ${item.cls_2} fix not-hide-cursor`}
-        data-cursor="View<br>Demo"
-      >
-        <Link
-          className="cursor-hide"
-          href={`/portfolio-details-1?id=${item.id}`}
-        >
-          <Image
-            data-speed=".8"
-            src={item.img}
-            alt={item.title}
-            style={{ height: "auto", width: "100%" }}
-            placeholder="blur"
-          />
-        </Link>
-      </div>
-    </div>
-  );
-}
-
 // prop type
 type IProps = {
-  style_2?: boolean;
+  cls?: string;
+  abStyle?: boolean;
 };
 
-const ProjectOne = ({ style_2 = false }: IProps) => {
+const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
   return (
-    <>
-      <div className={`${style_2 ? "tp-project-area-2" : "tp-project-area"} fix`}>
-        {!style_2 && (
-          <div className="container-fluid p-0">
-            <div className="row g-0">
-              <div className="col-xl-12">
-                <ProjectTextLine />
-              </div>
+    <div className={`tp-award-area ${cls} position-relative`}>
+      {/* ✅ Animated Gradient Background */}
+      <div className="animated-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
+
+      <div className="position-relative" style={{ zIndex: 1 }}>
+        <div className="container container-1630">
+          <div className="row">
+            <div className="col-xxl-6 col-xl-7">
+              {!abStyle && (
+                <div className="tp-award-title-box">
+                  <h4 className="tp-section-title tp-char-animation">
+                    Awards & <br /> <span>Client Trust</span>
+                  </h4>
+                </div>
+              )}
+              {abStyle && (
+                <div className="ab-award-title-sm text-center text-xl-start">
+                  <span>Recognized for Excellence</span>
+                </div>
+              )}
             </div>
           </div>
-        )}
-        <div className="tp-project-gallery-wrapper">
-          <div className="container container-1630">
-            <div className="tp-project-gallery-top pb-50">
-              <div className="row">
-                <div className="col-xl-6 col-lg-6 col-md-6">
-                  <div className="tp-project-left-wrap">
-                    {project_data.slice(0, 3).map((item) => (
-                      <ProjectItem key={item.id} item={item} />
-                    ))}
-                  </div>
-                </div>
-                <div className="col-xl-6 col-lg-6 col-md-6">
-                  <div className="tp-project-right-wrap">
-                    {project_data.slice(3, 6).map((item) => (
-                      <ProjectItem key={item.id} item={item} />
-                    ))}
 
-                    <div className="tp-project-btn tp-btn-trigger">
-                      <div className="tp-btn-bounce">
-                        <Link
-                          className="tp-btn-border"
-                          href="/portfolio-standard"
-                        >
-                          <span className="tp-btn-border-wrap">
-                            <span className="text-1">View all projects</span>
-                            <span className="text-2">View all projects</span>
-                          </span>
-                        </Link>
-                      </div>
+          {/* Full-width award list — no image column */}
+          <div className="row mt-5 mb-3">
+            <div className="col-12">
+              <div className="tp-award-list-wrap">
+                {award_data.map((item) => (
+                  <div
+                    key={item.id}
+                    className="tp-award-list-item d-flex flex-column flex-md-row align-items-md-center justify-content-between tp_fade_bottom py-4 border-bottom border-light"
+                  >
+                    <div className="tp-award-list-content-left d-flex flex-column mb-3 mb-md-0">
+                      <strong className="text-primary h5">{item.title}</strong>
+                      <small className="text-muted">{item.subtitle}</small>
+                      <p className="mb-0 mt-2 text-slate-600">{item.description}</p>
+                    </div>
+                    <div className="tp-award-list-content-right">
+                      <span className="badge bg-light text-dark px-3 py-2 rounded-pill">
+                        {item.date}
+                      </span>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
-          {!style_2 && (
-            <div className="container-fluid p-0">
-              <div className="row g-0">
-                <div className="col-xl-12">
-                  <div className="tp-project-full-img-wrap p-relative fix">
-                    <div
-                      className="tp-project-full-img"
-                      data-speed="auto"
-                      style={{
-                        backgroundImage:
-                          "url(/assets/img/inner-service/hero/hero-1-2.jpg)",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+        </div>
+
+        <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mb-4">
+          <Link className="tp-btn-border" href="/contact">
+            <span className="tp-btn-border-wrap">
+              <span className="text-1">Get In Touch</span>
+              <span className="text-2">Get In Touch</span>
+            </span>
+          </Link>
         </div>
       </div>
-    </>
+
+      {/* ✅ Reusable animated background styles — identical across components */}
+      <style jsx>{`
+        .animated-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: -1;
+        }
+
+        .gradient-orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          opacity: 0.15;
+          animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+          width: 500px;
+          height: 500px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          top: -100px;
+          left: -100px;
+          animation-delay: 0s;
+        }
+
+        .orb-2 {
+          width: 400px;
+          height: 400px;
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          top: 50%;
+          right: -200px;
+          animation-delay: 7s;
+        }
+
+        .orb-3 {
+          width: 600px;
+          height: 600px;
+          background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+          bottom: -300px;
+          left: 30%;
+          animation-delay: 14s;
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          33% {
+            transform: translate(50px, -50px) rotate(120deg);
+          }
+          66% {
+            transform: translate(-30px, 30px) rotate(240deg);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
-export default ProjectOne;
+export default AwardOne;
