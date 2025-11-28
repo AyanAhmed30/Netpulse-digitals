@@ -24,6 +24,19 @@ import b_m_4 from "@/assets/img/inner-blog/blog-standard/dg2.png";
 import b_m_5 from "@/assets/img/inner-blog/blog-standard/dg3.png";
 import b_m_6 from "@/assets/img/inner-blog/blog-standard/dg4.png";
 import b_m_7 from "@/assets/img/inner-blog/blog-standard/dg5.png";
+import se1 from "@/assets/img/inner-blog/blog-standard/se1.png";
+import se2 from "@/assets/img/inner-blog/blog-standard/se2.png";
+import se3 from "@/assets/img/inner-blog/blog-standard/se3.png";
+import se4 from "@/assets/img/inner-blog/blog-standard/se4.png";
+import seo1 from "@/assets/img/inner-blog/blog-standard/seo1.png";
+import seo2 from "@/assets/img/inner-blog/blog-standard/seo2.png";
+import seo3 from "@/assets/img/inner-blog/blog-standard/seo3.png";
+import seo4 from "@/assets/img/inner-blog/blog-standard/seo4.png";
+import ai1 from "@/assets/img/inner-blog/blog-standard/ai1.png";
+import ai2 from "@/assets/img/inner-blog/blog-standard/ai2.png";
+import ai3 from "@/assets/img/inner-blog/blog-standard/ai3.png";
+import ai4 from "@/assets/img/inner-blog/blog-standard/ai4.png";
+
 
 // avatar
 import avatar from "@/assets/img/inner-blog/blog-sidebar/avatar/avata-1.jpg";
@@ -241,9 +254,6 @@ export const blog_modern: IBlogDT[] = [
     title: 'Digital Marketing Trends 2025',
     slug: createSlug('Digital Marketing Trends 2025'),
 
-
-
-
     date: '21. OCT. 2025',
     category: 'Marketing',
     author: 'John Doe',
@@ -391,7 +401,7 @@ export const blog_modern: IBlogDT[] = [
   // Software Applications Development category
   {
     id: 9,
-    img: b_m_5,
+    img: se2,
     title: 'Modern Web Development Frameworks',
     slug: createSlug('Modern Web Development Frameworks'),
     date: '11. JAN. 2025',
@@ -410,7 +420,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_5.src}" alt="web-development-frameworks" />
+        <img class="w-100" src="${se2.src}" alt="web-development-frameworks" />
       </div>
 <<<<<<< HEAD
     </div>
@@ -428,7 +438,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 10,
-    img: b_m_6,
+    img: se1,
     title: 'Cloud-Native Development Practices',
     slug: createSlug('Cloud-Native Development Practices'),
     date: '15. OCT. 2025',
@@ -447,7 +457,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_6.src}" alt="cloud-native-development" />
+        <img class="w-100" src="${se1.src}" alt="cloud-native-development" />
       </div>
 <<<<<<< HEAD
     </div>
@@ -465,7 +475,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 11,
-    img: b_m_7,
+    img: se3,
     title: 'Progressive Web Apps (PWA) Development',
     slug: createSlug('Progressive Web Apps Development'),
     date: '20. NOV. 2025',
@@ -484,9 +494,8 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_7.src}" alt="pwa-development" />
+        <img class="w-100" src="${se3.src}" alt="pwa-development" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Cross-Platform Benefits</h4>
@@ -502,7 +511,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 12,
-    img: b_m_2,
+    img: se4,
     title: 'API-First Development Strategy',
     slug: createSlug('API-First Development Strategy'),
     date: '01. FEB. 2025',
@@ -521,7 +530,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_2.src}" alt="api-development" />
+        <img class="w-100" src="${se4.src}" alt="api-development" />
       </div>
 <<<<<<< HEAD
     </div>
@@ -541,7 +550,7 @@ export const blog_modern: IBlogDT[] = [
   // SEO Optimization category
   {
     id: 13,
-    img: b_m_3,
+    img: seo2,
     title: 'Technical SEO Fundamentals',
     slug: createSlug('Technical SEO Fundamentals'),
     date: '09. MAY. 2025',
@@ -560,7 +569,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_3.src}" alt="technical-seo" />
+        <img class="w-100" src="${seo2.src}" alt="technical-seo" />
       </div>
 <<<<<<< HEAD
     </div>
@@ -578,7 +587,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 14,
-    img: b_m_4,
+    img: seo1,
     title: 'Content SEO Strategy for 2025',
     slug: createSlug('Content SEO Strategy for 2025'),
     date: '30. AUG. 2025',
@@ -597,7 +606,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_4.src}" alt="content-seo" />
+        <img class="w-100" src="${seo1.src}" alt="content-seo" />
       </div>
 <<<<<<< HEAD
     </div>
@@ -615,7 +624,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 15,
-    img: b_m_5,
+    img: seo3,
     title: 'Local SEO Optimization Techniques',
     slug: createSlug('Local SEO Optimization Techniques'),
     date: '11. JAN. 2025',
@@ -634,7 +643,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_5.src}" alt="local-seo" />
+        <img class="w-100" src="${seo3.src}" alt="local-seo" />
       </div>
     </div>
     <div class="blog-details-left-content">
@@ -651,7 +660,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 16,
-    img: b_m_6,
+    img: seo4,
     title: 'SEO Analytics and Performance Tracking',
     slug: createSlug('SEO Analytics and Performance Tracking'),
     date: '15. OCT. 2025',
@@ -670,7 +679,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_6.src}" alt="seo-analytics" />
+        <img class="w-100" src="${seo4.src}" alt="seo-analytics" />
       </div>
     </div>
     <div class="blog-details-left-content">
@@ -689,7 +698,7 @@ export const blog_modern: IBlogDT[] = [
   // Artificial Intelligence category
   {
     id: 17,
-    img: b_m_7,
+    img: ai1,
     title: 'Machine Learning Applications in Business',
     slug: createSlug('Machine Learning Applications in Business'),
     date: '20. NOV. 2025',
@@ -708,7 +717,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_7.src}" alt="machine-learning" />
+        <img class="w-100" src="${ai1.src}" alt="machine-learning" />
       </div>
     </div>
     <div class="blog-details-left-content">
@@ -725,7 +734,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 18,
-    img: b_m_1,
+    img: ai2,
     title: 'Natural Language Processing Advancements',
     slug: createSlug('Natural Language Processing Advancements'),
     date: '21. OCT. 2025',
@@ -744,7 +753,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_1.src}" alt="nlp-advancements" />
+        <img class="w-100" src="${ai2.src}" alt="nlp-advancements" />
       </div>
     </div>
     <div class="blog-details-left-content">
@@ -761,7 +770,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 19,
-    img: b_m_2,
+    img: ai3,
     title: 'Computer Vision in Modern Applications',
     slug: createSlug('Computer Vision in Modern Applications'),
     date: '01. FEB. 2025',
@@ -780,7 +789,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_2.src}" alt="computer-vision" />
+        <img class="w-100" src="${ai3.src}" alt="computer-vision" />
       </div>
     </div>
     <div class="blog-details-left-content">
@@ -797,7 +806,7 @@ export const blog_modern: IBlogDT[] = [
   },
   {
     id: 20,
-    img: b_m_3,
+    img: ai4,
     title: 'AI Ethics and Responsible Implementation',
     slug: createSlug('AI Ethics and Responsible Implementation'),
     date: '09. MAY. 2025',
@@ -816,7 +825,7 @@ export const blog_modern: IBlogDT[] = [
     </div>
     <div class="blog-details-thumb-box">
       <div class="blog-details-thumb">
-        <img class="w-100" src="${b_m_3.src}" alt="ai-ethics" />
+        <img class="w-100" src="${ai4.src}" alt="ai-ethics" />
       </div>
     </div>
     <div class="blog-details-left-content">
