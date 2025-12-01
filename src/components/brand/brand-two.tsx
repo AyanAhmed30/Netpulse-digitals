@@ -3,29 +3,30 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Leaf } from "../svg";
 
-import b_1 from "@/assets/img/home-01/brand/logo1.png";
+import b_1 from "@/assets/img/home-01/brand/fast.png";
 import b_2 from "@/assets/img/home-01/brand/logo2.png";
 import b_3 from "@/assets/img/home-01/brand/logo3.png";
 import b_4 from "@/assets/img/home-01/brand/logo4.png";
-import b_5 from "@/assets/img/home-01/brand/logo5.png";
-import b_6 from "@/assets/img/home-01/brand/logo6.png";
-import b_7 from "@/assets/img/home-01/brand/logo7.png";
-import b_8 from "@/assets/img/home-01/brand/logo8.png";
-import b_9 from "@/assets/img/home-01/brand/logo9.png";
-import b_10 from "@/assets/img/home-01/brand/logo10.png";
+import b_5 from "@/assets/img/home-01/brand/timeless.png";
+import b_6 from "@/assets/img/home-01/brand/moizzy.png";
+import b_7 from "@/assets/img/home-01/brand/premier.png";
+import b_8 from "@/assets/img/home-01/brand/klaude.png";
+import b_9 from "@/assets/img/home-01/brand/pinnacle.png";
+import b_10 from "@/assets/img/home-01/brand/logo100.png";
 import b_11 from "@/assets/img/home-01/brand/logo11.png";
+import { headers } from "next/headers";
 
 const brand_data = [
-  { id: 1, brand: b_1 },
+  { id: 1, brand: b_1, height: 70, width: "auto" },
   { id: 2, brand: b_2 },
   { id: 3, brand: b_3 },
   { id: 4, brand: b_4 },
-  { id: 5, brand: b_5 },
-  { id: 6, brand: b_6 },
-  { id: 7, brand: b_7 },
-  { id: 8, brand: b_8 },
-  { id: 9, brand: b_9 },
-  { id: 10, brand: b_10 },
+  { id: 5, brand: b_5, height: 70, width: "auto" },
+  { id: 6, brand: b_6, height: 70, width: "auto" },
+  { id: 7, brand: b_7, height: 70, width: "auto" },
+  { id: 8, brand: b_8, height: 70, width: "auto" },
+  { id: 9, brand: b_9, height: 70, width: "auto" },
+  { id: 10, brand: b_10, height: 70, width: "auto" },
   { id: 11, brand: b_11 },
 ];
 
@@ -53,7 +54,7 @@ export function BrandItems() {
             className="tp-brand-4-item p-relative brand-no-hover"
             style={wrapperStyle}
           >
-            <Image src={item.brand} alt="brand" style={{ height: "auto" }} />
+            <Image src={item.brand} alt="brand" style={{ height: item.height ? item.height : "auto", width: item.width ? item.width : ""}} />
           </div>
         </div>
       ))}
