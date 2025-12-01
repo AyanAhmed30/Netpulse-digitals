@@ -15,6 +15,8 @@ import { charAnimation } from "@/utils/title-animation";
 import ContactForm from "@/components/form/contact-form";
 import ContactLocationTwo from "@/components/contact/contact-location-2";
 
+import GradientBackground from "@/components/common/GradientBackground";
+
 const ContactMain = () => {
   useScrollSmooth();
 
@@ -27,19 +29,14 @@ const ContactMain = () => {
 
   return (
     <Wrapper>
+      <GradientBackground />
       {/* header area start */}
       <HeaderEleven />
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <div
-            className="inner-bg"
-            style={{
-              backgroundImage:
-                "url(/assets/img/home-01/team/team-details-bg.png)",
-            }}
-          >
+          <div className="inner-bg">
             <main>
               {/* hero area start */}
               <div className="tm-hero-area tm-hero-ptb p-relative">

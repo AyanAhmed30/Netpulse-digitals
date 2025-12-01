@@ -17,6 +17,7 @@ import BlogDetailsRelatedPosts from "@/components/blog/details/blog-details-rela
 // animation
 import { charAnimation } from "@/utils/title-animation";
 import { IdProps } from "@/types/custom-d-t";
+import GradientBackground from "@/components/common/GradientBackground";
 
 interface BlogDetailsMainProps {
   id: string; // Use string to handle both ID and slug
@@ -34,6 +35,7 @@ const BlogDetailsMain = ({ id }: BlogDetailsMainProps) => {
 
   return (
     <Wrapper>
+      <GradientBackground />
       {/* header area start */}
       <HeaderEleven transparent={true} />
       {/* header area end */}
@@ -42,15 +44,15 @@ const BlogDetailsMain = ({ id }: BlogDetailsMainProps) => {
         <div id="smooth-content">
           <main>
             {/* blog details hero */}
-            <BlogDetailsBreadcrumb id={id}/>
+            <BlogDetailsBreadcrumb id={id} />
             {/* blog details hero */}
 
             {/* blog details area */}
-            <BlogDetailsArea id={id}/>
+            <BlogDetailsArea id={id} />
             {/* blog details area */}
 
             {/* related posts */}
-            <BlogDetailsRelatedPosts id={id}/>
+            <BlogDetailsRelatedPosts id={id} />
             {/* related posts */}
           </main>
 

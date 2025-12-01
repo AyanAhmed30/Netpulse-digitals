@@ -33,12 +33,10 @@ export function BrandItems() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Fix hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Until mounted, do NOT invert (prevents hydration mismatch)
   const wrapperStyle = mounted
     ? theme === "light"
       ? { filter: "invert(1)" }
@@ -48,7 +46,7 @@ export function BrandItems() {
   return (
     <>
       {brand_data.map((item) => (
-        <div key={item.id} className="col-xl-3 col-lg-3 col-md-6">
+        <div key={item.id} className="col-xl-3 col-lg-3 col-md-6 mb-40">
           <div
             className="tp-brand-4-item p-relative brand-no-hover"
             style={wrapperStyle}
@@ -63,11 +61,15 @@ export function BrandItems() {
 
 const BrandTwo = () => {
   return (
-    <div
-      className="tp-brand-4-area mt-20 pt-120 pb-120 grey-bg-3"
-      style={{ backgroundImage: "url(/assets/img/home-04/brand/overly.png)" }}
-    >
-      <div className="container">
+    <div className="tp-brand-4-area mt-20 pt-120 pb-120 grey-bg-3 position-relative">
+      {/* ✅ Animated gradient background */}
+      <div className="animated-background-brand">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
+
+      <div className="container position-relative" style={{ zIndex: 1 }}>
         <div className="row">
           <div className="col-xl-8">
             <div className="tp-service-4-title-box tp_fade_bottom mb-65">
@@ -88,6 +90,66 @@ const BrandTwo = () => {
           <BrandItems />
         </div>
       </div>
+
+      {/* ✅ Gradient background styles */}
+      <style jsx>{`
+        .animated-background-brand {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .gradient-orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(100px);
+          opacity: 0.15;
+          animation: float 25s ease-in-out infinite;
+        }
+
+        .orb-1 {
+          width: 600px;
+          height: 600px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          top: -150px;
+          left: -150px;
+          animation-delay: 0s;
+        }
+
+        .orb-2 {
+          width: 500px;
+          height: 500px;
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          top: 50%;
+          right: -200px;
+          animation-delay: 7s;
+        }
+
+        .orb-3 {
+          width: 700px;
+          height: 700px;
+          background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+          bottom: -300px;
+          left: 30%;
+          animation-delay: 14s;
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          33% {
+            transform: translate(50px, -50px) rotate(120deg);
+          }
+          66% {
+            transform: translate(-30px, 30px) rotate(240deg);
+          }
+        }
+      `}</style>
     </div>
   );
 };

@@ -15,6 +15,8 @@ import { charAnimation } from "@/utils/title-animation";
 import BlogModern from "@/components/blog/blog-modern-area";
 import BigText from "@/components/big-text";
 
+import GradientBackground from "@/components/common/GradientBackground";
+
 const BlogModernMain = () => {
   useScrollSmooth();
 
@@ -27,6 +29,7 @@ const BlogModernMain = () => {
 
   return (
     <Wrapper>
+      <GradientBackground />
       {/* header area start */}
       <HeaderEleven />
       {/* header area end */}

@@ -14,18 +14,19 @@ const service_data = [
   icon: s_2,
 },
 
-  {
-    id: 2,
-    title: "Website design",
-    desc: "The perfect cocktail should still look and taste perfect no matter the size of the glass you serve it in.",
-    icon: s_1,
-  },
-  {
-    id: 3,
-    title: "Marketing",
-    desc: "We take that same approach with the apps & websites we create. you go there because of the overall experience.",
-    icon: s_3,
-  },
+ {
+  id: 2,
+  title: "Web Design",
+  desc: "We craft visually stunning and responsive websites that deliver a seamless user experience across all devices, ensuring your brand looks perfect everywhere.",
+  icon: s_1,
+},
+{
+  id: 3,
+  title: "Marketing",
+  desc: "Our marketing strategies are designed to connect, engage, and convert your audience, making your apps and websites more impactful and memorable.",
+  icon: s_3,
+},
+
 ];
 
 // service items

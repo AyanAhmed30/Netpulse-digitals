@@ -15,7 +15,7 @@ export default function AboutUsHero() {
   return (
     <div
       className="ab-inner-hero-area ab-inner-hero-bg p-relative"
-      style={{ backgroundImage: "url(/assets/img/inner-about/hero/hero-1.jpg)" }}
+      style={{ backgroundImage: "url(/assets/img/inner-about/hero/heroo.png)" }}
     >
       <div className="breadcurmb-site d-none">
         <h6>About Us</h6>

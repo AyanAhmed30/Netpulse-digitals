@@ -49,9 +49,8 @@ export default function FooterTwo({
   return (
     <footer className={`${topCls}`}>
       <div
-        className={`tp-footer-2-area pt-100 pb-20 ${
-          whiteFooter ? "tp-footer-white" : "black-bg"
-        }`}
+        className={`tp-footer-2-area pt-100 pb-20 ${whiteFooter ? "tp-footer-white" : "black-bg"
+          }`}
       >
         <div className="container container-1480">
           <div className="row">
@@ -178,9 +177,8 @@ export default function FooterTwo({
       </div>
 
       <div
-        className={`tp-copyright-2-area tp-copyright-2-bdr-top ${
-          whiteFooter ? "tp-copyright-white" : "black-bg"
-        }`}
+        className={`tp-copyright-2-area tp-copyright-2-bdr-top ${whiteFooter ? "tp-copyright-white" : "black-bg"
+          }`}
       >
         <div className="container container-1480">
           <div className="row align-items-center">

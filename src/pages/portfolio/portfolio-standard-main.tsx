@@ -17,6 +17,8 @@ import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import { imageRevealAnimation } from "@/utils/image-reveal-anim";
 import { hoverBtn } from "@/utils/hover-btn";
 
+import GradientBackground from "@/components/common/GradientBackground";
+
 const PortfolioStandardMain = () => {
   useScrollSmooth();
 
@@ -28,10 +30,10 @@ const PortfolioStandardMain = () => {
   }, []);
 
   useEffect(() => {
-    if(typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
+    if (typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
       cursorAnimation();
     }
-  },[]);
+  }, []);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
@@ -45,13 +47,14 @@ const PortfolioStandardMain = () => {
 
   return (
     <Wrapper>
+      <GradientBackground />
 
       {/* magic cursor start */}
       <div id="magic-cursor">
         <div id="ball"></div>
       </div>
       {/* magic cursor end */}
-      
+
       {/* header area start */}
       <HeaderEleven />
       {/* header area end */}
@@ -88,7 +91,7 @@ const PortfolioStandardMain = () => {
             {/* portfolio area */}
 
             {/* big text */}
-            <BigText/>
+            <BigText />
             {/* big text */}
           </main>
 

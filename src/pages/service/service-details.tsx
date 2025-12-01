@@ -16,6 +16,7 @@ import FooterTwo from "@/layouts/footers/footer-two";
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import HeaderOne from "@/layouts/headers/header-one";
+import GradientBackground from "@/components/common/GradientBackground";
 
 const ServiceDetailsMain = ({ slug }: { slug: string }) => {
   useScrollSmooth();
@@ -30,6 +31,7 @@ const ServiceDetailsMain = ({ slug }: { slug: string }) => {
 
   return (
     <Wrapper>
+      <GradientBackground />
       {/* header area start */}
       <HeaderOne />
       {/* header area end */}
