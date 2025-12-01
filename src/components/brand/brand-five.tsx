@@ -9,16 +9,17 @@ import Marquee from "react-fast-marquee";
 // import b_4 from "@/assets/img/inner-about/brand/brand-4.png";
 // import b_5 from "@/assets/img/inner-about/brand/brand-5.png";
 // import b_6 from "@/assets/img/inner-about/brand/brand-2.png";
-import b_1 from "@/assets/img/home-01/brand/logo1.png";
+
+import b_1 from "@/assets/img/home-01/brand/fast.png";
 import b_2 from "@/assets/img/home-01/brand/logo2.png";
 import b_3 from "@/assets/img/home-01/brand/logo3.png";
 import b_4 from "@/assets/img/home-01/brand/logo4.png";
-import b_5 from "@/assets/img/home-01/brand/logo5.png";
-import b_6 from "@/assets/img/home-01/brand/logo6.png";
-import b_7 from "@/assets/img/home-01/brand/logo7.png";
-import b_8 from "@/assets/img/home-01/brand/logo8.png";
-import b_9 from "@/assets/img/home-01/brand/logo9.png";
-import b_10 from "@/assets/img/home-01/brand/logo10.png";
+import b_5 from "@/assets/img/home-01/brand/timeless.png";
+import b_6 from "@/assets/img/home-01/brand/moizzy.png";
+import b_7 from "@/assets/img/home-01/brand/premier.png";
+import b_8 from "@/assets/img/home-01/brand/klaude.png";
+import b_9 from "@/assets/img/home-01/brand/pinnacle.png";
+import b_10 from "@/assets/img/home-01/brand/logo100.png";
 import b_11 from "@/assets/img/home-01/brand/logo11.png";
 
 // brand images
@@ -51,7 +52,7 @@ export default function BrandFive() {
                       key={i}
                       className="ab-brand-item"
                     >
-                      <Image src={b} height={60} alt="brand" />
+                      <Image src={b} height={70} alt="brand" />
                     </div>
                   ))}
                 </Marquee>

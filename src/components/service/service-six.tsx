@@ -12,10 +12,17 @@ import { RightArrow, ShapeTwo } from "../svg";
 import Link from "next/link";
 import { linkSync } from "fs";
 
+import ai from "@/assets/img/inner-service/service/ai.jpg";
+import ma from "@/assets/img/inner-service/service/ma.png";
+import wd from "@/assets/img/inner-service/service/wd.jpg";
+import eb from "@/assets/img/inner-service/service/eb.png";
+import cd from "@/assets/img/inner-service/service/cd.jpg";
+import dm from "@/assets/img/inner-service/service/dm.png";
+
 const service_data = [
   {
     id: 1,
-    img: ser_img_1,
+    img: cd,
     subtitle: "Design Studio",
     title: "Creative Design",
     text: "Our design team creates stunning and user-friendly design concepts that help bring your brand's message to life",
@@ -30,7 +37,7 @@ const service_data = [
   },
   {
     id: 2,
-    img: ser_img_2,
+    img: wd,
     subtitle: "Development Studio",
     title: "Web Development",
     text: "We create lightning-fast, SEO-friendly websites optimized for performance and conversions.",
@@ -44,7 +51,7 @@ const service_data = [
   },
   {
     id: 3,
-    img: ser_img_3,
+    img: ma,
     subtitle: "Development Studio",
     title: "Mobile App Development",
     text: "We design and develop intuitive, high-performance mobile apps tailored for scalability and smooth user experience.",
@@ -53,7 +60,7 @@ const service_data = [
   },
   {
     id: 4,
-    img: ser_img_4,
+    img: dm,
     subtitle: "Marketing Hub",
     title: "Digital Marketing",
     text: "More clicks, more sales — our SEO, PPC, and social strategies grow your brand’s digital reach and engagement.",
@@ -62,7 +69,7 @@ const service_data = [
   },
   {
     id: 5,
-    img: ser_img_5,
+    img: ai,
     subtitle: "AI Solutions",
     title: "AI & Chatbots",
     text: "Automate conversations and scale support with AI bots that engage users and qualify leads effortlessly.",
@@ -75,7 +82,7 @@ const service_data = [
   },
   {
     id: 6,
-    img: ser_img_6,
+    img: eb,
     subtitle: "Publishing Studio",
     title: "eBook Solutions",
     text: "We help authors and businesses create professional eBooks ready for Amazon KDP and other platforms.",

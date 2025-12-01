@@ -13,7 +13,7 @@ const VideOne = () => {
           style={{ width: "100%", height: "auto" }}
         >
           <source
-            src="/assets/video/netpulse-digital-video.mov"
+            src="https://raw.githubusercontent.com/ZeeshanTheCoder/netpulse-video/main/netpulse-digital-video.mp4"
             type="video/mp4"
           />
         </video>
