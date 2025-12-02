@@ -117,7 +117,7 @@ const slider_setting: SwiperOptions = {
 
 export default function PortfolioDetailsThreeArea() {
   const searchParams = useSearchParams();
-  const projectIdParam = searchParams.get("project");
+  const projectIdParam = searchParams?.get("project");
   const projectId = projectIdParam ? parseInt(projectIdParam, 10) : 1; // fallback to 1
 
   const [content, setContent] = useState<ReturnType<typeof getProjectContent> | null>(null);

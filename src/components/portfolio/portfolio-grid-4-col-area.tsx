@@ -2,25 +2,31 @@ import React from "react";
 import { UpArrow } from "../svg";
 import Image from "next/image";
 import Link from "next/link";
-import portfolio_data from "@/data/portfolio-data";
+import { portfolioData } from "@/data/portfolio-data";
 
-// prop type 
+// prop type
 type IProps = {
   style_2?: boolean;
-}
+};
 
 export default function PortfolioGridFourColArea({ style_2 = false }: IProps) {
   return (
     <div className="tp-project-5-2-area tp-project-5-2-pt pb-130">
-      <div className={`container container-${style_2 ? '1800' : '1530'}`}>
+      <div className={`container container-${style_2 ? "1800" : "1530"}`}>
         <div className="row">
-          {portfolio_data.slice(0, 8).map((item) => (
+          {portfolioData.slice(0, 8).map((item) => (
             <div key={item.id} className="col-xl-3 col-lg-6 col-md-6">
-              <div className="tp-project-5-2-thumb mb-30 p-relative not-hide-cursor" data-cursor="View<br>Demo">
-                <Link href="/portfolio-details-2" className="tp_img_reveal cursor-hide">
+              <div
+                className="tp-project-5-2-thumb mb-30 p-relative not-hide-cursor"
+                data-cursor="View<br>Demo"
+              >
+                <Link
+                  href="/portfolio-details-2"
+                  className="tp_img_reveal cursor-hide"
+                >
                   <div className="tp_img_reveal">
                     <Image
-                      src={item.img}
+                      src={item.thumbnail}
                       alt="prd-img"
                       style={{ width: "100%", height: "auto" }}
                     />

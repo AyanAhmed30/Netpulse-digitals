@@ -1,6 +1,6 @@
 // types/custom-d-t.ts
 export interface IdProps {
-  id: string; // Change from number to string to handle both id and slug
+  id: number; // Change from number to string to handle both id and slug
 }
 
 export interface PageParamsProps {

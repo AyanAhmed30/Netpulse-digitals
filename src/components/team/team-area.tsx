@@ -18,7 +18,7 @@ export default function TeamArea() {
           <div className="row">
             {team_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">
-                <TeamItem item={item} handleTeamModal={handleTeamModal} />
+                <TeamItem item={item} />
               </div>
             ))}
           </div>
