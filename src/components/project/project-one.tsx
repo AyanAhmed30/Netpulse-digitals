@@ -1,64 +1,177 @@
 "use client";
-import Link from "next/link";
 import React from "react";
+import ProjectTextLine from "./project-text-line";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
-// ✅ Updated award data — realistic, high-trust, Netpulse-aligned
-const award_data = [
+// project images
+import p_1 from "@/assets/img/home-01/project/fast.png";
+import p_2 from "@/assets/img/home-01/project/ai.png";
+import p_3 from "@/assets/img/home-01/project/design.png";
+import p_4 from "@/assets/img/home-01/project/digital.png";
+import p_5 from "@/assets/img/home-01/project/mobile.jpg";
+import p_6 from "@/assets/img/home-01/project/ebook.png";
+
+// Type
+export type IProject = {
+  id: number;
+  cls: string;
+  cls_2: string;
+  img: StaticImageData;
+  title: string;
+  category: string;
+};
+
+export const project_data: IProject[] = [
   {
     id: 1,
-    title: "Clutch Top Digital Agency",
-    subtitle: "USA & UK",
-    date: "2025",
-    description: "Ranked in Top 10 for Web Development & Digital Marketing"
+    cls: "tp-project-mr",
+    cls_2: "height-1",
+    img: p_1,
+    title: "Fast Web Development",
+    category: "Web Development",
   },
   {
     id: 2,
-    title: "Google Premier Partner",
-    subtitle: "Search & Performance Marketing",
-    date: "2024–2025",
-    description: "Certified for excellence in SEO, PPC, and Analytics"
+    cls: "text-end",
+    cls_2: "height-2 d-inline-flex justify-content-end",
+    img: p_2,
+    title: "AI Automation",
+    category: "AI & Automation",
   },
   {
     id: 3,
-    title: "Awwwards Honors",
-    subtitle: "Smart Website Excellence",
-    date: "2024",
-    description: "For Netpulse’s Next.js-powered client site (Core Web Vitals: 98+)"
+    cls: "tp-project-mr",
+    cls_2: "height-3",
+    img: p_3,
+    title: "Creative Design",
+    category: "UI/UX Design",
   },
   {
     id: 4,
-    title: "DesignRush Best Creative Agency",
-    subtitle: "Branding & UI/UX",
-    date: "Q3 2024",
-    description: "Recognized for conversion-focused brand identity systems"
+    cls: "",
+    cls_2: "height-4",
+    img: p_4,
+    title: "Digital Marketing",
+    category: "Digital Marketing",
   },
   {
     id: 5,
-    title: "GoodFirms Top Developer",
-    subtitle: "Next.js & React",
-    date: "2025",
-    description: "Featured for high-performance, SEO-optimized web builds"
+    cls: "tp-project-ml",
+    cls_2: "height-5",
+    img: p_5,
+    title: "Mobile Application",
+    category: "Mobile Development",
   },
   {
     id: 6,
-    title: "Client Satisfaction Leader",
-    subtitle: "4.9★ Average Rating",
-    date: "2023–2025",
-    description: "Based on 120+ verified client reviews (Clutch, Google)"
+    cls: "",
+    cls_2: "height-6",
+    img: p_6,
+    title: "Interactive eBook",
+    category: "Content Platform",
   },
 ];
 
+function ProjectItem({ item }: { item: IProject }) {
+  return (
+    <div className={`tp-project-item ${item.cls} mb-200`}>
+      <div
+        className={`tp-project-img ${item.cls_2} fix not-hide-cursor`}
+        data-cursor="View<br>Demo"
+      >
+        <Link
+          className="cursor-hide"
+          href={`/portfolio-details-1?id=${item.id}`}
+        >
+          <Image
+            data-speed=".8"
+            src={item.img}
+            alt={item.title}
+            style={{ height: "auto", width: "100%" }}
+            placeholder="blur"
+          />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 // prop type
 type IProps = {
-  cls?: string;
-  abStyle?: boolean;
+  style_2?: boolean;
 };
 
-const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
+const ProjectOne = ({ style_2 = false }: IProps) => {
   return (
     <>
+      <div className={`${style_2 ? "tp-project-area-2" : "tp-project-area"} fix`}>
+        {!style_2 && (
+          <div className="container-fluid p-0">
+            <div className="row g-0">
+              <div className="col-xl-12">
+                <ProjectTextLine />
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="tp-project-gallery-wrapper">
+          <div className="container container-1630">
+            <div className="tp-project-gallery-top pb-50">
+              <div className="row">
+                <div className="col-xl-6 col-lg-6 col-md-6">
+                  <div className="tp-project-left-wrap">
+                    {project_data.slice(0, 3).map((item) => (
+                      <ProjectItem key={item.id} item={item} />
+                    ))}
+                  </div>
+                </div>
+                <div className="col-xl-6 col-lg-6 col-md-6">
+                  <div className="tp-project-right-wrap">
+                    {project_data.slice(3, 6).map((item) => (
+                      <ProjectItem key={item.id} item={item} />
+                    ))}
+
+                    <div className="tp-project-btn tp-btn-trigger">
+                      <div className="tp-btn-bounce">
+                        <Link
+                          className="tp-btn-border"
+                          href="/portfolio-standard"
+                        >
+                          <span className="tp-btn-border-wrap">
+                            <span className="text-1">View all projects</span>
+                            <span className="text-2">View all projects</span>
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {!style_2 && (
+            <div className="container-fluid p-0">
+              <div className="row g-0">
+                <div className="col-xl-12">
+                  <div className="tp-project-full-img-wrap p-relative fix">
+                    <div
+                      className="tp-project-full-img"
+                      data-speed="auto"
+                      style={{
+                        backgroundImage:
+                          "url(/assets/img/inner-service/hero/hero-1-2.jpg)",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 };
 
-export default AwardOne;
+export default ProjectOne;

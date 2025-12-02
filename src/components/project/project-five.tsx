@@ -3,7 +3,8 @@ import Image from "next/image";
 import LineTextFour from "../line-text/line-text-4";
 import { UpArrow } from "../svg";
 import Link from "next/link";
-import { portfolioData } from "@/data/portfolio-data";
+// This is the correct NAMED import which resolves the data warning issue for this specific file.
+import { portfolioData } from "@/data/portfolio-data"; 
 
 type IProps = {
   style_2?: boolean;
@@ -58,7 +59,7 @@ export default function ProjectFive({ style_2 = false }: IProps) {
                   
                   <div className="tp-project-5-2-content tp_fade_anim">
                     <h4 className="tp-project-5-2-title-sm">{category.title}</h4>
-                   
+                    
                   </div>
                 </Link>
               </div>
@@ -68,7 +69,7 @@ export default function ProjectFive({ style_2 = false }: IProps) {
         
         <div className="row">
           <div className="col-xl-12">
-           
+            
           </div>
         </div>
       </div>

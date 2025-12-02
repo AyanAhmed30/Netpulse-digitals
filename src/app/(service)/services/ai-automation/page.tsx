@@ -2,20 +2,32 @@ import React from "react";
 import { Metadata } from "next";
 import ServiceDetailsMain from "@/pages/service/service-details";
 
+// generateMetadata now receives params as a Promise
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const slug = params.slug || "digital-marketing"; // fallback to digital-marketing if slug is undefined
+  // Await the params Promise
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug || "ai-automation"; 
   const title = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, " ");
+  
   return {
     title: `Netpulse Digital - ${title} Details page`,
   };
 }
 
-const ServiceDetailsPage = ({ params }: { params: { slug: string } }) => {
-  return <ServiceDetailsMain slug={params.slug} />;
+// Main page component also receives params as a Promise in Next.js 15+
+const ServiceDetailsPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  // Await the params Promise
+  const resolvedParams = await params;
+  // Pass the slug to your main component
+  return <ServiceDetailsMain slug={resolvedParams.slug} />;
 };
 
 export default ServiceDetailsPage;

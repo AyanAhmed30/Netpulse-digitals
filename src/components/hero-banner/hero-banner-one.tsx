@@ -87,7 +87,7 @@ const HeroBannerOne = () => {
                   <span className="p-relative">
                     Creative
                     <span className="tp-hero-subtitle d-none d-lg-block">
-                      Hello <br /> People! We're
+                      Hello <br /> People! We&apos;re
                     </span>
                   </span>
                   <br />

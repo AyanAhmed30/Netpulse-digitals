@@ -12,7 +12,7 @@ import ai_1 from "@/assets/img/inner-project/portfolio-details-3/business-ai-aut
 import ai_2 from "@/assets/img/inner-project/portfolio-details-3/business_ai_automation.png";
 import ai_3 from "@/assets/img/inner-project/portfolio-details-3/customer_ai_automation.png";
 import ai_4 from "@/assets/img/inner-project/portfolio-details-3/medical_ai_automation.png";
-import ai_5 from  "@/assets/img/inner-project/portfolio-details-3/ai5.png";
+import ai_5 from "@/assets/img/inner-project/portfolio-details-3/ai5.png";
 
 import design_1 from "@/assets/img/inner-project/portfolio-details-3/cr4.png";
 import design_2 from "@/assets/img/inner-project/portfolio-details-3/cr3.png";
@@ -79,8 +79,6 @@ export const portfolioData: PortfolioCategory[] = [
       {
         id: 101,
         title: "iMAN Movement",
-
-
         description: "The official website of iMAN — a global faith-based movement empowering men to live with purpose, integrity, and courage. It serves as a digital hub for inspiration, discipleship, and community, offering devotionals, events, leadership resources, and actionable pathways to personal and spiritual growth.",
         img: web_1,
         category: "Web Development",
