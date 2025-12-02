@@ -9,42 +9,43 @@ const award_data = [
     title: "Clutch Top Digital Agency",
     subtitle: "USA & UK",
     date: "2025",
-    description: "Ranked in Top 10 for Web Development & Digital Marketing"
+    description: "Ranked in Top 10 for Web Development & Digital Marketing",
   },
   {
     id: 2,
     title: "Google Premier Partner",
     subtitle: "Search & Performance Marketing",
     date: "2024–2025",
-    description: "Certified for excellence in SEO, PPC, and Analytics"
+    description: "Certified for excellence in SEO, PPC, and Analytics",
   },
   {
     id: 3,
     title: "Awwwards Honors",
     subtitle: "Smart Website Excellence",
     date: "2024",
-    description: "For Netpulse’s Next.js-powered client site (Core Web Vitals: 98+)"
+    description:
+      "For Netpulse’s Next.js-powered client site (Core Web Vitals: 98+)",
   },
   {
     id: 4,
     title: "DesignRush Best Creative Agency",
     subtitle: "Branding & UI/UX",
     date: "Q3 2024",
-    description: "Recognized for conversion-focused brand identity systems"
+    description: "Recognized for conversion-focused brand identity systems",
   },
   {
     id: 5,
     title: "GoodFirms Top Developer",
     subtitle: "Next.js & React",
     date: "2025",
-    description: "Featured for high-performance, SEO-optimized web builds"
+    description: "Featured for high-performance, SEO-optimized web builds",
   },
   {
     id: 6,
     title: "Client Satisfaction Leader",
     subtitle: "4.9★ Average Rating",
     date: "2023–2025",
-    description: "Based on 120+ verified client reviews (Clutch, Google)"
+    description: "Based on 120+ verified client reviews (Clutch, Google)",
   },
 ];
 
@@ -95,7 +96,9 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
                     <div className="tp-award-list-content-left d-flex flex-column mb-3 mb-md-0">
                       <strong className="text-primary h5">{item.title}</strong>
                       <small className="text-muted">{item.subtitle}</small>
-                      <p className="mb-0 mt-2 text-slate-600">{item.description}</p>
+                      <p className="mb-0 mt-2 text-slate-600">
+                        {item.description}
+                      </p>
                     </div>
                     <div className="tp-award-list-content-right">
                       <span className="badge bg-light text-dark px-3 py-2 rounded-pill">
@@ -151,7 +154,7 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
         .orb-2 {
           width: 400px;
           height: 400px;
-          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          background: linear-gradient(135deg, #a18cd1 0%, #00f2fe 100%);
           top: 50%;
           right: -200px;
           animation-delay: 7s;
@@ -167,7 +170,8 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) rotate(0deg);
           }
           33% {

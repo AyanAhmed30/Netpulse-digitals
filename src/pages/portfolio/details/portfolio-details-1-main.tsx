@@ -284,7 +284,7 @@ export default function PortfolioDetails() {
         .orb-2 {
           width: 400px;
           height: 400px;
-          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); /* CHANGED: Light Purple to Light Blue/Pink */
           top: 50%;
           right: -200px;
           animation-delay: 7s;

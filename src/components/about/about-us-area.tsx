@@ -126,7 +126,7 @@ export default function AboutUsArea() {
         </div>
       </div>
 
-      {/* ✅ Reusable animated gradient styles — same as all other sections */}
+      {/* ✅ Reusable animated gradient styles — updated orb-2 */}
       <style jsx>{`
         .animated-background {
           position: absolute;
@@ -158,7 +158,7 @@ export default function AboutUsArea() {
         .orb-2 {
           width: 400px;
           height: 400px;
-          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+          background: linear-gradient(135deg, #a18cd1 0%, #4facfe 100%); /* CHANGED: Light Purple to Light Blue (no pink) */
           top: 50%;
           right: -200px;
           animation-delay: 7s;
