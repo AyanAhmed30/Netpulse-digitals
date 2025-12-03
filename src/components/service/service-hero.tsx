@@ -24,7 +24,8 @@ export default function ServiceHero() {
                   Experience <br /> the best services.
                 </h4>
                 <p className="tp_fade_bottom">
-                  Fulfilled direction use continual set him propriety continued.
+                  Providing continuous, high-quality services designed to meet
+                  your goals with complete professionalism.
                 </p>
               </div>
             </div>
@@ -95,7 +96,8 @@ export default function ServiceHero() {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) rotate(0deg);
           }
           33% {

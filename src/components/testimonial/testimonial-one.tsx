@@ -67,7 +67,7 @@ const TestimonialOne = () => {
                     </span>
                   </button>
                 </div>
-
+                <h1 className="text-center fw-semibold" >What Our Client Says</h1>
                 <Swiper
                   {...slider_setting}
                   modules={[Navigation]}
@@ -147,7 +147,8 @@ const TestimonialOne = () => {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) rotate(0deg);
           }
           33% {
