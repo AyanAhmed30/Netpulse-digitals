@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // image
-import ser_hero from "@/assets/img/inner-service/hero/hero-1.jpg";
+import ser_hero from "@/assets/img/inner-service/hero/hero-1-1.png";
 
 export default function ServiceHero() {
   return (

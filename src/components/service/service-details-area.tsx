@@ -23,104 +23,209 @@ interface ServiceData {
   benefits: string;
   bannerDescription: string;
   bannerCallToAction: string;
+  modernProblems: string[];
+  solutions: string[];
+  detailedIntro: string;
 }
 
 const serviceData: Record<string, ServiceData> = {
   "digital-marketing": {
     title: "Online Presence & Growth",
-    description: "Your online presence is at the heart of your digital identity. Strategic marketing, tailor-made and in line with your business goals will allow you to differentiate yourself and reach your target audience effectively.",
-    features: [
-      "SEO optimization and keyword research",
-      "Social media marketing campaigns",
-      "Pay-per-click advertising management",
-      "Content marketing and strategy",
-      "Email marketing automation",
-      "Analytics and performance tracking",
+    detailedIntro: "Digital marketing is the fundamental necessity for every business in today's era. It's not just about advertising, but rather the means to keep your brand alive in the digital world. From social media to search engines, your presence everywhere is essential so customers can easily reach you.",
+    description: "Your online presence is at the heart of your digital identity. Strategic marketing, tailored to align with your business goals, helps you differentiate yourself and reach your target audience effectively. We utilize data-driven strategies that deliver measurable results and maximize your ROI.",
+    modernProblems: [
+      "Low online visibility and lack of brand awareness that creates barriers to reaching customers",
+      "Ineffective presence and absence of engagement on social media platforms",
+      "Low ranking on search engines preventing organic traffic generation",
+      "Falling behind competitors in digital marketing strategies",
+      "Poor conversion rates despite high advertising costs",
+      "Inability to reach target audience with the right message, resulting in wasted marketing budget"
     ],
-    rightDescription: "Your online presence is at the heart of your digital identity. Strategic marketing, tailor-made and in line with your business goals will allow you to differentiate yourself and reach your target audience effectively.",
-    benefits: "Great digital marketing strategy lets users focus on your brand and evokes emotion without distracting them. Bonus points for when it also drives measurable results and ROI!",
-    bannerDescription: "Digital marketing is essential to establish your brand in the online market in a unique and permanent way. At Fast Print Guys, we attach great importance to your online presence. We seek to understand your business to better convey your values and your talent through strategic digital campaigns.",
-    bannerCallToAction: "Explore our achievements and let yourself be convinced!",
+    solutions: [
+      "Implementing comprehensive SEO strategies that bring your website to the top of search results",
+      "Designing targeted social media campaigns that engage your specific audience",
+      "Cost-effective PPC advertising that generates qualified leads and maximizes ROI",
+      "Content marketing strategies that build authority and develop customer trust",
+      "Email automation systems that nurture leads and increase conversions",
+      "Advanced analytics and tracking systems that provide real-time insights for campaign performance"
+    ],
+    features: [
+      "SEO optimization and comprehensive keyword research",
+      "Multi-platform social media marketing campaigns",
+      "Strategic pay-per-click advertising management",
+      "Content marketing strategy and creation",
+      "Advanced email marketing automation",
+      "Detailed analytics and performance tracking",
+    ],
+    rightDescription: "Our digital marketing services transform your brand into an online dominant force. We use a data-driven approach that delivers guaranteed results and aligns with your business goals.",
+    benefits: "A powerful digital marketing strategy focuses customers on your brand and creates an emotional connection without any distractions. And when it drives measurable results and ROI as well, that's the cherry on top!",
+    bannerDescription: "Digital marketing is essential to establish your brand uniquely and permanently in today's competitive market. At Fast Print Guys, we place great importance on your online presence. We understand your business to better convey your values and talent through strategic digital campaigns.",
+    bannerCallToAction: "Explore our achievements and convince yourself!",
   },
   "creative-design": {
     title: "Creative Design Solutions",
-    description: "Transform your brand with visually stunning designs that capture attention and communicate your message effectively across all touchpoints.",
-    features: [
-      "Brand identity and logo design",
-      "Website and UI/UX design",
-      "Print design and marketing materials",
-      "Packaging design",
-      "Social media graphics",
-      "Custom illustrations and graphics",
+    detailedIntro: "Creative design is not just about beauty, it's your brand's identity. A good design leaves a memorable impression and secures a place in customers' hearts. From logos to packaging, every visual element tells your brand story.",
+    description: "Transform your brand with visually stunning designs that capture attention and effectively communicate your message. We believe that every design element should be purposeful and strengthen your brand identity.",
+    modernProblems: [
+      "Generic and forgettable brand identity that fails to stand out in the market",
+      "Inconsistent visual branding across different platforms creating confusion",
+      "Outdated designs that fail to attract modern customers",
+      "Poor user experience due to bad UI/UX design that frustrates customers",
+      "Low-quality graphics and visuals that give an unprofessional impression",
+      "Lack of cohesive visual strategy that dilutes the brand message"
     ],
-    rightDescription: "Create memorable visual experiences that set your brand apart from the competition with our professional design services.",
-    benefits: "Creative design builds brand recognition, increases customer engagement, and helps establish a strong market presence.",
-    bannerDescription: "Creative design is essential to establish your brand in the online market in a unique and permanent way. At Fast Print Guys, we attach great importance to your visual identity. We seek to understand your business to better convey your values and your talent through strategic design solutions.",
-    bannerCallToAction: "Explore our design portfolio and let yourself be convinced!",
+    solutions: [
+      "Creating unique and memorable brand identities that clearly stand out in the market",
+      "Developing consistent design systems that provide a unified experience across all platforms",
+      "Modern, trend-forward designs that meet current market demands",
+      "User-centric UI/UX designs that create intuitive and engaging experiences",
+      "High-quality, professional graphics that build brand credibility",
+      "Comprehensive visual strategies that amplify brand message and resonate with target audience"
+    ],
+    features: [
+      "Comprehensive brand identity and logo design",
+      "Modern website and intuitive UI/UX design",
+      "Professional print design and marketing materials",
+      "Eye-catching packaging design solutions",
+      "Engaging social media graphics and templates",
+      "Custom illustrations and unique graphics",
+    ],
+    rightDescription: "Our creative design services create memorable visual experiences that distinguish your brand from the competition. We provide the perfect blend of creativity and strategy.",
+    benefits: "Creative design builds brand recognition, increases customer engagement, and helps establish a strong market presence. Good design is an investment that delivers long-term returns.",
+    bannerDescription: "Creative design is essential to give your brand a unique and permanent identity in the online market. At Fast Print Guys, we give great importance to your visual identity. We strive to understand your business to effectively convey your values and talent through strategic design solutions.",
+    bannerCallToAction: "Explore our design portfolio and convince yourself!",
   },
   "web-development": {
     title: "Web Development Services",
-    description: "Build responsive, high-performance websites and web applications that deliver exceptional user experiences and drive business growth.",
-    features: [
-      "Frontend and backend development",
-      "Responsive design implementation",
-      "E-commerce solutions",
-      "CMS development and integration",
-      "API development and integration",
-      "Website maintenance and support",
+    detailedIntro: "Your website is your digital property - it's the online home of your business. A professional, fast, and user-friendly website not only provides information but defines customer experience and drives conversions.",
+    description: "Build responsive, high-performance websites and web applications that deliver exceptional user experiences and drive business growth. We use the latest technologies and best practices to ensure your website is fast, secure, and scalable.",
+    modernProblems: [
+      "Slow-loading websites that frustrate visitors and increase bounce rates",
+      "Non-responsive designs that provide poor experience to mobile users",
+      "Security vulnerabilities that create data breaches and customer trust issues",
+      "Outdated technology stacks that create performance issues and maintenance problems",
+      "Poor user experience that negatively impacts conversions and sales",
+      "Lack of scalability that limits business growth"
     ],
-    rightDescription: "Create powerful, scalable web solutions that meet your business needs and provide seamless user experiences.",
-    benefits: "Professional web development ensures optimal performance, security, and scalability for your online presence.",
-    bannerDescription: "Web development is essential to establish your brand in the online market in a unique and permanent way. At Fast Print Guys, we attach great importance to your online presence. We seek to understand your business to better convey your values and your talent through strategic web solutions.",
-    bannerCallToAction: "Explore our web projects and let yourself be convinced!",
+    solutions: [
+      "Developing lightning-fast websites with optimized code and performance best practices",
+      "Fully responsive designs that provide perfect experience on every device",
+      "Enterprise-grade security implementations that protect data and users",
+      "Using modern technology stacks that are future-proof and maintainable",
+      "Designing intuitive user experiences that maximize conversions",
+      "Building scalable architectures that can easily expand with business growth"
+    ],
+    features: [
+      "Full-stack frontend and backend development",
+      "Mobile-first responsive design implementation",
+      "Secure e-commerce solutions with payment integration",
+      "Flexible CMS development and integration",
+      "RESTful API development and third-party integration",
+      "Ongoing website maintenance and technical support",
+    ],
+    rightDescription: "Our web development services create powerful, scalable solutions that meet your business needs and provide seamless user experiences. Quality and performance are our priorities.",
+    benefits: "Professional web development ensures optimal performance, robust security, and scalability for your online presence. A good website works 24/7 and converts customers effortlessly.",
+    bannerDescription: "Web development is essential to give your brand a unique and permanent position in the online market. At Fast Print Guys, we give exceptional importance to your online presence. We deeply understand your business to effectively showcase your values and capabilities through strategic web solutions.",
+    bannerCallToAction: "Explore our web projects and see the quality yourself!",
   },
   "ai-automation": {
     title: "AI & Automation Solutions",
-    description: "Leverage artificial intelligence and automation to streamline operations, improve efficiency, and gain competitive advantages.",
-    features: [
-      "AI-powered chatbots and virtual assistants",
-      "Process automation and workflow optimization",
-      "Predictive analytics and insights",
-      "Machine learning model development",
-      "Robotic process automation (RPA)",
-      "AI integration with existing systems",
+    detailedIntro: "AI and automation are no longer just talk of the future, they are a present necessity. By automating repetitive tasks, you give your team the opportunity to focus on more important work. Smart systems work for you 24/7 without getting tired.",
+    description: "Leverage artificial intelligence and automation to streamline operations, improve efficiency, and gain competitive advantages. We implement cutting-edge AI solutions that revolutionize your business processes.",
+    modernProblems: [
+      "Manual, repetitive tasks that waste valuable time and resources",
+      "Human errors that cause costly mistakes and productivity loss",
+      "Inability to handle large data volumes efficiently and extract actionable insights",
+      "Providing 24/7 customer support becomes expensive and challenging",
+      "Slow decision-making due to lack of real-time data analysis",
+      "Scaling operations becomes difficult with manual processes"
     ],
-    rightDescription: "Transform your business operations with intelligent automation solutions that save time and reduce costs.",
-    benefits: "AI automation increases productivity, reduces errors, and allows your team to focus on strategic tasks.",
-    bannerDescription: "AI automation is essential to establish your brand in the online market in a unique and permanent way. At Fast Print Guys, we attach great importance to your online presence. We seek to understand your business to better convey your values and your talent through strategic automation solutions.",
-    bannerCallToAction: "Explore our automation solutions and let yourself be convinced!",
+    solutions: [
+      "Intelligent automation systems that handle repetitive tasks and reduce human effort",
+      "AI-powered quality control that minimizes errors and improves consistency",
+      "Advanced analytics platforms that process large datasets and provide actionable insights",
+      "24/7 AI chatbots and virtual assistants that provide instant customer support",
+      "Predictive analytics systems that enable real-time insights for better decision-making",
+      "Scalable automation solutions that can easily grow with the business"
+    ],
+    features: [
+      "Advanced AI-powered chatbots and intelligent virtual assistants",
+      "Comprehensive process automation and workflow optimization",
+      "Predictive analytics and actionable business insights",
+      "Custom machine learning model development and training",
+      "Enterprise robotic process automation (RPA) implementation",
+      "Seamless AI integration with existing business systems",
+    ],
+    rightDescription: "Our AI automation services transform your business operations with intelligent solutions that save time and significantly reduce costs. Implement future-ready technology today.",
+    benefits: "AI automation exponentially increases productivity, dramatically reduces errors, and gives your team the freedom to focus on strategic, high-value tasks. This is the competitive advantage that gives you the lead in the market.",
+    bannerDescription: "AI automation is essential to make your business competitive and efficient in the digital age. At Fast Print Guys, we provide cutting-edge technology solutions. We analyze your business to optimize your operations through strategic automation and achieve maximum efficiency.",
+    bannerCallToAction: "See our automation solutions and experience the transformation!",
   },
   "ebooks": {
     title: "Ebook Creation & Publishing",
-    description: "Create professional, engaging ebooks that showcase your expertise and generate revenue through digital publishing.",
-    features: [
-      "Content planning and writing",
-      "Professional editing and proofreading",
-      "Cover design and layout",
-      "Formatting for multiple platforms",
-      "Digital publishing assistance",
-      "Marketing and distribution strategies",
+    detailedIntro: "Ebooks are the best way to share knowledge and generate passive income. Your expertise can now be read by people worldwide in book form. Digital products never run out and are always available.",
+    description: "Create professional, engaging ebooks that showcase your expertise and generate revenue through digital publishing. We provide complete support from concept to publishing to ensure your ebook is successful.",
+    modernProblems: [
+      "Difficulty in organizing thoughts and presenting knowledge in a structured format",
+      "Lack of writing skills and time that makes quality content creation difficult",
+      "Poor design and formatting that gives ebooks an unprofessional look",
+      "Confusion about multiple publishing platforms and their requirements",
+      "Inability to effectively market and distribute ebooks to reach target audience",
+      "Not knowing how to price and position ebooks in a competitive market"
     ],
-    rightDescription: "Transform your knowledge and expertise into valuable digital products that reach your target audience.",
-    benefits: "Ebooks establish authority, generate passive income, and expand your reach to a global audience.",
-    bannerDescription: "Ebook creation is essential to establish your brand in the online market in a unique and permanent way. At Fast Print Guys, we attach great importance to your online presence. We seek to understand your business to better convey your values and your talent through strategic ebook solutions.",
-    bannerCallToAction: "Explore our ebook projects and let yourself be convinced!",
+    solutions: [
+      "Expert content planning and structuring that converts ideas into compelling narratives",
+      "Professional writing and ghostwriting services that deliver polished content",
+      "High-quality design and formatting that displays perfectly on every platform",
+      "Platform-specific optimization and publishing support that maximizes reach",
+      "Comprehensive marketing strategies that effectively get ebooks to target audience",
+      "Pricing and positioning strategies that provide competitive advantage and maximize sales"
+    ],
+    features: [
+      "Comprehensive content planning and professional writing",
+      "Expert editing and meticulous proofreading services",
+      "Professional cover design and interior layout",
+      "Multi-platform formatting (Kindle, Apple Books, PDF, etc.)",
+      "Digital publishing assistance and distribution support",
+      "Strategic marketing and distribution planning",
+    ],
+    rightDescription: "Our ebook services transform your knowledge and expertise into valuable digital products that reach a global audience. Your message, worldwide impact.",
+    benefits: "Ebooks establish authority, create passive income streams, and expand your reach to a global audience. Create once, sell forever - that's the power of digital products.",
+    bannerDescription: "Ebook creation is a powerful way to monetize your expertise and knowledge. At Fast Print Guys, we make digital publishing accessible and profitable. We understand your ideas and convert them into professional ebooks that enhance your brand value and generate steady income.",
+    bannerCallToAction: "See our ebook projects and explore the possibilities!",
   },
   "mobile-development": {
     title: "Mobile App Development",
-    description: "Create high-quality, user-friendly mobile applications for iOS and Android platforms that engage users and drive business growth.",
-    features: [
-      "Native and cross-platform app development",
-      "UI/UX design for mobile interfaces",
-      "App store optimization (ASO)",
-      "Backend integration and APIs",
-      "Testing and quality assurance",
-      "App maintenance and updates",
+    detailedIntro: "Mobile apps are no longer a luxury but a necessity. People spend more time on their phones, and if your app is on their phone, you are always with them. This is the most powerful tool for customer engagement.",
+    description: "Create high-quality, user-friendly mobile applications for iOS and Android platforms that engage users and drive business growth. We provide both native and cross-platform solutions that meet your specific requirements.",
+    modernProblems: [
+      "Inability to engage customers who are increasingly mobile-first",
+      "Missing out on mobile commerce opportunities that are rapidly growing",
+      "Poor mobile user experience that pushes customers towards competitors",
+      "High development costs and long timelines that delay app launches",
+      "Lack of native device features integration that provides limited functionality",
+      "Difficulty in maintaining apps across multiple platforms and OS versions"
     ],
-    rightDescription: "Build powerful mobile applications that connect with your audience on their preferred devices.",
-    benefits: "Mobile apps increase customer engagement, provide convenient access to your services, and enhance brand loyalty.",
-    bannerDescription: "Mobile development is essential to establish your brand in the online market in a unique and permanent way. At Fast Print Guys, we attach great importance to your online presence. We seek to understand your business to better convey your values and your talent through strategic mobile solutions.",
-    bannerCallToAction: "Explore our mobile apps and let yourself be convinced!",
+    solutions: [
+      "Developing engaging mobile apps that directly connect with customers",
+      "Full-featured m-commerce solutions that exponentially increase mobile sales",
+      "Intuitive, native-feeling experiences that maximize user satisfaction",
+      "Cost-effective cross-platform development that reduces time-to-market",
+      "Deep native integration that fully utilizes device features (camera, GPS, notifications)",
+      "Comprehensive maintenance and update strategies that keep apps current and functional"
+    ],
+    features: [
+      "Native iOS and Android app development with optimal performance",
+      "Cross-platform development using React Native and Flutter",
+      "Modern UI/UX design for intuitive mobile interfaces",
+      "App store optimization (ASO) for maximum visibility",
+      "Robust backend integration and RESTful APIs",
+      "Rigorous testing, quality assurance, and ongoing maintenance",
+    ],
+    rightDescription: "Our mobile development services create powerful applications that connect your audience on their preferred devices. Native performance, cross-platform efficiency.",
+    benefits: "Mobile apps drastically increase customer engagement, provide convenient access to services, and significantly enhance brand loyalty. Apps are a direct channel to customers with push notifications and personalized experiences.",
+    bannerDescription: "Mobile development is critical for business success in today's mobile-first world. At Fast Print Guys, we follow a mobile-first approach. We understand your business objectives and develop strategic mobile solutions that delight users and deliver business results.",
+    bannerCallToAction: "Explore our mobile apps and see the innovation!",
   },
 };
 
@@ -217,17 +322,48 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
           <div className="col-xl-7 col-lg-7">
             <div className="service-details__left-wrap">
               <div className="service-details__left-text pb-20">
-                <p className="text-1 tp_title_anim">{currentService.description}</p>
+                <h5 className="mb-20">Service Introduction</h5>
+                <p className="text-1 tp_title_anim mb-30">{currentService.detailedIntro}</p>
+                <p className="mb-20">{currentService.description}</p>
                 <p>{currentService.benefits}</p>
               </div>
-              <div className="service-details__fea-list">
-                <ul>
-                  {currentService.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
+
+              <div className="service-details__left-text pb-20 pt-30">
+                <h5 className="mb-20">Modern Business Challenges</h5>
+                <p className="mb-20">In today's digital landscape, businesses face significant challenges:</p>
+                <div className="service-details__fea-list mb-30">
+                  <ul>
+                    {currentService.modernProblems.map((problem, index) => (
+                      <li key={index}>{problem}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="service-details__sm-thumb-wrap mb-60">
+
+              <div className="service-details__left-text pb-30">
+                <h5 className="mb-20">Our Strategic Solutions</h5>
+                <p className="mb-20">We provide comprehensive solutions that directly address these challenges:</p>
+                <div className="service-details__fea-list mb-30">
+                  <ul>
+                    {currentService.solutions.map((solution, index) => (
+                      <li key={index}>{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="service-details__left-text pb-20">
+                <h5 className="mb-20">Key Features & Deliverables</h5>
+                <div className="service-details__fea-list">
+                  <ul>
+                    {currentService.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* <div className="service-details__sm-thumb-wrap mb-60 mt-40">
                 <div className="row">
                   <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
                     <div className="service-details__sm-thumb">
@@ -240,7 +376,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

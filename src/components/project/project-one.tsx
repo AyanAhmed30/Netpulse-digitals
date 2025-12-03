@@ -160,7 +160,7 @@ const ProjectOne = ({ style_2 = false }: IProps) => {
                       data-speed="auto"
                       style={{
                         backgroundImage:
-                          "url(/assets/img/inner-service/hero/hero-1-2.jpg)",
+                          "url(/assets/img/inner-service/hero/hero-1-3.png)",
                       }}
                     ></div>
                   </div>
