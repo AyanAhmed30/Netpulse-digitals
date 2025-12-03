@@ -13,7 +13,8 @@ const VideOne = () => {
           style={{ width: "100%", height: "auto" }}
         >
           <source
-            src="https://raw.githubusercontent.com/AyanAhmed30/hosted-video/main/video111.mp4"
+            // src="https://raw.githubusercontent.com/AyanAhmed30/hosted-video/main/video111.mp4"
+            src="/assets/video/video.mp4"
             type="video/mp4"
           />
         </video>

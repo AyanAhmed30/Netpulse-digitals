@@ -4,9 +4,9 @@ import { Hand } from "../svg";
 
 // images
 import shape from "@/assets/img/inner-about/about/shape-1.png";
-import ab_1 from "@/assets/img/inner-about/about/abt11.png";
-import ab_2 from "@/assets/img/inner-about/about/about-3.jpg";
-import ab_3 from "@/assets/img/inner-about/about/abt22.png";
+import ab_1 from "@/assets/img/inner-about/about/building.png";
+import ab_2 from "@/assets/img/inner-about/about/office.png";
+import ab_3 from "@/assets/img/inner-about/about/office2.png";
 import Link from "next/link";
 
 export default function AboutUsArea() {
