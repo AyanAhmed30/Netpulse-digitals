@@ -44,7 +44,7 @@ const TeamOne = ({ spacing = "pt-20" }: IProps) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
-            <h1 className="text-center fw-semibold" >Our Team</h1>
+            <h1 className="text-center fw-semibold" >Our Team Memebers</h1>
             <div className="tp-team-slider-wrapper">
 
               <Swiper
