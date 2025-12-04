@@ -152,7 +152,7 @@ Providing continuous, high-quality services designed to meet your goals with com
         .orb-1 {
           width: 500px;
           height: 500px;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #667eea 0%, #685fe7ff 100%);
           top: -100px;
           left: -100px;
           animation-delay: 0s;
