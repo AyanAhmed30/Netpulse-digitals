@@ -1,63 +1,144 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import { fadeAnimation } from "@/utils/title-animation";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// image
-import ser_hero from "@/assets/img/inner-service/hero/hero-1-1.png";
+gsap.registerPlugin(ScrollTrigger);
 
-export default function ServiceHero() {
+const ServiceHero = () => {
+  const heroTitleRef = useRef(null);
+  const heroContentRef = useRef(null);
+
+  useGSAP(() => {
+    if (typeof window !== "undefined") {
+      setTimeout(() => fadeAnimation(), 100);
+
+      // Title dragging to the left
+      const heroTitle = heroTitleRef.current;
+      if (heroTitle) {
+        gsap.fromTo(
+          heroTitle,
+          { x: 0 },
+          {
+            x: -200,
+            scrollTrigger: {
+              trigger: heroTitle,
+              start: "top top",
+              end: "bottom top",
+              scrub: 1.5,
+              markers: false,
+            },
+          }
+        );
+      }
+
+      // Content dragging to the right
+      const heroContent = heroContentRef.current;
+      if (heroContent) {
+        gsap.fromTo(
+          heroContent,
+          { x: 0 },
+          {
+            x: 200,
+            scrollTrigger: {
+              trigger: heroContent,
+              start: "top center",
+              end: "bottom top",
+              scrub: 1.5,
+              markers: false,
+            },
+          }
+        );
+      }
+    }
+  }, []);
+
   return (
-    <div className="sv-hero-area sv-hero-ptb position-relative">
-      {/* ✅ Animated Gradient Background — same as all other sections */}
+    <div className="tp-hero-area tp-hero-ptb main-slider">
       <div className="animated-background">
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>
         <div className="gradient-orb orb-3"></div>
       </div>
 
-      <div className="position-relative" style={{ zIndex: 1 }}>
-        <div className="container container-1530">
-          <div className="row">
-            <div className="col-xl-10">
-              <div className="sv-hero-title-box">
-                <h4 className="sv-hero-title tp-char-animation">
-                  Experience <br /> the best services.
-                </h4>
-                <p className="tp_fade_bottom">
-                  Providing continuous, high-quality services designed to meet
-                  your goals with complete professionalism.
-                </p>
+      <div className="container-fluid">
+        <div className="row justify-content-center">
+          <div className="col-xxl-12">
+            <div className="tp-hero-title-wrap mb-35 p-relative">
+              <div className="tp-hero-shape-1">
+                <Image
+                  src="/assets/img/home-01/hero/hero-bg-shape-1-1.svg"
+                  alt="shape"
+                  width={790}
+                  height={700}
+                  style={{ height: "auto" }}
+                />
+              </div>
+
+              <div
+                className="tp-hero-title-box text-center p-relative"
+                ref={heroTitleRef}
+              >
+                <h1 className="tp-hero-title tp_fade_bottom">
+                  <span className="p-relative">
+                    Experience 
+                    
+                  </span>
+                  <br />
+                  <div>
+
+                    the best
+
+                    Services
+                  </div>
+                  <span
+                    className="d-block"
+                    style={{
+                      fontSize: "0.25em",
+                      fontWeight: "400",
+                      marginTop: "20px",
+                      letterSpacing: "0.5px",
+                    }}
+                  >
+Providing continuous, high-quality services designed to meet your goals with complete professionalism.                </span>
+                </h1>
               </div>
             </div>
-          </div>
 
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="sv-hero-thumb p-relative">
-                <div className="sv-hero-thumb-box">
-                  <Image
-                    data-speed=".7"
-                    src={ser_hero}
-                    alt="ser_hero-img"
-                    style={{ height: "auto" }}
-                  />
-                </div>
+            <div className="tp-hero-content tp_fade_bottom" ref={heroContentRef}>
+             
+
+              <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
+                <Link className="tp-btn-border" href="/contact">
+                  <span className="tp-btn-border-wrap">
+                    <span className="text-1">Let&apos;s Start Your Project</span>
+                    <span className="text-2">Let&apos;s Start Your Project</span>
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="row">
+          <div className="col-xl-12"></div>
+        </div>
       </div>
 
-      {/* ✅ Reusable animated gradient styles — identical across site */}
-      <style jsx>{`
+      <style jsx>
+        {`/* Animated Background */
         .animated-background {
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
           pointer-events: none;
-          z-index: -1;
+          z-index: 0;
         }
 
         .gradient-orb {
@@ -80,7 +161,7 @@ export default function ServiceHero() {
         .orb-2 {
           width: 400px;
           height: 400px;
-          background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+          background: linear-gradient(135deg, #a18cd1 0%, #00f2fe 100%); /* CHANGED: Pink/Red to Light Purple/Blue */
           top: 50%;
           right: -200px;
           animation-delay: 7s;
@@ -96,8 +177,7 @@ export default function ServiceHero() {
         }
 
         @keyframes float {
-          0%,
-          100% {
+          0%, 100% {
             transform: translate(0, 0) rotate(0deg);
           }
           33% {
@@ -106,8 +186,10 @@ export default function ServiceHero() {
           66% {
             transform: translate(-30px, 30px) rotate(240deg);
           }
-        }
-      `}</style>
+        }`}
+      </style>
     </div>
   );
-}
+};
+
+export default ServiceHero;

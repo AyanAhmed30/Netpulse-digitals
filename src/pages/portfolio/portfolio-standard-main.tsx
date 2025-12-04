@@ -69,7 +69,7 @@ const PortfolioStandardMain = () => {
                   <div className="col-xl-12">
                     <div className="tm-hero-content">
                       <span className="tm-hero-subtitle">Netpulse Digital Studio</span>
-                      <h4 className="tm-hero-title tp-char-animation">
+                      <h4 className="tp-hero-title tm-hero-title tp-char-animation">
                         Our latest & great projects
                       </h4>
                     </div>
