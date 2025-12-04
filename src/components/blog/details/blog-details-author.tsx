@@ -11,9 +11,9 @@ interface BlogDetailsAuthorProps {
 export default function BlogDetailsAuthor({ author }: BlogDetailsAuthorProps) {
   return (
     <div className="blog-details-author d-flex mb-60">
-      <div className="blog-details-author-img">
+      <div className="blog-details-author-img d-flex justify-content-center align-items-center">
         <Image
-          style={{ width: "130px", height: "auto" }}
+          style={{ width: "130px", height: "auto", margin: "20px" }}
           src={avatar}
           alt={author || "author"}
         />

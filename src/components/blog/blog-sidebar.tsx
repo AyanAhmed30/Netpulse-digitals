@@ -1,8 +1,8 @@
 // components/blog/details/blog-sidebar.tsx
 import React from "react";
 import Image from "next/image";
-import avatar from "@/assets/img/logo/logo.png";
-import banner from "@/assets/img/logo/logo.png";
+import avatar from "@/assets/img/logo/logo-h.png";
+import banner from "@/assets/img/logo/logo-h.png";
 import { Search } from "../svg";
 import { blog_data } from "@/data/blog-data";
 import Link from "next/link";
@@ -59,7 +59,7 @@ const rc_posts = [...blog_data.filter((b) => b.img && b.status !== "draft")]
         height={100}
         style={{ 
           height: "auto", 
-          borderRadius: "50%",
+          borderRadius: "10%",
           border: "3px solid #f1f5f9",
           boxShadow: "0 4px 12px rgba(0,0,0,0.05)"
         }} 
@@ -72,22 +72,14 @@ const rc_posts = [...blog_data.filter((b) => b.img && b.status !== "draft")]
         color: '#0f172a',
         marginBottom: '0.25rem'
       }}>
-        Alex Morgan
+       Netpulse Digital
       </h4>
       <p className="text-muted mb-2" style={{ 
         fontSize: '0.9rem', 
         fontWeight: 500, 
         color: '#475569'
       }}>
-        Senior Growth Strategist
-      </p>
-      <p style={{ 
-        fontSize: '0.95rem', 
-        lineHeight: 1.6, 
-        color: '#334155',
-        margin: 0 
-      }}>
-        Helping SaaS and e-commerce brands scale with data-led design, conversion-focused development, and performance marketing.
+        Admin
       </p>
     </div>
   </div>

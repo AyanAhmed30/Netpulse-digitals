@@ -67,7 +67,7 @@ export const blog_home_five: IBlogDT[] = [
     slug: createSlug("Future Business Ideas."),
     date: '01. FEB. 2023',
     category: 'Marketing / Strategy',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['business', 'innovation', 'strategy', 'future', 'trends'],
     content: `<p>In today's rapidly evolving business landscape, staying ahead of the curve requires forward-thinking strategies and innovative approaches. The future of business is being shaped by technological advancements, changing consumer behaviors, and global economic shifts that demand adaptability and creativity from entrepreneurs and organizations alike.</p>
     <div class="blog-details-left-content">
@@ -145,7 +145,7 @@ export const blog_home_five: IBlogDT[] = [
     slug: createSlug("Start Unique Experience."),
     date: '09. MAY. 2023',
     category: 'Marketing / Strategy',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['experience', 'customer', 'engagement', 'branding', 'marketing'],
     content: `<p>Creating unique customer experiences has become a primary differentiator in today's competitive marketplace. As products and services become increasingly commoditized, the quality of the experience surrounding them determines brand loyalty and customer retention. Exceptional experiences go beyond mere satisfaction to create emotional connections that transform casual buyers into devoted advocates.</p>
     <div class="blog-details-left-content">
@@ -187,7 +187,7 @@ export const blog_home_five: IBlogDT[] = [
     slug: createSlug("Is It Time To Rebrand?"),
     date: '30. AUG. 2023',
     category: 'Marketing / Strategy',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['rebranding', 'brand', 'identity', 'strategy', 'transformation'],
     content: `<p>Rebranding is a strategic decision that can revitalize a company's image, reconnect with its audience, and position it for future growth. However, determining the right time for a rebrand requires careful consideration of market conditions, customer perceptions, and business objectives. A successful rebrand strengthens brand equity rather than diluting it, making timing and execution critical factors in the process.</p>
     <div class="blog-details-left-content">
@@ -223,7 +223,7 @@ export const blog_home_five: IBlogDT[] = [
     slug: createSlug("Setting up the creativity."),
     date: '11. JAN. 2023',
     category: 'Marketing / Strategy',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['creativity', 'innovation', 'culture', 'design', 'collaboration'],
     content: `<p>Fostering creativity within an organization requires more than just hiring talented individuals; it demands creating an environment where innovation can flourish naturally. Creative thinking drives problem-solving, differentiation, and growth, making it a vital capability for businesses navigating complex challenges and competitive markets. Establishing the right conditions for creativity involves both structural and cultural considerations.</p>
     <div class="blog-details-left-content">
@@ -256,7 +256,7 @@ export const blog_modern: IBlogDT[] = [
 
     date: '21. OCT. 2025',
     category: 'Marketing',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['digital-marketing', 'trends', '2025', 'marketing-strategy', 'online-marketing'],
     content: `<p>The digital marketing landscape continues to evolve at a rapid pace, with 2025 bringing new challenges and opportunities for marketers worldwide. As consumer behaviors shift and technology advances, businesses must adapt their strategies to remain competitive and relevant. This year promises significant changes in how brands connect with their audiences, leveraging new technologies and approaches to drive engagement and conversions.</p>
     <div class="blog-details-left-content">
@@ -406,7 +406,7 @@ export const blog_modern: IBlogDT[] = [
     slug: createSlug('Modern Web Development Frameworks'),
     date: '11. JAN. 2025',
     category: 'Software Applications Development',
-    author: 'Alex Thompson',
+    author: 'Admin',
     tags: ['web-development', 'frameworks', 'javascript', 'frontend', 'backend'],
     content: `<p>The landscape of web development frameworks continues to evolve rapidly, with 2025 bringing new tools and methodologies that prioritize developer experience, performance, and scalability. Modern frameworks are designed to handle complex applications while maintaining clean code architecture and efficient development workflows. Understanding these frameworks is crucial for developers looking to build robust, scalable web applications that meet today's demanding requirements.</p>
     <div class="blog-details-left-content">
@@ -1055,7 +1055,7 @@ export const blog_lists: IBlogDT[] = [
     slug: createSlug("Design To Remember"),
     date: '01 DEC, 2023',
     category: 'Marketing',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['brand-recognition', 'visual-memory', 'logo-design', 'identity', 'marketing'],
     content: `<p>Memorable design creates lasting impressions that influence consumer behavior and build brand equity over time. In a world saturated with visual stimuli, designs that stand out and stick in memory provide significant competitive advantages. These powerful visuals become mental shortcuts that trigger associations with quality, reliability, and emotional connections developed through repeated positive experiences.</p>
     <div class="blog-details-left-content">
@@ -1082,7 +1082,7 @@ export const blog_lists: IBlogDT[] = [
     slug: createSlug("Simplistic photo setup"),
     date: '09. MAY. 2023',
     category: 'Branding',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['simple-photography', 'product-photography', 'lighting-techniques', 'creative-setup', 'visual-content'],
     content: `<p>Professional-quality photography doesn't require elaborate studios or expensive equipment—many stunning images result from simple, thoughtfully arranged setups. Resourceful photographers leverage natural light, household items, and creative angles to produce compelling visuals that serve marketing and branding purposes effectively. This minimalist approach emphasizes technique and vision over material resources.</p>
     <div class="blog-details-left-content">
@@ -1109,7 +1109,7 @@ export const blog_lists: IBlogDT[] = [
     slug: createSlug("Future Business Ideas."),
     date: '20. NOV. 2023',
     category: 'Branding',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['entrepreneurial-opportunities', 'emerging-markets', 'sustainable-business', 'tech-innovation', 'social-impact'],
     content: `<p>The future economy will be shaped by businesses that address pressing global challenges while creating value for stakeholders. Climate change, resource scarcity, demographic shifts, and technological disruption present both risks and opportunities for innovative entrepreneurs. Companies that develop sustainable solutions, leverage emerging technologies ethically, and respond to evolving consumer values will lead the next wave of economic development.</p>
     <div class="blog-details-left-content">
@@ -1136,7 +1136,7 @@ export const blog_lists: IBlogDT[] = [
     slug: createSlug("Is It Time To Rebrand?"),
     date: '30. AUG. 2023',
     category: 'Branding',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['brand-evolution', 'identity-update', 'market-positioning', 'customer-perception', 'strategic-change'],
     content: `<p>Brand evolution represents a strategic response to changing market dynamics, customer expectations, and organizational growth. Rather than abrupt transformations, many successful rebrands occur gradually through consistent refinement of visual identity, messaging, and customer experience. This evolutionary approach maintains brand equity while ensuring relevance in contemporary contexts.</p>
     <div class="blog-details-left-content">
@@ -1163,7 +1163,7 @@ export const blog_lists: IBlogDT[] = [
     slug: createSlug("Desert Treasure Hunt"),
     date: '09. MAY. 2023',
     category: 'Branding',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['adventure-marketing', 'storytelling', 'experiential-branding', 'journey-narrative', 'emotional-engagement'],
     content: `<p>Brands that incorporate adventure and discovery into their narratives create powerful emotional connections with audiences. The treasure hunt metaphor resonates across cultures, symbolizing the pursuit of valuable goals through perseverance and ingenuity. Marketing campaigns built around exploration themes engage customers as active participants rather than passive recipients of messages.</p>
     <div class="blog-details-left-content">
@@ -1190,7 +1190,7 @@ export const blog_lists: IBlogDT[] = [
     slug: createSlug("Visualizing Your Brand"),
     date: '12. JAN. 2023',
     category: 'Branding',
-    author: 'John Doe',
+    author: 'Admin',
     tags: ['brand-identity', 'visual-strategy', 'graphic-design', 'consistency', 'brand-guidelines'],
     content: `<p>A cohesive visual identity system ensures consistent brand representation across all touchpoints and media. This comprehensive framework includes logo variations, color specifications, typography standards, imagery styles, and application examples that guide internal teams and external partners. Well-documented brand guidelines maintain integrity while allowing flexibility for different contexts and formats.</p>
     <div class="blog-details-left-content">
