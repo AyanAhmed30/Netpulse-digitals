@@ -201,6 +201,13 @@
   & .tp-hero-bottom-img-wrap {
     background-color: var(--tp-common-dark);
   }
+  .tp-hero-bottom-img video {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    display: block;
+  }
+
   & .tp-brand-area {
     background-color: var(--tp-common-dark);
   }

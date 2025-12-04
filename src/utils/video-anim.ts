@@ -3,27 +3,39 @@ import $ from 'jquery';
 import {ScrollTrigger} from '@/plugins';
 
 function videoAnimOne() {
-	if ($('.tp-hero-bottom-img-wrap').length > 0) {
-		let ms = gsap.matchMedia();
-		ms.add("(min-width: 768px)", () => {
-			// Home 8
-			let tp_hero = gsap.timeline({
-				scrollTrigger: {
-					trigger: ".tp-hero-bottom-img-wrap",
-					start: "top 70",
-					pin: true,
-					markers: false,
-					scrub: 1,
-					pinSpacing: false,
-					end: "bottom 50%",
-				}
-			});
-			tp_hero.to(".tp-hero-bottom-img", {
-				width: "100%",
-			});
-		});
-	}
-};
+  if ($('.tp-hero-bottom-img-wrap').length > 0) {
+
+    let ms = gsap.matchMedia();
+
+    // Desktop Animation
+    ms.add("(min-width: 768px)", () => {
+      let tp_hero = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".tp-hero-bottom-img-wrap",
+          start: "top 70",
+          pin: true,
+          scrub: 1,
+          pinSpacing: false,
+          end: "bottom 50%",
+        }
+      });
+
+      tp_hero.to(".tp-hero-bottom-img", {
+        width: "100%",
+      });
+    });
+
+    // Mobile Full Width Fix
+    ms.add("(max-width: 767px)", () => {
+      gsap.set(".tp-hero-bottom-img", {
+		height: "auto",
+        width: "100vw",
+      });
+    });
+
+  }
+}
+
 
 function videoAnimTwo() {
 	if ($('.tp-video-area').length > 0) {

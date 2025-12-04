@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+// import video from "@/assets/video/video.mp4";
 
 const VideOne = () => {
   return (
@@ -14,7 +15,7 @@ const VideOne = () => {
         >
           <source
             // src="https://raw.githubusercontent.com/AyanAhmed30/hosted-video/main/video111.mp4"
-            src="/assets/video/video.mp4"
+            src="https://raw.githubusercontent.com/AyanAhmed30/Netpulse-digitals/main/public/assets/video/video.mp4"
             type="video/mp4"
           />
         </video>

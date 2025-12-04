@@ -38,7 +38,7 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
   }
 
   return (
-    <section className="postbox__area tp-blog-sidebar-sticky-area pt-120 pb-120">
+    <section className="postbox__area tp-blog-sidebar-sticky-area pt-120">
       <div className="container">
         <div className="row">
           <div className="col-xxl-8 col-xl-8 col-lg-8">
@@ -99,12 +99,12 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
               <BlogDetailsNavigation currentBlogId={blog.id} />
               {/* blog details navigation */}
 
-              <div className="postbox__comment mb-100">
-                <h3 className="postbox__comment-title">Comments</h3>
+              {/* <div className="postbox__comment mb-100">
+                <h3 className="postbox__comment-title">Comments</h3> */}
                 {/* blog details comments */}
-                <BlogDetailsComments />
+                {/* <BlogDetailsComments /> */}
                 {/* blog details comments */}
-              </div>
+              {/* </div> */}
 
              
             </div>
