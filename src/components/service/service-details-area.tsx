@@ -330,7 +330,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
 
               <div className="service-details__left-text pb-20 pt-30">
                 <h5 className="mb-20">Modern Business Challenges</h5>
-                <p className="mb-20">In today's digital landscape, businesses face significant challenges:</p>
+                <p className="mb-20">In today&apos;s digital landscape, businesses face significant challenges:</p>
                 <div className="service-details__fea-list mb-30">
                   <ul>
                     {currentService.modernProblems.map((problem, index) => (
