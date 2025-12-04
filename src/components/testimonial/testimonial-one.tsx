@@ -85,14 +85,7 @@ const TestimonialOne = () => {
                   ))}
                 </Swiper>
 
-                <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mt-4">
-                  <Link className="tp-btn-border" href="/contact">
-                    <span className="tp-btn-border-wrap">
-                      <span className="text-1">Start Your Journey with us</span>
-                      <span className="text-2">Start Your Journey with us</span>
-                    </span>
-                  </Link>
-                </div>
+             
               </div>
             </div>
           </div>

@@ -154,7 +154,7 @@ const ProjectOne = ({ style_2 = false }: IProps) => {
             <div className="container-fluid p-0">
               <div className="row g-0">
                 <div className="col-xl-12">
-                  <div className="tp-project-full-img-wrap p-relative fix">
+                  <div className="tp-project-full-img-wrap p-relative">
                     <div
                       className="tp-project-full-img"
                       data-speed="auto"
