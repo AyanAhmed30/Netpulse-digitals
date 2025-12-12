@@ -12,13 +12,13 @@ const counter_data = [
   {
     id: 2,
     title: "YEARS OF EXPERIENCE",
-    count: 17,
+    count: 7,
     text: "+",
   },
   {
     id: 3,
     title: "TEAM MEMBERS",
-    count: 100,
+    count: 50,
     text: "+",
   },
   {

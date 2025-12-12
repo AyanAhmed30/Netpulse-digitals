@@ -21,6 +21,7 @@ import Link from "next/link";
 // animation
 import { charAnimation, fadeAnimation } from "@/utils/title-animation";
 import { servicePanel } from "@/utils/panel-animation";
+import TestimonialOne from "@/components/testimonial/testimonial-one";
 
 const ServiceMain = () => {
   useScrollSmooth();
@@ -65,7 +66,8 @@ const ServiceMain = () => {
                         Services
                       </span>
                       <h4 className="tp-service-5-title">
-                        We strongly believe that only design, development & marketing <br />
+                        We strongly believe that only design, development &
+                        marketing <br />
                         reinforced by strategy can provide real results.
                       </h4>
                     </div>
@@ -100,6 +102,10 @@ const ServiceMain = () => {
               </div>
             </div>
             {/* brand area */}
+
+            {/* Testimonils area */}
+            <TestimonialOne />
+            {/* Testimonils area */}
 
             {/* big text */}
             <BigText />
@@ -160,7 +166,8 @@ const ServiceMain = () => {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) rotate(0deg);
           }
           33% {

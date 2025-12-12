@@ -21,9 +21,10 @@ import b_8 from "@/assets/img/home-01/brand/klaude.png";
 import b_9 from "@/assets/img/home-01/brand/pinnacle.png";
 import b_10 from "@/assets/img/home-01/brand/logo100.png";
 import b_11 from "@/assets/img/home-01/brand/logo11.png";
+import b_12 from "@/assets/img/home-01/brand/embodier.png";
 
 // brand images
-const brand_images = [b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_10, b_11];
+const brand_images = [b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_10, b_11, b_12];
 
 export default function BrandFive() {
   return (

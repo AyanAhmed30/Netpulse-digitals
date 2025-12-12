@@ -105,7 +105,9 @@ type IProps = {
 const ProjectOne = ({ style_2 = false }: IProps) => {
   return (
     <>
-      <div className={`${style_2 ? "tp-project-area-2" : "tp-project-area"} fix`}>
+      <div
+        className={`${style_2 ? "tp-project-area-2" : "tp-project-area"} fix`}
+      >
         {!style_2 && (
           <div className="container-fluid p-0">
             <div className="row g-0">
@@ -160,7 +162,10 @@ const ProjectOne = ({ style_2 = false }: IProps) => {
                       data-speed="auto"
                       style={{
                         backgroundImage:
-                          "url(/assets/img/inner-service/hero/hero-1-3.png)",
+                          "url(/assets/img/inner-service/hero/hero-1-update.jpg)",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center center",
                       }}
                     ></div>
                   </div>
@@ -170,6 +175,17 @@ const ProjectOne = ({ style_2 = false }: IProps) => {
           )}
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .tp-project-full-img {
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            height: auto !important;
+            padding-top: 60%; /* aspect-ratio on mobile */
+          }
+        }
+      `}</style>
     </>
   );
 };

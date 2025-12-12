@@ -5,8 +5,8 @@ import { Hand } from "../svg";
 // images
 import shape from "@/assets/img/inner-about/about/shape-1.png";
 import ab_1 from "@/assets/img/inner-about/about/building.png";
-import ab_2 from "@/assets/img/inner-about/about/office.png";
-import ab_3 from "@/assets/img/inner-about/about/office2.png";
+import ab_2 from "@/assets/img/inner-about/about/off2.jpg";
+import ab_3 from "@/assets/img/inner-about/about/off.png";
 import Link from "next/link";
 
 export default function AboutUsArea() {
@@ -91,7 +91,7 @@ export default function AboutUsArea() {
 
                 <div className="col-xl-7 col-lg-7 col-md-8">
                   <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
+                    <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="ab-about-category-list category-space-1 tp_fade_bottom">
                         <ul>
                           <li>Web Development</li>
@@ -100,7 +100,7 @@ export default function AboutUsArea() {
                         </ul>
                       </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
+                    <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="ab-about-category-list category-space-2 tp_fade_bottom">
                         <ul>
                           <li>Mobile Application Development</li>

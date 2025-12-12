@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 // service images
-import s_1 from "@/assets/img/home-01/service/service-icon-1.png";
-import s_2 from "@/assets/img/home-01/service/service-icon-2.png";
-import s_3 from "@/assets/img/home-01/service/service-icon-3.png";
-import s_4 from "@/assets/img/home-01/service/service-icon-4.png";
+import s_1 from "@/assets/img/home-01/service/d-m.png";
+import s_2 from "@/assets/img/home-01/service/w-d.png";
+import s_3 from "@/assets/img/home-01/service/c-d.png";
+import s_4 from "@/assets/img/home-01/service/m-l.png";
 
 // service data
 const service_data = [
@@ -78,7 +78,7 @@ const ServiceOne = () => {
                   className="tp-service-item d-flex align-items-start mb-75 tp_fade_bottom"
                 >
                   <div className="tp-service-icon">
-                    <Image src={s.icon} alt="icon" style={{ height: "auto" }} />
+                    <Image src={s.icon} alt="icon" style={{ height: "50px", width: "50px" }} />
                   </div>
                   <div className="tp-service-content">
                     <h4 className="tp-service-title-sm order-0">

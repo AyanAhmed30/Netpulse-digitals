@@ -16,231 +16,688 @@ import sv_2 from "@/assets/img/inner-service/sercive-details/seo1.png";
 import sv_3 from "@/assets/img/inner-service/sercive-details/sv-details-3.jpg";
 
 interface ServiceData {
-  title: string;
-  description: string;
-  features: string[];
-  rightDescription: string;
-  benefits: string;
-  bannerDescription: string;
-  bannerCallToAction: string;
+  // Hero
+  heroTitle: string;
+  heroSubtext: string;
+  heroCTA1: string;
+  heroCTA2: string;
+
+  // Problems
+  problemsTitle: string;
+  problemsIntro?: string;
   modernProblems: string[];
+
+  // Solutions
+  solutionsTitle: string;
+  solutionsIntro?: string;
   solutions: string[];
-  detailedIntro: string;
+
+  // Features
+  featuresTitle: string;
+  featuresIntro?: string;
+  features: string[];
+
+  // Process
+  processTitle: string;
+  processSteps: { step: string; title: string; desc: string }[];
+
+  // Why Choose Us
+  whyChooseTitle: string;
+  whyChooseItems: string[];
+
+  // Testimonials
+  testimonialsTitle: string;
+  testimonials: { quote: string; author: string }[];
+
+  // Final CTA
+  finalCTATitle: string;
+  finalCTASubtext: string;
+  finalCTAPrimary: string;
+  finalCTASecondary: string;
+  microtrustLine: string;
+
+  // Sidebar
+  sidebarTitle: string;
+  rightDescription: string;
+  callToActionLinkText: string;
 }
 
 const serviceData: Record<string, ServiceData> = {
   "digital-marketing": {
-    title: "Online Presence & Growth",
-    detailedIntro: "Digital marketing is the fundamental necessity for every business in today's era. It's not just about advertising, but rather the means to keep your brand alive in the digital world. From social media to search engines, your presence everywhere is essential so customers can easily reach you.",
-    description: "Your online presence is at the heart of your digital identity. Strategic marketing, tailored to align with your business goals, helps you differentiate yourself and reach your target audience effectively. We utilize data-driven strategies that deliver measurable results and maximize your ROI.",
+    heroTitle: "Digital Marketing That Delivers Real Growth",
+    heroSubtext:
+      "From social media to SEO, paid ads, funnels, and content strategy — Netpulse Digital helps businesses across the USA, UK, Canada, and Australia attract more customers and convert more leads with data-driven marketing solutions.",
+    heroCTA1: "Get a Free Marketing Strategy Call",
+    heroCTA2: "See Our Work",
+
+    problemsTitle: "Why Most Businesses Fail to Grow Online",
+    problemsIntro: "In today's digital landscape, businesses face significant challenges:",
     modernProblems: [
-      "Low online visibility and lack of brand awareness that creates barriers to reaching customers",
-      "Ineffective presence and absence of engagement on social media platforms",
-      "Low ranking on search engines preventing organic traffic generation",
-      "Falling behind competitors in digital marketing strategies",
-      "Poor conversion rates despite high advertising costs",
-      "Inability to reach target audience with the right message, resulting in wasted marketing budget"
+      " No Clear Marketing Strategy – Businesses jump between trends without a structured growth plan.",
+      " Low Website Traffic – Search engines and social media algorithms don’t favor weak content.",
+      " Poor Lead Quality – Wrong targeting means wasted budgets and no real conversions.",
+      " Inconsistent Branding & Messaging – Customers don’t trust brands that lack clarity and consistency.",
+      " Ineffective Social Media Presence – Posting is not enough — businesses need strategy + engagement + content psychology.",
+      " No Data Tracking or Analytics – Decisions based on guesswork hurt revenue and prevent scaling.",
+      " Overspending on Ads With No ROI – Without optimization, ad budgets burn fast and return nothing.",
     ],
+
+    solutionsTitle: "Smart, Scalable Marketing Solutions That Actually Work",
+    solutionsIntro: "We provide comprehensive solutions that directly address these challenges:",
     solutions: [
-      "Implementing comprehensive SEO strategies that bring your website to the top of search results",
-      "Designing targeted social media campaigns that engage your specific audience",
-      "Cost-effective PPC advertising that generates qualified leads and maximizes ROI",
-      "Content marketing strategies that build authority and develop customer trust",
-      "Email automation systems that nurture leads and increase conversions",
-      "Advanced analytics and tracking systems that provide real-time insights for campaign performance"
+      "⚡ Clear Marketing Strategy & Roadmap – We create a customized blueprint aligned with your business goals, audience, and budget.",
+      "📈 SEO + Keyword Strategy for High-Intent Traffic – Rank higher, attract better leads, and improve organic visibility.",
+      "🎯 Advanced Targeting for Quality Leads – We refine your audience using industry data, competitor analysis, and buyer psychology.",
+      "✨ Content That Builds Trust & Engagement – From design to messaging, we craft content that converts audiences into buyers.",
+      "📊 Analytics, Tracking & Performance Reporting – We use data — not guesswork — to optimize every campaign for growth.",
+      "💸 High-ROI Advertising Campaigns – Our Google, Facebook, and multi-platform ad strategies lower costs and increase conversions.",
+      "🤝 Full Transparency & Communication – You’re updated at every step — no confusion, no black-box marketing.",
     ],
+
+    featuresTitle: "Everything Your Business Needs to Grow Online",
     features: [
-      "SEO optimization and comprehensive keyword research",
-      "Multi-platform social media marketing campaigns",
-      "Strategic pay-per-click advertising management",
-      "Content marketing strategy and creation",
-      "Advanced email marketing automation",
-      "Detailed analytics and performance tracking",
+      "⭐ Social Media Marketing – Strategic posting, content creation, engagement, and growth systems.",
+      "⭐ Paid Advertising (Facebook, Google, TikTok, Instagram) – High-ROI ad campaigns with weekly optimization.",
+      "⭐ Search Engine Optimization (SEO) – On-page, technical, and local SEO to improve rankings and traffic.",
+      "⭐ Content Creation & Brand Messaging – Premium content that builds trust and drives customer action.",
+      "⭐ Email Marketing & Automation – Personalized workflows that nurture leads and increase lifetime value.",
+      "⭐ Full Funnel Setup (Lead Magnet → CTA → Landing Page) – Complete systems designed for conversions, not random clicks.",
+      "⭐ Analytics & Reporting – Monthly performance, KPI tracking, and strategic adjustments.",
     ],
-    rightDescription: "Our digital marketing services transform your brand into an online dominant force. We use a data-driven approach that delivers guaranteed results and aligns with your business goals.",
-    benefits: "A powerful digital marketing strategy focuses customers on your brand and creates an emotional connection without any distractions. And when it drives measurable results and ROI as well, that's the cherry on top!",
-    bannerDescription: "Digital marketing is essential to establish your brand uniquely and permanently in today's competitive market. At Fast Print Guys, we place great importance on your online presence. We understand your business to better convey your values and talent through strategic digital campaigns.",
-    bannerCallToAction: "Explore our achievements and convince yourself!",
+
+    processTitle: "A Proven Process That Scales With You",
+    processSteps: [
+      {
+        step: "1️⃣",
+        title: "Discovery & Audit",
+        desc: "We analyze your current digital presence, competitors, and opportunities.",
+      },
+      {
+        step: "2️⃣",
+        title: "Strategy & Planning",
+        desc: "We create a personalized, data-driven strategy tailored to your industry.",
+      },
+      {
+        step: "3️⃣",
+        title: "Execution & Optimization",
+        desc: "Campaigns, content, SEO, ads, and funnels — managed and optimized weekly.",
+      },
+      {
+        step: "4️⃣",
+        title: "Growth & Scaling",
+        desc: "Once results are stable, we scale budgets, expand campaigns, and improve ROI.",
+      },
+    ],
+
+    whyChooseTitle: "Why Choose Netpulse Digital",
+    whyChooseItems: [
+      "Performance-Driven Team – Everything we do aligns with your growth goals.",
+      "Real Transparency – Clear communication, weekly updates, and honest reporting.",
+      "Global Expertise – Delivering results across USA, UK, Canada & Australia.",
+      "Creative + Analytical Approach – Beautiful content backed by data and strategy.",
+      "Affordable, Scalable Solutions – Plans for startups, small businesses, and growing brands.",
+      "Long-Term Growth Partner – We care about your business as much as you do.",
+    ],
+
+    testimonialsTitle: "What Our Clients Say",
+    testimonials: [
+      {
+        quote: "Netpulse Digital rebuilt our entire marketing system — our traffic increased, leads improved, and our brand finally feels consistent.",
+        author: "— Michael • USA",
+      },
+      {
+        quote: "Their ad strategies helped us cut costs while doubling conversions.",
+        author: "— Sophie • UK",
+      },
+    ],
+
+    finalCTATitle: "Ready to Grow Your Business With Smart Digital Marketing?",
+    finalCTASubtext:
+      "Let’s create a marketing system that attracts the right audience, boosts engagement, and drives consistent growth.",
+    finalCTAPrimary: "Get a Free Marketing Audit",
+    finalCTASecondary: "Contact Our Team",
+    microtrustLine: "We respond within 24 hours. No obligations — just insights.",
+
+    sidebarTitle: "Digital Marketing",
+    rightDescription:
+      "Our digital marketing services transform your brand into an online dominant force. We use a data-driven approach that delivers guaranteed results and aligns with your business goals.",
+    callToActionLinkText: "Let's Talk",
   },
   "creative-design": {
-    title: "Creative Design Solutions",
-    detailedIntro: "Creative design is not just about beauty, it's your brand's identity. A good design leaves a memorable impression and secures a place in customers' hearts. From logos to packaging, every visual element tells your brand story.",
-    description: "Transform your brand with visually stunning designs that capture attention and effectively communicate your message. We believe that every design element should be purposeful and strengthen your brand identity.",
+    heroTitle: "Creative Designs That Build Trust, Strengthen Brands & Drive Results",
+    heroSubtext:
+      "From logos and brand identity systems to social media design, UI/UX, and complete visual branding — Netpulse Digital helps businesses worldwide create strong, memorable designs that connect with customers and inspire action.",
+    heroCTA1: "Get a Free Brand Consultation",
+    heroCTA2: "View Our Design Work",
+
+    problemsTitle: "Most Businesses Struggle With Weak Visual Identity — Here’s Why",
+    problemsIntro: "",
     modernProblems: [
-      "Generic and forgettable brand identity that fails to stand out in the market",
-      "Inconsistent visual branding across different platforms creating confusion",
-      "Outdated designs that fail to attract modern customers",
-      "Poor user experience due to bad UI/UX design that frustrates customers",
-      "Low-quality graphics and visuals that give an unprofessional impression",
-      "Lack of cohesive visual strategy that dilutes the brand message"
+      " Outdated or Unprofessional Branding – Generic or outdated designs make businesses look unreliable.",
+      " Inconsistent Brand Visuals Across Platforms – Mismatched colors, fonts, and layouts confuse customers and reduce trust.",
+      " Low-Quality Logos & Graphics – Cheap designs don’t scale well and fail to represent the brand’s value.",
+      " No Clear Brand Messaging or Visual Story – Businesses struggle to communicate who they are and why they matter.",
+      " Poor Social Media Visuals – Low-engagement posts caused by weak design, wrong colors, and unclear layouts.",
+      " Confusing UI/UX That Pushes Users Away – Bad user experience leads to low conversions and high bounce rates.",
     ],
+
+    solutionsTitle: "Design Solutions That Elevate Your Brand & Boost Conversions",
+    solutionsIntro: "",
     solutions: [
-      "Creating unique and memorable brand identities that clearly stand out in the market",
-      "Developing consistent design systems that provide a unified experience across all platforms",
-      "Modern, trend-forward designs that meet current market demands",
-      "User-centric UI/UX designs that create intuitive and engaging experiences",
-      "High-quality, professional graphics that build brand credibility",
-      "Comprehensive visual strategies that amplify brand message and resonate with target audience"
+      "Strategic, Psychology-Driven Branding – We create visuals that influence trust, emotion, and buying behavior.",
+      "Professional Logo & Identity Systems – Every logo, color palette, and typeface is crafted to fit your audience and industry.",
+      "Complete Brand Guidelines – We deliver full guidelines to keep your brand consistent across all platforms.",
+      "High-Impact Social Media Design – Scroll-stopping designs optimized for engagement and storytelling.",
+      "UI/UX Design for Websites & Apps – Beautiful and intuitive product designs that improve user experience and conversions.",
+      "Fast Turnaround With Premium Quality – Top-tier design work, delivered quickly and efficiently.",
     ],
+
+    featuresTitle: "Everything Your Brand Needs to Look Professional & Powerful",
     features: [
-      "Comprehensive brand identity and logo design",
-      "Modern website and intuitive UI/UX design",
-      "Professional print design and marketing materials",
-      "Eye-catching packaging design solutions",
-      "Engaging social media graphics and templates",
-      "Custom illustrations and unique graphics",
+      "Logo Design & Brand Identity – Unique, memorable, scalable logos designed for long-term brand success.",
+      "Full Brand Kits & Guidelines – Color systems, typography, icons, patterns, brand voice — everything packaged beautifully.",
+      "Social Media Design – Templates, post graphics, reels covers, stories, ads & banners.",
+      "UI/UX Design (Web & App) – Wireframes, prototypes, high-fidelity designs built for clarity and conversion.",
+      "Business Collateral Design – Business cards, pitch decks, brochures, packaging & more.",
+      "Marketing Creatives & Ads – High-converting ad creatives for Meta, Google, TikTok & YouTube.",
     ],
-    rightDescription: "Our creative design services create memorable visual experiences that distinguish your brand from the competition. We provide the perfect blend of creativity and strategy.",
-    benefits: "Creative design builds brand recognition, increases customer engagement, and helps establish a strong market presence. Good design is an investment that delivers long-term returns.",
-    bannerDescription: "Creative design is essential to give your brand a unique and permanent identity in the online market. At Fast Print Guys, we give great importance to your visual identity. We strive to understand your business to effectively convey your values and talent through strategic design solutions.",
-    bannerCallToAction: "Explore our design portfolio and convince yourself!",
+
+    processTitle: "Our Creative Process (Designed for Clarity & Growth)",
+    processSteps: [
+      {
+        step: "1️⃣",
+        title: "Discovery & Brand Understanding",
+        desc: "We learn your goals, audience, competitors, and brand personality.",
+      },
+      {
+        step: "2️⃣",
+        title: "Creative Direction & Concepting",
+        desc: "We create concepts, color palettes, typography and visual direction.",
+      },
+      {
+        step: "3️⃣",
+        title: "Design & Refinement",
+        desc: "We craft polished, strategic designs based on feedback and brand goals.",
+      },
+      {
+        step: "4️⃣",
+        title: "Delivery & Brand Activation",
+        desc: "We package everything professionally so you can launch with confidence.",
+      },
+    ],
+
+    whyChooseTitle: "Why Brands Choose Our Creative Team",
+    whyChooseItems: [
+      "Clean, Modern, High-Quality Designs – Every design is crafted with premium aesthetic standards.",
+      "Brand Psychology Taken Seriously – Every color, shape, layout, and font is chosen with purpose.",
+      "Industry & Global Expertise – Serving clients in USA, UK, Canada, and Australia.",
+      "Dedicated Creative Team – Experienced designers specializing in branding, UI/UX, and visual marketing.",
+      "Fast Communication & Revisions – We keep the process smooth, friendly, and highly efficient.",
+      "Fully Custom Work — Never Templates – Your brand deserves originality, not recycled designs.",
+    ],
+
+    testimonialsTitle: "What Clients Say About Our Designs",
+    testimonials: [
+      {
+        quote: "Our brand identity finally feels premium. Their design work transformed how customers see us.",
+        author: "— Olivia • UK",
+      },
+      {
+        quote: "High-quality, clean, creative — exactly what our brand needed.",
+        author: "— Rebecca • Australia",
+      },
+    ],
+
+    finalCTATitle: "Ready to Elevate Your Brand With Stunning, Strategic Design?",
+    finalCTASubtext:
+      "Let’s bring your vision to life with creative solutions that boost trust, recognition, and conversions.",
+    finalCTAPrimary: "Get a Free Brand Consultation",
+    finalCTASecondary: "View Our Design Portfolio",
+    microtrustLine: "No commitment — just expert insights to grow your brand.",
+
+    sidebarTitle: "Creative Design",
+    rightDescription:
+      "Our creative design services create memorable visual experiences that distinguish your brand from the competition. We provide the perfect blend of creativity and strategy.",
+    callToActionLinkText: "Let's Talk",
   },
   "web-development": {
-    title: "Web Development Services",
-    detailedIntro: "Your website is your digital property - it's the online home of your business. A professional, fast, and user-friendly website not only provides information but defines customer experience and drives conversions.",
-    description: "Build responsive, high-performance websites and web applications that deliver exceptional user experiences and drive business growth. We use the latest technologies and best practices to ensure your website is fast, secure, and scalable.",
+    heroTitle: "High-Performance Websites Built to Convert, Scale & Impress",
+    heroSubtext:
+      "We design and develop modern, fast, mobile-optimized websites that don’t just look good — they turn visitors into customers. Trusted by businesses across the USA, UK, Canada, and Australia, we build digital experiences that fuel long-term growth.",
+    heroCTA1: "Start Your Website Project",
+    heroCTA2: "View Portfolio",
+
+    problemsTitle: "Why Most Business Websites Fail to Convert",
+    problemsIntro: "",
     modernProblems: [
-      "Slow-loading websites that frustrate visitors and increase bounce rates",
-      "Non-responsive designs that provide poor experience to mobile users",
-      "Security vulnerabilities that create data breaches and customer trust issues",
-      "Outdated technology stacks that create performance issues and maintenance problems",
-      "Poor user experience that negatively impacts conversions and sales",
-      "Lack of scalability that limits business growth"
+      " Outdated Designs That Don’t Build Trust – Customers judge your brand within seconds — old layouts instantly reduce credibility.",
+      " Slow Loading Speed – Slow pages kill conversions and hurt Google rankings.",
+      " Poor Mobile Experience – Over 70% of users browse on mobile — most websites still aren’t optimized.",
+      " Confusing Navigation & Bad UX – Users leave instantly if they can’t find what they need.",
+      " No Clear Call-To-Action (CTA) – Visitors don’t know what to do → fewer leads → fewer sales.",
+      " Weak SEO Structure – Websites that ignore SEO never attract organic traffic.",
+      " Built With Cheap Templates – Template-based sites lack uniqueness, security, and long-term scalability.",
     ],
+
+    solutionsTitle: "Strategic Web Development That Delivers Real Business Growth",
+    solutionsIntro: "",
     solutions: [
-      "Developing lightning-fast websites with optimized code and performance best practices",
-      "Fully responsive designs that provide perfect experience on every device",
-      "Enterprise-grade security implementations that protect data and users",
-      "Using modern technology stacks that are future-proof and maintainable",
-      "Designing intuitive user experiences that maximize conversions",
-      "Building scalable architectures that can easily expand with business growth"
+      "Custom, Modern & Conversion-Focused Designs – No templates — every website is built uniquely to match your brand and goals.",
+      "Lightning-Fast Performance – Optimized code, image compression, caching, and modern frameworks like Next.js.",
+      "100% Mobile-Responsive Builds – Perfect across all devices — phones, tablets, desktops.",
+      "Clear CTA & Lead Capture Systems – Designed to generate more calls, messages, and sales.",
+      "SEO-Ready Architecture – Clean code, schema setup, meta tags, optimized URL structure.",
+      "Analytics + Tracking Integration – Google Analytics, Search Console, Facebook Pixel, CRM/Webhooks.",
+      "Secure & Scalable Frameworks – Built for long-term growth — not quick fixes.",
     ],
+
+    featuresTitle: "Everything You Need for a High-Performing Website",
     features: [
-      "Full-stack frontend and backend development",
-      "Mobile-first responsive design implementation",
-      "Secure e-commerce solutions with payment integration",
-      "Flexible CMS development and integration",
-      "RESTful API development and third-party integration",
-      "Ongoing website maintenance and technical support",
+      "Custom Website Development – Tailored websites built from scratch based on your brand and business goals.",
+      "UI/UX Design – User-centered interfaces that improve engagement and reduce bounce rates.",
+      "Next.js / React Development – Modern, fast, SEO-friendly frameworks for long-term scalability.",
+      "Ecommerce Development (Shopify / WooCommerce) – Conversion-driven online stores with powerful features.",
+      "Landing Pages & Funnels – High-converting pages designed to capture leads and drive sales.",
+      "Responsive Design & Optimization – Perfect display across mobile, tablet, and desktop.",
+      "Speed Optimization – Reduce load times, improve rankings, and strengthen user experience.",
+      "Maintenance & Support – Ongoing updates, monitoring, backups, and fixes.",
     ],
-    rightDescription: "Our web development services create powerful, scalable solutions that meet your business needs and provide seamless user experiences. Quality and performance are our priorities.",
-    benefits: "Professional web development ensures optimal performance, robust security, and scalability for your online presence. A good website works 24/7 and converts customers effortlessly.",
-    bannerDescription: "Web development is essential to give your brand a unique and permanent position in the online market. At Fast Print Guys, we give exceptional importance to your online presence. We deeply understand your business to effectively showcase your values and capabilities through strategic web solutions.",
-    bannerCallToAction: "Explore our web projects and see the quality yourself!",
+
+    processTitle: "A Smooth & Transparent Process From Start to Finish",
+    processSteps: [
+      {
+        step: "1️⃣",
+        title: "Discovery & Project Planning",
+        desc: "Understand your audience, goals, and technical requirements.",
+      },
+      {
+        step: "2️⃣",
+        title: "Design & Prototyping",
+        desc: "We craft UI/UX that aligns with your brand and enhances conversions.",
+      },
+      {
+        step: "3️⃣",
+        title: "Development & Testing",
+        desc: "Building your site using modern technologies with quality assurance.",
+      },
+      {
+        step: "4️⃣",
+        title: "Launch, Optimization & Support",
+        desc: "Deploy, test performance, integrate tracking, and provide ongoing support.",
+      },
+    ],
+
+    whyChooseTitle: "A Team Dedicated to Quality, Performance & Long-Term Growth",
+    whyChooseItems: [
+      "Modern Tech Stack (Next.js, React, WordPress, Shopify)",
+      "Conversion-Focused, Not Just Design-Focused",
+      "Transparent Communication & Fast Delivery",
+      "Experience Across USA, UK, Canada & Australia",
+      "Affordable Options for Small Businesses and Startups",
+      "Long-Term Maintenance & Marketing Support",
+    ],
+
+    testimonialsTitle: "What Clients Say About Our Web Development Work",
+    testimonials: [
+      {
+        quote: "Our new website increased leads by over 200% in the first month. The UX improvements alone made a huge difference.",
+        author: "— Daniel, USA",
+      },
+      {
+        quote: "Clean, fast, and perfectly aligned with our brand. Netpulse Digital exceeded our expectations.",
+        author: "— Clara, UK",
+      },
+    ],
+
+    finalCTATitle: "Ready to Build a Website That Grows Your Business?",
+    finalCTASubtext:
+      "Let’s create a high-performing website designed to generate leads, drive sales, and elevate your brand.",
+    finalCTAPrimary: "Start Your Website Project",
+    finalCTASecondary: "Request a Free Consultation",
+    microtrustLine: "We reply within 24 hours. No obligations — just expert insights.",
+
+    sidebarTitle: "Web Development",
+    rightDescription:
+      "Our web development services create powerful, scalable solutions that meet your business needs and provide seamless user experiences. Quality and performance are our priorities.",
+    callToActionLinkText: "Let's Talk",
   },
   "ai-automation": {
-    title: "AI & Automation Solutions",
-    detailedIntro: "AI and automation are no longer just talk of the future, they are a present necessity. By automating repetitive tasks, you give your team the opportunity to focus on more important work. Smart systems work for you 24/7 without getting tired.",
-    description: "Leverage artificial intelligence and automation to streamline operations, improve efficiency, and gain competitive advantages. We implement cutting-edge AI solutions that revolutionize your business processes.",
+    heroTitle: "AI Automations & Chatbots That Save Time, Reduce Costs & Scale Your Business",
+    heroSubtext:
+      "From smart AI chatbots to workflow automation, CRM integrations, and GPT-powered assistants — Netpulse Digital helps businesses automate repetitive tasks, improve customer experience, and operate more efficiently across the USA, UK, Canada, and Australia.",
+    heroCTA1: "Get a Free Automation Audit",
+    heroCTA2: "See How AI Can Transform Your Business",
+
+    problemsTitle: "Businesses Lose Time & Money Every Day — Often Without Realizing It",
+    problemsIntro: "",
     modernProblems: [
-      "Manual, repetitive tasks that waste valuable time and resources",
-      "Human errors that cause costly mistakes and productivity loss",
-      "Inability to handle large data volumes efficiently and extract actionable insights",
-      "Providing 24/7 customer support becomes expensive and challenging",
-      "Slow decision-making due to lack of real-time data analysis",
-      "Scaling operations becomes difficult with manual processes"
+      "Too Many Manual Tasks – Teams waste hours daily on repetitive work that can be automated.",
+      "Slow Customer Response Times – Businesses lose leads when they take too long to reply.",
+      "Inconsistent Customer Service – No scripts, no structure, no immediate support equals poor customer experience.",
+      "High Operational Costs – Human labor is expensive; AI can handle 60–70% of repetitive workflows.",
+      "Complicated Tools That Don’t Talk to Each Other – CRMs, emails, forms, social media — all disconnected, causing errors and delays.",
+      "Missed Leads Due to Poor Follow-Up – Most leads disappear because businesses don’t respond fast enough.",
+      "No Data Organization or Automation Systems – Scattered processes = lost opportunities + slow growth.",
     ],
+
+    solutionsTitle: "Smarter Workflows. Faster Response Times. Lower Costs. Happier Customers.",
+    solutionsIntro: "",
     solutions: [
-      "Intelligent automation systems that handle repetitive tasks and reduce human effort",
-      "AI-powered quality control that minimizes errors and improves consistency",
-      "Advanced analytics platforms that process large datasets and provide actionable insights",
-      "24/7 AI chatbots and virtual assistants that provide instant customer support",
-      "Predictive analytics systems that enable real-time insights for better decision-making",
-      "Scalable automation solutions that can easily grow with the business"
+      "Custom AI Chatbots (24/7 Support) – Instant replies, lead qualification, FAQs, bookings, sales assistance — all on autopilot.",
+      "GPT-Powered Assistants – Advanced AI trained on your business to handle inquiries, support, tasks, and internal operations.",
+      "Workflow Automation – We automate tasks like emails, follow-ups, scheduling, reporting, onboarding, and more.",
+      "CRM Integration & Lead Routing – AI sends leads to the right team automatically, with instant notifications.",
+      "Automated Reports & Insights – Daily, weekly, and monthly performance updates — without manual effort.",
+      "Multi-Platform Chatbots – Website, social media, WhatsApp, Messenger, Instagram, and more.",
+      "Secure, Scalable AI Systems – Built with enterprise-level frameworks to support long-term growth.",
     ],
+
+    featuresTitle: "What We Can Automate for Your Business",
     features: [
-      "Advanced AI-powered chatbots and intelligent virtual assistants",
-      "Comprehensive process automation and workflow optimization",
-      "Predictive analytics and actionable business insights",
-      "Custom machine learning model development and training",
-      "Enterprise robotic process automation (RPA) implementation",
-      "Seamless AI integration with existing business systems",
+      "AI Chatbots for Websites – 24/7 support, lead capture, FAQs, bookings, sales assistance.",
+      "Social Media & Messenger Bots – DM automation for Instagram, Facebook, and WhatsApp.",
+      "Custom GPT Assistants – AI trained on your business documents, processes, and knowledge base.",
+      "Workflow Automation – Follow-ups, emails, notifications, scheduling, internal tasks.",
+      "CRM / Zapier / Make Integrations – Connect all your tools into one powerful, automated system.",
+      "Internal Team Automation – AI tools for teams to reduce manual work and increase efficiency.",
+      "AI Analytics & Insights – Smart dashboards and automated reporting.",
     ],
-    rightDescription: "Our AI automation services transform your business operations with intelligent solutions that save time and significantly reduce costs. Implement future-ready technology today.",
-    benefits: "AI automation exponentially increases productivity, dramatically reduces errors, and gives your team the freedom to focus on strategic, high-value tasks. This is the competitive advantage that gives you the lead in the market.",
-    bannerDescription: "AI automation is essential to make your business competitive and efficient in the digital age. At Fast Print Guys, we provide cutting-edge technology solutions. We analyze your business to optimize your operations through strategic automation and achieve maximum efficiency.",
-    bannerCallToAction: "See our automation solutions and experience the transformation!",
-  },
-  "ebooks": {
-    title: "Ebook Creation & Publishing",
-    detailedIntro: "Ebooks are the best way to share knowledge and generate passive income. Your expertise can now be read by people worldwide in book form. Digital products never run out and are always available.",
-    description: "Create professional, engaging ebooks that showcase your expertise and generate revenue through digital publishing. We provide complete support from concept to publishing to ensure your ebook is successful.",
-    modernProblems: [
-      "Difficulty in organizing thoughts and presenting knowledge in a structured format",
-      "Lack of writing skills and time that makes quality content creation difficult",
-      "Poor design and formatting that gives ebooks an unprofessional look",
-      "Confusion about multiple publishing platforms and their requirements",
-      "Inability to effectively market and distribute ebooks to reach target audience",
-      "Not knowing how to price and position ebooks in a competitive market"
+
+    processTitle: "Our Proven Automation Workflow",
+    processSteps: [
+      {
+        step: "1️⃣",
+        title: "Business Analysis & Automation Audit",
+        desc: "We analyze your processes and identify automation opportunities.",
+      },
+      {
+        step: "2️⃣",
+        title: "System Planning & AI Design",
+        desc: "We map automations, build flows, and design your custom AI assistant.",
+      },
+      {
+        step: "3️⃣",
+        title: "Development & Integration",
+        desc: "Chatbots, workflows, integrations — all built and tested.",
+      },
+      {
+        step: "4️⃣",
+        title: "Launch, Optimization & Support",
+        desc: "We monitor usage, refine flows, and provide ongoing optimization.",
+      },
     ],
-    solutions: [
-      "Expert content planning and structuring that converts ideas into compelling narratives",
-      "Professional writing and ghostwriting services that deliver polished content",
-      "High-quality design and formatting that displays perfectly on every platform",
-      "Platform-specific optimization and publishing support that maximizes reach",
-      "Comprehensive marketing strategies that effectively get ebooks to target audience",
-      "Pricing and positioning strategies that provide competitive advantage and maximize sales"
+
+    whyChooseTitle: "Your Long-Term AI & Automation Partner",
+    whyChooseItems: [
+      "Custom Solutions – No Templates – Every automation is fully built around your business needs.",
+      "Advanced AI Expertise – GPT models, automation frameworks, cloud integrations & more.",
+      "Fast Delivery & Transparent Communication – Clear updates, step-by-step walkthroughs, and fast iterations.",
+      "Affordable Solutions for Small Businesses – Enterprise-level automation without enterprise pricing.",
+      "Global Experience – Serving businesses in USA, UK, Canada, and Australia.",
+      "Continuous Support & Optimization – We improve your AI systems as your business grows.",
     ],
-    features: [
-      "Comprehensive content planning and professional writing",
-      "Expert editing and meticulous proofreading services",
-      "Professional cover design and interior layout",
-      "Multi-platform formatting (Kindle, Apple Books, PDF, etc.)",
-      "Digital publishing assistance and distribution support",
-      "Strategic marketing and distribution planning",
+
+    testimonialsTitle: "What Clients Say About Our AI & Automation Services",
+    testimonials: [
+      {
+        quote: "Our customer support workload dropped by 70% after implementing their chatbot. Huge improvement!",
+        author: "— Tom, Australia",
+      },
+      {
+        quote: "The workflow automations saved us hours each week. Our leads now get instant responses.",
+        author: "— Maria, USA",
+      },
     ],
-    rightDescription: "Our ebook services transform your knowledge and expertise into valuable digital products that reach a global audience. Your message, worldwide impact.",
-    benefits: "Ebooks establish authority, create passive income streams, and expand your reach to a global audience. Create once, sell forever - that's the power of digital products.",
-    bannerDescription: "Ebook creation is a powerful way to monetize your expertise and knowledge. At Fast Print Guys, we make digital publishing accessible and profitable. We understand your ideas and convert them into professional ebooks that enhance your brand value and generate steady income.",
-    bannerCallToAction: "See our ebook projects and explore the possibilities!",
+
+    finalCTATitle: "Ready to Automate Your Business With AI?",
+    finalCTASubtext:
+      "Let us build an AI system that saves time, increases efficiency, and helps your business scale effortlessly.",
+    finalCTAPrimary: "Get a Free Automation Audit",
+    finalCTASecondary: "Speak to an AI Specialist",
+    microtrustLine: "We respond within 24 hours. No obligations — just real value.",
+
+    sidebarTitle: "AI & Automation",
+    rightDescription:
+      "Our AI automation services transform your business operations with intelligent solutions that save time and significantly reduce costs. Implement future-ready technology today.",
+    callToActionLinkText: "Let's Talk",
   },
   "mobile-development": {
-    title: "Mobile App Development",
-    detailedIntro: "Mobile apps are no longer a luxury but a necessity. People spend more time on their phones, and if your app is on their phone, you are always with them. This is the most powerful tool for customer engagement.",
-    description: "Create high-quality, user-friendly mobile applications for iOS and Android platforms that engage users and drive business growth. We provide both native and cross-platform solutions that meet your specific requirements.",
+    heroTitle: "Custom Mobile Apps Built for Performance, Scalability & User Experience",
+    heroSubtext:
+      "From idea to launch, we design and develop high-performance mobile apps for startups, growing businesses, and global brands. Whether you need iOS, Android, or a cross-platform solution, our mobile apps deliver seamless experiences and long-term scalability.",
+    heroCTA1: "Start Your App Project",
+    heroCTA2: "Book a Free Consultation",
+
+    problemsTitle: "Most Apps Fail — Not Because of Coding, But Because of Strategy",
+    problemsIntro: "",
     modernProblems: [
-      "Inability to engage customers who are increasingly mobile-first",
-      "Missing out on mobile commerce opportunities that are rapidly growing",
-      "Poor mobile user experience that pushes customers towards competitors",
-      "High development costs and long timelines that delay app launches",
-      "Lack of native device features integration that provides limited functionality",
-      "Difficulty in maintaining apps across multiple platforms and OS versions"
+      "No Clear User Experience Strategy – Apps are built without understanding user flow, leading to confusion and drop-offs.",
+      "Slow, Laggy, or Buggy Performance – Poor optimization results in low ratings and uninstall rates.",
+      "Low User Retention – Apps attract downloads but fail to keep users engaged.",
+      "Outdated UI/UX Design – Old layouts instantly make your app feel untrustworthy.",
+      "Poor Backend or API Integration – Apps crash or fail when backend systems aren’t properly designed.",
+      "Long Development Cycles – Some agencies take months without transparency or iteration.",
+      "No Post-Launch Support – Businesses are left alone once the app is “delivered,” with no updates or maintenance.",
     ],
+
+    solutionsTitle: "We Build Apps That Users Love & Businesses Depend On",
+    solutionsIntro: "",
     solutions: [
-      "Developing engaging mobile apps that directly connect with customers",
-      "Full-featured m-commerce solutions that exponentially increase mobile sales",
-      "Intuitive, native-feeling experiences that maximize user satisfaction",
-      "Cost-effective cross-platform development that reduces time-to-market",
-      "Deep native integration that fully utilizes device features (camera, GPS, notifications)",
-      "Comprehensive maintenance and update strategies that keep apps current and functional"
+      "User-Centered UI/UX Design – Clean, intuitive, modern interfaces that improve usability and engagement.",
+      "Fast, High-Performance Development – Optimized codebases for smooth, fast, reliable app performance.",
+      "Cross-Platform App Development – Build once — deploy on both iOS and Android.",
+      "Strategic Product Planning & Architecture – We guide you from concept → strategy → design → development.",
+      "Robust Backend, API & Database Setup – Powerful architecture that scales as your business grows.",
+      "Analytics + In-App Event Tracking – Know exactly how users behave and where improvements are needed.",
+      "Ongoing Support & Maintenance – Updates, optimizations, new features — we stay with you long-term.",
     ],
+
+    featuresTitle: "End-to-End Mobile App Solutions",
     features: [
-      "Native iOS and Android app development with optimal performance",
-      "Cross-platform development using React Native and Flutter",
-      "Modern UI/UX design for intuitive mobile interfaces",
-      "App store optimization (ASO) for maximum visibility",
-      "Robust backend integration and RESTful APIs",
-      "Rigorous testing, quality assurance, and ongoing maintenance",
+      "iOS App Development – Native & cross-platform builds for a seamless Apple experience.",
+      "Android App Development – High-performance Android apps with scalable architecture.",
+      "Cross-Platform App Development (React Native / Flutter) – One codebase → multiple platforms → lower cost → faster launch.",
+      "UI/UX for Mobile Apps – User-centric screens, flows, and prototypes designed for clarity and efficiency.",
+      "API & Backend Development – Secure, scalable tech stack built for long-term growth.",
+      "Quality Assurance & Testing – Bug-free, smooth performance across all devices and operating systems.",
+      "Maintenance, Updates & Optimization – We manage your app post-launch — new features, fixes, and improvements.",
     ],
-    rightDescription: "Our mobile development services create powerful applications that connect your audience on their preferred devices. Native performance, cross-platform efficiency.",
-    benefits: "Mobile apps drastically increase customer engagement, provide convenient access to services, and significantly enhance brand loyalty. Apps are a direct channel to customers with push notifications and personalized experiences.",
-    bannerDescription: "Mobile development is critical for business success in today's mobile-first world. At Fast Print Guys, we follow a mobile-first approach. We understand your business objectives and develop strategic mobile solutions that delight users and deliver business results.",
-    bannerCallToAction: "Explore our mobile apps and see the innovation!",
+
+    processTitle: "A Streamlined Process That Reduces Risk & Maximizes Results",
+    processSteps: [
+      {
+        step: "1️⃣",
+        title: "Discovery & Strategy",
+        desc: "Understanding your business goals, competition, and user expectations.",
+      },
+      {
+        step: "2️⃣",
+        title: "Wireframing & UI/UX Design",
+        desc: "Crafting user flows and screens that ensure a smooth experience.",
+      },
+      {
+        step: "3️⃣",
+        title: "Development & Integration",
+        desc: "Building the app using modern frameworks and optimized architecture.",
+      },
+      {
+        step: "4️⃣",
+        title: "Testing & Refinement",
+        desc: "Bug fixing, performance optimization, device testing.",
+      },
+      {
+        step: "5️⃣",
+        title: "Launch & Deployment",
+        desc: "Publishing your app on the Apple App Store & Google Play Store.",
+      },
+      {
+        step: "6️⃣",
+        title: "Post-Launch Support & Scaling",
+        desc: "Feature enhancements, updates, monitoring, analytics & marketing support.",
+      },
+    ],
+
+    whyChooseTitle: "A Development Partner You Can Rely On",
+    whyChooseItems: [
+      "Modern Tech Stack (React Native, Flutter, Next.js, Node.js)",
+      "Fast, Clear Communication",
+      "Pixel-Perfect UI/UX",
+      "Scalable Code Architecture",
+      "Affordable Solutions for Startups & Businesses",
+      "Experience across USA, UK, Canada & Australia",
+      "Transparent Processes & Weekly Updates",
+    ],
+
+    testimonialsTitle: "What Our App Clients Say",
+    testimonials: [
+      {
+        quote: "Netpulse Digital built a seamless, fast app that our users love. Their design quality and communication were outstanding.",
+        author: "— Lucas, Canada",
+      },
+      {
+        quote: "Our app went from concept to launch in weeks. Highly professional and deeply knowledgeable team.",
+        author: "— Priya, UK",
+      },
+    ],
+
+    finalCTATitle: "Let’s Build the App Your Business Deserves",
+    finalCTASubtext:
+      "Whether you're launching a startup app or scaling an existing product, we’ll help you build a high-performing, beautiful, and scalable mobile experience.",
+    finalCTAPrimary: "Start Your App Project",
+    finalCTASecondary: "Book a Free Consultation",
+    microtrustLine: "We respond within 24 hours — no pressure, just expert insights.",
+
+    sidebarTitle: "Mobile App Development",
+    rightDescription:
+      "Our mobile development services create powerful applications that connect your audience on their preferred devices. Native performance, cross-platform efficiency.",
+    callToActionLinkText: "Let's Talk",
   },
+  ebooks: {
+    heroTitle: "Professional E-Book Creation & Author Services That Bring Your Story to Life",
+    heroSubtext:
+      "From book writing, editing, formatting, and cover design to author websites, marketing, and affordable book printing, Netpulse Digital offers complete, end-to-end solutions for indie authors worldwide. We turn your manuscript into a polished, published, and market-ready book — all under one roof.",
+    heroCTA1: "Start Your Book Project",
+    heroCTA2: "Get a Free Publishing Consultation",
+
+    problemsTitle: "Most Authors Struggle With Publishing — Here’s Why",
+    problemsIntro: "",
+    modernProblems: [
+      "Poor or Unprofessional Book Design – First impressions matter — low-quality covers hurt book sales instantly.",
+      "Improper Book Formatting – Incorrect margins, spacing, fonts, or layout make books look unprofessional and get rejected by platforms.",
+      "Confusing Publishing Platforms – Amazon KDP, IngramSpark, Gumroad… most authors don’t know where to start.",
+      "No Author Brand or Website – Without an online presence, readers can’t discover or trust the author.",
+      "Low Book Sales Due to Weak Marketing – Even great books fail without proper promotion & launch strategy.",
+      "High Book Printing Costs – Most printing platforms charge expensive per-copy prices that limit profits.",
+      "No End-to-End Guidance – Authors are left alone to figure out editing, publishing, design, and marketing.",
+    ],
+
+    solutionsTitle: "We Help Authors Publish Professionally & Sell More Books",
+    solutionsIntro: "",
+    solutions: [
+      "Beautiful, Professional Book Designs – Covers & interiors crafted to industry standards that impress readers and retail platforms.",
+      "Precise, Platform-Approved Formatting – We format your book for Amazon KDP, IngramSpark, ePub, PDF & print-ready versions.",
+      "Complete Publishing Assistance – We handle everything — writing, editing, formatting, uploading, metadata & more.",
+      "Custom Author Websites – Build a strong digital presence with a clean, modern, high-converting author website.",
+      "Book Marketing & Launch Strategy – Ads, promotions, SEO, landing pages, social media — everything to drive sales.",
+      "Affordable Book Printing Services – We offer lower printing prices than major publishing platforms to increase your profit margins.",
+      "Fully Guided Process – From concept to final publishing, we support you at every step.",
+    ],
+
+    featuresTitle: "Complete Services for Indie Authors & Self-Publishers",
+    features: [
+      "Book Writing / Ghostwriting – Professional writing services for authors who need help crafting their story or book content.",
+      "Book Cover Design – Eye-catching, genre-specific covers that attract readers and increase sales.",
+      "Interior Book Formatting – Perfect layout for Kindle, ePub, PDF, and print-ready formats with professional typography.",
+      "Book Printing Services – Affordable printing with lower per-book costs than leading print-on-demand platforms.",
+      "Author Website Development – Clean, modern websites that help authors build a digital brand and sell books directly.",
+      "Book Marketing & Launch Strategy – Social media campaigns, Amazon optimization, email marketing & promotional assets.",
+      "E-Book Conversion (PDF, EPUB, MOBI) – Professional eBook conversion compatible with all major reading devices.",
+      "KDP & IngramSpark Publishing Assistance – We prepare, upload, optimize, and manage your book publishing process.",
+    ],
+
+    processTitle: "A Smooth, Guided Process From Manuscript to Published Book",
+    processSteps: [
+      {
+        step: "1️⃣",
+        title: "Consultation & Manuscript Review",
+        desc: "We understand your goals, genre, and publication requirements.",
+      },
+      {
+        step: "2️⃣",
+        title: "Design & Formatting",
+        desc: "Professional cover + interior layout + eBook formatting.",
+      },
+      {
+        step: "3️⃣",
+        title: "Publishing Setup & Upload",
+        desc: "Everything prepared & uploaded to KDP, IngramSpark, or your chosen platform.",
+      },
+      {
+        step: "4️⃣",
+        title: "Marketing & Promotion",
+        desc: "We help you launch, promote, and build an author brand.",
+      },
+      {
+        step: "5️⃣",
+        title: "Printing & Delivery (Optional)",
+        desc: "Affordable printing with high-quality paper & binding.",
+      },
+      {
+        step: "6️⃣",
+        title: "Ongoing Support",
+        desc: "Updates, new editions, website changes, and marketing support.",
+      },
+    ],
+
+    whyChooseTitle: "Your Trusted Partner for Publishing & Author Success",
+    whyChooseItems: [
+      "Affordable Printing With Higher Profit Margins",
+      "Experienced Team in Book Design & Publishing",
+      "Perfect Formatting for KDP & Print Platforms",
+      "Professional Designs That Attract Readers",
+      "Marketing Strategies That Boost Book Sales",
+      "Fast Delivery + Transparent Communication",
+      "End-to-End Support for Every Step",
+    ],
+
+    testimonialsTitle: "What Authors Say",
+    testimonials: [
+      {
+        quote: "My book went from a Word document to a beautiful, professional product. The cover design alone boosted my sales.",
+        author: "— Hannah, UK",
+      },
+      {
+        quote: "Their printing service saved me so much money. Excellent quality, fast delivery, and far cheaper than KDP.",
+        author: "— David, USA",
+      },
+    ],
+
+    finalCTATitle: "Ready to Publish Your Book Professionally?",
+    finalCTASubtext:
+      "Let’s turn your manuscript into a high-quality book and create a strong author presence that grows your readership.",
+    finalCTAPrimary: "Start Your Book Project",
+    finalCTASecondary: "Get a Free Publishing Consultation",
+    microtrustLine: "We reply within 24 hours. No pressure — just expert guidance.",
+
+    sidebarTitle: "Ebook Creation & Publishing",
+    rightDescription:
+      "Our ebook services transform your knowledge and expertise into valuable digital products that reach a global audience. Your message, worldwide impact.",
+    callToActionLinkText: "Let's Talk",
+  },
+};
+
+const serviceImageMap: Record<keyof typeof serviceData, StaticImageData> = {
+  "digital-marketing": s44,
+  "creative-design": s11,
+  "web-development": s22,
+  "mobile-development": s33,
+  "ai-automation": s55,
+  ebooks: s66,
 };
 
 export default function ServiceDetailsArea({ slug }: { slug: string }) {
   const router = useRouter();
   const pathname = usePathname();
-
-  const serviceImageMap: Record<keyof typeof serviceData, StaticImageData> = {
-    "digital-marketing": s44,
-    "creative-design": s11,
-    "web-development": s22,
-    "mobile-development": s33,
-    "ai-automation": s55,
-    "ebooks": s66,
-  };
 
   const extractServiceSlug = useCallback(() => {
     if (pathname) {
@@ -252,7 +709,9 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
 
   const normalizedSlug = extractServiceSlug();
   const [activeService, setActiveService] = useState<keyof typeof serviceData>(
-    serviceData[normalizedSlug as keyof typeof serviceData] ? (normalizedSlug as keyof typeof serviceData) : "digital-marketing"
+    serviceData[normalizedSlug as keyof typeof serviceData]
+      ? (normalizedSlug as keyof typeof serviceData)
+      : "digital-marketing"
   );
 
   useEffect(() => {
@@ -271,33 +730,179 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
     return title.charAt(0).toUpperCase() + title.slice(1);
   };
 
-  const handleCategoryClick = (service: keyof typeof serviceData, e: React.MouseEvent) => {
+  const handleCategoryClick = (
+    service: keyof typeof serviceData,
+    e: React.MouseEvent
+  ) => {
     e.preventDefault();
     setActiveService(service);
     router.push(`/services/${service}`);
   };
 
+  const renderSectionCard = (
+    title: string,
+    introText: string | null | undefined,
+    items: string[],
+    key: string
+  ) => {
+    return (
+      <div key={key} className="service-details__left-text mb-4">
+        <div
+          className="p-4 rounded border"
+          style={{
+            backgroundColor: "#fafafa",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
+            fontSize: "0.95rem",
+          }}
+        >
+          <h5 className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 600 }}>
+            {title}
+          </h5>
+          {introText && <p className="mb-3">{introText}</p>}
+          <ul className="mb-0" style={{ paddingLeft: "1.2rem" }}>
+            {items.map((item, index) => (
+              <li key={index} className="mb-1">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
+  const renderProcessSection = () => {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-12 text-center mb-80">
+            <h3 className="sv-hero-title tp-char-animation mb-50">
+              {currentService.processTitle}
+            </h3>
+            <div className="row g-4">
+              {currentService.processSteps.map((item, i) => (
+                <div key={i} className="col-md-6 col-lg-3">
+                  <div className="service-details__process-card p-4 h-100 border rounded text-center">
+                    <div className="mb-3" style={{ fontSize: "1.8rem" }}>
+                      {item.step}
+                    </div>
+                    <h5 className="mb-2">{item.title}</h5>
+                    <p className="mb-0">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderWhyChooseSection = () => {
+    return (
+      <div className="container mb-80">
+        <div className="row">
+          <div className="col-12 text-center mb-50">
+            <h3 className="sv-hero-title tp-char-animation">
+              {currentService.whyChooseTitle}
+            </h3>
+          </div>
+          <div className="col-12">
+            <div className="row g-4">
+              {currentService.whyChooseItems.map((value, i) => (
+                <div key={i} className="col-md-6 col-lg-4">
+                  <div className="d-flex align-items-start">
+                    <span className="me-3" style={{ fontSize: "1.2rem" }}>
+                      ⭐
+                    </span>
+                    <p className="mb-0">{value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderTestimonialsSection = () => {
+    return (
+      <div className="container mb-80">
+        <div className="row">
+          <div className="col-12 text-center mb-50">
+            <h3 className="sv-hero-title tp-char-animation">
+              {currentService.testimonialsTitle}
+            </h3>
+          </div>
+          <div className="col-md-6 offset-md-3">
+            {currentService.testimonials.map((t, i) => (
+              <div key={i} className="mb-4 p-4 border rounded">
+                <p className="mb-2">“{t.quote}”</p>
+                <p className="text-muted mb-0">{t.author}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderFinalCTASection = () => {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-12 text-center mb-80">
+            <h3 className="sv-hero-title tp-char-animation mb-4">
+              {currentService.finalCTATitle}
+            </h3>
+            <p className="mb-4">{currentService.finalCTASubtext}</p>
+            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
+              <Link href="/contact" className="tp-btn-white background-black">
+                {currentService.finalCTAPrimary}
+              </Link>
+              <Link href="/contact" className="tp-btn-border">
+                {currentService.finalCTASecondary}
+              </Link>
+            </div>
+            <p className="mt-3 text-muted" style={{ fontSize: "0.9rem" }}>
+              {currentService.microtrustLine}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="service-details__area service-details__space pt-200 pb-120">
+      {/* HERO */}
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
             <div className="service-details__title-box mb-40">
-              <span className="service-details__subtitle tp-char-animation">{getDisplayTitle()}</span>
-              <h4 className="sv-hero-title tp-char-animation">{currentService.title}</h4>
+              <span className="service-details__subtitle tp-char-animation">
+                {getDisplayTitle()}
+              </span>
+              <h4 className="sv-hero-title tp-char-animation">
+                {currentService.heroTitle}
+              </h4>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="offset-xl-4 col-xl-5">
             <div className="service-details__banner-text mb-80">
-              <p className="mb-30 tp_title_anim">{currentService.bannerDescription}</p>
-              <p className="tp_title_anim">{currentService.bannerCallToAction}</p>
+              <p className="mb-30 tp_title_anim">{currentService.heroSubtext}</p>
+              <p className="tp_title_anim">
+                {currentService.heroCTA1} • {currentService.heroCTA2}
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* IMAGE */}
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
@@ -306,7 +911,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                 <Image
                   data-speed="0.4"
                   src={serviceImageMap[activeService]}
-                  alt={`${currentService.title} service illustration`}
+                  alt={`${getDisplayTitle()} service illustration`}
                   style={{ height: "auto" }}
                   width={800}
                   height={500}
@@ -317,66 +922,31 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
         </div>
       </div>
 
+      {/* MAIN CONTENT */}
       <div className="container">
         <div className="row">
           <div className="col-xl-7 col-lg-7">
             <div className="service-details__left-wrap">
-              <div className="service-details__left-text pb-20">
-                <h5 className="mb-20">Service Introduction</h5>
-                <p className="text-1 tp_title_anim mb-30">{currentService.detailedIntro}</p>
-                <p className="mb-20">{currentService.description}</p>
-                <p>{currentService.benefits}</p>
-              </div>
+              {renderSectionCard(
+                currentService.problemsTitle,
+                currentService.problemsIntro,
+                currentService.modernProblems,
+                "problems"
+              )}
 
-              <div className="service-details__left-text pb-20 pt-30">
-                <h5 className="mb-20">Modern Business Challenges</h5>
-                <p className="mb-20">In today&apos;s digital landscape, businesses face significant challenges:</p>
-                <div className="service-details__fea-list mb-30">
-                  <ul>
-                    {currentService.modernProblems.map((problem, index) => (
-                      <li key={index}>{problem}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              {renderSectionCard(
+                currentService.solutionsTitle,
+                currentService.solutionsIntro,
+                currentService.solutions,
+                "solutions"
+              )}
 
-              <div className="service-details__left-text pb-30">
-                <h5 className="mb-20">Our Strategic Solutions</h5>
-                <p className="mb-20">We provide comprehensive solutions that directly address these challenges:</p>
-                <div className="service-details__fea-list mb-30">
-                  <ul>
-                    {currentService.solutions.map((solution, index) => (
-                      <li key={index}>{solution}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="service-details__left-text pb-20">
-                <h5 className="mb-20">Key Features & Deliverables</h5>
-                <div className="service-details__fea-list">
-                  <ul>
-                    {currentService.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* <div className="service-details__sm-thumb-wrap mb-60 mt-40">
-                <div className="row">
-                  <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
-                    <div className="service-details__sm-thumb">
-                      <Image src={sv_2} alt="service-img" style={{ height: "auto" }} />
-                    </div>
-                  </div>
-                  <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
-                    <div className="service-details__sm-thumb">
-                      <Image src={sv_3} alt="service-img" style={{ height: "auto" }} />
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+              {renderSectionCard(
+                currentService.featuresTitle,
+                currentService.featuresIntro,
+                currentService.features,
+                "features"
+              )}
             </div>
           </div>
 
@@ -390,32 +960,37 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   <Link
                     key={service}
                     href={`/services/${service}`}
-                    onClick={(e) => handleCategoryClick(service as keyof typeof serviceData, e)}
+                    onClick={(e) =>
+                      handleCategoryClick(
+                        service as keyof typeof serviceData,
+                        e
+                      )
+                    }
                     className={activeService === service ? "active" : ""}
                   >
-                    {service.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+                    {service
+                      .replace(/-/g, " ")
+                      .replace(/\b\w/g, (c) => c.toUpperCase())}
                   </Link>
                 ))}
               </div>
               <div className="service-details__right-text-box">
-                <h4>
-                  {activeService.split("-")[0].charAt(0).toUpperCase() +
-                    activeService.split("-")[0].slice(1)}
-                  <br />
-                  {activeService.split("-")[1]
-                    ? activeService.split("-")[1].charAt(0).toUpperCase() +
-                      activeService.split("-")[1].slice(1)
-                    : ""}
-                </h4>
+                <h4>{currentService.sidebarTitle}</h4>
                 <p className="mb-20">{currentService.rightDescription}</p>
                 <Link className="tp-btn-white background-black" href="/contact">
-                  Let&apos;s Talk
+                  {currentService.callToActionLinkText}
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* DYNAMIC SECTIONS */}
+      {renderProcessSection()}
+      {renderWhyChooseSection()}
+      {/* {renderTestimonialsSection()}
+      {renderFinalCTASection()} */}
     </div>
   );
 }

@@ -14,6 +14,7 @@ import b_8 from "@/assets/img/home-01/brand/klaude.png";
 import b_9 from "@/assets/img/home-01/brand/pinnacle.png";
 import b_10 from "@/assets/img/home-01/brand/logo100.png";
 import b_11 from "@/assets/img/home-01/brand/logo11.png";
+import b_12 from "@/assets/img/home-01/brand/embodier.png";
 import { headers } from "next/headers";
 
 const brand_data = [
@@ -28,6 +29,7 @@ const brand_data = [
   { id: 9, brand: b_9, height: 70, width: "auto" },
   { id: 10, brand: b_10, height: 70, width: "auto" },
   { id: 11, brand: b_11 },
+  { id: 12, brand: b_12 },
 ];
 
 export function BrandItems() {

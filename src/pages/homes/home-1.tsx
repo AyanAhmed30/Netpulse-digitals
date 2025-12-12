@@ -32,6 +32,7 @@ import { hoverBtn } from "@/utils/hover-btn";
 import { footerTwoAnimation } from "@/utils/footer-anim";
 import { bounceAnimation, charAnimation, fadeAnimation } from "@/utils/title-animation";
 import BigText from "@/components/big-text";
+import PricingArea from "@/components/pricing/pricing-area";
 
 const HomeMain = () => {
   useScrollSmooth();
@@ -110,6 +111,10 @@ const HomeMain = () => {
             {/* project area */}
             <ProjectOne />
             {/* project area */}
+
+            {/* pricing area */}
+            {/* <PricingArea /> */}
+            {/* pricing area */}
 
             {/* award area */}
             <AwardOne />
