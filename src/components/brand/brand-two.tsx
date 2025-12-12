@@ -15,7 +15,6 @@ import b_9 from "@/assets/img/home-01/brand/pinnacle.png";
 import b_10 from "@/assets/img/home-01/brand/logo100.png";
 import b_11 from "@/assets/img/home-01/brand/logo11.png";
 import b_12 from "@/assets/img/home-01/brand/embodier.png";
-import { headers } from "next/headers";
 
 const brand_data = [
   { id: 1, brand: b_1, height: 70, width: "auto" },
