@@ -6,7 +6,7 @@ const steps = [
   { id: 2, title: "Design & Prototyping", desc: "Clean UI/UX, brand-focused visuals, and conversion psychology." },
   { id: 3, title: "Development & Build", desc: "Fast, secure, and high-performing solutions." },
   { id: 4, title: "Launch & Optimization", desc: "SEO, testing, performance, analytics." },
-  { id: 5, title: "Ongoing Support", desc: "Marketing, updates, scaling & automation." },
+  { id: 5, title: "Ongoing Supports", desc: "Marketing, updates, scaling & automation." },
 ];
 
 const ServiceProcess = () => {

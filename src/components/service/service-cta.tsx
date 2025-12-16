@@ -45,7 +45,7 @@ const ServiceCTA = () => {
               </div>
 
               <p className="tp_fade_bottom" style={{ fontSize: "0.9rem", color: "rgba(0,0,0,0.6)" }}>
-                No pressure. No obligations. Just expert insights for your growth.
+                No pressure. No obligations. just expert insights for your growth.
               </p>
             </div>
           </div>
