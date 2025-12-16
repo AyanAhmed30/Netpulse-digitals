@@ -58,12 +58,9 @@ const ServiceHero = () => {
   }, []);
 
   return (
-    <div className="tp-hero-area tp-hero-ptb main-slider">
-      <div className="animated-background">
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
-      </div>
+    <div className="tp-hero-area tp-hero-ptb main-slider" style={{ position: 'relative' }}>
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1, background: "linear-gradient(to top, #dfe9f3 0%, white 100%)" }}></div>
+
 
       <div className="container-fluid">
         <div className="row justify-content-center">
@@ -86,7 +83,7 @@ const ServiceHero = () => {
                 <h1 className="tp-hero-title tp_fade_bottom">
                   <span className="p-relative">
                     Digital Services
-                    
+
                   </span>
                   <br />
                   <div>
@@ -104,14 +101,14 @@ const ServiceHero = () => {
                       letterSpacing: "0.5px",
                     }}
                   >
-Netpulse Digital provides smart digital solutions—design, development, marketing, AI, and SEO—for consistent business growth worldwide.                
-</span>
+                    Netpulse Digital provides smart digital solutions—design, development, marketing, AI, and SEO—for consistent business growth worldwide.
+                  </span>
                 </h1>
               </div>
             </div>
 
             <div className="tp-hero-content tp_fade_bottom" ref={heroContentRef}>
-             
+
 
               <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
                 <Link className="tp-btn-border" href="/portfolio-standard">
@@ -130,65 +127,7 @@ Netpulse Digital provides smart digital solutions—design, development, marketi
         </div>
       </div>
 
-      <style jsx>
-        {`/* Animated Background */
-        .animated-background {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          pointer-events: none;
-          z-index: 0;
-        }
 
-        .gradient-orb {
-          position: absolute;
-          border-radius: 50%;
-          filter: blur(80px);
-          opacity: 0.15;
-          animation: float 20s ease-in-out infinite;
-        }
-
-        .orb-1 {
-          width: 500px;
-          height: 500px;
-          background: linear-gradient(135deg, #667eea 0%, #685fe7ff 100%);
-          top: -100px;
-          left: -100px;
-          animation-delay: 0s;
-        }
-
-        .orb-2 {
-          width: 400px;
-          height: 400px;
-          background: linear-gradient(135deg, #a18cd1 0%, #00f2fe 100%); /* CHANGED: Pink/Red to Light Purple/Blue */
-          top: 50%;
-          right: -200px;
-          animation-delay: 7s;
-        }
-
-        .orb-3 {
-          width: 600px;
-          height: 600px;
-          background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-          bottom: -300px;
-          left: 30%;
-          animation-delay: 14s;
-        }
-
-        @keyframes float {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          33% {
-            transform: translate(50px, -50px) rotate(120deg);
-          }
-          66% {
-            transform: translate(-30px, 30px) rotate(240deg);
-          }
-        }`}
-      </style>
     </div>
   );
 };

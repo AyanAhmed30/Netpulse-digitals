@@ -41,6 +41,8 @@ const AboutUsMain = () => {
       <HeaderEleven />
       {/* header area end */}
 
+      <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -2, background: "linear-gradient(to top, #dfe9f3 0%, white 100%)" }}></div>
+
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
