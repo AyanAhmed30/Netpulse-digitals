@@ -21,7 +21,7 @@ const ServiceCTA = () => {
               </h2>
               
               <p className="tp_fade_bottom mb-5" style={{ fontSize: "1.1rem", color: "rgba(0,0,0,0.8)", lineHeight: "1.8" }}>
-                Let's build your next website, app, brand, or marketing system — and take your business to the next level.
+                Let&apos;s build your next website, app, brand, or marketing system — and take your business to the next level.
               </p>
 
               <div className="d-flex justify-content-center align-items-center gap-4 flex-wrap mb-4">
