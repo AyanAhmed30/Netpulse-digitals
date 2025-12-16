@@ -47,9 +47,18 @@ export default function FooterOne() {
               <div className="col-xl-5 col-lg-6">
                 <div className="tp-footer-middle-wrap">
                   <div className="tp-footer-content">
-                    <h4 className="tp-footer-big-title footer-big-text">
-                      {"Let's"} Contact!
-                    </h4>
+                    <h4 className="tp-footer-big-title footer-big-text">Ready to Grow Your Business? Let’s Talk.</h4>
+                    <p className="mt-2">Whether you need a new website, brand refresh, marketing system, or AI solution — we’re here to help you scale.</p>
+                    <div className="d-flex gap-3 mt-3">
+                     
+                      <Link className="tp-btn-border" href="/contact">
+                        <span className="tp-btn-border-wrap">
+                          <span className="text-1">Contact Us</span>
+                          <span className="text-2">Contact Us</span>
+                        </span>
+                      </Link>
+                    </div>
+                    <small className="d-block mt-2">No obligations. No pressure. 100% value.</small>
                   </div>
                   <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-6">

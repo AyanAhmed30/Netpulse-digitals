@@ -9,15 +9,15 @@ import Link from "next/link";
 const testimonial_data = [
   {
     id: 1,
-    desc: `"Netpulse rebuilt our e-commerce site using Next.js — conversions jumped by 250% in 3 months, and load time dropped to under 1 second. Their blend of design and technical SEO is unmatched."`,
-    name: "Sarah Mitchell",
-    designation: "Growth Director, UK Retail Brand",
+    desc: "Netpulse Digital transformed our online presence. The new website doubled our leads within weeks and their marketing strategy helped us scale faster than expected. Highly recommend!",
+    name: "Sarah M.",
+    designation: "USA",
   },
   {
     id: 2,
-    desc: `"We needed a partner who could handle branding, web dev, and digital marketing — all under one roof. Netpulse delivered a full rebrand + AI chatbot that cut support tickets by 40%. Truly an end-to-end growth partner."`,
+    desc: "We needed a partner who could handle branding, web dev, and digital marketing — all under one roof. Netpulse delivered a full rebrand and an AI chatbot that cut support tickets by 40%.",
     name: "Michael Chen",
-    designation: "Founder, SaaS Startup (Toronto)",
+    designation: "Founder, Toronto",
   },
 ];
 
@@ -67,7 +67,7 @@ const TestimonialOne = () => {
                     </span>
                   </button>
                 </div>
-                <h1 className="text-center fw-semibold" >What Our Client Says</h1>
+                <h1 className="text-center fw-semibold">Client Feedback That Speaks for Itself</h1>
                 <Swiper
                   {...slider_setting}
                   modules={[Navigation]}
@@ -157,3 +157,4 @@ const TestimonialOne = () => {
 };
 
 export default TestimonialOne;
+

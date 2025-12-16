@@ -6,46 +6,28 @@ import React from "react";
 const award_data = [
   {
     id: 1,
-    title: "Clutch Top Digital Agency",
-    subtitle: "USA & UK",
-    date: "2025",
-    description: "Ranked in Top 10 for Web Development & Digital Marketing",
+    title: "Full-Service Team",
+    subtitle: "Designers, developers, marketers & AI experts all under one roof.",
   },
   {
     id: 2,
-    title: "Google Premier Partner",
-    subtitle: "Search & Performance Marketing",
-    date: "2024–2025",
-    description: "Certified for excellence in SEO, PPC, and Analytics",
+    title: "Data-Driven Approach",
+    subtitle: "Every decision is strategic, not guesswork.",
   },
   {
     id: 3,
-    title: "Awwwards Honors",
-    subtitle: "Smart Website Excellence",
-    date: "2024",
-    description:
-      "For Netpulse’s Next.js-powered client site (Core Web Vitals: 98+)",
+    title: "Fast & Transparent Communication",
+    subtitle: "Always available, always accountable.",
   },
   {
     id: 4,
-    title: "DesignRush Best Creative Agency",
-    subtitle: "Branding & UI/UX",
-    date: "Q3 2024",
-    description: "Recognized for conversion-focused brand identity systems",
+    title: "Scalable Solutions",
+    subtitle: "Built for startups, SMEs, and growing businesses.",
   },
   {
     id: 5,
-    title: "GoodFirms Top Developer",
-    subtitle: "Next.js & React",
-    date: "2025",
-    description: "Featured for high-performance, SEO-optimized web builds",
-  },
-  {
-    id: 6,
-    title: "Client Satisfaction Leader",
-    subtitle: "4.9★ Average Rating",
-    date: "2023–2025",
-    description: "Based on 120+ verified client reviews (Clutch, Google)",
+    title: "Global Experience",
+    subtitle: "Delivering projects across USA, UK, Canada & Australia.",
   },
 ];
 
@@ -69,19 +51,19 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
         <div className="container container-1630">
           <div className="row">
             <div className="col-xxl-6 col-xl-7">
-              {!abStyle && (
-                <div className="tp-award-title-box">
-                  <h4 className="tp-section-title tp-char-animation">
-                    Awards & <br /> <span>Client Trust</span>
-                  </h4>
-                </div>
-              )}
-              {abStyle && (
-                <div className="ab-award-title-sm text-center text-xl-start">
-                  <span>Recognized for Excellence</span>
-                </div>
-              )}
-            </div>
+                {!abStyle && (
+                  <div className="tp-award-title-box">
+                    <h4 className="tp-section-title tp-char-animation">Why Businesses Choose Netpulse Digital</h4>
+                    <p className="mt-3">
+                      ✔ Full-Service Team — Designers, developers, marketers & AI experts all under one roof.
+                      <br />✔ Data-Driven Approach — Every decision is strategic, not guesswork.
+                      <br />✔ Fast & Transparent Communication — Always available, always accountable.
+                      <br />✔ Scalable Solutions — Built for startups, SMEs, and growing businesses.
+                      <br />✔ Global Experience — Delivering projects across USA, UK, Canada & Australia.
+                    </p>
+                  </div>
+                )}
+              </div>
           </div>
 
           {/* Full-width award list — no image column */}
@@ -112,11 +94,11 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
           </div>
         </div>
 
-        <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mb-4">
+          <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mb-4">
           <Link className="tp-btn-border" href="/contact">
             <span className="tp-btn-border-wrap">
-              <span className="text-1">Get In Touch</span>
-              <span className="text-2">Get In Touch</span>
+              <span className="text-1">Let’s Build Something Together</span>
+              <span className="text-2">Let’s Build Something Together</span>
             </span>
           </Link>
         </div>

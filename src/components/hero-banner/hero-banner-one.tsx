@@ -84,48 +84,49 @@ const HeroBannerOne = () => {
                 ref={heroTitleRef}
               >
                 <h1 className="tp-hero-title tp_fade_bottom">
-                  <span className="p-relative">
-                    Creative
-                    <span className="tp-hero-subtitle d-none d-lg-block">
-                      Hello <br /> People! We&apos;re
-                    </span>
-                  </span>
-                  <br />
-                  <div>
-
-                    Digital
-
-                    Agency
-                  </div>
+                  We Build Digital Experiences That Convert and Scale
                   <span
                     className="d-block"
                     style={{
-                      fontSize: "0.25em",
+                      fontSize: "0.75rem",
                       fontWeight: "400",
-                      marginTop: "20px",
+                      marginTop: "25px",
                       letterSpacing: "0.5px",
+                      lineHeight: "1.6",
+                      maxWidth: "800px",
+                      margin: "25px auto 0",
+                      color: "black",
                     }}
                   >
-                    We design, develop and market digital experiences that convert
+                   
+                   
                   </span>
                 </h1>
               </div>
             </div>
 
-            <div className="tp-hero-content tp_fade_bottom" ref={heroContentRef}>
+              <div className="tp-hero-content tp_fade_bottom" ref={heroContentRef}>
               <p>
-                From concept to code - Netpulse Digital helps businesses across
-                the USA, UK, Canada, and Australia scale through powerful design,
-                development, and marketing.
-              </p>
+From Web & App Development to Branding, Digital Marketing, and AI-powered automations — Netpulse Digital helps businesses grow across the USA, UK, Canada, and Australia with solutions built for results, not just aesthetics.              </p>
 
-              <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
-                <Link className="tp-btn-border" href="/contact">
-                  <span className="tp-btn-border-wrap">
-                    <span className="text-1">Talk to Our Experts</span>
-                    <span className="text-2">Talk to Our Experts</span>
-                  </span>
-                </Link>
+              <div className="d-flex justify-content-center align-items-center gap-3 flex-wrap" style={{ maxWidth: "900px", margin: "0 auto" }}>
+                <div className="tp-service-left-btn tp-btn-bounce" style={{ minWidth: "200px" }}>
+                  <Link className="tp-btn-border" href="/contact">
+                    <span className="tp-btn-border-wrap">
+                      <span className="text-1">Get a Free Strategy Call</span>
+                      <span className="text-2">Get a Free Strategy Call</span>
+                    </span>
+                  </Link>
+                </div>
+
+                <div className="tp-service-left-btn tp-btn-bounce" style={{ minWidth: "170px" }}>
+                  <Link className="tp-btn-border" href="/portfolio-standard">
+                    <span className="tp-btn-border-wrap">
+                      <span className="text-1">View Our Work</span>
+                      <span className="text-2">View Our Work</span>
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

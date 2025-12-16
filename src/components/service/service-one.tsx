@@ -13,31 +13,35 @@ import s_4 from "@/assets/img/home-01/service/m-l.png";
 const service_data = [
   {
     id: 1,
-    title: "DIGITAL MARKETING",
-    desc: "Strategic digital campaigns crafted to boost visibility, drive engagement, and spark real growth",
-    icon: s_1,
-    link: "/services/digital-marketing",
+    title: "Web & App Development",
+    desc: "Build fast, responsive, conversion-driven digital platforms. We design & develop websites and apps that look stunning, perform flawlessly, and turn visitors into customers.",
+    icon: s_2,
+    link: "/service",
+    cta: "View Development Services",
   },
   {
     id: 2,
-    title: "WEB DEVELOPMENT",
-    desc: "Powerful websites crafted with purpose, built to perform seamlessly across every device.",
-    icon: s_2,
-    link: "/services/web-development",
+    title: "Branding & Creative Design",
+    desc: "Create a brand that people trust and remember. Logos, brand identity systems, social media design — everything your brand needs to stand out.",
+    icon: s_3,
+    link: "/service",
+    cta: "Explore Branding",
   },
   {
     id: 3,
-    title: "CREATIVE DESIGN",
-    desc: "Creative energy flows through every detail we craft with purpose and precision.",
-    icon: s_3,
-    link: "/services/creative-design",
+    title: "Digital Marketing & SEO",
+    desc: "Get found. Get clicks. Get customers. From SEO and social media to ads and funnels — we build custom strategies that increase visibility and generate real growth.",
+    icon: s_1,
+    link: "/service",
+    cta: "Grow With Marketing",
   },
   {
     id: 4,
-    title: "AI AUTOMATIONS AND CHATBOTS",
-    desc: "Intelligent AI systems crafted to automate conversations, enhance support, and improve engagement.",
+    title: "AI & Automation",
+    desc: "Automate your business with intelligent systems. AI chatbots, workflow automation, CRM integrations — scale smarter with AI-powered tools.",
     icon: s_4,
-    link: "/services/ai-automation",
+    link: "/service",
+    cta: "Discover AI Solutions",
   },
 ];
 
@@ -54,11 +58,9 @@ const ServiceOne = () => {
       <div className="container container-1630 position-relative" style={{ zIndex: 1 }}>
         <div className="row">
           <div className="col-xl-6 col-lg-6">
-            <div className="tp-service-title-box p-relative">
-              <h4 className="tp-section-title tp-char-animation">
-                Netpulse Digitals<br />
-                <span>Services</span>
-              </h4>
+              <div className="tp-service-title-box p-relative">
+              <h4 className="tp-section-title tp-char-animation">What We Can Do for Your Business</h4>
+              <p className="mt-3">End-to-end creative, development, and marketing services built for performance.</p>
             </div>
 
             <div className="tp-service-left-btn tp-btn-bounce mt-4">
@@ -85,6 +87,11 @@ const ServiceOne = () => {
                       <Link href={s.link}>{s.title}</Link>
                     </h4>
                     <p className="order-1">{s.desc}</p>
+                    <div className="mt-2">
+                      <Link href={s.link} className="tp-link-arrow">
+                        {s.cta}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}

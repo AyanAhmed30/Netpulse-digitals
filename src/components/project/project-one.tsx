@@ -120,6 +120,24 @@ const ProjectOne = ({ style_2 = false }: IProps) => {
         <div className="tp-project-gallery-wrapper">
           <div className="container container-1630">
             <div className="tp-project-gallery-top pb-50">
+              <div className="row mb-4">
+                <div className="col-xl-8">
+                  <h2 className="tp-section-title">Recent Work That Drives Real Results</h2>
+                  <p className="mt-3">Explore our latest projects — crafted with strategy, creativity, and conversion psychology at the core.</p>
+                </div>
+                <div className="col-xl-4 d-flex align-items-start justify-content-xl-end mt-2">
+                  <div className="tp-project-btn tp-btn-trigger">
+                    <div className="tp-btn-bounce">
+                      <Link className="tp-btn-border" href="/portfolio-standard">
+                        <span className="tp-btn-border-wrap">
+                          <span className="text-1">View Full Portfolio</span>
+                          <span className="text-2">View Full Portfolio</span>
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="row">
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="tp-project-left-wrap">
