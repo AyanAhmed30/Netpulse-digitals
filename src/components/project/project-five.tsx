@@ -4,7 +4,7 @@ import LineTextFour from "../line-text/line-text-4";
 import { UpArrow } from "../svg";
 import Link from "next/link";
 // This is the correct NAMED import which resolves the data warning issue for this specific file.
-import { portfolioData } from "@/data/portfolio-data"; 
+import { portfolioData } from "@/data/portfolio-data";
 
 type IProps = {
   style_2?: boolean;
@@ -13,9 +13,8 @@ type IProps = {
 export default function ProjectFive({ style_2 = false }: IProps) {
   return (
     <div
-      className={`tp-project-5-2-area pb-130 ${
-        style_2 ? "" : "tp-project-5-2-pt black-bg"
-      }`}
+      className={`tp-project-5-2-area ${style_2 ? "pb-30" : "pb-130"} ${style_2 ? "" : "tp-project-5-2-pt black-bg"
+        }`}
     >
       {!style_2 && (
         <div className="row">
@@ -24,13 +23,13 @@ export default function ProjectFive({ style_2 = false }: IProps) {
           </div>
         </div>
       )}
-      
+
       <div className="container">
         <div className="row gx-140">
           {portfolioData.map((category) => (
             <div key={category.id} className="col-xl-6 col-lg-6 col-md-6">
               <div
-                className="tp-project-5-2-thumb fix mb-140 p-relative not-hide-cursor"
+                className={`tp-project-5-2-thumb fix ${style_2 ? "mb-40" : "mb-140"} p-relative not-hide-cursor`}
                 data-cursor="View<br>Projects"
               >
                 <Link
@@ -52,24 +51,24 @@ export default function ProjectFive({ style_2 = false }: IProps) {
                       />
                     </div>
                   </span>
-                  
+
                   <div className="tp-project-5-2-category tp_fade_anim">
                     <span>{category.category}</span>
                   </div>
-                  
+
                   <div className="tp-project-5-2-content tp_fade_anim">
                     <h4 className="tp-project-5-2-title-sm">{category.title}</h4>
-                    
+
                   </div>
                 </Link>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="row">
           <div className="col-xl-12">
-            
+
           </div>
         </div>
       </div>

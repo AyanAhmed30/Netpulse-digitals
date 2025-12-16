@@ -60,7 +60,7 @@ const ServiceOne = () => {
       <div className="container container-1630 position-relative" style={{ zIndex: 1 }}>
         <div className="row">
           <div className="col-xl-6 col-lg-6">
-              <div className="tp-service-title-box p-relative">
+            <div className="tp-service-title-box p-relative">
               <h4 className="tp-section-title tp-char-animation">What We Can Do for Your Business</h4>
               <p className="mt-3">End-to-end creative, development, and marketing services built for performance.</p>
             </div>
@@ -102,9 +102,9 @@ const ServiceOne = () => {
         </div>
       </div>
 
-      <ServiceProcess />
+      {/* <ServiceProcess /> */}
 
-      <ServiceCTA />
+      {/* <ServiceCTA /> */}
 
       {/* ✅ Inline styles for animated background (same as HeroBannerOne) */}
       <style jsx>{`

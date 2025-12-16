@@ -44,10 +44,10 @@ const HomeMain = () => {
   }, []);
 
   useEffect(() => {
-    if(typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
+    if (typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
       cursorAnimation();
     }
-  },[]);
+  }, []);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
@@ -55,11 +55,11 @@ const HomeMain = () => {
       // portfolio image wrap
       gsap.timeline({
         scrollTrigger: {
-           trigger: ".tp-project-full-img-wrap",
-           start: "top 65",
-           end: "bottom 0%",
-           pin: ".tp-project-full-img",
-           pinSpacing: false,
+          trigger: ".tp-project-full-img-wrap",
+          start: "top 65",
+          end: "bottom 0%",
+          pin: ".tp-project-full-img",
+          pinSpacing: false,
         }
       });
       // team marquee
@@ -77,6 +77,8 @@ const HomeMain = () => {
   return (
     <Wrapper showBackToTop={false}>
 
+      <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -2, background: "linear-gradient(to top, #dfe9f3 0%, white 100%)" }}></div>
+
       {/* magic cursor start */}
       <div id="magic-cursor">
         <div id="ball"></div>
@@ -91,7 +93,7 @@ const HomeMain = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            
+
             {/* hero area start */}
             <HeroBannerOne />
             {/* hero area end */}
@@ -128,7 +130,7 @@ const HomeMain = () => {
             <TestimonialOne />
             {/* testimonial area */}
           </main>
-          <BigText/>
+          <BigText />
 
           {/* footer area */}
           <FooterOne />
@@ -139,13 +141,13 @@ const HomeMain = () => {
       {/* footer shape */}
       <div className="tp-footer-shape-wrap z-index-5 smooth">
         <Link href="/contact">
-            <div className="tp-footer-shape p-relative">
-                <Image className="img-1" src={shape_1} alt="shape"/>
-                <Image className="img-2" src={shape_2} alt="shape"/>
-                <span></span>
-            </div>
-          </Link>
-        </div>
+          <div className="tp-footer-shape p-relative">
+            <Image className="img-1" src={shape_1} alt="shape" />
+            <Image className="img-2" src={shape_2} alt="shape" />
+            <span></span>
+          </div>
+        </Link>
+      </div>
       {/* footer shape */}
     </Wrapper>
   );
