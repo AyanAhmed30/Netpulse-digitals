@@ -22,6 +22,8 @@ import Link from "next/link";
 import { charAnimation, fadeAnimation } from "@/utils/title-animation";
 import { servicePanel } from "@/utils/panel-animation";
 import TestimonialOne from "@/components/testimonial/testimonial-one";
+import ServiceProcess from "@/components/service/service-process";
+import ServiceCTA from "@/components/service/service-cta";
 
 const ServiceMain = () => {
   useScrollSmooth();
@@ -101,10 +103,12 @@ const ServiceMain = () => {
                 </div>
               </div>
             </div>
-            {/* brand area */}
-
+            <ServiceProcess />
+            <ServiceCTA />
             {/* Testimonils area */}
-            <TestimonialOne />
+            <div className="my-5">
+              <TestimonialOne />
+            </div>
             {/* Testimonils area */}
 
             {/* big text */}

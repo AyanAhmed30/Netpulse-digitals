@@ -85,15 +85,15 @@ const ServiceHero = () => {
               >
                 <h1 className="tp-hero-title tp_fade_bottom">
                   <span className="p-relative">
-                    Experience 
+                    Digital Services
                     
                   </span>
                   <br />
                   <div>
 
-                    the best
+                    Built to Grow
 
-                    Services
+                    Your Business
                   </div>
                   <span
                     className="d-block"
@@ -104,7 +104,8 @@ const ServiceHero = () => {
                       letterSpacing: "0.5px",
                     }}
                   >
-Providing continuous, high-quality services designed to meet your goals with complete professionalism.                </span>
+Netpulse Digital provides smart digital solutions—design, development, marketing, AI, and SEO—for consistent business growth worldwide.                
+</span>
                 </h1>
               </div>
             </div>
@@ -113,10 +114,10 @@ Providing continuous, high-quality services designed to meet your goals with com
              
 
               <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
-                <Link className="tp-btn-border" href="/contact">
+                <Link className="tp-btn-border" href="/portfolio-standard">
                   <span className="tp-btn-border-wrap">
-                    <span className="text-1">Let&apos;s Start Your Project</span>
-                    <span className="text-2">Let&apos;s Start Your Project</span>
+                    <span className="text-1">View Our Portfolio</span>
+                    <span className="text-2">View Our Portfolio</span>
                   </span>
                 </Link>
               </div>

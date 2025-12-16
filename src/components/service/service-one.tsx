@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ServiceProcess from "./service-process";
+import ServiceCTA from "./service-cta";
 
 // service images
 import s_1 from "@/assets/img/home-01/service/d-m.png";
@@ -99,6 +101,10 @@ const ServiceOne = () => {
           </div>
         </div>
       </div>
+
+      <ServiceProcess />
+
+      <ServiceCTA />
 
       {/* ✅ Inline styles for animated background (same as HeroBannerOne) */}
       <style jsx>{`
