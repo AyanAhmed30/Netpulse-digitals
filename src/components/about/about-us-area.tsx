@@ -61,12 +61,12 @@ export default function AboutUsArea() {
                   Hi!
                 </span>
                 <p className="tp-dropcap tp_fade_bottom">
-                  We’re Netpulse Digital — a full-service digital agency helping
-                  brands grow through creativity, data, and technology.
-                  <br />
-                  From London to Los Angeles, Toronto to Sydney — our work
-                  empowers businesses worldwide to design, develop, and market
-                  smarter.
+                  We partner with companies around the world to create standout
+                  websites, powerful brands, and marketing systems that deliver
+                  measurable results. <br />
+                  Today, we proudly serve clients in the USA, UK, Canada, and
+                  Australia with precision, quality, and a genuine passion for
+                  helping businesses succeed.{" "}
                 </p>
               </div>
             </div>
@@ -158,7 +158,11 @@ export default function AboutUsArea() {
         .orb-2 {
           width: 400px;
           height: 400px;
-          background: linear-gradient(135deg, #a18cd1 0%, #4facfe 100%); /* CHANGED: Light Purple to Light Blue (no pink) */
+          background: linear-gradient(
+            135deg,
+            #a18cd1 0%,
+            #4facfe 100%
+          ); /* CHANGED: Light Purple to Light Blue (no pink) */
           top: 50%;
           right: -200px;
           animation-delay: 7s;
@@ -174,7 +178,8 @@ export default function AboutUsArea() {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) rotate(0deg);
           }
           33% {

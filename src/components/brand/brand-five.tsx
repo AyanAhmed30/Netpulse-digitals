@@ -24,7 +24,20 @@ import b_11 from "@/assets/img/home-01/brand/logo11.png";
 import b_12 from "@/assets/img/home-01/brand/embodier.png";
 
 // brand images
-const brand_images = [b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_10, b_11, b_12];
+const brand_images = [
+  b_1,
+  b_2,
+  b_3,
+  b_4,
+  b_5,
+  b_6,
+  b_7,
+  b_8,
+  b_9,
+  b_10,
+  b_11,
+  b_12,
+];
 
 export default function BrandFive() {
   return (
@@ -49,10 +62,7 @@ export default function BrandFive() {
               <div className="swiper-container ab-brand-slide-active">
                 <Marquee speed={100} loop={0} className="ab-brand-slide-wrap">
                   {brand_images.map((b, i) => (
-                    <div
-                      key={i}
-                      className="ab-brand-item"
-                    >
+                    <div key={i} className="ab-brand-item">
                       <Image src={b} height={70} alt="brand" />
                     </div>
                   ))}
@@ -65,9 +75,9 @@ export default function BrandFive() {
           <div className="col-xl-7 col-lg-9">
             <div className="ab-brand-content tp_title_anim">
               <p>
-                We belive in creating partnerships based on honesty and true
-                connection. That is why some of the biggest companies stayed with
-                us for years.
+                A talented and passionate group of designers, developers,
+                strategists, and storytellers committed to helping businesses
+                grow through exceptional digital experiences.
               </p>
             </div>
           </div>
