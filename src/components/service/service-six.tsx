@@ -109,6 +109,54 @@ export default function ServiceSix() {
               </div>
               <div className="col-xl-6 col-lg-6">
                 <div className="sv-service-content-wrap d-flex align-items-center">
+                  <style jsx>{`
+                    .sv-service-title {
+                      font-family: var(--tp-ff-gelder);
+                      font-size: 3rem;
+                      font-weight: 700;
+                      color: #0047AB;
+                      line-height: 1.2;
+                      margin-bottom: 25px;
+                    }
+                    .sv-service-subtitle {
+                      font-family: var(--tp-ff-body);
+                      font-size: 1rem;
+                      font-weight: 600;
+                      color: #0047AB;
+                      text-transform: uppercase;
+                      letter-spacing: 2px;
+                      display: flex;
+                      align-items: center;
+                      gap: 15px;
+                      margin-bottom: 15px;
+                    }
+                    .sv-service-subtitle i {
+                      font-style: normal;
+                      opacity: 0.5;
+                    }
+                    .sv-service-text p {
+                      font-family: var(--tp-ff-body);
+                      font-size: 1.15rem;
+                      line-height: 1.7;
+                      color: #4A5568;
+                      margin-bottom: 30px;
+                    }
+                    .sv-service-list ul li {
+                      font-family: var(--tp-ff-body);
+                      font-size: 1rem;
+                      color: #4A5568;
+                      margin-bottom: 10px;
+                      list-style: none;
+                      padding-left: 20px;
+                      position: relative;
+                    }
+                    .sv-service-list ul li::before {
+                      content: "→";
+                      position: absolute;
+                      left: 0;
+                      color: #0047AB;
+                    }
+                  `}</style>
                   <div className="sv-service-content">
                     <div className="sv-service-title-box">
                       <span className="sv-service-subtitle">

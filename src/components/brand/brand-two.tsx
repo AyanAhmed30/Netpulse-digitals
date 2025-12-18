@@ -35,12 +35,10 @@ export function BrandItems() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Fix hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Until mounted, do NOT invert (prevents hydration mismatch)
   const wrapperStyle = mounted
     ? theme === "light"
       ? { filter: "invert(1)" }
@@ -52,13 +50,34 @@ export function BrandItems() {
       {brand_data.map((item) => (
         <div key={item.id} className="col-xl-3 col-lg-3 col-md-6">
           <div
-            className="tp-brand-4-item p-relative brand-no-hover"
-            style={wrapperStyle}
+            className="tp-brand-4-item p-relative brand-hover-effect"
+            style={{
+              ...wrapperStyle,
+              borderRadius: "10px",
+              transition: "all 0.3s ease",
+              overflow: "hidden",
+            }}
           >
-            <Image src={item.brand} alt="brand" style={{ height: item.height ? item.height : "auto", width: item.width ? item.width : ""}} />
+            <Image
+              src={item.brand}
+              alt="brand"
+              style={{
+                height: item.height ? item.height : "auto",
+                width: item.width ? item.width : "",
+                display: "block",
+              }}
+            />
           </div>
         </div>
       ))}
+
+      {/* Hover effect CSS */}
+      <style jsx>{`
+        .brand-hover-effect:hover {
+          border: 3px solid #0047AB; /* fixed blue border */
+          filter: none; /* prevent invert on border */
+        }
+      `}</style>
     </>
   );
 }

@@ -15,9 +15,13 @@ const ServiceProcess = () => {
       <div className="container container-1630">
         <div className="row">
           <div className="col-12">
-            <div className="tp-service-title-box p-relative text-center mb-60">
-              <h4 className="tp-section-title tp-char-animation">How We Bring Your Vision to Life</h4>
-            </div>
+           <div style={{ textAlign: "center" }}>
+  <h2 className="tp-section-title tp-char-animation mb-4">
+
+               How We Bring Your Vision to Life
+              </h2>
+</div>
+
           </div>
         </div>
 
@@ -38,33 +42,52 @@ const ServiceProcess = () => {
 
       <style jsx>{`
         .col-xl-2-custom { flex: 0 0 calc(20% - 1rem); }
+        .tp-section-title {
+          font-family: var(--tp-ff-gelder);
+          font-size: 3rem;
+          font-weight: 700;
+          color: #0047AB;
+          line-height: 1.2;
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
         .tp-process-number span { 
           display: inline-block; 
           width: 56px; 
           height: 56px; 
           line-height: 56px; 
           border-radius: 50%; 
-          background: rgba(0,0,0,0.06); 
+          background: rgba(0, 71, 171, 0.08); 
           font-weight: 700; 
           font-size: 1.3rem;
+          font-family: var(--tp-ff-gelder);
+          color: #0047AB;
         }
         .tp-process-item { 
-          border-radius: 8px; 
+          border-radius: 12px; 
           transition: all 0.3s ease;
+          border: 1px solid #116ae7ff;
         }
         .tp-process-item:hover { 
-          background: rgba(0,0,0,0.02); 
+          background: white; 
           transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 71, 171, 0.1);
+          border: 3px solid #0047AB;
         }
         .tp-process-item h5 { 
-          font-size: 1rem; 
+          font-family: var(--tp-ff-gelder);
+          font-size: 1.25rem; 
           font-weight: 600; 
-          color: #000;
+          color: #0047AB;
+          text-align: center !important;
         }
         .tp-process-item p { 
-          color: rgba(0,0,0,0.65);
-          font-size: 0.9rem;
-          line-height: 1.5;
+          font-family: var(--tp-ff-body);
+          color: #4A5568;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          text-align: center !important;
         }
         
         @media (max-width: 1399px) {

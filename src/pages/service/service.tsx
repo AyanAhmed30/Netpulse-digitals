@@ -55,6 +55,28 @@ const ServiceMain = () => {
 
             {/* service area */}
             <div className="tp-service-5-area sv-service-style pb-70">
+              <style jsx>{`
+                .tp-service-5-title {
+                  font-family: var(--tp-ff-gelder);
+                  font-size: 3rem;
+                  font-weight: 700;
+                  color: #0047AB;
+                  line-height: 1.2;
+                  text-align: center;
+                }
+                .ab-inner-subtitle {
+                  font-family: var(--tp-ff-body);
+                  font-size: 1rem;
+                  font-weight: 600;
+                  color: #0047AB;
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                }
+              `}</style>
               <div className="container container-1530">
                 <div className="row">
                   <div className="col-xl-12">
@@ -65,7 +87,7 @@ const ServiceMain = () => {
                       </span>
                       <h4 className="tp-service-5-title">
                         We strongly believe that only design, development &
-                        marketing <br />
+                        marketing 
                         reinforced by strategy can provide real results.
                       </h4>
                     </div>
@@ -76,14 +98,37 @@ const ServiceMain = () => {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce">
-                <Link className="tp-btn-border" href="/contact">
-                  <span className="tp-btn-border-wrap">
-                    <span className="text-1">Get Our Services</span>
-                    <span className="text-2">Get Our Services</span>
-                  </span>
-                </Link>
-              </div>
+              <div
+  className="hero-cta-wrapper"
+  style={{
+    display: "flex",
+    gap: "15px",
+    marginTop: "60px",
+    flexWrap: "wrap",
+    justifyContent: "center", // center horizontally
+  }}
+>
+  <Link
+    href="/contact"
+    style={{
+      display: "inline-block",
+      padding: "20px 40px", // ✅ increased padding for bigger button
+      background: "#0047AB",
+      color: "white",
+      borderRadius: "10px",
+      fontSize: "1.2rem", // ✅ larger text
+      fontWeight: "700",  // slightly bolder
+      textDecoration: "none",
+      fontFamily: "var(--tp-ff-body)",
+      transition: "all 0.3s ease",
+      border: "none",
+    }}
+    className="hero-cta-primary"
+  >
+    Get Our Services
+  </Link>
+</div>
+
             </div>
             {/* service area */}
 
