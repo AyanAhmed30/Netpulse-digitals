@@ -56,7 +56,7 @@ export default function AboutUsArea() {
           <div id="about-info" className="row">
             <div className="col-xxl-9">
               <div className="ab-about-content p-relative">
-                <span style={{backgroundColor: "#0047AB"}}>
+                <span style={{ backgroundColor: "#0047AB" }}>
                   <Hand />
                   Hi!
                 </span>
@@ -128,12 +128,35 @@ export default function AboutUsArea() {
                   </div>
 
                   <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mt-3">
-                    <Link className="tp-btn-border" href="/contact">
-                      <span className="tp-btn-border-wrap">
-                        <span className="text-1">Talk to Our Experts</span>
-                        <span className="text-2">Talk to Our Experts</span>
-                      </span>
-                    </Link>
+                    <div
+                      className="hero-cta-wrapper"
+                      style={{
+                        display: "flex",
+                        gap: "15px",
+                        marginBottom: "60px",
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <Link
+                        href="/contact"
+                        style={{
+                          display: "inline-block",
+                          padding: "16px 32px",
+                          background: "#0047AB",
+                          color: "white",
+                          borderRadius: "8px",
+                          fontSize: "1rem",
+                          fontWeight: "600",
+                          textDecoration: "none",
+                          fontFamily: "var(--tp-ff-body)",
+                          transition: "all 0.3s ease",
+                          border: "none",
+                        }}
+                        className="hero-cta-primary"
+                      >
+                        Talk to Our Experts{" "}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

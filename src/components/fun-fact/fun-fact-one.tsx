@@ -38,6 +38,7 @@ export default function FunFactOne() {
               <h4
                 style={{
                   fontFamily: "var(--tp-ff-gelder-p)",
+                  color: "#0047AB",
                 }}
                 className="ab-inner-funfact-title tp_title_anim"
               >
@@ -51,7 +52,7 @@ export default function FunFactOne() {
                 {counter_data.map((item) => (
                   <div key={item.id} className="col-xl-6 col-lg-6 col-md-6">
                     <div className="ab-funfact-item mb-90">
-                      <span>
+                      <span style={{ color: "#0047AB" }}>
                         <CounterItem min={0} max={item.count} />
                         {item.text}
                       </span>
