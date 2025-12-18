@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import {
   Syne,
   Aladin,
+  Manrope,
+  Outfit,
   Marcellus,
 } from "next/font/google";
 import { VideoProvider } from "@/provider/VideoProvider";
@@ -29,6 +31,12 @@ const gellery = localFont({
     },
   ],
   variable: "--tp-ff-gallery",
+});
+
+const gelder = Outfit({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--tp-ff-gelder",
 });
 
 const aladin = Aladin({
@@ -77,7 +85,7 @@ export default function RootLayout({
       <body
         id="body"
         suppressHydrationWarning={true}
-        className={`${gellery.variable} ${aladin.variable}
+        className={`${gellery.variable} ${gelder.variable} ${aladin.variable}
          ${syne_body.variable} ${syne_heading.variable} ${syne_p.variable}
           ${syne.variable} ${marcellus.variable}`}
       >

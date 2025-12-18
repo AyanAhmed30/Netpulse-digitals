@@ -10,21 +10,41 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroBannerOne = () => {
-  const heroTitleRef = useRef(null);
-  const heroContentRef = useRef(null);
+  const heroTitleRef = useRef<HTMLHeadingElement>(null);
+  const heroContentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     if (typeof window !== "undefined") {
       setTimeout(() => fadeAnimation(), 100);
 
-      // Title dragging to the left
+      // Modern word-by-word reveal animation for title
       const heroTitle = heroTitleRef.current;
       if (heroTitle) {
+        const words = heroTitle.querySelectorAll('.word');
+
         gsap.fromTo(
-          heroTitle,
-          { x: 0 },
+          words,
           {
-            x: -200,
+            opacity: 0,
+            y: 50,
+            rotateX: -90
+          },
+          {
+            opacity: 1,
+            y: 0,
+            rotateX: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "back.out(1.2)",
+            delay: 0.3
+          }
+        );
+
+        // Parallax scroll effect
+        gsap.to(
+          heroTitle,
+          {
+            y: -100,
             scrollTrigger: {
               trigger: heroTitle,
               start: "top top",
@@ -65,77 +85,219 @@ const HeroBannerOne = () => {
         <div className="gradient-orb orb-3"></div>
       </div>
 
-      <div className="container-fluid">
-        <div className="row justify-content-center">
-          <div className="col-xxl-12">
-            <div className="tp-hero-title-wrap mb-35 p-relative">
-              <div className="tp-hero-shape-1">
-                <Image
-                  src="/assets/img/home-01/hero/hero-bg-shape-1-1.svg"
-                  alt="shape"
-                  width={790}
-                  height={700}
-                  style={{ height: "auto" }}
-                />
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8">
+            <div className="hero-content-wrapper" style={{ paddingTop: "130px", paddingBottom: "80px" }}>
+              {/* Tagline */}
+              <div className="hero-tagline" style={{
+                color: "#0047AB",
+                fontSize: "0.95rem",
+                fontWeight: "600",
+                letterSpacing: "0.5px",
+                marginBottom: "20px",
+                fontFamily: "var(--tp-ff-body)"
+              }}>
+                Digital Transformation Company
               </div>
 
-              <div
-                className="tp-hero-title-box text-center p-relative"
-                ref={heroTitleRef}
-              >
-                <h1 className="tp-hero-title tp_fade_bottom">
-                  We Build Digital Experiences That Convert and Scale
-                  <span
-                    className="d-block"
-                    style={{
-                      fontSize: "0.75rem",
-                      fontWeight: "400",
-                      marginTop: "25px",
-                      letterSpacing: "0.5px",
-                      lineHeight: "1.6",
-                      maxWidth: "800px",
-                      margin: "25px auto 0",
-                      color: "black",
-                    }}
-                  >
-                   
-                   
-                  </span>
-                </h1>
+              {/* Main Heading */}
+              <h1 className="hero-main-title" ref={heroTitleRef} style={{
+                fontFamily: "var(--tp-ff-gelder)",
+                color: "#0047AB",
+                fontSize: "3.5rem",
+                lineHeight: "1.15",
+                letterSpacing: "-0.02em",
+                fontWeight: "700",
+                marginBottom: "25px",
+                maxWidth: "700px"
+              }}>
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>We</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Build</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Digital</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Experiences</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>That</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Convert</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>and</span>{' '}
+                <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Scale</span>
+              </h1>
+
+              {/* Description */}
+              <p className="hero-description" style={{
+                color: "#4A5568",
+                fontSize: "1.1rem",
+                lineHeight: "1.7",
+                marginBottom: "35px",
+                maxWidth: "600px",
+                fontFamily: "var(--tp-ff-body)"
+              }}>
+                From Web & App Development to Branding, Digital Marketing, and AI-powered automations — Netpulse Digital helps businesses grow across the USA, UK, Canada, and Australia with solutions built for results, not just aesthetics.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="hero-cta-wrapper" style={{ display: "flex", gap: "15px", marginBottom: "60px", flexWrap: "wrap" }}>
+                <Link
+                  href="/contact"
+                  style={{
+                    display: "inline-block",
+                    padding: "16px 32px",
+                    background: "#0047AB",
+                    color: "white",
+                    borderRadius: "8px",
+                    fontSize: "1rem",
+                    fontWeight: "600",
+                    textDecoration: "none",
+                    fontFamily: "var(--tp-ff-body)",
+                    transition: "all 0.3s ease",
+                    border: "none"
+                  }}
+                  className="hero-cta-primary"
+                >
+                  Get a Free Strategy Call
+                </Link>
+                <Link
+                  href="/portfolio-standard"
+                  style={{
+                    display: "inline-block",
+                    padding: "16px 32px",
+                    background: "transparent",
+                    color: "#0047AB",
+                    borderRadius: "8px",
+                    fontSize: "1rem",
+                    fontWeight: "600",
+                    textDecoration: "none",
+                    fontFamily: "var(--tp-ff-body)",
+                    transition: "all 0.3s ease",
+                    border: "2px solid #0047AB"
+                  }}
+                  className="hero-cta-secondary"
+                >
+                  View Our Work
+                </Link>
               </div>
+
+
             </div>
+          </div>
 
-              <div className="tp-hero-content tp_fade_bottom" ref={heroContentRef}>
-              <p>
-From Web & App Development to Branding, Digital Marketing, and AI-powered automations — Netpulse Digital helps businesses grow across the USA, UK, Canada, and Australia with solutions built for results, not just aesthetics.              </p>
-
-              <div className="d-flex justify-content-center align-items-center gap-3 flex-wrap" style={{ maxWidth: "900px", margin: "0 auto" }}>
-                <div className="tp-service-left-btn tp-btn-bounce" style={{ minWidth: "200px" }}>
-                  <Link className="tp-btn-border" href="/contact">
-                    <span className="tp-btn-border-wrap">
-                      <span className="text-1">Get a Free Strategy Call</span>
-                      <span className="text-2">Get a Free Strategy Call</span>
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="tp-service-left-btn tp-btn-bounce" style={{ minWidth: "170px" }}>
-                  <Link className="tp-btn-border" href="/portfolio-standard">
-                    <span className="tp-btn-border-wrap">
-                      <span className="text-1">View Our Work</span>
-                      <span className="text-2">View Our Work</span>
-                    </span>
-                  </Link>
-                </div>
+          {/* Hero Image Column */}
+          <div className="col-lg-4">
+            <div className="hero-image-wrapper" style={{
+              paddingTop: "130px",
+              paddingBottom: "80px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              <div style={{
+                position: "relative",
+                width: "100%",
+                maxWidth: "500px"
+              }}>
+                <Image
+                  src="/assets/img/home-01/hero/hero-1-1.webp"
+                  alt="Digital Solutions"
+                  width={700}
+                  height={800}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                    filter: "drop-shadow(0 20px 40px rgba(0, 71, 171, 0.15))"
+                  }}
+                  priority
+                />
+                {/* Decorative elements */}
+                <div style={{
+                  position: "absolute",
+                  top: "-20px",
+                  right: "-20px",
+                  width: "100px",
+                  height: "100px",
+                  background: "linear-gradient(135deg, #0047AB 0%, #667eea 100%)",
+                  borderRadius: "50%",
+                  opacity: "0.1",
+                  zIndex: "-1"
+                }}></div>
+                <div style={{
+                  position: "absolute",
+                  bottom: "-30px",
+                  left: "-30px",
+                  width: "150px",
+                  height: "150px",
+                  background: "linear-gradient(135deg, #667eea 0%, #0047AB 100%)",
+                  borderRadius: "50%",
+                  opacity: "0.08",
+                  zIndex: "-1"
+                }}></div>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="row">
-          <div className="col-xl-12"></div>
-        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @media (max-width: 991px) {
+          .hero-image-wrapper {
+            display: none !important;
+          }
+        }
+      `}</style>
+
+      <style jsx>{`
+        .tp-hero-ptb {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        .hero-cta-primary:hover {
+          background: white !important;
+          color: #0047AB !important;
+          border: 2px solid #0047AB !important;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0, 71, 171, 0.3);
+        }
+        
+        .hero-cta-secondary:hover {
+          background: #0047AB !important;
+          color: white !important;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0, 71, 171, 0.2);
+        }
+
+        @media (max-width: 768px) {
+          .hero-content-wrapper {
+            padding-top: 30px !important;
+            padding-bottom: 40px !important;
+          }
+          
+          .hero-main-title {
+            font-size: 2.5rem !important;
+          }
+          
+          .hero-description {
+            font-size: 1rem !important;
+          }
+          
+          .hero-cta-wrapper {
+            flex-direction: column !important;
+          }
+          
+          .hero-cta-wrapper a {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      `}</style>
 
       <style jsx>
         {`/* Animated Background */

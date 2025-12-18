@@ -52,56 +52,186 @@ const ServiceOne = () => {
     <div className="tp-service-area pt-180 pb-80 tp-btn-trigger position-relative">
 
 
-      <div className="container container-1630 position-relative" style={{ zIndex: 1 }}>
+      <div className="container position-relative" style={{ zIndex: 1 }}>
+        {/* Centered Header Section */}
         <div className="row">
-          <div className="col-xl-6 col-lg-6">
-            <div className="tp-service-title-box p-relative">
-              <h4 className="tp-section-title tp-char-animation">What We Can Do for Your Business</h4>
-              <p className="mt-3">End-to-end creative, development, and marketing services built for performance.</p>
-            </div>
-
-            <div className="tp-service-left-btn tp-btn-bounce mt-4">
-              <Link className="tp-btn-border" href="/service">
-                <span className="tp-btn-border-wrap">
-                  <span className="text-1">See All Services</span>
-                  <span className="text-2">See All Services</span>
-                </span>
-              </Link>
-            </div>
-          </div>
-          <div className="col-xl-6 col-lg-6">
-            <div className="tp-service-right-wrap">
-              {service_data.map((s, i) => (
-                <div
-                  key={s.id}
-                  className="tp-service-item d-flex align-items-start mb-75 tp_fade_bottom"
-                >
-                  <div className="tp-service-icon">
-                    <Image src={s.icon} alt="icon" style={{ height: "50px", width: "50px" }} />
-                  </div>
-                  <div className="tp-service-content">
-                    <h4 className="tp-service-title-sm order-0">
-                      <Link href={s.link}>{s.title}</Link>
-                    </h4>
-                    <p className="order-1">{s.desc}</p>
-                    <div className="mt-2">
-                      <Link href={s.link} className="tp-link-arrow">
-                        {s.cta}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          <div className="col-12">
+            <div className="text-center mb-5">
+              <h4 className="tp-section-title tp-char-animation" style={{
+                color: "#0047AB",
+                fontFamily: "var(--tp-ff-gelder)",
+                fontWeight: "700",
+                fontSize: "3rem",
+                marginBottom: "20px"
+              }}>What We Can Do for Your Business</h4>
+              <p style={{
+                color: "#4A5568",
+                fontFamily: "var(--tp-ff-body)",
+                fontSize: "1.15rem",
+                maxWidth: "700px",
+                margin: "0 auto"
+              }}>End-to-end creative, development, and marketing services built for performance.</p>
             </div>
           </div>
         </div>
+
+        {/* Services Cards Grid */}
+        <div className="row g-4">
+          {service_data.map((s, i) => (
+            <div key={s.id} className="col-lg-6 col-md-6">
+              <div className="service-card tp_fade_bottom">
+                <div className="service-card-icon">
+                  <Image src={s.icon} alt="icon" width={60} height={60} />
+                </div>
+                <h4 className="service-card-title">
+                  <Link href={s.link}>{s.title}</Link>
+                </h4>
+                <p className="service-card-desc">{s.desc}</p>
+                <Link href={s.link} className="service-card-link">
+                  {s.cta} →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Button Below Cards */}
+        <div className="row mt-5">
+          <div className="col-12 text-center">
+            <Link
+              href="/service"
+              style={{
+                display: "inline-block",
+                padding: "16px 32px",
+                background: "#0047AB",
+                color: "white",
+                borderRadius: "8px",
+                fontSize: "1rem",
+                fontWeight: "600",
+                textDecoration: "none",
+                fontFamily: "var(--tp-ff-body)",
+                transition: "all 0.3s ease",
+                border: "none"
+              }}
+              className="service-cta-btn"
+            >
+              See All Services
+            </Link>
+          </div>
+        </div>
       </div>
+
+      {/* Card Styles */}
+      <style jsx>{`
+        .service-card {
+          background: white;
+          border-radius: 16px;
+          padding: 40px 30px;
+          height: 100%;
+          box-shadow: 0 4px 20px rgba(0, 71, 171, 0.08);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          border: 1px solid rgba(0, 71, 171, 0.1);
+          cursor: pointer;
+        }
+
+        .service-card:hover {
+          transform: translateY(-10px) scale(1.05);
+          box-shadow: 0 20px 40px rgba(0, 71, 171, 0.25);
+          background: linear-gradient(135deg, #0047AB 0%, #0056D6 100%);
+          border-color: #0047AB;
+        }
+
+        .service-card-icon {
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, rgba(0, 71, 171, 0.1) 0%, rgba(0, 71, 171, 0.05) 100%);
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 24px;
+          transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-card-icon {
+          background: rgba(255, 255, 255, 0.2);
+          transform: scale(1.1);
+        }
+
+        .service-card-title {
+          font-family: var(--tp-ff-gelder);
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 16px;
+          line-height: 1.3;
+        }
+
+        .service-card-title a {
+          color: #0047AB;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+
+        .service-card:hover .service-card-title a {
+          color: white !important;
+        }
+
+        .service-card-desc {
+          color: #4A5568;
+          font-family: var(--tp-ff-body);
+          font-size: 0.95rem;
+          line-height: 1.7;
+          margin-bottom: 20px;
+          transition: color 0.3s ease;
+        }
+
+        .service-card:hover .service-card-desc {
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .service-card-link {
+          color: #0047AB;
+          font-family: var(--tp-ff-body);
+          font-weight: 600;
+          font-size: 0.95rem;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-card-link {
+          gap: 12px;
+          color: white !important;
+        }
+
+        @media (max-width: 768px) {
+          .service-card {
+            padding: 30px 20px;
+          }
+          
+          .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+          }
+        }
+      `}</style>
 
       {/* <ServiceProcess /> */}
 
       {/* <ServiceCTA /> */}
 
       {/* ✅ Inline styles for animated background (same as HeroBannerOne) */}
+
+      <style jsx>{`
+        .service-cta-btn:hover {
+          background: white !important;
+          color: #0047AB !important;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0, 71, 171, 0.3);
+          border: 2px solid #0047AB !important;
+        }
+      `}</style>
 
     </div>
   );

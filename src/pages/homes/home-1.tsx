@@ -131,10 +131,7 @@ const HomeMain = () => {
             {/* testimonial area */}
           </main>
           <BigText />
-
-          {/* footer area */}
           <FooterOne />
-          {/* footer area */}
         </div>
       </div>
 

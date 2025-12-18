@@ -20,6 +20,7 @@ import AwardOne from "@/components/award/award-one";
 import { charAnimation, fadeAnimation, titleAnimation } from "@/utils/title-animation";
 import { hoverBtn } from "@/utils/hover-btn";
 import { teamMarqueAnim } from "@/utils/scroll-marque";
+import BigText from "@/components/big-text";
 
 const AboutUsMain = () => {
   useScrollSmooth();
@@ -70,6 +71,7 @@ const AboutUsMain = () => {
             <AwardOne cls="ab-award-style pt-120 pb-120" />
             {/* award area */}
           </main>
+          <BigText/>
 
           {/* footer area */}
           <FooterTwo topCls="" />
