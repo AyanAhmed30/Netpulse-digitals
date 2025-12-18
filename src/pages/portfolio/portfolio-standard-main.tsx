@@ -19,6 +19,7 @@ import { hoverBtn } from "@/utils/hover-btn";
 
 import GradientBackground from "@/components/common/GradientBackground";
 import Link from "next/link";
+import Image from "next/image";
 
 const PortfolioStandardMain = () => {
   useScrollSmooth();
@@ -65,8 +66,8 @@ const PortfolioStandardMain = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            {/* portfolio hero */}
-            <div className="tp-hero-area tp-hero-ptb p-relative">
+            {/* portfolio hero exactly like hero-banner-one */}
+            <div className="tp-hero-area tp-hero-ptb p-relative main-slider" style={{ overflow: 'hidden' }}>
               <div className="animated-background">
                 <div className="gradient-orb orb-1"></div>
                 <div className="gradient-orb orb-2"></div>
@@ -87,7 +88,7 @@ const PortfolioStandardMain = () => {
                   position: absolute;
                   border-radius: 50%;
                   filter: blur(80px);
-                  opacity: 0.12;
+                  opacity: 0.15;
                   animation: float 20s ease-in-out infinite;
                 }
                 .orb-1 {
@@ -119,66 +120,163 @@ const PortfolioStandardMain = () => {
                   66% { transform: translate(-20px, 20px) rotate(240deg); }
                 }
 
-                .tm-hero-subtitle {
-                  color: #0047AB;
-                  font-size: 0.95rem;
-                  font-weight: 600;
-                  letter-spacing: 0.5px;
-                  margin-bottom: 20px;
-                  display: block;
-                  font-family: var(--tp-ff-body);
+                .hero-cta-primary:hover {
+                  background: white !important;
+                  color: #0047AB !important;
+                  border: 2px solid #0047AB !important;
+                  transform: translateY(-2px);
+                  box-shadow: 0 10px 25px rgba(0, 71, 171, 0.3);
                 }
-                .tm-hero-title-standard {
-                  font-family: var(--tp-ff-gelder);
-                  color: #0047AB;
-                  font-size: 4rem;
-                  line-height: 1.1;
-                  font-weight: 700;
-                  margin-bottom: 25px;
-                }
-                .tm-hero-text-p {
-                  color: #4A5568;
-                  font-size: 1.15rem;
-                  line-height: 1.7;
-                  max-width: 800px;
-                  font-family: var(--tp-ff-body);
+                .hero-cta-secondary:hover {
+                  background: #0047AB !important;
+                  color: white !important;
+                  transform: translateY(-2px);
+                  box-shadow: 0 10px 25px rgba(0, 71, 171, 0.2);
                 }
                 
+                @media (max-width: 991px) {
+                  .hero-image-wrapper { display: none !important; }
+                }
                 @media (max-width: 768px) {
-                  .tm-hero-title-standard { font-size: 2.5rem; }
-                  .tm-hero-text-p { font-size: 1rem; }
+                  .hero-cta-wrapper { flex-direction: column !important; }
+                  .hero-cta-wrapper a { width: 100%; text-align: center; }
                 }
               `}</style>
 
               <div className="container">
                 <div className="row">
-                  <div className="col-xl-12">
-                    <div className="tm-hero-content p-relative z-index-1" style={{ paddingTop: "130px", paddingBottom: "60px" }}>
-                      <span className="tm-hero-subtitle">Netpulse Digital Portfolio</span>
-                      <h1 className="tm-hero-title-standard tp-char-animation">
-                        Our Work. Your Results.
+                  <div className="col-lg-8 mb-20">
+                    <div className="hero-content-wrapper p-relative z-index-1" style={{ paddingTop: "10px", paddingBottom: "100px", }}>
+                      {/* Tagline */}
+                      <div className="hero-tagline" style={{
+                        color: "#0047AB",
+                        fontSize: "0.95rem",
+                        fontWeight: "600",
+                        letterSpacing: "0.5px",
+                        marginBottom: "20px",
+                        fontFamily: "var(--tp-ff-body)"
+                      }}>
+                        Netpulse Digital Portfolio
+                      </div>
+
+                      {/* Main Heading */}
+                      <h1 className="hero-main-title" style={{
+                        fontFamily: "var(--tp-ff-gelder)",
+                        color: "#0047AB",
+                        fontSize: "3.5rem",
+                        lineHeight: "1.15",
+                        letterSpacing: "-0.02em",
+                        fontWeight: "700",
+                        marginBottom: "25px",
+                        maxWidth: "700px"
+                      }}>
+                        <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Our</span>{' '}
+                        <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Work.</span>{' '}
+                        <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Your</span>{' '}
+                        <span className="word" style={{ display: "inline-block", transformStyle: "preserve-3d" }}>Results.</span>
                       </h1>
-                      <div className="tm-hero-text">
-                        <p className="tm-hero-text-p tp_title_anim">
-                          Explore a collection of websites, brands, apps, and digital campaigns we’ve crafted for clients across the USA, UK, Canada, and Australia. Every project is designed with purpose — blending creativity, strategy, and technology to help businesses grow.
-                        </p>
+
+                      {/* Description */}
+                      <p className="hero-description" style={{
+                        color: "#4A5568",
+                        fontSize: "1.1rem",
+                        lineHeight: "1.7",
+                        marginBottom: "35px",
+                        maxWidth: "600px",
+                        fontFamily: "var(--tp-ff-body)"
+                      }}>
+                        Explore a collection of websites, brands, apps, and digital campaigns we’ve crafted for clients across the USA, UK, Canada, and Australia. Every project is designed with purpose — blending creativity, strategy, and technology to help businesses grow.
+                      </p>
+
+                      {/* CTA Buttons */}
+                      <div className="hero-cta-wrapper" style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
+                        <Link
+                          href="/contact"
+                          style={{
+                            display: "inline-block",
+                            padding: "16px 32px",
+                            background: "#0047AB",
+                            color: "white",
+                            borderRadius: "8px",
+                            fontSize: "1rem",
+                            fontWeight: "600",
+                            textDecoration: "none",
+                            fontFamily: "var(--tp-ff-body)",
+                            transition: "all 0.3s ease",
+                            border: "none"
+                          }}
+                          className="hero-cta-primary"
+                        >
+                          Start Your Project
+                        </Link>
+                        <Link
+                          href="/contact"
+                          style={{
+                            display: "inline-block",
+                            padding: "16px 32px",
+                            background: "transparent",
+                            color: "#0047AB",
+                            borderRadius: "8px",
+                            fontSize: "1rem",
+                            fontWeight: "600",
+                            textDecoration: "none",
+                            fontFamily: "var(--tp-ff-body)",
+                            transition: "all 0.3s ease",
+                            border: "2px solid #0047AB"
+                          }}
+                          className="hero-cta-secondary"
+                        >
+                          Contact Our Team
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hero Image Column */}
+                  <div className="col-lg-4">
+                    <div className="hero-image-wrapper" style={{
+                      paddingTop: "10px",
+                      paddingBottom: "100px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center"
+                    }}>
+                      <div style={{
+                        position: "relative",
+                        width: "100%",
+                        maxWidth: "500px"
+                      }}>
+                        <Image
+                          src="/assets/img/home-01/hero/hero-1-1.webp"
+                          alt="Our Work"
+                          width={700}
+                          height={800}
+                          style={{
+                            width: "100%",
+                            height: "auto",
+                            objectFit: "contain",
+                            filter: "drop-shadow(0 20px 40px rgba(0, 71, 171, 0.15))"
+                          }}
+                          priority
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* portfolio hero */}
-            {/* SECTION 2 — SHORT VALUE STATEMENT */}
+            {/* portfolio hero exactly like hero-banner-one */}
 
-
-            <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mb-30">
-              <Link className="tp-btn-border" href="/portfolio-standard">
-                <span className="tp-btn-border-wrap">
-                  <span className="text-1">Start Your Project</span>
-                  <span className="text-2">Start Your Project</span>
-                </span>
-              </Link>
+            {/* SECTION 2 — CTA (Previously centered) */}
+            <div className="container" style={{ display: 'none' }}>
+              <div className="d-flex justify-content-center align-items-center tp-service-left-btn tp-btn-bounce mb-30">
+                <Link className="tp-btn-border" href="/portfolio-standard">
+                  <span className="tp-btn-border-wrap">
+                    <span className="text-1">Start Your Project</span>
+                    <span className="text-2">Start Your Project</span>
+                  </span>
+                </Link>
+              </div>
             </div>
 
             {/* portfolio area */}
