@@ -98,7 +98,7 @@ const PortfolioRandomMain = () => {
               {/* portfolio hero */}
 
               {/* portfolio area */}
-              <ProjectOne style_2={true} />
+              <ProjectOne />
               {/* portfolio area */}
             </div>
 
