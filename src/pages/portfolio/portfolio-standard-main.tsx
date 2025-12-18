@@ -66,19 +66,103 @@ const PortfolioStandardMain = () => {
         <div id="smooth-content">
           <main>
             {/* portfolio hero */}
-            <div className="tm-hero-area tm-hero-ptb">
+            <div className="tp-hero-area tp-hero-ptb p-relative">
+              <div className="animated-background">
+                <div className="gradient-orb orb-1"></div>
+                <div className="gradient-orb orb-2"></div>
+                <div className="gradient-orb orb-3"></div>
+              </div>
+
+              <style jsx>{`
+                .animated-background {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  pointer-events: none;
+                  z-index: 0;
+                }
+                .gradient-orb {
+                  position: absolute;
+                  border-radius: 50%;
+                  filter: blur(80px);
+                  opacity: 0.12;
+                  animation: float 20s ease-in-out infinite;
+                }
+                .orb-1 {
+                  width: 500px;
+                  height: 500px;
+                  background: linear-gradient(135deg, #0047AB 0%, #685fe7 100%);
+                  top: -100px;
+                  left: -100px;
+                }
+                .orb-2 {
+                  width: 400px;
+                  height: 400px;
+                  background: linear-gradient(135deg, #a18cd1 0%, #00f2fe 100%);
+                  top: 50%;
+                  right: -100px;
+                  animation-delay: -7s;
+                }
+                .orb-3 {
+                  width: 600px;
+                  height: 600px;
+                  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                  bottom: -200px;
+                  left: 20%;
+                  animation-delay: -14s;
+                }
+                @keyframes float {
+                  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+                  33% { transform: translate(30px, -30px) rotate(120deg); }
+                  66% { transform: translate(-20px, 20px) rotate(240deg); }
+                }
+
+                .tm-hero-subtitle {
+                  color: #0047AB;
+                  font-size: 0.95rem;
+                  font-weight: 600;
+                  letter-spacing: 0.5px;
+                  margin-bottom: 20px;
+                  display: block;
+                  font-family: var(--tp-ff-body);
+                }
+                .tm-hero-title-standard {
+                  font-family: var(--tp-ff-gelder);
+                  color: #0047AB;
+                  font-size: 4rem;
+                  line-height: 1.1;
+                  font-weight: 700;
+                  margin-bottom: 25px;
+                }
+                .tm-hero-text-p {
+                  color: #4A5568;
+                  font-size: 1.15rem;
+                  line-height: 1.7;
+                  max-width: 800px;
+                  font-family: var(--tp-ff-body);
+                }
+                
+                @media (max-width: 768px) {
+                  .tm-hero-title-standard { font-size: 2.5rem; }
+                  .tm-hero-text-p { font-size: 1rem; }
+                }
+              `}</style>
+
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">
-                    <div className="tm-hero-content">
-                      <h4 className="tp-hero-title tm-hero-title tp-char-animation">
+                    <div className="tm-hero-content p-relative z-index-1" style={{ paddingTop: "130px", paddingBottom: "60px" }}>
+                      <span className="tm-hero-subtitle">Netpulse Digital Portfolio</span>
+                      <h1 className="tm-hero-title-standard tp-char-animation">
                         Our Work. Your Results.
-                      </h4>
-                    </div>
-                    <div className="tm-hero-text">
-                      <p className="tp_title_anim">
-                        Explore a collection of websites, brands, apps, and digital campaigns we’ve crafted for clients across the USA, UK, Canada, and Australia. Every project is designed with purpose — blending creativity, strategy, and technology to help businesses grow.
-                      </p>
+                      </h1>
+                      <div className="tm-hero-text">
+                        <p className="tm-hero-text-p tp_title_anim">
+                          Explore a collection of websites, brands, apps, and digital campaigns we’ve crafted for clients across the USA, UK, Canada, and Australia. Every project is designed with purpose — blending creativity, strategy, and technology to help businesses grow.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -103,12 +187,12 @@ const PortfolioStandardMain = () => {
             </div>
 
             {/* portfolio area */}
-            <div className="container mb-100 ">
+            <div className="container mb-100 mt-100">
               <div className="row justify-content-center">
                 <div className="col-xl-10">
                   <div className="text-center">
-                    <h3 className="tp-section-title tp-char-animation mb-20" style={{ fontSize: '65px', fontFamily: 'var(--tp-ff-gallery)', fontWeight: 'bold' }}>Designs & Digital Solutions That Create Real Impact</h3>
-                    <p className="mb-30" style={{ fontSize: '18px' }}>
+                    <h3 className="tp-section-title tp-char-animation mb-30" style={{ fontSize: '3.5rem', fontFamily: 'var(--tp-ff-gelder)', fontWeight: 'bold', color: '#0047AB', lineHeight: '1.1' }}>Designs & Digital Solutions That Create Real Impact</h3>
+                    <p className="mb-30" style={{ fontSize: '1.1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)', lineHeight: '1.7' }}>
                       At Netpulse Digital, we don’t just design — we solve problems. <br />
                       Every website, brand identity, app, or marketing campaign we create is built with one goal: <br />
                       to help businesses convert better, grow faster, and scale smarter. <br />
@@ -124,51 +208,51 @@ const PortfolioStandardMain = () => {
               <div className="row justify-content-center">
                 <div className="col-xl-8">
                   <div className="text-center mb-60">
-                    <h3 className="tp-section-title tp-char-animation" style={{ fontSize: '72px', fontFamily: 'var(--tp-ff-gallery)', fontWeight: 'bold' }}>Why Clients Choose Us</h3>
+                    <h3 className="tp-section-title tp-char-animation" style={{ fontSize: '3.5rem', fontFamily: 'var(--tp-ff-gelder)', fontWeight: 'bold', color: '#0047AB' }}>Why Clients Choose Us</h3>
                   </div>
                 </div>
               </div>
               <div className="row">
                 {/* Item 1 */}
                 <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center">
-                    <h4 className="mb-15" style={{ fontSize: '24px', fontWeight: 'bold' }}>Conversion-Focused Execution</h4>
-                    <p style={{ fontSize: '16px' }}>We design and develop with strategy, not guesswork.</p>
+                  <div className="text-center px-3">
+                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Conversion-Focused Execution</h4>
+                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>We design and develop with strategy, not guesswork.</p>
                   </div>
                 </div>
                 {/* Item 2 */}
                 <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center">
-                    <h4 className="mb-15" style={{ fontSize: '24px', fontWeight: 'bold' }}>Fast, Clear Communication</h4>
-                    <p style={{ fontSize: '16px' }}>Updates at every stage with full transparency.</p>
+                  <div className="text-center px-3">
+                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Fast, Clear Communication</h4>
+                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Updates at every stage with full transparency.</p>
                   </div>
                 </div>
                 {/* Item 3 */}
                 <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center">
-                    <h4 className="mb-15" style={{ fontSize: '24px', fontWeight: 'bold' }}>Modern, Clean, High-Impact Design Standards</h4>
-                    <p style={{ fontSize: '16px' }}>Every project is pixel-perfect and purpose-driven.</p>
+                  <div className="text-center px-3">
+                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Modern, Clean Design</h4>
+                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Every project is pixel-perfect and purpose-driven.</p>
                   </div>
                 </div>
                 {/* Item 4 */}
                 <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center">
-                    <h4 className="mb-15" style={{ fontSize: '24px', fontWeight: 'bold' }}>Global Experience</h4>
-                    <p style={{ fontSize: '16px' }}>We proudly serve clients across USA, UK, Canada, and Australia.</p>
+                  <div className="text-center px-3">
+                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Global Experience</h4>
+                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>We proudly serve clients across USA, UK, Canada, and Australia.</p>
                   </div>
                 </div>
                 {/* Item 5 */}
                 <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center">
-                    <h4 className="mb-15" style={{ fontSize: '24px', fontWeight: 'bold' }}>Multi-Disciplinary Expertise</h4>
-                    <p style={{ fontSize: '16px' }}>Web • Apps • Branding • Marketing • SEO • AI — everything under one roof.</p>
+                  <div className="text-center px-3">
+                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Multi-Disciplinary Expertise</h4>
+                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Web • Apps • Branding • Marketing • SEO • AI — everything under one roof.</p>
                   </div>
                 </div>
                 {/* Item 6 */}
                 <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center">
-                    <h4 className="mb-15" style={{ fontSize: '24px', fontWeight: 'bold' }}>Long-Term Support & Growth Partnership</h4>
-                    <p style={{ fontSize: '16px' }}>Most clients work with us for years, not weeks.</p>
+                  <div className="text-center px-3">
+                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Long-Term Partnership</h4>
+                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Most clients work with us for years, not weeks.</p>
                   </div>
                 </div>
               </div>

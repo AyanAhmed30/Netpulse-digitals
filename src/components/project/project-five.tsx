@@ -53,18 +53,33 @@ export default function ProjectFive({ style_2 = false }: IProps) {
                   </span>
 
                   <div className="tp-project-5-2-category tp_fade_anim">
-                    <span>{category.category}</span>
+                    <span style={{ fontFamily: 'var(--tp-ff-body)', color: '#4A5568', fontWeight: '500' }}>{category.category}</span>
                   </div>
 
                   <div className="tp-project-5-2-content tp_fade_anim">
-                    <h4 className="tp-project-5-2-title-sm">{category.title}</h4>
-
+                    <h4 className="tp-project-5-2-title-sm" style={{
+                      fontFamily: 'var(--tp-ff-gelder)',
+                      fontSize: '1.5rem',
+                      fontWeight: '700',
+                      color: '#0047AB',
+                      marginTop: '15px'
+                    }}>{category.title}</h4>
                   </div>
                 </Link>
               </div>
             </div>
           ))}
         </div>
+
+        <style jsx>{`
+          .tp-project-5-2-title-sm {
+            transition: all 0.3s ease;
+          }
+          .tp-project-5-2-thumb:hover .tp-project-5-2-title-sm {
+            transform: translateX(10px);
+            color: #4A5568 !important;
+          }
+        `}</style>
 
         <div className="row">
           <div className="col-xl-12">

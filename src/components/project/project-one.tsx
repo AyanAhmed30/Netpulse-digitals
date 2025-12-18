@@ -9,7 +9,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const ProjectOne = () => {
+const ProjectOne = ({ style_2 = false }: { style_2?: boolean }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 

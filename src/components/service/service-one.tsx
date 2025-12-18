@@ -87,9 +87,9 @@ const ServiceOne = () => {
                   <Link href={s.link}>{s.title}</Link>
                 </h4>
                 <p className="service-card-desc">{s.desc}</p>
-                <Link href={s.link} className="service-card-link">
+                {/* <Link href={s.link} className="service-card-link">
                   {s.cta} →
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}
@@ -140,7 +140,7 @@ const ServiceOne = () => {
         .service-card:hover {
           transform: translateY(-10px) scale(1.05);
           box-shadow: 0 20px 40px rgba(0, 71, 171, 0.25);
-          background: linear-gradient(135deg, #0047AB 0%, #0056D6 100%);
+          background: linear-gradient(135deg, #5091ecff 0%, #3e69aaff 100%);
           border-color: #0047AB;
           service-card-title a: color: white;
         }
