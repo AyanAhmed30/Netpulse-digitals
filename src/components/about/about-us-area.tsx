@@ -56,11 +56,17 @@ export default function AboutUsArea() {
           <div id="about-info" className="row">
             <div className="col-xxl-9">
               <div className="ab-about-content p-relative">
-                <span>
+                <span style={{backgroundColor: "#0047AB"}}>
                   <Hand />
                   Hi!
                 </span>
-                <p className="tp-dropcap tp_fade_bottom">
+                <p
+                  style={{
+                    fontFamily: "var(--tp-ff-gelder)",
+                    color: "#0047AB",
+                  }}
+                  className="tp-dropcap tp_fade_bottom"
+                >
                   We partner with companies around the world to create standout
                   websites, powerful brands, and marketing systems that deliver
                   measurable results. <br />
@@ -72,12 +78,22 @@ export default function AboutUsArea() {
             </div>
           </div>
 
-          <div className="row">
+          <div
+            className="row"
+            style={{
+              fontFamily: "var(--tp-ff-gelder-p)",
+            }}
+          >
             <div className="col-xl-9">
               <div className="row">
                 <div className="col-xl-5 col-lg-5 col-md-4 mb-40">
                   <div className="ab-about-category-title-box p-relative">
-                    <h4 className="ab-about-category-title">
+                    <h4
+                      className="ab-about-category-title"
+                      style={{
+                        fontFamily: "var(--tp-ff-gelder-p)",
+                      }}
+                    >
                       What We Do <br />
                       <span>END-TO-END DIGITAL SOLUTIONS</span>
                     </h4>

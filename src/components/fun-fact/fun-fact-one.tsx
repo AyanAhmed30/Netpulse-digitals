@@ -1,7 +1,6 @@
 import React from "react";
 import CounterItem from "../counter/counter-item";
 
-
 const counter_data = [
   {
     id: 1,
@@ -35,11 +34,13 @@ export default function FunFactOne() {
         <div className="row">
           <div className="col-xl-4">
             <div className="ab-funfact-title-box">
-              <span className="ab-inner-subtitle mb-25">
-              
-                Fun Facts
-              </span>
-              <h4 className="ab-inner-funfact-title tp_title_anim">
+              <span className="ab-inner-subtitle mb-25">Fun Facts</span>
+              <h4
+                style={{
+                  fontFamily: "var(--tp-ff-gelder-p)",
+                }}
+                className="ab-inner-funfact-title tp_title_anim"
+              >
                 Agency <br /> Snapshots
               </h4>
             </div>
@@ -54,7 +55,13 @@ export default function FunFactOne() {
                         <CounterItem min={0} max={item.count} />
                         {item.text}
                       </span>
-                      <p>{item.title}</p>
+                      <p
+                        style={{
+                          fontFamily: "var(--tp-ff-gelder-p)",
+                        }}
+                      >
+                        {item.title}
+                      </p>
                     </div>
                   </div>
                 ))}

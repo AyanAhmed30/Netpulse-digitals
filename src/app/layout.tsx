@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Syne,
-  Aladin,
-  Manrope,
-  Outfit,
-  Marcellus,
-} from "next/font/google";
+import { Syne, Aladin, Manrope, Outfit, Marcellus } from "next/font/google";
 import { VideoProvider } from "@/provider/VideoProvider";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
@@ -33,10 +27,29 @@ const gellery = localFont({
   variable: "--tp-ff-gallery",
 });
 
+// 🔥 GELDER (Outfit) – Body / Heading / Paragraph
 const gelder = Outfit({
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   variable: "--tp-ff-gelder",
+});
+
+const gelderBody = Outfit({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--tp-ff-gelder-body",
+});
+
+const gelderHeading = Outfit({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--tp-ff-gelder-heading",
+});
+
+const gelderP = Outfit({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--tp-ff-gelder-p",
 });
 
 const aladin = Aladin({
@@ -87,12 +100,10 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${gellery.variable} ${gelder.variable} ${aladin.variable}
          ${syne_body.variable} ${syne_heading.variable} ${syne_p.variable}
-          ${syne.variable} ${marcellus.variable}`}
+          ${syne.variable} ${marcellus.variable} ${gelderBody.variable} ${gelderHeading.variable} ${gelderP.variable}`}
       >
         <ThemeProvider defaultTheme="light">
-          <VideoProvider>
-            {children}
-          </VideoProvider>
+          <VideoProvider>{children}</VideoProvider>
         </ThemeProvider>
       </body>
     </html>

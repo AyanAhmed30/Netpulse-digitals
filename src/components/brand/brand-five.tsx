@@ -52,7 +52,14 @@ export default function BrandFive() {
         <div className="row">
           <div className="col-xl-12">
             <div className="ab-brand-title-box mb-100">
-              <h4 className="ab-brand-title">Our clients</h4>
+              <h4
+                className="ab-brand-title"
+                style={{
+                  fontFamily: "var(--tp-ff-gelder-p)",
+                }}
+              >
+                Our clients
+              </h4>
             </div>
           </div>
         </div>
@@ -74,7 +81,11 @@ export default function BrandFive() {
         <div className="row">
           <div className="col-xl-7 col-lg-9">
             <div className="ab-brand-content tp_title_anim">
-              <p>
+              <p
+                style={{
+                  fontFamily: "var(--tp-ff-gelder-p)",
+                }}
+              >
                 A talented and passionate group of designers, developers,
                 strategists, and storytellers committed to helping businesses
                 grow through exceptional digital experiences.
