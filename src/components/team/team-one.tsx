@@ -44,7 +44,13 @@ const TeamOne = ({ spacing = "pt-20" }: IProps) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
-            <h1 className="text-center fw-semibold" >Our Team Memebers</h1>
+            <h4 className="tp-section-title text-center mb-50" style={{
+              color: "#0047AB",
+              fontFamily: "var(--tp-ff-gelder)",
+              fontWeight: "700",
+              fontSize: "4rem",
+              marginBottom: "40px"
+            }}>Our Team Members</h4>
             <div className="tp-team-slider-wrapper">
 
               <Swiper

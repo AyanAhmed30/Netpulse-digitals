@@ -65,13 +65,53 @@ const AwardOne = ({ cls = "pt-125 pb-125", abStyle = false }: IProps) => {
   const [activeThumb, setActiveThumb] = React.useState(1);
   return (
     <div className={`tp-award-area ${cls}`}>
+      <style jsx>{`
+        .tp-award-title-box .tp-section-title {
+          font-size: 4rem;
+          font-weight: 700;
+          font-family: var(--tp-ff-gelder);
+          color: #0047AB;
+          line-height: 1.2;
+          margin-bottom: 40px;
+        }
+        .tp-award-title-box .tp-section-title span {
+          color: #0047AB;
+        }
+        .tp-award-list-content-left p {
+          font-family: var(--tp-ff-gelder);
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #0047AB;
+          margin-bottom: 0;
+          transition: all 0.3s ease;
+        }
+        .tp-award-list-content-left span {
+          font-family: var(--tp-ff-body);
+          font-size: 1.15rem;
+          color: #4A5568;
+          margin-right: 25px;
+        }
+        .tp-award-list-content-right span {
+          font-family: var(--tp-ff-body);
+          font-size: 1.15rem;
+          color: #4A5568;
+        }
+        .tp-award-list-item {
+          transition: all 0.3s ease;
+          border-bottom: 1px solid rgba(0, 71, 171, 0.1);
+          padding: 25px 0;
+        }
+        .tp-award-list-item:hover .tp-award-list-content-left p {
+          transform: translateX(10px);
+        }
+      `}</style>
       <div className="container container-1630">
         <div className="row">
           <div className="col-xxl-6 col-xl-7">
             {!abStyle && (
               <div className="tp-award-title-box">
                 <h4 className="tp-section-title tp-char-animation">
-                  Awards <br /> <span>& Recognitions</span>
+                  Awards & Recognitions
                 </h4>
               </div>
             )}

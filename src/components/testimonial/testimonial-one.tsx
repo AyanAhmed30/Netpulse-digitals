@@ -67,7 +67,13 @@ const TestimonialOne = () => {
                     </span>
                   </button>
                 </div>
-                <h1 className="text-center fw-semibold">Client Feedback That Speaks for Itself</h1>
+                <h4 className="tp-section-title text-center" style={{
+                  color: "#0047AB",
+                  fontFamily: "var(--tp-ff-gelder)",
+                  fontWeight: "700",
+                  fontSize: "4rem",
+                  marginBottom: "40px"
+                }}>Client Feedback That Speaks for Itself</h4>
                 <Swiper
                   {...slider_setting}
                   modules={[Navigation]}
@@ -85,7 +91,7 @@ const TestimonialOne = () => {
                   ))}
                 </Swiper>
 
-             
+
               </div>
             </div>
           </div>
@@ -150,6 +156,30 @@ const TestimonialOne = () => {
           66% {
             transform: translate(-30px, 30px) rotate(240deg);
           }
+        }
+
+        .tp-testimonial-item p {
+          font-family: var(--tp-ff-body);
+          font-size: 1.5rem;
+          line-height: 1.6;
+          color: #4A5568;
+          margin-bottom: 30px;
+          font-style: italic;
+        }
+
+        .tp-testimonial-item span {
+          display: block;
+          font-family: var(--tp-ff-body);
+          font-size: 1.15rem;
+          color: #4A5568;
+        }
+
+        .tp-testimonial-item span em {
+          font-family: var(--tp-ff-gelder);
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #0047AB;
+          font-style: normal;
         }
       `}</style>
     </div>

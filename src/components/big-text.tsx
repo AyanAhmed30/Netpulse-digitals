@@ -86,6 +86,15 @@ export default function BigText({ cls = "" }: IProps) {
             transform: translate(-30px, 30px) rotate(240deg);
           }
         }
+        .sv-big-text-box .sv-big-text a {
+          color: #0047AB !important;
+          font-family: var(--tp-ff-gelder) !important;
+          font-weight: 700 !important;
+        }
+        .sv-small-text-box span {
+          color: #0047AB !important;
+          font-family: var(--tp-ff-body);
+        }
       `}</style>
     </div>
   );

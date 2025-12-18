@@ -20,10 +20,20 @@ export default function TeamItem({ item }: IProps) {
         />
       </div>
       <div className="tp-team-content">
-        <span style={{ fontSize: "34px", fontWeight: "600", color: "#fff" }}>
+        <span style={{
+          fontSize: "1.5rem",
+          fontWeight: "600",
+          color: "#0047AB",
+          fontFamily: "var(--tp-ff-gelder)"
+        }}>
           {item.name}
-        </span><br/>
-        <span style={{ fontSize: "18px", fontWeight: "600", color: "#fff" }}>
+        </span><br />
+        <span style={{
+          fontSize: "1rem",
+          fontWeight: "400",
+          color: "#fff",
+          fontFamily: "var(--tp-ff-body)"
+        }}>
           {item.designation}
         </span>
       </div>

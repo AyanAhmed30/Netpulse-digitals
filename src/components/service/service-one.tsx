@@ -61,7 +61,7 @@ const ServiceOne = () => {
                 color: "#0047AB",
                 fontFamily: "var(--tp-ff-gelder)",
                 fontWeight: "700",
-                fontSize: "3rem",
+                fontSize: "4rem",
                 marginBottom: "20px"
               }}>What We Can Do for Your Business</h4>
               <p style={{
@@ -70,13 +70,13 @@ const ServiceOne = () => {
                 fontSize: "1.15rem",
                 maxWidth: "700px",
                 margin: "0 auto"
-              }}>End-to-end creative, development, and marketing services built for performance.</p>
+              }}> End-to-end creative, development, and marketing services strategically designed and executed to deliver measurable performance, drive growth, enhance brand impact, and achieve long-term business results.</p>
             </div>
           </div>
         </div>
 
         {/* Services Cards Grid */}
-        <div className="row g-4">
+        <div className="row g-4 mt-15">
           {service_data.map((s, i) => (
             <div key={s.id} className="col-lg-6 col-md-6">
               <div className="service-card tp_fade_bottom">
@@ -96,27 +96,28 @@ const ServiceOne = () => {
         </div>
 
         {/* Button Below Cards */}
-        <div className="row mt-5">
-          <div className="col-12 text-center">
+        <div className="row mt-15">
+          <div className="col-12 text-center mt-15">
             <Link
               href="/service"
               style={{
                 display: "inline-block",
                 padding: "16px 32px",
-                background: "#0047AB",
-                color: "white",
+                background: "white",
+                color: "#0047AB",
                 borderRadius: "8px",
                 fontSize: "1rem",
                 fontWeight: "600",
                 textDecoration: "none",
                 fontFamily: "var(--tp-ff-body)",
                 transition: "all 0.3s ease",
-                border: "none"
+                border: "2px solid #0047AB" // ✅ Corrected: adds width + style + color
               }}
               className="service-cta-btn"
             >
               See All Services
             </Link>
+
           </div>
         </div>
       </div>
@@ -132,6 +133,8 @@ const ServiceOne = () => {
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           border: 1px solid rgba(0, 71, 171, 0.1);
           cursor: pointer;
+          border-color: #0047AB;
+
         }
 
         .service-card:hover {
@@ -139,6 +142,7 @@ const ServiceOne = () => {
           box-shadow: 0 20px 40px rgba(0, 71, 171, 0.25);
           background: linear-gradient(135deg, #0047AB 0%, #0056D6 100%);
           border-color: #0047AB;
+          service-card-title a: color: white;
         }
 
         .service-card-icon {
@@ -165,8 +169,18 @@ const ServiceOne = () => {
           margin-bottom: 16px;
           line-height: 1.3;
         }
-
+        .service-card-title:hover {
+          color: white;
+        }
+          .service-card-title p:hover {
+            color: white;
+          }
         .service-card-title a {
+          color: #0047AB;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        .service-card-title h4 {
           color: #0047AB;
           text-decoration: none;
           transition: color 0.3s ease;
@@ -200,6 +214,9 @@ const ServiceOne = () => {
           gap: 8px;
           transition: all 0.3s ease;
         }
+          .service-card-link a:hover {
+            color: white;
+          }
 
         .service-card:hover .service-card-link {
           gap: 12px;
@@ -217,21 +234,7 @@ const ServiceOne = () => {
         }
       `}</style>
 
-      {/* <ServiceProcess /> */}
 
-      {/* <ServiceCTA /> */}
-
-      {/* ✅ Inline styles for animated background (same as HeroBannerOne) */}
-
-      <style jsx>{`
-        .service-cta-btn:hover {
-          background: white !important;
-          color: #0047AB !important;
-          transform: translateY(-2px);
-          box-shadow: 0 10px 25px rgba(0, 71, 171, 0.3);
-          border: 2px solid #0047AB !important;
-        }
-      `}</style>
 
     </div>
   );

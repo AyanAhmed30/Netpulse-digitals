@@ -90,9 +90,9 @@ const ProjectOne = () => {
   // Individual card hover animations
   useEffect(() => {
     if (hoveredIndex !== null) {
-      gsap.to(`.project-showcase-card`, {
-        opacity: (index) => (index === hoveredIndex ? 1 : 0.4),
-        scale: (index) => (index === hoveredIndex ? 1.02 : 1),
+      // Scale only the hovered card
+      gsap.to(`.project-showcase-card:nth-child(${hoveredIndex + 1})`, {
+        scale: 1.02,
         duration: 0.4,
         ease: "power2.out",
       });
@@ -109,9 +109,10 @@ const ProjectOne = () => {
         ease: "power2.out",
       });
     } else {
+      // Reset all cards to their default state
       gsap.to(`.project-showcase-card`, {
-        opacity: 1,
         scale: 1,
+        opacity: 1,
         duration: 0.4,
         ease: "power2.out",
       });
@@ -148,24 +149,22 @@ const ProjectOne = () => {
         }
 
         .project-showcase-title {
-          font-size: 48px;
-          font-weight: 800;
-          font-family: var(--tp-ff-heading); /* Added font variable */
+          font-size: 4rem;
+          font-weight: 700;
+          font-family: var(--tp-ff-gelder);
           line-height: 1.2;
-          margin-bottom: 15px;
-          background: linear-gradient(135deg, #005FEE 0%, #0051D5 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
+          margin-bottom: 20px;
+          color: #0047AB;
         }
 
         .project-showcase-subtitle {
-          font-size: 18px;
-          color: rgba(0, 0, 0, 0.6);
-          font-weight: 500;
-          font-family: var(--tp-ff-p); /* Added font variable */
-          max-width: 600px;
+          font-size: 1.15rem;
+          color: #4A5568;
+          font-weight: 400;
+          font-family: var(--tp-ff-body);
+          max-width: 700px;
           margin: 0 auto;
+          line-height: 1.6;
         }
 
         .project-showcase-grid {
@@ -299,8 +298,8 @@ const ProjectOne = () => {
         .project-number {
           font-size: 48px;
           font-weight: 900;
-          font-family: var(--tp-ff-heading); /* Added font variable */
-          background: linear-gradient(135deg, #005FEE 0%, #0051D5 100%);
+          font-family: var(--tp-ff-gelder);
+          background: linear-gradient(135deg, #0047AB 0%, #0056D6 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -311,21 +310,21 @@ const ProjectOne = () => {
         .project-badge {
           display: inline-block;
           padding: 6px 14px;
-          background: rgba(0, 95, 238, 0.1);
-          color: #005FEE;
+          background: rgba(0, 71, 171, 0.1);
+          color: #0047AB;
           border-radius: 20px;
           font-size: 12px;
           font-weight: 600;
-          font-family: var(--tp-ff-body); /* Added font variable */
+          font-family: var(--tp-ff-body);
           text-transform: uppercase;
           letter-spacing: 0.5px;
         }
 
         .project-title {
-          font-size: 24px;
-          font-weight: 800;
-          font-family: var(--tp-ff-heading); /* Added font variable */
-          color: #1a1a1a;
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: var(--tp-ff-gelder);
+          color: #0047AB;
           margin-bottom: 14px;
           line-height: 1.3;
           display: -webkit-box;
@@ -335,10 +334,10 @@ const ProjectOne = () => {
         }
 
         .project-description {
-          font-size: 14px;
-          color: rgba(0, 0, 0, 0.6);
+          font-size: 0.95rem;
+          color: #4A5568;
           line-height: 1.7;
-          font-family: var(--tp-ff-p); /* Added font variable */
+          font-family: var(--tp-ff-body);
           margin-bottom: 24px;
           display: -webkit-box;
           -webkit-line-clamp: 3;
@@ -362,11 +361,11 @@ const ProjectOne = () => {
 
         .meta-label {
           font-size: 12px;
-          color: rgba(0, 0, 0, 0.5);
+          color: #4A5568;
           text-transform: uppercase;
           letter-spacing: 0.5px;
           font-weight: 600;
-          font-family: var(--tp-ff-body); /* Added font variable */
+          font-family: var(--tp-ff-body);
           margin-bottom: 6px;
           display: block;
         }
@@ -374,7 +373,7 @@ const ProjectOne = () => {
         .meta-value {
           font-size: 16px;
           font-weight: 700;
-          font-family: var(--tp-ff-heading); /* Added font variable */
+          font-family: var(--tp-ff-gelder);
           color: #1a1a1a;
         }
 
@@ -401,14 +400,14 @@ const ProjectOne = () => {
 
         .tech-tag {
           padding: 6px 12px;
-          background: rgba(0, 95, 238, 0.08);
-          color: #005FEE;
+          background: rgba(0, 71, 171, 0.08);
+          color: #0047AB;
           border-radius: 6px;
           font-size: 12px;
           font-weight: 600;
-          font-family: var(--tp-ff-body); /* Added font variable */
+          font-family: var(--tp-ff-body);
           transition: all 0.3s ease;
-          border: 1px solid rgba(0, 95, 238, 0.2);
+          border: 1px solid rgba(0, 71, 171, 0.2);
         }
 
         .tech-tag:hover {
@@ -431,7 +430,7 @@ const ProjectOne = () => {
           border-radius: 10px;
           font-size: 14px;
           font-weight: 600;
-          font-family: var(--tp-ff-body); /* Added font variable */
+          font-family: var(--tp-ff-body);
           cursor: pointer;
           transition: all 0.3s ease;
           text-decoration: none;
@@ -565,9 +564,9 @@ const ProjectOne = () => {
       <div className="container">
         {/* Header Section */}
         <div className="project-showcase-header">
-          <h2 className="tp-section-title tp-char-animation">Featured Projects</h2>
+          <h2 className="project-showcase-title tp-char-animation">Featured Projects</h2>
           <p className="project-showcase-subtitle">
-            Showcasing our latest and greatest work across various industries and technologies
+            Showcasing our latest and most innovative projects, highlighting our expertise across a wide range of industries, technologies, and creative solutions that drive results and deliver exceptional value to our clients.
           </p>
         </div>
 
