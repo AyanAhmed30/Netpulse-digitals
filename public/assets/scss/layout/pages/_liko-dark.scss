@@ -3,6 +3,18 @@
 /*----------------------------------------*/
 /*  7.12 liko-dark css start
 /*----------------------------------------*/
+.tp-blog-title-sm {
+  color: #0047ab;
+}
+
+.blog-details-content,
+.blog-details-content * {
+  font-family: var(--tp-ff-gelder);
+}
+
+.blog-details-content h4 {
+  color: #0047ab;
+}
 
 [data-theme="dark"] {
   & body {

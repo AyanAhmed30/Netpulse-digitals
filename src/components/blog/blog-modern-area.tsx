@@ -10,8 +10,11 @@ export default function BlogModern() {
   const blog_items = [...blog_modern];
   const first_blog = blog_items[0];
   const other_blogs = blog_items.filter((b) => b !== first_blog);
-  const { currentItems, handlePageClick, pageCount } = usePagination<IBlogDT>(other_blogs,6);
-  
+  const { currentItems, handlePageClick, pageCount } = usePagination<IBlogDT>(
+    other_blogs,
+    6
+  );
+
   return (
     <>
       <div className="tp-blog-standard-area pt-170">
@@ -20,14 +23,27 @@ export default function BlogModern() {
             <div className="col-xl-12">
               <div className="tp-blog-standard-thumb-box p-relative">
                 <Image data-speed=".8" src={first_blog.img!} alt="blog-img" />
-                <div className="tp-blog-standard-title-box d-none d-sm-block">
+                <div
+                  style={{
+                    backgroundColor: "#0047AB",
+                  }}
+                  className="tp-blog-standard-title-box d-none d-sm-block"
+                >
                   <h4
+                    style={{
+                      fontFamily: "var(--tp-ff-gelder)",
+                    }}
                     className="tp-blog-standard-title tp-char-animation"
                     dangerouslySetInnerHTML={{ __html: first_blog.title }}
                   ></h4>
                 </div>
                 <div className="tp-blog-standard-meta d-none d-sm-block">
-                  <span>
+                  <span
+                    style={{
+                      backgroundColor: "#0047AB",
+                      fontFamily: "var(--tp-ff-gelder)",
+                    }}
+                  >
                     {first_blog.date.split(".")[1]} <br />{" "}
                     {first_blog.date.split(".")[0]}
                   </span>

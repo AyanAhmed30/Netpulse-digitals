@@ -40,10 +40,21 @@ export default function BlogDetailsBreadcrumb({
           <div className="row">
             <div className="col-xl-11">
               <div className="blog-details-content z-index-5">
-                <span className="blog-details-meta">
+                <span
+                  style={{
+                    fontFamily: "var(--tp-ff-gelder)",
+                  }}
+                  className="blog-details-meta"
+                >
                   {blog?.category} <i>{blog?.date}</i>
                 </span>
-                <h4 className="blog-details-title tp-char-animation">
+                <h4
+                  className="blog-details-title tp-char-animation"
+                  style={{
+                    fontFamily: "var(--tp-ff-gelder)",
+                    color: "#fff",
+                  }}
+                >
                   {blog?.title}
                 </h4>
                 <div className="blog-details-top-author d-flex align-items-center">
@@ -51,7 +62,11 @@ export default function BlogDetailsBreadcrumb({
                     src={blog?.avatar || avatar}
                     alt={blog?.author || "author"}
                   />
-                  <span>
+                  <span
+                    style={{
+                      fontFamily: "var(--tp-ff-gelder)",
+                    }}
+                  >
                     {blog?.author} / <i>5 min</i>
                   </span>
                 </div>

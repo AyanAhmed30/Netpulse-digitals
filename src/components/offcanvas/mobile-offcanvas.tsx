@@ -51,7 +51,10 @@ export default function MobileOffcanvas({
 
   return (
     <>
-      <div className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}>
+      <div
+        className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}
+        style={{ fontFamily: "var(--tp-ff-gelder)" }}
+      >
         <div className="tp-offcanvas-wrapper">
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
@@ -70,8 +73,13 @@ export default function MobileOffcanvas({
 
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
-              <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>
+              <h3
+                className="tp-offcanvas-title"
+                style={{ fontFamily: "var(--tp-ff-gelder)" }}
+              >
+                Hello There!
+              </h3>
+              <p style={{ fontFamily: "var(--tp-ff-gelder)" }}>
                 Netpulse Digital develops, designs & delivers websites &
                 creative campaigns that drive results
               </p>
@@ -100,7 +108,12 @@ export default function MobileOffcanvas({
             </div>
 
             <div className="tp-offcanvas-contact">
-              <h3 className="tp-offcanvas-title sm">Information</h3>
+              <h3
+                className="tp-offcanvas-title sm"
+                style={{ fontFamily: "var(--tp-ff-gelder)" }}
+              >
+                Information
+              </h3>
               <ul>
                 <li>
                   <Link href="tel:+18322208552">+1 832 220 8552</Link>
@@ -122,7 +135,12 @@ export default function MobileOffcanvas({
             </div>
 
             <div className="tp-offcanvas-social">
-              <h3 className="tp-offcanvas-title sm">Follow Us</h3>
+              <h3
+                className="tp-offcanvas-title sm"
+                style={{ fontFamily: "var(--tp-ff-gelder)" }}
+              >
+                Follow Us
+              </h3>
               <ul>
                 <li>
                   <Link
