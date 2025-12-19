@@ -1,13 +1,18 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // images
 import s11 from "@/assets/img/inner-service/service/s11.png";
-import s22 from "@/assets/img/inner-service/service/s22.png";
-import s33 from "@/assets/img/inner-service/service/s33.png";
+import s22 from "@/assets/img/inner-service/service/s221.jpeg";
+import s33 from "@/assets/img/inner-service/service/s331.jpeg";
 import s44 from "@/assets/img/inner-service/service/s44.png";
 import s55 from "@/assets/img/inner-service/service/s55.png";
 import s66 from "@/assets/img/inner-service/service/s66.png";
@@ -60,6 +65,12 @@ interface ServiceData {
   sidebarTitle: string;
   rightDescription: string;
   callToActionLinkText: string;
+
+  // New Sidebar Content
+  faq: { q: string; a: string }[];
+  technologies: string[];
+  industries: string[];
+  deliverables: string[];
 }
 
 const serviceData: Record<string, ServiceData> = {
@@ -103,32 +114,14 @@ const serviceData: Record<string, ServiceData> = {
       " Search Engine Optimization (SEO) – On-page, technical, and local SEO to improve rankings and traffic.",
       " Content Creation & Brand Messaging – Premium content that builds trust and drives customer action.",
       " Email Marketing & Automation – Personalized workflows that nurture leads and increase lifetime value.",
-      " Full Funnel Setup (Lead Magnet → CTA → Landing Page) – Complete systems designed for conversions, not random clicks.",
-      " Analytics & Reporting – Monthly performance, KPI tracking, and strategic adjustments.",
     ],
 
     processTitle: "A Proven Process That Scales With You",
     processSteps: [
-      {
-        step: "",
-        title: "Discovery & Audit",
-        desc: "We analyze your current digital presence, competitors, and opportunities.",
-      },
-      {
-        step: "",
-        title: "Strategy & Planning",
-        desc: "We create a personalized, data-driven strategy tailored to your industry.",
-      },
-      {
-        step: "",
-        title: "Execution & Optimization",
-        desc: "Campaigns, content, SEO, ads, and funnels — managed and optimized weekly.",
-      },
-      {
-        step: "4",
-        title: "Growth & Scaling",
-        desc: "Once results are stable, we scale budgets, expand campaigns, and improve ROI.",
-      },
+      { step: "01", title: "Discovery & Audit", desc: "We analyze your digital presence and opportunities." },
+      { step: "02", title: "Strategy & Planning", desc: "A personalized, data-driven roadmap for your industry." },
+      { step: "03", title: "Execution & Optimization", desc: "Campaigns and content managed and optimized weekly." },
+      { step: "04", title: "Growth & Scaling", desc: "Scaling budgets and improving ROI for long-term success." },
     ],
 
     whyChooseTitle: "Why Choose Netpulse Digital",
@@ -167,6 +160,13 @@ const serviceData: Record<string, ServiceData> = {
     rightDescription:
       "Our digital marketing services transform your brand into an online dominant force. We use a data-driven approach that delivers guaranteed results and aligns with your business goals.",
     callToActionLinkText: "Let's Talk",
+    faq: [
+      { q: "How long until I see results?", a: "Most SEO campaigns see movement in 3-6 months, while PPC/Ads deliver instant traffic." },
+      { q: "Which platform is best for my business?", a: "We analyze your audience to determine if Google, Meta, or TikTok will drive the highest ROI." }
+    ],
+    technologies: ["Google Ads", "Meta Business Suite", "SEMRush", "Google Analytics 4", "Mailchimp"],
+    industries: ["E-commerce", "SaaS", "Real Estate", "Healthcare", "Education"],
+    deliverables: ["Comprehensive Marketing Roadmap", "Weekly Performance Reports", "Optimized Ad Campaigns", "High-Converting Content", "Monthly Strategy Reviews"]
   },
   "creative-design": {
     heroTitle:
@@ -207,32 +207,14 @@ const serviceData: Record<string, ServiceData> = {
       "Full Brand Kits & Guidelines – Color systems, typography, icons, patterns, brand voice — everything packaged beautifully.",
       "Social Media Design – Templates, post graphics, reels covers, stories, ads & banners.",
       "UI/UX Design (Web & App) – Wireframes, prototypes, high-fidelity designs built for clarity and conversion.",
-      "Business Collateral Design – Business cards, pitch decks, brochures, packaging & more.",
-      "Marketing Creatives & Ads – High-converting ad creatives for Meta, Google, TikTok & YouTube.",
     ],
 
     processTitle: "Our Creative Process (Designed for Clarity & Growth)",
     processSteps: [
-      {
-        step: "",
-        title: "Discovery & Brand Understanding",
-        desc: "We learn your goals, audience, competitors, and brand personality.",
-      },
-      {
-        step: "",
-        title: "Creative Direction & Concepting",
-        desc: "We create concepts, color palettes, typography and visual direction.",
-      },
-      {
-        step: "",
-        title: "Design & Refinement",
-        desc: "We craft polished, strategic designs based on feedback and brand goals.",
-      },
-      {
-        step: "",
-        title: "Delivery & Brand Activation",
-        desc: "We package everything professionally so you can launch with confidence.",
-      },
+      { step: "01", title: "Discovery", desc: "We learn your goals and brand personality." },
+      { step: "02", title: "Direction", desc: "We create palettes, and visual direction." },
+      { step: "03", title: "Refinement", desc: "We craft strategic designs based on feedback." },
+      { step: "04", title: "Activation", desc: "Professional delivery so you launch with confidence." },
     ],
 
     whyChooseTitle: "Why Brands Choose Our Creative Team",
@@ -270,6 +252,13 @@ const serviceData: Record<string, ServiceData> = {
     rightDescription:
       "Our creative design services create memorable visual experiences that distinguish your brand from the competition. We provide the perfect blend of creativity and strategy.",
     callToActionLinkText: "Let's Talk",
+    faq: [
+      { q: "Do I get full ownership of the designs?", a: "Yes, once the project is completed and paid, you own all final raw source files and copyrights." },
+      { q: "What is your revision policy?", a: "We offer unlimited revisions until you are 100% satisfied with the brand identity." }
+    ],
+    technologies: ["Adobe Illustrator", "Figma", "Photoshop", "After Effects", "Blender"],
+    industries: ["Startups", "Corporate", "Fashion", "Tech Brands", "Personal Brands"],
+    deliverables: ["Brand Identity Guidelines", "Primary & Secondary Logos", "Social Media Templates", "UI/UX Prototypes", "Ready-to-Print Assets"]
   },
   "web-development": {
     heroTitle: "High-Performance Websites Built to Convert, Scale & Impress",
@@ -311,32 +300,14 @@ const serviceData: Record<string, ServiceData> = {
       "Ecommerce Development (Shopify / WooCommerce) – Conversion-driven online stores with powerful features.",
       "Landing Pages & Funnels – High-converting pages designed to capture leads and drive sales.",
       "Responsive Design & Optimization – Perfect display across mobile, tablet, and desktop.",
-      "Speed Optimization – Reduce load times, improve rankings, and strengthen user experience.",
-      "Maintenance & Support – Ongoing updates, monitoring, backups, and fixes.",
     ],
 
     processTitle: "A Smooth & Transparent Process From Start to Finish",
     processSteps: [
-      {
-        step: "",
-        title: "Discovery & Project Planning",
-        desc: "Understand your audience, goals, and technical requirements.",
-      },
-      {
-        step: "",
-        title: "Design & Prototyping",
-        desc: "We craft UI/UX that aligns with your brand and enhances conversions.",
-      },
-      {
-        step: "",
-        title: "Development & Testing",
-        desc: "Building your site using modern technologies with quality assurance.",
-      },
-      {
-        step: "",
-        title: "Launch, Optimization & Support",
-        desc: "Deploy, test performance, integrate tracking, and provide ongoing support.",
-      },
+      { step: "01", title: "Planning", desc: "Understand your audience and technical goals." },
+      { step: "02", title: "UI/UX Design", desc: "We craft interfaces that enhance conversions." },
+      { step: "03", title: "Development", desc: "Building your site using modern technologies." },
+      { step: "04", title: "Support", desc: "Performance testing and ongoing maintenance." },
     ],
 
     whyChooseTitle:
@@ -376,6 +347,13 @@ const serviceData: Record<string, ServiceData> = {
     rightDescription:
       "Our web development services create powerful, scalable solutions that meet your business needs and provide seamless user experiences. Quality and performance are our priorities.",
     callToActionLinkText: "Let's Talk",
+    faq: [
+      { q: "Will my website be mobile-friendly?", a: "Absolutely. 100% of our sites are optimized for mobile, tablet, and desktop viewports." },
+      { q: "Do you provide hosting and maintenance?", a: "Yes, we offer fully managed high-speed hosting and ongoing technical support." }
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Shopify"],
+    industries: ["E-commerce", "Tech Startups", "Professional Services", "Portfolio Sites"],
+    deliverables: ["Custom Source Code", "Mobile-Responsive Website", "Admin Control Panel", "SEO Setup & Indexing", "Deployment Documentation"]
   },
   "ai-automation": {
     heroTitle:
@@ -418,32 +396,14 @@ const serviceData: Record<string, ServiceData> = {
       "Custom GPT Assistants – AI trained on your business documents, processes, and knowledge base.",
       "Workflow Automation – Follow-ups, emails, notifications, scheduling, internal tasks.",
       "CRM / Zapier / Make Integrations – Connect all your tools into one powerful, automated system.",
-      "Internal Team Automation – AI tools for teams to reduce manual work and increase efficiency.",
-      "AI Analytics & Insights – Smart dashboards and automated reporting.",
     ],
 
     processTitle: "Our Proven Automation Workflow",
     processSteps: [
-      {
-        step: "",
-        title: "Business Analysis & Automation Audit",
-        desc: "We analyze your processes and identify automation opportunities.",
-      },
-      {
-        step: "",
-        title: "System Planning & AI Design",
-        desc: "We map automations, build flows, and design your custom AI assistant.",
-      },
-      {
-        step: "",
-        title: "Development & Integration",
-        desc: "Chatbots, workflows, integrations — all built and tested.",
-      },
-      {
-        step: "",
-        title: "Launch, Optimization & Support",
-        desc: "We monitor usage, refine flows, and provide ongoing optimization.",
-      },
+      { step: "01", title: "Audit", desc: "Analyzing your processes for opportunities." },
+      { step: "02", title: "AI Design", desc: "Mapping automations and assistant flows." },
+      { step: "03", title: "Integration", desc: "Chatbots and workflows built and tested." },
+      { step: "04", title: "Launch", desc: "Monitoring and refining and live optimization." },
     ],
 
     whyChooseTitle: "Your Long-Term AI & Automation Partner",
@@ -482,6 +442,13 @@ const serviceData: Record<string, ServiceData> = {
     rightDescription:
       "Our AI automation services transform your business operations with intelligent solutions that save time and significantly reduce costs. Implement future-ready technology today.",
     callToActionLinkText: "Let's Talk",
+    faq: [
+      { q: "Can AI really handle customer support?", a: "Yes, our bots handle up to 70% of repetitive FAQs, leaving only complex cases for humans." },
+      { q: "Is my business data secure with AI?", a: "We use secure, private enterprise-level GPT models that do not train on your sensitive data." }
+    ],
+    technologies: ["OpenAI API", "Python", "Zapier", "Make.com", "Vector Databases", "LangChain"],
+    industries: ["Customer Service", "Real Estate", "Financial Services", "Legal", "SaaS"],
+    deliverables: ["Custom Trained AI Models", "24/7 Automated Chatbots", "Automated Workflows (Zapier)", "Live Data Dashboards", "Staff Training & Documentation"]
   },
   "mobile-development": {
     heroTitle:
@@ -523,42 +490,14 @@ const serviceData: Record<string, ServiceData> = {
       "Cross-Platform App Development (React Native / Flutter) – One codebase → multiple platforms → lower cost → faster launch.",
       "UI/UX for Mobile Apps – User-centric screens, flows, and prototypes designed for clarity and efficiency.",
       "API & Backend Development – Secure, scalable tech stack built for long-term growth.",
-      "Quality Assurance & Testing – Bug-free, smooth performance across all devices and operating systems.",
-      "Maintenance, Updates & Optimization – We manage your app post-launch — new features, fixes, and improvements.",
     ],
 
     processTitle: "A Streamlined Process That Reduces Risk & Maximizes Results",
     processSteps: [
-      {
-        step: "",
-        title: "Discovery & Strategy",
-        desc: "Understanding your business goals, competition, and user expectations.",
-      },
-      {
-        step: "",
-        title: "Wireframing & UI/UX Design",
-        desc: "Crafting user flows and screens that ensure a smooth experience.",
-      },
-      {
-        step: "",
-        title: "Development & Integration",
-        desc: "Building the app using modern frameworks and optimized architecture.",
-      },
-      {
-        step: "",
-        title: "Testing & Refinement",
-        desc: "Bug fixing, performance optimization, device testing.",
-      },
-      {
-        step: "",
-        title: "Launch & Deployment",
-        desc: "Publishing your app on the Apple App Store & Google Play Store.",
-      },
-      {
-        step: "",
-        title: "Post-Launch Support & Scaling",
-        desc: "Feature enhancements, updates, monitoring, analytics & marketing support.",
-      },
+      { step: "01", title: "Discovery", desc: "Understanding goals and user expectations." },
+      { step: "02", title: "UI/UX Design", desc: "Crafting flows for a smooth experience." },
+      { step: "03", title: "Development", desc: "Building with optimized app architecture." },
+      { step: "04", title: "Scaling", desc: "Updates, monitoring, and live support." },
     ],
 
     whyChooseTitle: "A Development Partner You Can Rely On",
@@ -569,7 +508,6 @@ const serviceData: Record<string, ServiceData> = {
       "Scalable Code Architecture",
       "Affordable Solutions for Startups & Businesses",
       "Experience across USA, UK, Canada & Australia",
-      "Transparent Processes & Weekly Updates",
     ],
 
     testimonialsTitle: "What Our App Clients Say",
@@ -598,6 +536,13 @@ const serviceData: Record<string, ServiceData> = {
     rightDescription:
       "Our mobile development services create powerful applications that connect your audience on their preferred devices. Native performance, cross-platform efficiency.",
     callToActionLinkText: "Let's Talk",
+    faq: [
+      { q: "Native or Cross-platform?", a: "We recommend React Native or Flutter for most businesses to save 40% on costs while keeping native feel." },
+      { q: "Do you handle App Store publishing?", a: "Yes, we manage the entire submission process for both Apple App Store and Google Play." }
+    ],
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Node.js"],
+    industries: ["Social Networking", "E-commerce", "Health & Fitness", "Delivery Apps", "FinTech"],
+    deliverables: ["iOS & Android App Store Builds", "Complete UI/UX Design File", "Scalable Backend API", "In-App Analytics Setup", "90-Day Bug Support"]
   },
   ebooks: {
     heroTitle:
@@ -639,42 +584,14 @@ const serviceData: Record<string, ServiceData> = {
       "Book Printing Services – Affordable printing with lower per-book costs than leading print-on-demand platforms.",
       "Author Website Development – Clean, modern websites that help authors build a digital brand and sell books directly.",
       "Book Marketing & Launch Strategy – Social media campaigns, Amazon optimization, email marketing & promotional assets.",
-      "E-Book Conversion (PDF, EPUB, MOBI) – Professional eBook conversion compatible with all major reading devices.",
-      "KDP & IngramSpark Publishing Assistance – We prepare, upload, optimize, and manage your book publishing process.",
     ],
 
     processTitle: "A Smooth, Guided Process From Manuscript to Published Book",
     processSteps: [
-      {
-        step: "",
-        title: "Consultation & Manuscript Review",
-        desc: "We understand your goals, genre, and publication requirements.",
-      },
-      {
-        step: "",
-        title: "Design & Formatting",
-        desc: "Professional cover + interior layout + eBook formatting.",
-      },
-      {
-        step: "",
-        title: "Publishing Setup & Upload",
-        desc: "Everything prepared & uploaded to KDP, IngramSpark, or your chosen platform.",
-      },
-      {
-        step: "",
-        title: "Marketing & Promotion",
-        desc: "We help you launch, promote, and build an author brand.",
-      },
-      {
-        step: "",
-        title: "Printing & Delivery (Optional)",
-        desc: "Affordable printing with high-quality paper & binding.",
-      },
-      {
-        step: "",
-        title: "Ongoing Support",
-        desc: "Updates, new editions, website changes, and marketing support.",
-      },
+      { step: "01", title: "Consultation", desc: "Manuscript review and genre planning." },
+      { step: "02", title: "Formatting", desc: "Professional cover and interior layout." },
+      { step: "03", title: "Publishing", desc: "Uploading to KDP and IngramSpark." },
+      { step: "04", title: "Promotion", desc: "Launch support and brand building." },
     ],
 
     whyChooseTitle: "Your Trusted Partner for Publishing & Author Success",
@@ -685,7 +602,6 @@ const serviceData: Record<string, ServiceData> = {
       "Professional Designs That Attract Readers",
       "Marketing Strategies That Boost Book Sales",
       "Fast Delivery + Transparent Communication",
-      "End-to-End Support for Every Step",
     ],
 
     testimonialsTitle: "What Authors Say",
@@ -714,6 +630,13 @@ const serviceData: Record<string, ServiceData> = {
     rightDescription:
       "Our ebook services transform your knowledge and expertise into valuable digital products that reach a global audience. Your message, worldwide impact.",
     callToActionLinkText: "Let's Talk",
+    faq: [
+      { q: "How much royalty do I keep?", a: "100%. We take no commission on your sales. You own your book and all its profits." },
+      { q: "Can you help with Amazon KDP?", a: "Yes, we handle formatting, metadata setup, and publishing on Amazon, IngramSpark, and more." }
+    ],
+    technologies: ["Vellum", "Adobe InDesign", "Amazon KDP", "Calibre", "Gumroad"],
+    industries: ["Business Owners", "Educators", "Indie Authors", "Coaches", "Thought Leaders"],
+    deliverables: ["Polished Digital Manuscript", "Print-Ready Book Cover", "Formatted ePub & PDF Files", "Premium Author Website", "Amazon Launch Strategy"]
   },
 };
 
@@ -735,61 +658,88 @@ const SectionCard = ({
   introText?: string | null;
   items: string[];
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div
-      className="p-4 rounded border transition-all duration-300 mb-4"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="p-5 rounded-4 border transition-all duration-300 mb-4 bg-white shadow-sm"
       style={{
-        backgroundColor: isHovered ? "#0047AB" : "#fafafa",
-        boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
-        fontSize: "0.95rem",
-        transition: "all 0.3s ease",
-        borderColor: isHovered ? "#0047AB" : "#dee2e6",
-        fontFamily: "var(--tp-ff-gelder)",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.03)",
+        border: "1px solid rgba(0,71,171,0.08)",
       }}
     >
-      <h5
-        className="mb-2"
-        style={{
-          fontSize: "1.15rem",
-          fontWeight: 600,
-          fontFamily: "var(--tp-ff-gelder)",
-          color: isHovered ? "#ffffff" : "#0047AB",
-          transition: "all 0.3s ease",
-        }}
-      >
-        {title}
-      </h5>
+      <div className="d-flex align-items-center mb-4">
+        <div
+          className="me-3 d-flex align-items-center justify-content-center rounded-3"
+          style={{ width: "45px", height: "45px", backgroundColor: "rgba(0,71,171,0.05)", color: "#0047AB" }}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3
+          style={{
+            fontSize: "1.75rem",
+            fontWeight: 700,
+            fontFamily: "var(--tp-ff-gelder)",
+            color: "#0047AB",
+            margin: 0
+          }}
+        >
+          {title}
+        </h3>
+      </div>
+
       {introText && (
         <p
-          className="mb-3"
+          className="mb-4"
           style={{
-            fontFamily: "var(--tp-ff-gelder)",
-            color: isHovered ? "#ffffff" : "#4A5568",
-            transition: "all 0.3s ease",
+            fontFamily: "var(--tp-ff-body)",
+            color: "#4A5568",
+            fontSize: "1.1rem",
+            lineHeight: "1.6"
           }}
         >
           {introText}
         </p>
       )}
-      <ul className="mb-0" style={{ paddingLeft: "1.2rem" }}>
+
+      <div className="row g-3">
         {items.map((item, index) => (
-          <li
-            key={index}
-            className="mb-1"
-            style={{
-              fontFamily: "var(--tp-ff-gelder)",
-              color: isHovered ? "#ffffff" : "#4A5568",
-              transition: "all 0.3s ease",
-            }}
-          >
-            {item}
-          </li>
+          <div key={index} className="col-12">
+            <div
+              className="d-flex align-items-start p-3 rounded-3 transition-all h-100 hover-section-item"
+              style={{
+                backgroundColor: "rgba(0,71,171,0.02)",
+                border: "1px solid rgba(0,71,171,0.04)",
+                transition: "all 0.3s ease",
+                cursor: "default"
+              }}
+            >
+              <span className="me-2 mt-1 bullet-icon" style={{ color: "#0047AB", transition: "all 0.3s ease" }}>•</span>
+              <p
+                className="mb-0"
+                style={{
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "#2D3748",
+                  fontSize: "1rem",
+                  fontWeight: 500
+                }}
+              >
+                {item}
+              </p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
+      <style jsx>{`
+        .hover-section-item:hover {
+          background-color: rgba(0, 71, 171, 0.05) !important;
+          border-color: rgba(0, 71, 171, 0.15) !important;
+          transform: translateX(10px);
+          box-shadow: 0 4px 12px rgba(0, 71, 171, 0.05);
+        }
+        .hover-section-item:hover .bullet-icon {
+          transform: scale(1.5);
+          color: #002D6B !important;
+        }
+      `}</style>
     </div>
   );
 };
@@ -803,84 +753,215 @@ const ProcessCard = ({
   title: string;
   desc: string;
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className="service-details__process-card p-4 h-100 border rounded text-center transition-all duration-300"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      style={{
-        backgroundColor: isHovered ? "#0047AB" : "#ffffff",
-        borderColor: isHovered ? "#0047AB" : "#dee2e6",
-        transition: "all 0.3s ease",
-        color: isHovered ? "#ffffff" : "inherit",
-      }}
-    >
+    <div className="service-details__process-card px-4 py-5 h-100 border-0 rounded-4 text-center transition-all duration-300 bg-white shadow-sm hover-premium-card">
       <div
-        className="mb-3"
-        style={{ fontSize: "1.8rem", color: isHovered ? "#ffffff" : "inherit" }}
+        className="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle"
+        style={{
+          width: "75px",
+          height: "75px",
+          backgroundColor: "#0047AB",
+          color: "white",
+          fontSize: "1.7rem",
+          fontWeight: 800,
+          boxShadow: "0 10px 20px rgba(0, 71, 171, 0.2)",
+          transition: "all 0.3s ease"
+        }}
       >
-        {step}
+        {step || "!"}
       </div>
       <h5
-        className="mb-2"
+        className="mb-3 mt-3"
         style={{
           fontFamily: "var(--tp-ff-gelder)",
-          color: isHovered ? "#ffffff" : "#0047AB",
-          transition: "all 0.3s ease",
+          color: "#0047AB",
+          fontSize: "1.5rem",
+          fontWeight: 700
         }}
       >
         {title}
       </h5>
       <p
-        className="mb-0"
+        className="mb-0 mx-auto"
         style={{
-          fontFamily: "var(--tp-ff-gelder)",
-          color: isHovered ? "#ffffff" : "#4A5568",
-          transition: "all 0.3s ease",
+          fontFamily: "var(--tp-ff-body)",
+          color: "#4A5568",
+          fontSize: "1rem",
+          lineHeight: "1.6"
         }}
       >
         {desc}
       </p>
+      <style jsx>{`
+        .hover-premium-card {
+          margin: 5px;
+        }
+        .hover-premium-card:hover {
+          transform: translateY(-15px) scale(1.03);
+          box-shadow: 0 30px 60px rgba(0, 71, 171, 0.15) !important;
+          z-index: 2;
+        }
+        .hover-premium-card:hover .rounded-circle {
+          transform: scale(1.1) rotate(5deg);
+          background-color: #002D6B !important;
+        }
+      `}</style>
     </div>
   );
 };
 
 const WhyChooseItem = ({ value }: { value: string }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div
-      className="p-3 rounded border transition-all duration-300 h-100"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="p-4 rounded-4 border-0 transition-all duration-300 h-100 bg-white shadow-sm d-flex align-items-center hover-why-card"
       style={{
-        backgroundColor: isHovered ? "#0047AB" : "#ffffff",
-        borderColor: isHovered ? "#0047AB" : "#dee2e6",
-        transition: "all 0.3s ease",
-        display: "flex",
-        alignItems: "center",
-        boxShadow: isHovered ? "0 4px 12px rgba(0,71,171,0.2)" : "none",
+        border: "1px solid rgba(0,71,171,0.05)",
+        cursor: "default"
       }}
     >
+      <div className="me-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 check-icon" style={{ width: "32px", height: "32px", backgroundColor: "rgba(0,71,171,0.1)", color: "#0047AB", transition: "all 0.3s ease" }}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
       <p
         className="mb-0"
         style={{
-          fontFamily: "var(--tp-ff-gelder)",
-          color: isHovered ? "#ffffff" : "#4A5568",
-          transition: "all 0.3s ease",
+          fontFamily: "var(--tp-ff-body)",
+          color: "#2D3748",
+          fontSize: "1.05rem",
+          fontWeight: 500,
         }}
       >
         {value}
       </p>
+      <style jsx>{`
+        .hover-why-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 15px 30px rgba(0, 71, 171, 0.1) !important;
+          background-color: #fcfdfe !important;
+        }
+        .hover-why-card:hover .check-icon {
+          background-color: #0047AB !important;
+          color: white !important;
+          transform: rotate(10deg) scale(1.1);
+        }
+      `}</style>
     </div>
   );
 };
 
+const DeliverablesCard = ({ items }: { items: string[] }) => (
+  <div className="service-details__deliverables-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
+    <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>What You'll Get</h4>
+    <div className="d-flex flex-column gap-3">
+      {items.map((item, i) => (
+        <div key={i} className="d-flex align-items-center">
+          <div className="me-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: "24px", height: "24px", backgroundColor: "rgba(0,71,171,0.05)", color: "#0047AB" }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+          </div>
+          <span style={{ fontSize: "0.9rem", color: "#4A5568", fontWeight: 600, fontFamily: "var(--tp-ff-body)" }}>{item}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const TechStackCard = ({ techs }: { techs: string[] }) => (
+  <div className="service-details__tech-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
+    <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>Tools & Technologies</h4>
+    <div className="d-flex flex-wrap gap-2">
+      {techs.map((tech, i) => (
+        <span
+          key={i}
+          className="px-3 py-2 rounded-pill hover-tech-tag"
+          style={{
+            backgroundColor: "rgba(0,71,171,0.05)",
+            color: "#0047AB",
+            fontSize: "0.85rem",
+            fontWeight: 600,
+            fontFamily: "var(--tp-ff-body)",
+            border: "1px solid rgba(0,71,171,0.1)",
+            transition: "all 0.3s ease",
+            cursor: "pointer"
+          }}
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+    <style jsx>{`
+      .hover-tech-tag:hover {
+        background-color: #0047AB !important;
+        color: white !important;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 71, 171, 0.2);
+      }
+    `}</style>
+  </div>
+);
+
+const IndustryFocusCard = ({ industries }: { industries: string[] }) => (
+  <div className="service-details__industry-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
+    <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>Industry Focus</h4>
+    <div className="row g-2">
+      {industries.map((ind, i) => (
+        <div key={i} className="col-6">
+          <div className="d-flex align-items-center p-2 rounded-3 border-0 transition-all hover-industry-item" style={{ backgroundColor: "#f8f9fa", transition: "all 0.3s ease", cursor: "pointer" }}>
+            <span style={{ color: "#0047AB", marginRight: "8px", fontSize: "14px" }}>#</span>
+            <span style={{ fontSize: "0.85rem", color: "#4A5568", fontWeight: 600, fontFamily: "var(--tp-ff-body)" }}>{ind}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <style jsx>{`
+      .hover-industry-item:hover {
+        background-color: rgba(0, 71, 171, 0.05) !important;
+        transform: translateX(5px);
+      }
+      .hover-industry-item:hover span:first-child {
+        transform: scale(1.2);
+      }
+    `}</style>
+  </div>
+);
+
+const FAQCard = ({ faq }: { faq: { q: string; a: string }[] }) => (
+  <div className="service-details__faq-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
+    <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>Common Questions</h4>
+    <div className="accordion accordion-flush" id="serviceSidebarFaq">
+      {faq.map((item, i) => (
+        <div key={i} className="accordion-item border-0 mb-3 rounded-3 overflow-hidden shadow-sm" style={{ border: "1px solid rgba(0,71,171,0.05)" }}>
+          <h2 className="accordion-header">
+            <button
+              className="accordion-button collapsed py-3 px-4"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={`#sidebarFaq${i}`}
+              style={{
+                fontFamily: "var(--tp-ff-body)",
+                fontSize: "0.9rem",
+                fontWeight: 600,
+                color: "#0047AB",
+                backgroundColor: "white"
+              }}
+            >
+              {item.q}
+            </button>
+          </h2>
+          <div id={`sidebarFaq${i}`} className="accordion-collapse collapse" data-bs-parent="#serviceSidebarFaq">
+            <div className="accordion-body py-3 px-4 text-muted" style={{ fontSize: "0.85rem", lineHeight: "1.5", fontFamily: "var(--tp-ff-body)" }}>
+              {item.a}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 export default function ServiceDetailsArea({ slug }: { slug: string }) {
   const router = useRouter();
   const pathname = usePathname();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const extractServiceSlug = useCallback(() => {
     if (pathname) {
@@ -905,6 +986,40 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
       setActiveService("digital-marketing");
     }
   }, [extractServiceSlug]);
+
+  useGSAP(() => {
+    // Initial animations
+    gsap.from(".reveal-text", {
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power4.out",
+    });
+
+    gsap.from(".service-hero-img", {
+      scale: 1.2,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      delay: 0.5
+    });
+
+    // Scroll triggered animations
+    const sections = gsap.utils.toArray(".scroll-reveal");
+    sections.forEach((section: any) => {
+      gsap.from(section, {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+  }, { scope: containerRef, dependencies: [activeService] });
 
   const currentService = serviceData[activeService];
 
@@ -938,24 +1053,26 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
   const renderProcessSection = () => {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-12 text-center mb-80">
+        <div className="row justify-content-center">
+          <div className="col-lg-10 text-center mb-80">
             <h3
-              className="sv-hero-title tp-char-animation mb-50"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
                 color: "#0047AB",
-                fontSize: "2rem",
-                letterSpacing: "0.001em",
+                fontSize: "calc(2rem + 0.5vw)",
+                fontWeight: 800,
+                letterSpacing: "-0.02em",
               }}
             >
               {currentService.processTitle}
             </h3>
-            <div className="row g-4">
+          </div>
+          <div className="col-12">
+            <div className="row g-4 justify-content-center">
               {currentService.processSteps.map((item, i) => (
                 <div key={i} className="col-md-6 col-lg-3">
                   <ProcessCard
-                    step={item.step}
+                    step={item.step || String(i + 1)}
                     title={item.title}
                     desc={item.desc}
                   />
@@ -970,16 +1087,16 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
 
   const renderWhyChooseSection = () => {
     return (
-      <div className="container mb-80">
-        <div className="row">
-          <div className="col-12 text-center mb-50">
+      <div className="container mt-40">
+        <div className="row justify-content-center">
+          <div className="col-lg-10 text-center mb-80">
             <h3
-              className="sv-hero-title tp-char-animation"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
                 color: "#0047AB",
-                fontSize: "2rem",
-                letterSpacing: "0.001em",
+                fontSize: "calc(2rem + 0.5vw)",
+                fontWeight: 800,
+                letterSpacing: "-0.02em",
               }}
             >
               {currentService.whyChooseTitle}
@@ -1001,90 +1118,137 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
 
   const renderTestimonialsSection = () => {
     return (
-      <div className="container mb-80">
-        <div className="row">
-          <div className="col-12 text-center mb-50">
+      <div className="container mb-100 scroll-reveal mt-25">
+        <div className="row justify-content-center">
+          <div className="col-lg-8 text-center mb-80">
             <h3
-              className="sv-hero-title tp-char-animation"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
                 color: "#0047AB",
+                fontSize: "2.5rem",
+                fontWeight: 700
               }}
             >
               {currentService.testimonialsTitle}
             </h3>
           </div>
-          <div className="col-md-6 offset-md-3">
-            {currentService.testimonials.map((t, i) => (
-              <div key={i} className="mb-4 p-4 border rounded">
-                <p
-                  className="mb-2"
-                  style={{
-                    fontFamily: "var(--tp-ff-body)",
-                    color: "#4A5568",
-                  }}
-                >
-                  “{t.quote}”
-                </p>
-                <p
-                  className="text-muted mb-0"
-                  style={{
-                    fontFamily: "var(--tp-ff-body)",
-                    color: "#4A5568",
-                    opacity: 0.8,
-                  }}
-                >
-                  {t.author}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
+        <div className="row g-4 justify-content-center">
+          {currentService.testimonials.map((t, i) => (
+            <div key={i} className="col-md-6 col-lg-5">
+              <div
+                className="h-100 p-5 rounded-4 bg-white shadow-sm border transition-all duration-300 hover-testimonial-card"
+                style={{
+                  border: "1px solid rgba(0,71,171,0.08)",
+                  transition: "all 0.3s ease",
+                  cursor: "default"
+                }}
+              >
+                <div className="mb-3 text-primary transition-all quote-icon" style={{ opacity: 0.15, transition: "all 0.3s ease" }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H13.017V21H14.017ZM6.017 21L6.017 18C6.017 16.8954 6.91243 16 8.017 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H8.017C7.46472 8 7.017 8.44772 7.017 9V12C7.017 12.5523 6.56929 13 6.017 13H5.017V21H6.017Z" /></svg>
+                </div>
+                <p
+                  className="mb-4"
+                  style={{
+                    fontFamily: "var(--tp-ff-body)",
+                    color: "#2D3748",
+                    fontSize: "1.1rem",
+                    lineHeight: "1.7",
+                    fontStyle: "italic"
+                  }}
+                >
+                  {t.quote}
+                </p>
+                <div className="d-flex align-items-center">
+                  <div className="ms-0">
+                    <h6 className="mb-0 fw-bold author-name" style={{ color: "#0047AB", transition: "all 0.3s ease" }}>{t.author.split('•')[0].trim().replace('— ', '')}</h6>
+                    <small className="text-muted">{t.author.split('•')[1]?.trim() || 'Client'}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <style jsx>{`
+          .hover-testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 71, 171, 0.1) !important;
+            border-color: rgba(0, 71, 171, 0.2) !important;
+          }
+          .hover-testimonial-card:hover .quote-icon {
+            opacity: 0.4 !important;
+            transform: scale(1.1);
+            color: #0047AB !important;
+          }
+          .hover-testimonial-card:hover .author-name {
+            color: #002D6B !important;
+            transform: translateX(5px);
+          }
+        `}</style>
       </div>
     );
   };
 
   const renderFinalCTASection = () => {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-12 text-center mb-80">
-            <h3
-              className="sv-hero-title tp-char-animation mb-4"
-              style={{
-                fontFamily: "var(--tp-ff-gelder)",
-                color: "#0047AB",
-              }}
-            >
-              {currentService.finalCTATitle}
-            </h3>
-            <p
-              className="mb-4"
-              style={{
-                fontFamily: "var(--tp-ff-body)",
-                color: "#4A5568",
-              }}
-            >
-              {currentService.finalCTASubtext}
-            </p>
-            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
-              <Link href="/contact" className="tp-btn-white background-black">
-                {currentService.finalCTAPrimary}
-              </Link>
-              <Link href="/contact" className="tp-btn-border">
-                {currentService.finalCTASecondary}
-              </Link>
+      <div className="container pb-100 scroll-reveal">
+        <div className="row justify-content-center">
+          <div className="col-xl-10">
+            <div className="p-5 p-lg-8 rounded-5 text-center text-white shadow-2xl" style={{
+              background: "linear-gradient(135deg, #0047AB 0%, #002D6B 100%)",
+              boxShadow: "0 25px 50px -12px rgba(0, 71, 171, 0.5)"
+            }}>
+              <h3
+                className="mb-4"
+                style={{
+                  fontFamily: "var(--tp-ff-gelder)",
+                  color: "white",
+                  fontSize: "3rem",
+                  fontWeight: 800
+                }}
+              >
+                {currentService.finalCTATitle}
+              </h3>
+              <p
+                className="mb-5 mx-auto"
+                style={{
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "white",
+                  opacity: 0.9,
+                  fontSize: "1.25rem",
+                  maxWidth: "700px"
+                }}
+              >
+                {currentService.finalCTASubtext}
+              </p>
+              <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <Link
+                  href="/contact"
+                  className="btn btn-light px-5 py-3 rounded-pill fw-bold"
+                  style={{ color: "#0047AB", fontSize: "1.1rem" }}
+                >
+                  {currentService.finalCTAPrimary}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="btn btn-outline-light px-5 py-3 rounded-pill fw-bold"
+                  style={{ fontSize: "1.1rem" }}
+                >
+                  {currentService.finalCTASecondary}
+                </Link>
+              </div>
+              <p
+                className="mt-4"
+                style={{
+                  fontSize: "0.95rem",
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "white",
+                  opacity: 0.7
+                }}
+              >
+                {currentService.microtrustLine}
+              </p>
             </div>
-            <p
-              className="mt-3 text-muted"
-              style={{
-                fontSize: "0.9rem",
-                fontFamily: "var(--tp-ff-body)",
-                color: "#4A5568",
-              }}
-            >
-              {currentService.microtrustLine}
-            </p>
           </div>
         </div>
       </div>
@@ -1092,267 +1256,222 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
   };
 
   return (
-    <div className="service-details__area service-details__space pt-200 pb-120">
-      {/* HERO */}
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="service-details__title-box mb-40">
-              <span
-                className="service-details__subtitle tp-char-animation"
-                style={{
-                  fontFamily: "var(--tp-ff-gelder)",
-                  color: "#0047AB",
-                  fontWeight: 600,
-                }}
-              >
-                {getDisplayTitle()}
-              </span>
-              <h6
-                className="sv-hero-title tp-char-animation"
-                style={{
-                  fontFamily: "var(--tp-ff-gelder)",
-                  color: "#0047AB",
-                  fontSize: "4rem", // Reduced size
-                  lineHeight: "1.2",
-                }}
-              >
-                {currentService.heroTitle}
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="offset-xl-4 col-xl-5">
-            <div className="service-details__banner-text mb-80">
-              <p
-                className="mb-30 tp_title_anim"
-                style={{
-                  fontFamily: "var(--tp-ff-gelder)",
-                  color: "#0047AB",
-                }}
-              >
-                {currentService.heroSubtext}
-              </p>
-              <div
-                className="d-flex align-items-center"
-                style={{ gap: "20px" }}
-              >
-                {/* CTA 1 – Contact */}
-                <Link
-                  href="/contact"
+    <div ref={containerRef} className="service-details__area service-details__space pt-150 pb-120 overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="service-details__hero mb-100">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="service-details__title-box mb-40">
+                <span
+                  className="service-details__subtitle reveal-text"
                   style={{
-                    padding: "12px 30px",
-                    backgroundColor: "#0047AB",
-                    color: "#ffffff",
-                    fontFamily: "var(--tp-ff-gelder)",
-                    fontWeight: 600,
-                    border: "2px solid #0047AB",
-                    borderRadius: "50px",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                    whiteSpace: "nowrap",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.style.color = "#0047AB";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#0047AB";
-                    e.currentTarget.style.color = "#ffffff";
-                  }}
-                >
-                  {currentService.heroCTA1}
-                </Link>
-
-                {/* CTA 2 – Portfolio */}
-                <Link
-                  href="/portfolio-standard-main"
-                  style={{
-                    padding: "12px 30px",
-                    backgroundColor: "transparent",
+                    fontFamily: "var(--tp-ff-body)",
                     color: "#0047AB",
-                    fontFamily: "var(--tp-ff-gelder)",
                     fontWeight: 600,
-                    border: "2px solid #0047AB",
-                    borderRadius: "50px",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                    whiteSpace: "nowrap",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#0047AB";
-                    e.currentTarget.style.color = "#ffffff";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.style.color = "#0047AB";
+                    textTransform: "uppercase",
+                    letterSpacing: "2px",
+                    display: "block",
+                    marginBottom: "15px"
                   }}
                 >
-                  {currentService.heroCTA2}
-                </Link>
+                  {getDisplayTitle()}
+                </span>
+                <h1
+                  className="reveal-text"
+                  style={{
+                    fontFamily: "var(--tp-ff-gelder)",
+                    color: "#0047AB",
+                    fontSize: "calc(2.5rem + 1.5vw)",
+                    lineHeight: "1.1",
+                    fontWeight: "800",
+                    marginBottom: "25px",
+                  }}
+                >
+                  {currentService.heroTitle}
+                </h1>
+                <p
+                  className="reveal-text"
+                  style={{
+                    fontFamily: "var(--tp-ff-body)",
+                    color: "#1A202C",
+                    fontSize: "1.15rem",
+                    lineHeight: "1.7",
+                    maxWidth: "650px",
+                    marginBottom: "50px",
+                    opacity: 0.9
+                  }}
+                >
+                  {currentService.heroSubtext}
+                </p>
+                <div className="reveal-text d-flex flex-wrap gap-3">
+                  <Link
+                    href="/contact"
+                    style={{
+                      padding: "16px 35px",
+                      backgroundColor: "#0047AB",
+                      color: "#ffffff",
+                      fontFamily: "var(--tp-ff-body)",
+                      fontWeight: 600,
+                      borderRadius: "12px",
+                      textDecoration: "none",
+                      transition: "all 0.3s ease",
+                      boxShadow: "0 10px 20px rgba(0, 71, 171, 0.2)"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-3px)";
+                      e.currentTarget.style.boxShadow = "0 15px 30px rgba(0, 71, 171, 0.3)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "0 10px 20px rgba(0, 71, 171, 0.2)";
+                    }}
+                  >
+                    {currentService.heroCTA1}
+                  </Link>
+                  <Link
+                    href="/portfolio-standard-main"
+                    style={{
+                      padding: "16px 35px",
+                      backgroundColor: "transparent",
+                      color: "#0047AB",
+                      fontFamily: "var(--tp-ff-body)",
+                      fontWeight: 600,
+                      border: "2px solid #0047AB",
+                      borderRadius: "12px",
+                      textDecoration: "none",
+                      transition: "all 0.3s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "rgba(0, 71, 171, 0.05)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                    }}
+                  >
+                    {currentService.heroCTA2}
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* IMAGE */}
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="service-details__tab-wrapper text-center mb-120">
-              <div className="service-details__tab-thumb">
+            <div className="col-xl-5 col-lg-4 d-none d-lg-block">
+              <div className="service-hero-img p-relative">
                 <Image
-                  data-speed="0.4"
                   src={serviceImageMap[activeService]}
-                  alt={`${getDisplayTitle()} service illustration`}
-                  style={{ height: "auto" }}
-                  width={800}
-                  height={500}
+                  alt={`${getDisplayTitle()} illustration`}
+                  width={600}
+                  height={600}
+                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                  priority
                 />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* MAIN CONTENT */}
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-7 col-lg-7">
-            <div
-              className="service-details__left-wrap"
-            >
-              {renderSectionCard(
-                currentService.problemsTitle,
-                currentService.problemsIntro,
-                currentService.modernProblems,
-                "problems"
-              )}
+      {/* CONTENT SECTIONS */}
+      <div className="service-details__main-content pb-100">
+        <div className="container">
+          <div className="row g-5">
+            {/* Sidebar Sticky */}
+            <div className="col-xl-4 col-lg-4 order-2 order-lg-1">
+              <aside className="service-details__sidebar sticky-top" style={{ top: "100px", zIndex: 10 }}>
+                <div className="service-details__category-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
+                  <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "25px", fontSize: "1.4rem" }}>Expertise Areas</h4>
+                  <div className="d-flex flex-column gap-2">
+                    {Object.keys(serviceData).map((service) => (
+                      <Link
+                        key={service}
+                        href={`/services/${service}`}
+                        onClick={(e) => handleCategoryClick(service as keyof typeof serviceData, e)}
+                        className={`p-3 rounded-3 text-decoration-none transition-all ${activeService === service ? 'bg-primary text-white shadow-lg' : 'text-primary'}`}
+                        style={{
+                          fontFamily: "var(--tp-ff-body)",
+                          fontWeight: 600,
+                          backgroundColor: activeService === service ? "#0047AB" : "transparent",
+                          fontSize: "0.95rem",
+                          border: activeService === service ? "none" : "1px solid rgba(0,71,171,0.1)"
+                        }}
+                      >
+                        {service.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
 
-              {renderSectionCard(
-                currentService.solutionsTitle,
-                currentService.solutionsIntro,
-                currentService.solutions,
-                "solutions"
-              )}
-
-              {renderSectionCard(
-                currentService.featuresTitle,
-                currentService.featuresIntro,
-                currentService.features,
-                "features"
-              )}
-            </div>
-          </div>
-
-          <div className="col-xl-5 col-lg-5">
-            <div className="service-details__right-wrap fix p-relative">
-              <div className="service-details__rotate-text">
-                <span
-                  style={{
-                    fontFamily: "var(--tp-ff-body)",
-                    color: "#0047AB",
-                    fontWeight: 500,
-                  }}
-                >
-                  Full list of services
-                </span>
-              </div>
-              <div className="service-details__right-category">
-                {Object.keys(serviceData).map((service) => (
+                <div className="service-details__help-box p-5 rounded-4 text-center text-white border-0 mb-40" style={{ background: "linear-gradient(135deg, #0047AB 0%, #002D6B 100%)", position: "relative", overflow: "hidden" }}>
+                  <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "white", marginBottom: "15px", position: "relative", zIndex: 2 }}>{currentService.sidebarTitle}</h4>
+                  <p style={{ color: "white", opacity: 0.9, marginBottom: "30px", position: "relative", zIndex: 2 }}>{currentService.rightDescription}</p>
                   <Link
-                    key={service}
-                    href={`/services/${service}`}
-                    onClick={(e) =>
-                      handleCategoryClick(
-                        service as keyof typeof serviceData,
-                        e
-                      )
-                    }
-                    className={activeService === service ? "active" : ""}
-                    style={{
-                      fontFamily: "var(--tp-ff-body)",
-                      color: activeService === service ? "white" : "#0047AB",
-                      backgroundColor:
-                        activeService === service ? "#0047AB" : "transparent",
-                      fontWeight: 600,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      border: "2px solid #0047AB",
-                      borderRadius: "50px",
-                      padding: "14px 25px",
-                      marginBottom: "15px",
-                      textTransform: "uppercase",
-                      fontSize: "14px",
-                      letterSpacing: "1px",
-                      transition: "all 0.3s ease",
-                      textDecoration: "none",
-                      lineHeight: "1",
-                      height: "50px", // Explicit height for consistent pills
-                    }}
+                    href="/contact"
+                    className="btn btn-light w-100 py-3 rounded-pill fw-bold"
+                    style={{ color: "#0047AB", position: "relative", zIndex: 2 }}
                   >
-                    {service
-                      .replace(/-/g, " ")
-                      .replace(/\b\w/g, (c) => c.toUpperCase())}
+                    {currentService.callToActionLinkText}
                   </Link>
-                ))}
+                  <div style={{ position: "absolute", top: "-50px", right: "-50px", width: "150px", height: "150px", background: "rgba(255,255,255,0.05)", borderRadius: "50%" }}></div>
+                </div>
+
+                <div className="service-details__highlights-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
+                  <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>Service Highlights</h4>
+                  <ul className="list-unstyled mb-0">
+                    {currentService.whyChooseItems.slice(0, 4).map((item, i) => (
+                      <li key={i} className="d-flex align-items-start mb-3">
+                        <div className="me-3 mt-1 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: "20px", height: "20px", backgroundColor: "rgba(0,71,171,0.1)", color: "#0047AB", fontSize: "10px" }}>
+                          ✓
+                        </div>
+                        <span style={{ fontSize: "0.95rem", color: "#4A5568", fontFamily: "var(--tp-ff-body)", fontWeight: 500 }}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <DeliverablesCard items={currentService.deliverables} />
+
+                <TechStackCard techs={currentService.technologies} />
+                <IndustryFocusCard industries={currentService.industries} />
+                <FAQCard faq={currentService.faq} />
+              </aside>
+            </div>
+
+            {/* Main Content Sections */}
+            <div className="col-xl-8 col-lg-8 order-1 order-lg-2">
+              <div className="scroll-reveal mb-80">
+                {renderSectionCard(currentService.problemsTitle, currentService.problemsIntro, currentService.modernProblems, "problems")}
               </div>
-              <div
-                className="service-details__right-text-box"
-                style={{
-                  backgroundColor: "#0047AB",
-                  padding: "40px",
-                  borderRadius: "20px",
-                  marginTop: "30px",
-                }}
-              >
-                <h4
-                  style={{
-                    fontFamily: "var(--tp-ff-gelder)",
-                    color: "white",
-                    marginBottom: "15px",
-                  }}
-                >
-                  {currentService.sidebarTitle}
-                </h4>
-                <p
-                  className="mb-20"
-                  style={{
-                    fontFamily: "var(--tp-ff-gelder)",
-                    color: "white",
-                  }}
-                >
-                  {currentService.rightDescription}
-                </p>
-                <Link
-                  href="/contact"
-                  style={{
-                    display: "inline-block",
-                    padding: "12px 25px",
-                    backgroundColor: "white",
-                    color: "#0047AB",
-                    borderRadius: "50px",
-                    fontWeight: 600,
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  {currentService.callToActionLinkText}
-                </Link>
+
+              <div className="scroll-reveal mb-80">
+                {renderSectionCard(currentService.solutionsTitle, currentService.solutionsIntro, currentService.solutions, "solutions")}
+              </div>
+
+              <div className="scroll-reveal mb-100">
+                {renderSectionCard(currentService.featuresTitle, currentService.featuresIntro, currentService.features, "features")}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* DYNAMIC SECTIONS */}
-      {renderProcessSection()}
-      {renderWhyChooseSection()}
-      {/* {renderTestimonialsSection()}
-      {renderFinalCTASection()} */}
+      {/* PROCESS SECTION */}
+      <section className="service-details__process-area py-120 bg-light-blue" style={{ backgroundColor: "rgba(0,71,171,0.02)" }}>
+        {renderProcessSection()}
+      </section>
+
+      {/* WHY CHOOSE SECTION */}
+      <section className="service-details__why-choose py-120">
+        {renderWhyChooseSection()}
+      </section>
+
+      {/* TESTIMONIALS SECTION */}
+      <section className="service-details__testimonials py-120 bg-light-blue" style={{ backgroundColor: "rgba(0,71,171,0.02)" }}>
+        {renderTestimonialsSection()}
+      </section>
+
+      {/* FINAL CTA SECTION */}
+      <section className="service-details__cta py-120">
+        {renderFinalCTASection()}
+      </section>
     </div>
   );
 }
