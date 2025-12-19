@@ -71,7 +71,8 @@ const serviceData: Record<string, ServiceData> = {
     heroCTA2: "Visit Our Portfolio",
 
     problemsTitle: "Why Most Businesses Fail to Grow Online",
-    problemsIntro: "In today's digital landscape, businesses face significant challenges:",
+    problemsIntro:
+      "In today's digital landscape, businesses face significant challenges:",
     modernProblems: [
       " No Clear Marketing Strategy – Businesses jump between trends without a structured growth plan.",
       " Low Website Traffic – Search engines and social media algorithms don’t favor weak content.",
@@ -83,7 +84,8 @@ const serviceData: Record<string, ServiceData> = {
     ],
 
     solutionsTitle: "Smart, Scalable Marketing Solutions That Actually Work",
-    solutionsIntro: "We provide comprehensive solutions that directly address these challenges:",
+    solutionsIntro:
+      "We provide comprehensive solutions that directly address these challenges:",
     solutions: [
       " Clear Marketing Strategy & Roadmap – We create a customized blueprint aligned with your business goals, audience, and budget.",
       " SEO + Keyword Strategy for High-Intent Traffic – Rank higher, attract better leads, and improve organic visibility.",
@@ -142,11 +144,13 @@ const serviceData: Record<string, ServiceData> = {
     testimonialsTitle: "What Our Clients Say",
     testimonials: [
       {
-        quote: "Netpulse Digital rebuilt our entire marketing system — our traffic increased, leads improved, and our brand finally feels consistent.",
+        quote:
+          "Netpulse Digital rebuilt our entire marketing system — our traffic increased, leads improved, and our brand finally feels consistent.",
         author: "— Michael • USA",
       },
       {
-        quote: "Their ad strategies helped us cut costs while doubling conversions.",
+        quote:
+          "Their ad strategies helped us cut costs while doubling conversions.",
         author: "— Sophie • UK",
       },
     ],
@@ -156,7 +160,8 @@ const serviceData: Record<string, ServiceData> = {
       "Let’s create a marketing system that attracts the right audience, boosts engagement, and drives consistent growth.",
     finalCTAPrimary: "Get a Free Marketing Audit",
     finalCTASecondary: "Contact Our Team",
-    microtrustLine: "We respond within 24 hours. No obligations — just insights.",
+    microtrustLine:
+      "We respond within 24 hours. No obligations — just insights.",
 
     sidebarTitle: "Digital Marketing",
     rightDescription:
@@ -164,13 +169,15 @@ const serviceData: Record<string, ServiceData> = {
     callToActionLinkText: "Let's Talk",
   },
   "creative-design": {
-    heroTitle: "Creative Designs That Build Trust, Strengthen Brands & Drive Results",
+    heroTitle:
+      "Creative Designs That Build Trust, Strengthen Brands & Drive Results",
     heroSubtext:
       "From logos and brand identity systems to social media design, UI/UX, and complete visual branding — Netpulse Digital helps businesses worldwide create strong, memorable designs that connect with customers and inspire action.",
     heroCTA1: "Get a Free Brand Consultation",
     heroCTA2: "View Our Design Work",
 
-    problemsTitle: "Most Businesses Struggle With Weak Visual Identity — Here’s Why",
+    problemsTitle:
+      "Most Businesses Struggle With Weak Visual Identity — Here’s Why",
     problemsIntro: "",
     modernProblems: [
       " Outdated or Unprofessional Branding – Generic or outdated designs make businesses look unreliable.",
@@ -181,7 +188,8 @@ const serviceData: Record<string, ServiceData> = {
       " Confusing UI/UX That Pushes Users Away – Bad user experience leads to low conversions and high bounce rates.",
     ],
 
-    solutionsTitle: "Design Solutions That Elevate Your Brand & Boost Conversions",
+    solutionsTitle:
+      "Design Solutions That Elevate Your Brand & Boost Conversions",
     solutionsIntro: "",
     solutions: [
       "Strategic, Psychology-Driven Branding – We create visuals that influence trust, emotion, and buying behavior.",
@@ -192,7 +200,8 @@ const serviceData: Record<string, ServiceData> = {
       "Fast Turnaround With Premium Quality – Top-tier design work, delivered quickly and efficiently.",
     ],
 
-    featuresTitle: "Everything Your Brand Needs to Look Professional & Powerful",
+    featuresTitle:
+      "Everything Your Brand Needs to Look Professional & Powerful",
     features: [
       "Logo Design & Brand Identity – Unique, memorable, scalable logos designed for long-term brand success.",
       "Full Brand Kits & Guidelines – Color systems, typography, icons, patterns, brand voice — everything packaged beautifully.",
@@ -239,7 +248,8 @@ const serviceData: Record<string, ServiceData> = {
     testimonialsTitle: "What Clients Say About Our Designs",
     testimonials: [
       {
-        quote: "Our brand identity finally feels premium. Their design work transformed how customers see us.",
+        quote:
+          "Our brand identity finally feels premium. Their design work transformed how customers see us.",
         author: "— Olivia • UK",
       },
       {
@@ -248,7 +258,8 @@ const serviceData: Record<string, ServiceData> = {
       },
     ],
 
-    finalCTATitle: "Ready to Elevate Your Brand With Stunning, Strategic Design?",
+    finalCTATitle:
+      "Ready to Elevate Your Brand With Stunning, Strategic Design?",
     finalCTASubtext:
       "Let’s bring your vision to life with creative solutions that boost trust, recognition, and conversions.",
     finalCTAPrimary: "Get a Free Brand Consultation",
@@ -279,7 +290,8 @@ const serviceData: Record<string, ServiceData> = {
       " Built With Cheap Templates – Template-based sites lack uniqueness, security, and long-term scalability.",
     ],
 
-    solutionsTitle: "Strategic Web Development That Delivers Real Business Growth",
+    solutionsTitle:
+      "Strategic Web Development That Delivers Real Business Growth",
     solutionsIntro: "",
     solutions: [
       "Custom, Modern & Conversion-Focused Designs – No templates — every website is built uniquely to match your brand and goals.",
@@ -327,7 +339,8 @@ const serviceData: Record<string, ServiceData> = {
       },
     ],
 
-    whyChooseTitle: "A Team Dedicated to Quality, Performance & Long-Term Growth",
+    whyChooseTitle:
+      "A Team Dedicated to Quality, Performance & Long-Term Growth",
     whyChooseItems: [
       "Modern Tech Stack (Next.js, React, WordPress, Shopify)",
       "Conversion-Focused, Not Just Design-Focused",
@@ -340,11 +353,13 @@ const serviceData: Record<string, ServiceData> = {
     testimonialsTitle: "What Clients Say About Our Web Development Work",
     testimonials: [
       {
-        quote: "Our new website increased leads by over 200% in the first month. The UX improvements alone made a huge difference.",
+        quote:
+          "Our new website increased leads by over 200% in the first month. The UX improvements alone made a huge difference.",
         author: "— Daniel, USA",
       },
       {
-        quote: "Clean, fast, and perfectly aligned with our brand. Netpulse Digital exceeded our expectations.",
+        quote:
+          "Clean, fast, and perfectly aligned with our brand. Netpulse Digital exceeded our expectations.",
         author: "— Clara, UK",
       },
     ],
@@ -354,7 +369,8 @@ const serviceData: Record<string, ServiceData> = {
       "Let’s create a high-performing website designed to generate leads, drive sales, and elevate your brand.",
     finalCTAPrimary: "Start Your Website Project",
     finalCTASecondary: "Request a Free Consultation",
-    microtrustLine: "We reply within 24 hours. No obligations — just expert insights.",
+    microtrustLine:
+      "We reply within 24 hours. No obligations — just expert insights.",
 
     sidebarTitle: "Web Development",
     rightDescription:
@@ -362,13 +378,15 @@ const serviceData: Record<string, ServiceData> = {
     callToActionLinkText: "Let's Talk",
   },
   "ai-automation": {
-    heroTitle: "AI Automations & Chatbots That Save Time, Reduce Costs & Scale Your Business",
+    heroTitle:
+      "AI Automations & Chatbots That Save Time, Reduce Costs & Scale Your Business",
     heroSubtext:
       "From smart AI chatbots to workflow automation, CRM integrations, and GPT-powered assistants — Netpulse Digital helps businesses automate repetitive tasks, improve customer experience, and operate more efficiently across the USA, UK, Canada, and Australia.",
     heroCTA1: "Get a Free Automation Audit",
     heroCTA2: "Visit Our AI Portfolio",
 
-    problemsTitle: "Businesses Lose Time & Money Every Day — Often Without Realizing It",
+    problemsTitle:
+      "Businesses Lose Time & Money Every Day — Often Without Realizing It",
     problemsIntro: "",
     modernProblems: [
       "Too Many Manual Tasks – Teams waste hours daily on repetitive work that can be automated.",
@@ -380,7 +398,8 @@ const serviceData: Record<string, ServiceData> = {
       "No Data Organization or Automation Systems – Scattered processes = lost opportunities + slow growth.",
     ],
 
-    solutionsTitle: "Smarter Workflows. Faster Response Times. Lower Costs. Happier Customers.",
+    solutionsTitle:
+      "Smarter Workflows. Faster Response Times. Lower Costs. Happier Customers.",
     solutionsIntro: "",
     solutions: [
       "Custom AI Chatbots (24/7 Support) – Instant replies, lead qualification, FAQs, bookings, sales assistance — all on autopilot.",
@@ -440,11 +459,13 @@ const serviceData: Record<string, ServiceData> = {
     testimonialsTitle: "What Clients Say About Our AI & Automation Services",
     testimonials: [
       {
-        quote: "Our customer support workload dropped by 70% after implementing their chatbot. Huge improvement!",
+        quote:
+          "Our customer support workload dropped by 70% after implementing their chatbot. Huge improvement!",
         author: "— Tom, Australia",
       },
       {
-        quote: "The workflow automations saved us hours each week. Our leads now get instant responses.",
+        quote:
+          "The workflow automations saved us hours each week. Our leads now get instant responses.",
         author: "— Maria, USA",
       },
     ],
@@ -454,7 +475,8 @@ const serviceData: Record<string, ServiceData> = {
       "Let us build an AI system that saves time, increases efficiency, and helps your business scale effortlessly.",
     finalCTAPrimary: "Get a Free Automation Audit",
     finalCTASecondary: "Speak to an AI Specialist",
-    microtrustLine: "We respond within 24 hours. No obligations — just real value.",
+    microtrustLine:
+      "We respond within 24 hours. No obligations — just real value.",
 
     sidebarTitle: "AI & Automation",
     rightDescription:
@@ -462,13 +484,15 @@ const serviceData: Record<string, ServiceData> = {
     callToActionLinkText: "Let's Talk",
   },
   "mobile-development": {
-    heroTitle: "Custom Mobile Apps Built for Performance, Scalability & User Experience",
+    heroTitle:
+      "Custom Mobile Apps Built for Performance, Scalability & User Experience",
     heroSubtext:
       "From idea to launch, we design and develop high-performance mobile apps for startups, growing businesses, and global brands. Whether you need iOS, Android, or a cross-platform solution, our mobile apps deliver seamless experiences and long-term scalability.",
     heroCTA1: "Start Your App Project",
     heroCTA2: "Visit Our Portfolio",
 
-    problemsTitle: "Most Apps Fail — Not Because of Coding, But Because of Strategy",
+    problemsTitle:
+      "Most Apps Fail — Not Because of Coding, But Because of Strategy",
     problemsIntro: "",
     modernProblems: [
       "No Clear User Experience Strategy – Apps are built without understanding user flow, leading to confusion and drop-offs.",
@@ -551,11 +575,13 @@ const serviceData: Record<string, ServiceData> = {
     testimonialsTitle: "What Our App Clients Say",
     testimonials: [
       {
-        quote: "Netpulse Digital built a seamless, fast app that our users love. Their design quality and communication were outstanding.",
+        quote:
+          "Netpulse Digital built a seamless, fast app that our users love. Their design quality and communication were outstanding.",
         author: "— Lucas, Canada",
       },
       {
-        quote: "Our app went from concept to launch in weeks. Highly professional and deeply knowledgeable team.",
+        quote:
+          "Our app went from concept to launch in weeks. Highly professional and deeply knowledgeable team.",
         author: "— Priya, UK",
       },
     ],
@@ -565,7 +591,8 @@ const serviceData: Record<string, ServiceData> = {
       "Whether you're launching a startup app or scaling an existing product, we’ll help you build a high-performing, beautiful, and scalable mobile experience.",
     finalCTAPrimary: "Start Your App Project",
     finalCTASecondary: "Book a Free Consultation",
-    microtrustLine: "We respond within 24 hours — no pressure, just expert insights.",
+    microtrustLine:
+      "We respond within 24 hours — no pressure, just expert insights.",
 
     sidebarTitle: "Mobile App Development",
     rightDescription:
@@ -573,7 +600,8 @@ const serviceData: Record<string, ServiceData> = {
     callToActionLinkText: "Let's Talk",
   },
   ebooks: {
-    heroTitle: "Professional E-Book Creation & Author Services That Bring Your Story to Life",
+    heroTitle:
+      "Professional E-Book Creation & Author Services That Bring Your Story to Life",
     heroSubtext:
       "From book writing, editing, formatting, and cover design to author websites, marketing, and affordable book printing, Netpulse Digital offers complete, end-to-end solutions for indie authors worldwide. We turn your manuscript into a polished, published, and market-ready book — all under one roof.",
     heroCTA1: "Start Your Book Project",
@@ -663,11 +691,13 @@ const serviceData: Record<string, ServiceData> = {
     testimonialsTitle: "What Authors Say",
     testimonials: [
       {
-        quote: "My book went from a Word document to a beautiful, professional product. The cover design alone boosted my sales.",
+        quote:
+          "My book went from a Word document to a beautiful, professional product. The cover design alone boosted my sales.",
         author: "— Hannah, UK",
       },
       {
-        quote: "Their printing service saved me so much money. Excellent quality, fast delivery, and far cheaper than KDP.",
+        quote:
+          "Their printing service saved me so much money. Excellent quality, fast delivery, and far cheaper than KDP.",
         author: "— David, USA",
       },
     ],
@@ -677,7 +707,8 @@ const serviceData: Record<string, ServiceData> = {
       "Let’s turn your manuscript into a high-quality book and create a strong author presence that grows your readership.",
     finalCTAPrimary: "Start Your Book Project",
     finalCTASecondary: "Get a Free Publishing Consultation",
-    microtrustLine: "We reply within 24 hours. No pressure — just expert guidance.",
+    microtrustLine:
+      "We reply within 24 hours. No pressure — just expert guidance.",
 
     sidebarTitle: "Ebook Creation & Publishing",
     rightDescription:
@@ -695,7 +726,15 @@ const serviceImageMap: Record<keyof typeof serviceData, StaticImageData> = {
   ebooks: s66,
 };
 
-const SectionCard = ({ title, introText, items }: { title: string; introText?: string | null; items: string[] }) => {
+const SectionCard = ({
+  title,
+  introText,
+  items,
+}: {
+  title: string;
+  introText?: string | null;
+  items: string[];
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -708,7 +747,8 @@ const SectionCard = ({ title, introText, items }: { title: string; introText?: s
         boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
         fontSize: "0.95rem",
         transition: "all 0.3s ease",
-        borderColor: isHovered ? "#0047AB" : "#dee2e6"
+        borderColor: isHovered ? "#0047AB" : "#dee2e6",
+        fontFamily: "var(--tp-ff-gelder)",
       }}
     >
       <h5
@@ -718,7 +758,7 @@ const SectionCard = ({ title, introText, items }: { title: string; introText?: s
           fontWeight: 600,
           fontFamily: "var(--tp-ff-gelder)",
           color: isHovered ? "#ffffff" : "#0047AB",
-          transition: "all 0.3s ease"
+          transition: "all 0.3s ease",
         }}
       >
         {title}
@@ -727,9 +767,9 @@ const SectionCard = ({ title, introText, items }: { title: string; introText?: s
         <p
           className="mb-3"
           style={{
-            fontFamily: "var(--tp-ff-body)",
+            fontFamily: "var(--tp-ff-gelder)",
             color: isHovered ? "#ffffff" : "#4A5568",
-            transition: "all 0.3s ease"
+            transition: "all 0.3s ease",
           }}
         >
           {introText}
@@ -741,9 +781,9 @@ const SectionCard = ({ title, introText, items }: { title: string; introText?: s
             key={index}
             className="mb-1"
             style={{
-              fontFamily: "var(--tp-ff-body)",
+              fontFamily: "var(--tp-ff-gelder)",
               color: isHovered ? "#ffffff" : "#4A5568",
-              transition: "all 0.3s ease"
+              transition: "all 0.3s ease",
             }}
           >
             {item}
@@ -754,7 +794,15 @@ const SectionCard = ({ title, introText, items }: { title: string; introText?: s
   );
 };
 
-const ProcessCard = ({ step, title, desc }: { step: string; title: string; desc: string }) => {
+const ProcessCard = ({
+  step,
+  title,
+  desc,
+}: {
+  step: string;
+  title: string;
+  desc: string;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -766,10 +814,13 @@ const ProcessCard = ({ step, title, desc }: { step: string; title: string; desc:
         backgroundColor: isHovered ? "#0047AB" : "#ffffff",
         borderColor: isHovered ? "#0047AB" : "#dee2e6",
         transition: "all 0.3s ease",
-        color: isHovered ? "#ffffff" : "inherit"
+        color: isHovered ? "#ffffff" : "inherit",
       }}
     >
-      <div className="mb-3" style={{ fontSize: "1.8rem", color: isHovered ? "#ffffff" : "inherit" }}>
+      <div
+        className="mb-3"
+        style={{ fontSize: "1.8rem", color: isHovered ? "#ffffff" : "inherit" }}
+      >
         {step}
       </div>
       <h5
@@ -777,7 +828,7 @@ const ProcessCard = ({ step, title, desc }: { step: string; title: string; desc:
         style={{
           fontFamily: "var(--tp-ff-gelder)",
           color: isHovered ? "#ffffff" : "#0047AB",
-          transition: "all 0.3s ease"
+          transition: "all 0.3s ease",
         }}
       >
         {title}
@@ -785,9 +836,9 @@ const ProcessCard = ({ step, title, desc }: { step: string; title: string; desc:
       <p
         className="mb-0"
         style={{
-          fontFamily: "var(--tp-ff-body)",
+          fontFamily: "var(--tp-ff-gelder)",
           color: isHovered ? "#ffffff" : "#4A5568",
-          transition: "all 0.3s ease"
+          transition: "all 0.3s ease",
         }}
       >
         {desc}
@@ -810,16 +861,15 @@ const WhyChooseItem = ({ value }: { value: string }) => {
         transition: "all 0.3s ease",
         display: "flex",
         alignItems: "center",
-        boxShadow: isHovered ? "0 4px 12px rgba(0,71,171,0.2)" : "none"
+        boxShadow: isHovered ? "0 4px 12px rgba(0,71,171,0.2)" : "none",
       }}
     >
-      
       <p
         className="mb-0"
         style={{
-          fontFamily: "var(--tp-ff-body)",
+          fontFamily: "var(--tp-ff-gelder)",
           color: isHovered ? "#ffffff" : "#4A5568",
-          transition: "all 0.3s ease"
+          transition: "all 0.3s ease",
         }}
       >
         {value}
@@ -895,7 +945,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
                 color: "#0047AB",
-                fontSize: "2rem"
+                fontSize: "2rem",
+                letterSpacing: "0.001em",
               }}
             >
               {currentService.processTitle}
@@ -903,7 +954,11 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
             <div className="row g-4">
               {currentService.processSteps.map((item, i) => (
                 <div key={i} className="col-md-6 col-lg-3">
-                  <ProcessCard step={item.step} title={item.title} desc={item.desc} />
+                  <ProcessCard
+                    step={item.step}
+                    title={item.title}
+                    desc={item.desc}
+                  />
                 </div>
               ))}
             </div>
@@ -923,7 +978,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
                 color: "#0047AB",
-                fontSize: "2rem"
+                fontSize: "2rem",
+                letterSpacing: "0.001em",
               }}
             >
               {currentService.whyChooseTitle}
@@ -952,7 +1008,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               className="sv-hero-title tp-char-animation"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
-                color: "#0047AB"
+                color: "#0047AB",
               }}
             >
               {currentService.testimonialsTitle}
@@ -965,7 +1021,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   className="mb-2"
                   style={{
                     fontFamily: "var(--tp-ff-body)",
-                    color: "#4A5568"
+                    color: "#4A5568",
                   }}
                 >
                   “{t.quote}”
@@ -975,7 +1031,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   style={{
                     fontFamily: "var(--tp-ff-body)",
                     color: "#4A5568",
-                    opacity: 0.8
+                    opacity: 0.8,
                   }}
                 >
                   {t.author}
@@ -997,7 +1053,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               className="sv-hero-title tp-char-animation mb-4"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
-                color: "#0047AB"
+                color: "#0047AB",
               }}
             >
               {currentService.finalCTATitle}
@@ -1006,7 +1062,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               className="mb-4"
               style={{
                 fontFamily: "var(--tp-ff-body)",
-                color: "#4A5568"
+                color: "#4A5568",
               }}
             >
               {currentService.finalCTASubtext}
@@ -1024,7 +1080,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               style={{
                 fontSize: "0.9rem",
                 fontFamily: "var(--tp-ff-body)",
-                color: "#4A5568"
+                color: "#4A5568",
               }}
             >
               {currentService.microtrustLine}
@@ -1045,9 +1101,9 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               <span
                 className="service-details__subtitle tp-char-animation"
                 style={{
-                  fontFamily: "var(--tp-ff-body)",
+                  fontFamily: "var(--tp-ff-gelder)",
                   color: "#0047AB",
-                  fontWeight: 600
+                  fontWeight: 600,
                 }}
               >
                 {getDisplayTitle()}
@@ -1058,7 +1114,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   fontFamily: "var(--tp-ff-gelder)",
                   color: "#0047AB",
                   fontSize: "4rem", // Reduced size
-                  lineHeight: "1.2"
+                  lineHeight: "1.2",
                 }}
               >
                 {currentService.heroTitle}
@@ -1072,8 +1128,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               <p
                 className="mb-30 tp_title_anim"
                 style={{
-                  fontFamily: "var(--tp-ff-body)",
-                  color: "#0047AB"
+                  fontFamily: "var(--tp-ff-gelder)",
+                  color: "#0047AB",
                 }}
               >
                 {currentService.heroSubtext}
@@ -1089,13 +1145,13 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     padding: "12px 30px",
                     backgroundColor: "#0047AB",
                     color: "#ffffff",
-                    fontFamily: "var(--tp-ff-body)",
+                    fontFamily: "var(--tp-ff-gelder)",
                     fontWeight: 600,
                     border: "2px solid #0047AB",
                     borderRadius: "50px",
                     textDecoration: "none",
                     transition: "all 0.3s ease",
-                    whiteSpace: "nowrap"
+                    whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = "transparent";
@@ -1116,13 +1172,13 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     padding: "12px 30px",
                     backgroundColor: "transparent",
                     color: "#0047AB",
-                    fontFamily: "var(--tp-ff-body)",
+                    fontFamily: "var(--tp-ff-gelder)",
                     fontWeight: 600,
                     border: "2px solid #0047AB",
                     borderRadius: "50px",
                     textDecoration: "none",
                     transition: "all 0.3s ease",
-                    whiteSpace: "nowrap"
+                    whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = "#0047AB";
@@ -1136,7 +1192,6 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   {currentService.heroCTA2}
                 </Link>
               </div>
-
             </div>
           </div>
         </div>
@@ -1166,7 +1221,9 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
       <div className="container">
         <div className="row">
           <div className="col-xl-7 col-lg-7">
-            <div className="service-details__left-wrap">
+            <div
+              className="service-details__left-wrap"
+            >
               {renderSectionCard(
                 currentService.problemsTitle,
                 currentService.problemsIntro,
@@ -1193,7 +1250,13 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
           <div className="col-xl-5 col-lg-5">
             <div className="service-details__right-wrap fix p-relative">
               <div className="service-details__rotate-text">
-                <span style={{ fontFamily: "var(--tp-ff-body)", color: "#0047AB", fontWeight: 500 }}>
+                <span
+                  style={{
+                    fontFamily: "var(--tp-ff-body)",
+                    color: "#0047AB",
+                    fontWeight: 500,
+                  }}
+                >
                   Full list of services
                 </span>
               </div>
@@ -1212,7 +1275,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     style={{
                       fontFamily: "var(--tp-ff-body)",
                       color: activeService === service ? "white" : "#0047AB",
-                      backgroundColor: activeService === service ? "#0047AB" : "transparent",
+                      backgroundColor:
+                        activeService === service ? "#0047AB" : "transparent",
                       fontWeight: 600,
                       display: "flex",
                       alignItems: "center",
@@ -1227,7 +1291,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                       transition: "all 0.3s ease",
                       textDecoration: "none",
                       lineHeight: "1",
-                      height: "50px" // Explicit height for consistent pills
+                      height: "50px", // Explicit height for consistent pills
                     }}
                   >
                     {service
@@ -1242,14 +1306,14 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   backgroundColor: "#0047AB",
                   padding: "40px",
                   borderRadius: "20px",
-                  marginTop: "30px"
+                  marginTop: "30px",
                 }}
               >
                 <h4
                   style={{
                     fontFamily: "var(--tp-ff-gelder)",
                     color: "white",
-                    marginBottom: "15px"
+                    marginBottom: "15px",
                   }}
                 >
                   {currentService.sidebarTitle}
@@ -1257,8 +1321,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                 <p
                   className="mb-20"
                   style={{
-                    fontFamily: "var(--tp-ff-body)",
-                    color: "white"
+                    fontFamily: "var(--tp-ff-gelder)",
+                    color: "white",
                   }}
                 >
                   {currentService.rightDescription}
@@ -1273,7 +1337,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     borderRadius: "50px",
                     fontWeight: 600,
                     textDecoration: "none",
-                    transition: "all 0.3s ease"
+                    transition: "all 0.3s ease",
                   }}
                 >
                   {currentService.callToActionLinkText}
