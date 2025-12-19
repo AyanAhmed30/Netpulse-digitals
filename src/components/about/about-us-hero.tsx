@@ -98,7 +98,7 @@ const AboutUsHero = () => {
                 marginBottom: "20px",
                 fontFamily: "var(--tp-ff-body)"
               }}>
-                Digital Transformation Company
+                Digital Transformation Agency
               </div>
 
               {/* Main Heading – About Us content, homepage UI */}
