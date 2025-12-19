@@ -98,7 +98,7 @@ const HeroBannerOne = () => {
                 marginBottom: "20px",
                 fontFamily: "var(--tp-ff-body)"
               }}>
-                Digital Transformation Company
+                Digital Transformation Agency
               </div>
 
               {/* Main Heading */}
