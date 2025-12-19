@@ -310,50 +310,134 @@ const PortfolioStandardMain = () => {
                   </div>
                 </div>
               </div>
-              <div className="row">
-                {/* Item 1 */}
-                <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center px-3">
-                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Conversion-Focused Execution</h4>
-                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>We design and develop with strategy, not guesswork.</p>
-                  </div>
-                </div>
-                {/* Item 2 */}
-                <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center px-3">
-                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Fast, Clear Communication</h4>
-                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Updates at every stage with full transparency.</p>
-                  </div>
-                </div>
-                {/* Item 3 */}
-                <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center px-3">
-                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Modern, Clean Design</h4>
-                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Every project is pixel-perfect and purpose-driven.</p>
-                  </div>
-                </div>
-                {/* Item 4 */}
-                <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center px-3">
-                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Global Experience</h4>
-                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>We proudly serve clients across USA, UK, Canada, and Australia.</p>
-                  </div>
-                </div>
-                {/* Item 5 */}
-                <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center px-3">
-                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Multi-Disciplinary Expertise</h4>
-                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Web • Apps • Branding • Marketing • SEO • AI — everything under one roof.</p>
-                  </div>
-                </div>
-                {/* Item 6 */}
-                <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
-                  <div className="text-center px-3">
-                    <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>Long-Term Partnership</h4>
-                    <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>Most clients work with us for years, not weeks.</p>
-                  </div>
-                </div>
-              </div>
+             <div className="row">
+  {/* Item 1 */}
+  <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
+    <div
+      className="text-center px-3 hover-box"
+      style={{
+        border: '3px solid transparent',
+        transition: 'all 0.3s ease',
+        padding: '30px'
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.border = '3px solid #0047AB')}
+      onMouseLeave={(e) => (e.currentTarget.style.border = '3px solid transparent')}
+    >
+      <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>
+        Conversion-Focused Execution
+      </h4>
+      <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>
+        We design and develop with strategy, not guesswork.
+      </p>
+    </div>
+  </div>
+
+  {/* Item 2 */}
+  <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
+    <div
+      className="text-center px-3"
+      style={{
+        border: '2px solid transparent',
+        transition: 'all 0.3s ease',
+        padding: '30px'
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.border = '3px solid #0047AB')}
+      onMouseLeave={(e) => (e.currentTarget.style.border = '3px solid transparent')}
+    >
+      <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>
+        Fast, Clear Communication
+      </h4>
+      <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>
+        Updates at every stage with full transparency.
+      </p>
+    </div>
+  </div>
+
+  {/* Item 3 */}
+  <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
+    <div
+      className="text-center px-3"
+      style={{
+        border: '2px solid transparent',
+        transition: 'all 0.3s ease',
+        padding: '30px'
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.border = '3px solid #0047AB')}
+      onMouseLeave={(e) => (e.currentTarget.style.border = '3px solid transparent')}
+    >
+      <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>
+        Modern, Clean Design
+      </h4>
+      <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>
+        Every project is pixel-perfect and purpose-driven.
+      </p>
+    </div>
+  </div>
+
+  {/* Item 4 */}
+  <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
+    <div
+      className="text-center px-3"
+      style={{
+        border: '2px solid transparent',
+        transition: 'all 0.3s ease',
+        padding: '30px'
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.border = '3px solid #0047AB')}
+      onMouseLeave={(e) => (e.currentTarget.style.border = '3px solid transparent')}
+    >
+      <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>
+        Global Experience
+      </h4>
+      <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>
+        We proudly serve clients across USA, UK, Canada, and Australia.
+      </p>
+    </div>
+  </div>
+
+  {/* Item 5 */}
+  <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
+    <div
+      className="text-center px-3"
+      style={{
+        border: '2px solid transparent',
+        transition: 'all 0.3s ease',
+        padding: '30px'
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.border = '3px solid #0047AB')}
+      onMouseLeave={(e) => (e.currentTarget.style.border = '3px solid transparent')}
+    >
+      <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>
+        Multi-Disciplinary Expertise
+      </h4>
+      <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>
+        Web • Apps • Branding • Marketing • SEO • AI — everything under one roof.
+      </p>
+    </div>
+  </div>
+
+  {/* Item 6 */}
+  <div className="col-xl-4 col-lg-6 col-md-6 mb-40">
+    <div
+      className="text-center px-3"
+      style={{
+        border: '2px solid transparent',
+        transition: 'all 0.3s ease',
+        padding: '30px'
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.border = '3px solid #0047AB')}
+      onMouseLeave={(e) => (e.currentTarget.style.border = '3px solid transparent')}
+    >
+      <h4 className="mb-15" style={{ fontSize: '1.5rem', fontWeight: '700', fontFamily: 'var(--tp-ff-gelder)', color: '#0047AB' }}>
+        Long-Term Partnership
+      </h4>
+      <p style={{ fontSize: '1rem', color: '#4A5568', fontFamily: 'var(--tp-ff-body)' }}>
+        Most clients work with us for years, not weeks.
+      </p>
+    </div>
+  </div>
+</div>
+
             </div>
 
 

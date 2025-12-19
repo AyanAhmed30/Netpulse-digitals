@@ -755,13 +755,38 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
             fontSize: "0.95rem",
           }}
         >
-          <h5 className="mb-2" style={{ fontSize: "1.15rem", fontWeight: 600 }}>
+          <h5
+            className="mb-2"
+            style={{
+              fontSize: "1.15rem",
+              fontWeight: 600,
+              fontFamily: "var(--tp-ff-gelder)",
+              color: "#0047AB"
+            }}
+          >
             {title}
           </h5>
-          {introText && <p className="mb-3">{introText}</p>}
+          {introText && (
+            <p
+              className="mb-3"
+              style={{
+                fontFamily: "var(--tp-ff-body)",
+                color: "#4A5568"
+              }}
+            >
+              {introText}
+            </p>
+          )}
           <ul className="mb-0" style={{ paddingLeft: "1.2rem" }}>
             {items.map((item, index) => (
-              <li key={index} className="mb-1">
+              <li
+                key={index}
+                className="mb-1"
+                style={{
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "#4A5568"
+                }}
+              >
                 {item}
               </li>
             ))}
@@ -776,7 +801,13 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center mb-80">
-            <h3 className="sv-hero-title tp-char-animation mb-50">
+            <h3
+              className="sv-hero-title tp-char-animation mb-50"
+              style={{
+                fontFamily: "var(--tp-ff-gelder)",
+                color: "#0047AB"
+              }}
+            >
               {currentService.processTitle}
             </h3>
             <div className="row g-4">
@@ -786,8 +817,24 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     <div className="mb-3" style={{ fontSize: "1.8rem" }}>
                       {item.step}
                     </div>
-                    <h5 className="mb-2">{item.title}</h5>
-                    <p className="mb-0">{item.desc}</p>
+                    <h5
+                      className="mb-2"
+                      style={{
+                        fontFamily: "var(--tp-ff-gelder)",
+                        color: "#0047AB"
+                      }}
+                    >
+                      {item.title}
+                    </h5>
+                    <p
+                      className="mb-0"
+                      style={{
+                        fontFamily: "var(--tp-ff-body)",
+                        color: "#4A5568"
+                      }}
+                    >
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -803,7 +850,13 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
       <div className="container mb-80">
         <div className="row">
           <div className="col-12 text-center mb-50">
-            <h3 className="sv-hero-title tp-char-animation">
+            <h3
+              className="sv-hero-title tp-char-animation"
+              style={{
+                fontFamily: "var(--tp-ff-gelder)",
+                color: "#0047AB"
+              }}
+            >
               {currentService.whyChooseTitle}
             </h3>
           </div>
@@ -815,7 +868,15 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     <span className="me-3" style={{ fontSize: "1.2rem" }}>
                       ⭐
                     </span>
-                    <p className="mb-0">{value}</p>
+                    <p
+                      className="mb-0"
+                      style={{
+                        fontFamily: "var(--tp-ff-body)",
+                        color: "#4A5568"
+                      }}
+                    >
+                      {value}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -831,15 +892,38 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
       <div className="container mb-80">
         <div className="row">
           <div className="col-12 text-center mb-50">
-            <h3 className="sv-hero-title tp-char-animation">
+            <h3
+              className="sv-hero-title tp-char-animation"
+              style={{
+                fontFamily: "var(--tp-ff-gelder)",
+                color: "#0047AB"
+              }}
+            >
               {currentService.testimonialsTitle}
             </h3>
           </div>
           <div className="col-md-6 offset-md-3">
             {currentService.testimonials.map((t, i) => (
               <div key={i} className="mb-4 p-4 border rounded">
-                <p className="mb-2">“{t.quote}”</p>
-                <p className="text-muted mb-0">{t.author}</p>
+                <p
+                  className="mb-2"
+                  style={{
+                    fontFamily: "var(--tp-ff-body)",
+                    color: "#4A5568"
+                  }}
+                >
+                  “{t.quote}”
+                </p>
+                <p
+                  className="text-muted mb-0"
+                  style={{
+                    fontFamily: "var(--tp-ff-body)",
+                    color: "#4A5568",
+                    opacity: 0.8
+                  }}
+                >
+                  {t.author}
+                </p>
               </div>
             ))}
           </div>
@@ -853,10 +937,24 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center mb-80">
-            <h3 className="sv-hero-title tp-char-animation mb-4">
+            <h3
+              className="sv-hero-title tp-char-animation mb-4"
+              style={{
+                fontFamily: "var(--tp-ff-gelder)",
+                color: "#0047AB"
+              }}
+            >
               {currentService.finalCTATitle}
             </h3>
-            <p className="mb-4">{currentService.finalCTASubtext}</p>
+            <p
+              className="mb-4"
+              style={{
+                fontFamily: "var(--tp-ff-body)",
+                color: "#4A5568"
+              }}
+            >
+              {currentService.finalCTASubtext}
+            </p>
             <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
               <Link href="/contact" className="tp-btn-white background-black">
                 {currentService.finalCTAPrimary}
@@ -865,7 +963,14 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                 {currentService.finalCTASecondary}
               </Link>
             </div>
-            <p className="mt-3 text-muted" style={{ fontSize: "0.9rem" }}>
+            <p
+              className="mt-3 text-muted"
+              style={{
+                fontSize: "0.9rem",
+                fontFamily: "var(--tp-ff-body)",
+                color: "#4A5568"
+              }}
+            >
               {currentService.microtrustLine}
             </p>
           </div>
@@ -881,10 +986,23 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
         <div className="row">
           <div className="col-xl-12">
             <div className="service-details__title-box mb-40">
-              <span className="service-details__subtitle tp-char-animation">
+              <span
+                className="service-details__subtitle tp-char-animation"
+                style={{
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "#0047AB",
+                  fontWeight: 600
+                }}
+              >
                 {getDisplayTitle()}
               </span>
-              <h4 className="sv-hero-title tp-char-animation">
+              <h4
+                className="sv-hero-title tp-char-animation"
+                style={{
+                  fontFamily: "var(--tp-ff-gelder)",
+                  color: "#0047AB"
+                }}
+              >
                 {currentService.heroTitle}
               </h4>
             </div>
@@ -893,8 +1011,23 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
         <div className="row">
           <div className="offset-xl-4 col-xl-5">
             <div className="service-details__banner-text mb-80">
-              <p className="mb-30 tp_title_anim">{currentService.heroSubtext}</p>
-              <p className="tp_title_anim">
+              <p
+                className="mb-30 tp_title_anim"
+                style={{
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "#4A5568"
+                }}
+              >
+                {currentService.heroSubtext}
+              </p>
+              <p
+                className="tp_title_anim"
+                style={{
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "#4A5568",
+                  fontWeight: 500
+                }}
+              >
                 {currentService.heroCTA1} • {currentService.heroCTA2}
               </p>
             </div>
@@ -953,7 +1086,9 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
           <div className="col-xl-5 col-lg-5">
             <div className="service-details__right-wrap fix p-relative">
               <div className="service-details__rotate-text">
-                <span>Full list of services</span>
+                <span style={{ fontFamily: "var(--tp-ff-body)", color: "#0047AB", fontWeight: 500 }}>
+                  Full list of services
+                </span>
               </div>
               <div className="service-details__right-category">
                 {Object.keys(serviceData).map((service) => (
@@ -967,6 +1102,11 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                       )
                     }
                     className={activeService === service ? "active" : ""}
+                    style={{
+                      fontFamily: "var(--tp-ff-body)",
+                      color: activeService === service ? "#0047AB" : "#4A5568",
+                      fontWeight: activeService === service ? 600 : 400
+                    }}
                   >
                     {service
                       .replace(/-/g, " ")
@@ -975,8 +1115,23 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                 ))}
               </div>
               <div className="service-details__right-text-box">
-                <h4>{currentService.sidebarTitle}</h4>
-                <p className="mb-20">{currentService.rightDescription}</p>
+                <h4
+                  style={{
+                    fontFamily: "var(--tp-ff-gelder)",
+                    color: "#0047AB"
+                  }}
+                >
+                  {currentService.sidebarTitle}
+                </h4>
+                <p
+                  className="mb-20"
+                  style={{
+                    fontFamily: "var(--tp-ff-body)",
+                    color: "#4A5568"
+                  }}
+                >
+                  {currentService.rightDescription}
+                </p>
                 <Link className="tp-btn-white background-black" href="/contact">
                   {currentService.callToActionLinkText}
                 </Link>
