@@ -23,7 +23,7 @@ export default function TeamItem({ item }: IProps) {
         <span style={{
           fontSize: "1.5rem",
           fontWeight: "600",
-          color: "#0047AB",
+          color: "#fff",
           fontFamily: "var(--tp-ff-gelder)"
         }}>
           {item.name}

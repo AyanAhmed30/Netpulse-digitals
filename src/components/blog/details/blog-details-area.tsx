@@ -38,7 +38,12 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
   }
 
   return (
-    <section className="postbox__area tp-blog-sidebar-sticky-area pt-120">
+    <section
+      className="postbox__area tp-blog-sidebar-sticky-area pt-120"
+      style={{
+        fontFamily: "var(--tp-ff-gelder)",
+      }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-xxl-8 col-xl-8 col-lg-8">
@@ -101,12 +106,10 @@ export default function BlogDetailsArea({ id }: BlogDetailsAreaProps) {
 
               {/* <div className="postbox__comment mb-100">
                 <h3 className="postbox__comment-title">Comments</h3> */}
-                {/* blog details comments */}
-                {/* <BlogDetailsComments /> */}
-                {/* blog details comments */}
+              {/* blog details comments */}
+              {/* <BlogDetailsComments /> */}
+              {/* blog details comments */}
               {/* </div> */}
-
-             
             </div>
           </div>
           <div className="col-xxl-4 col-xl-4 col-lg-4">

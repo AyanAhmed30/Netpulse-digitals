@@ -5,8 +5,8 @@ import { IBlogDT } from "@/types/blog-d-t";
 const createSlug = (title: string) => {
   return title
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
     .trim();
 };
 
@@ -16,7 +16,7 @@ import blog_2 from "@/assets/img/home-05/blog/blog-2.jpg";
 import blog_3 from "@/assets/img/home-05/blog/blog-3.jpg";
 import blog_4 from "@/assets/img/home-05/blog/blog-4.jpg";
 
-// blog modern 
+// blog modern
 import b_m_1 from "@/assets/img/inner-blog/blog-standard/blog-1.jpg";
 import b_m_2 from "@/assets/img/inner-blog/blog-standard/dg1.png";
 import b_m_3 from "@/assets/img/inner-blog/blog-standard/blog-3.jpg";
@@ -37,22 +37,21 @@ import ai2 from "@/assets/img/inner-blog/blog-standard/ai2.png";
 import ai3 from "@/assets/img/inner-blog/blog-standard/ai3.png";
 import ai4 from "@/assets/img/inner-blog/blog-standard/ai4.png";
 
-
 // avatar
 import avatar from "@/assets/img/inner-blog/blog-sidebar/avatar/avata-1.jpg";
 
 // blog postbox img
-import blog_post_1 from '@/assets/img/inner-blog/blog-sidebar/sidebar-left-1.jpg';
-import blog_post_2 from '@/assets/img/inner-blog/blog-sidebar/sidebar-left-2.jpg';
-import blog_post_3 from '@/assets/img/inner-blog/blog-sidebar/sidebar-left-3.jpg';
-import blog_post_4 from '@/assets/img/inner-blog/blog-sidebar/sidebar-left-4.jpg';
+import blog_post_1 from "@/assets/img/inner-blog/blog-sidebar/sidebar-left-1.jpg";
+import blog_post_2 from "@/assets/img/inner-blog/blog-sidebar/sidebar-left-2.jpg";
+import blog_post_3 from "@/assets/img/inner-blog/blog-sidebar/sidebar-left-3.jpg";
+import blog_post_4 from "@/assets/img/inner-blog/blog-sidebar/sidebar-left-4.jpg";
 
 // blog list images
-import blog_list_1 from '@/assets/img/inner-blog/blog-right-sidebar/blog-1.jpg';
-import blog_list_2 from '@/assets/img/inner-blog/blog-right-sidebar/blog-2.jpg';
-import blog_list_3 from '@/assets/img/inner-blog/blog-right-sidebar/blog-3.jpg';
-import blog_list_4 from '@/assets/img/inner-blog/blog-right-sidebar/blog-4.jpg';
-import blog_list_5 from '@/assets/img/inner-blog/blog-right-sidebar/blog-5.jpg';
+import blog_list_1 from "@/assets/img/inner-blog/blog-right-sidebar/blog-1.jpg";
+import blog_list_2 from "@/assets/img/inner-blog/blog-right-sidebar/blog-2.jpg";
+import blog_list_3 from "@/assets/img/inner-blog/blog-right-sidebar/blog-3.jpg";
+import blog_list_4 from "@/assets/img/inner-blog/blog-right-sidebar/blog-4.jpg";
+import blog_list_5 from "@/assets/img/inner-blog/blog-right-sidebar/blog-5.jpg";
 
 // blog details images
 import details_thumb_1 from "@/assets/img/inner-blog/blog-details/blog-details-2.jpg";
@@ -65,10 +64,10 @@ export const blog_home_five: IBlogDT[] = [
     img: blog_1,
     title: "Future Business Ideas.",
     slug: createSlug("Future Business Ideas."),
-    date: '01. FEB. 2023',
-    category: 'Marketing / Strategy',
-    author: 'Admin',
-    tags: ['business', 'innovation', 'strategy', 'future', 'trends'],
+    date: "01. FEB. 2023",
+    category: "Marketing / Strategy",
+    author: "Admin",
+    tags: ["business", "innovation", "strategy", "future", "trends"],
     content: `<p>In today's rapidly evolving business landscape, staying ahead of the curve requires forward-thinking strategies and innovative approaches. The future of business is being shaped by technological advancements, changing consumer behaviors, and global economic shifts that demand adaptability and creativity from entrepreneurs and organizations alike.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">The Evolution of Business Models</h4>
@@ -136,17 +135,17 @@ export const blog_home_five: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 2,
     img: blog_2,
     title: "Start Unique Experience.",
     slug: createSlug("Start Unique Experience."),
-    date: '09. MAY. 2023',
-    category: 'Marketing / Strategy',
-    author: 'Admin',
-    tags: ['experience', 'customer', 'engagement', 'branding', 'marketing'],
+    date: "09. MAY. 2023",
+    category: "Marketing / Strategy",
+    author: "Admin",
+    tags: ["experience", "customer", "engagement", "branding", "marketing"],
     content: `<p>Creating unique customer experiences has become a primary differentiator in today's competitive marketplace. As products and services become increasingly commoditized, the quality of the experience surrounding them determines brand loyalty and customer retention. Exceptional experiences go beyond mere satisfaction to create emotional connections that transform casual buyers into devoted advocates.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Understanding Customer Journeys</h4>
@@ -178,17 +177,17 @@ export const blog_home_five: IBlogDT[] = [
       </blockquote>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 3,
     img: blog_3,
     title: "Is It Time To Rebrand?",
     slug: createSlug("Is It Time To Rebrand?"),
-    date: '30. AUG. 2023',
-    category: 'Marketing / Strategy',
-    author: 'Admin',
-    tags: ['rebranding', 'brand', 'identity', 'strategy', 'transformation'],
+    date: "30. AUG. 2023",
+    category: "Marketing / Strategy",
+    author: "Admin",
+    tags: ["rebranding", "brand", "identity", "strategy", "transformation"],
     content: `<p>Rebranding is a strategic decision that can revitalize a company's image, reconnect with its audience, and position it for future growth. However, determining the right time for a rebrand requires careful consideration of market conditions, customer perceptions, and business objectives. A successful rebrand strengthens brand equity rather than diluting it, making timing and execution critical factors in the process.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Recognizing the Need for Change</h4>
@@ -214,17 +213,17 @@ export const blog_home_five: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 4,
     img: blog_4,
     title: "Setting up the creativity.",
     slug: createSlug("Setting up the creativity."),
-    date: '11. JAN. 2023',
-    category: 'Marketing / Strategy',
-    author: 'Admin',
-    tags: ['creativity', 'innovation', 'culture', 'design', 'collaboration'],
+    date: "11. JAN. 2023",
+    category: "Marketing / Strategy",
+    author: "Admin",
+    tags: ["creativity", "innovation", "culture", "design", "collaboration"],
     content: `<p>Fostering creativity within an organization requires more than just hiring talented individuals; it demands creating an environment where innovation can flourish naturally. Creative thinking drives problem-solving, differentiation, and growth, making it a vital capability for businesses navigating complex challenges and competitive markets. Establishing the right conditions for creativity involves both structural and cultural considerations.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Cultivating a Creative Culture</h4>
@@ -241,8 +240,8 @@ export const blog_home_five: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
-  }
+    featured: undefined,
+  },
 ];
 
 export const blog_modern: IBlogDT[] = [
@@ -251,13 +250,19 @@ export const blog_modern: IBlogDT[] = [
     id: 5,
     img: b_m_1,
 
-    title: 'Digital Marketing Trends 2025',
-    slug: createSlug('Digital Marketing Trends 2025'),
+    title: "Digital Marketing Trends 2025",
+    slug: createSlug("Digital Marketing Trends 2025"),
 
-    date: '21. OCT. 2025',
-    category: 'Marketing',
-    author: 'Admin',
-    tags: ['digital-marketing', 'trends', '2025', 'marketing-strategy', 'online-marketing'],
+    date: "21. OCT. 2025",
+    category: "Marketing",
+    author: "Admin",
+    tags: [
+      "digital-marketing",
+      "trends",
+      "2025",
+      "marketing-strategy",
+      "online-marketing",
+    ],
     content: `<p>The digital marketing landscape continues to evolve at a rapid pace, with 2025 bringing new challenges and opportunities for marketers worldwide. As consumer behaviors shift and technology advances, businesses must adapt their strategies to remain competitive and relevant. This year promises significant changes in how brands connect with their audiences, leveraging new technologies and approaches to drive engagement and conversions.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">AI-Powered Personalization</h4>
@@ -272,7 +277,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_1.src}" alt="digital-marketing-trends" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Privacy-First Marketing Approaches</h4>
@@ -284,17 +288,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 6,
     img: b_m_2,
-    title: 'Influencer Marketing Evolution',
-    slug: createSlug('Influencer Marketing Evolution'),
-    date: '01. FEB. 2025',
-    category: 'Marketing',
-    author: 'Jane Smith',
-    tags: ['influencer-marketing', 'social-media', 'content-creation', 'brand-partnerships', 'micro-influencers'],
+    title: "Influencer Marketing Evolution",
+    slug: createSlug("Influencer Marketing Evolution"),
+    date: "01. FEB. 2025",
+    category: "Marketing",
+    author: "Jane Smith",
+    tags: [
+      "influencer-marketing",
+      "social-media",
+      "content-creation",
+      "brand-partnerships",
+      "micro-influencers",
+    ],
     content: `<p>Influencer marketing has transformed from simple celebrity endorsements to sophisticated, data-driven campaigns that prioritize authentic connections and measurable outcomes. The 2025 landscape emphasizes micro-influencers, long-term partnerships, and genuine content creation that resonates with niche audiences. Brands are moving beyond one-off posts toward comprehensive collaboration strategies that build lasting relationships with their target demographics.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Micro-Influencer Dominance</h4>
@@ -309,7 +319,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_2.src}" alt="influencer-marketing" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Authenticity and Transparency</h4>
@@ -321,17 +330,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 7,
     img: b_m_3,
-    title: 'Content Marketing Strategies That Work',
-    slug: createSlug('Content Marketing Strategies That Work'),
-    date: '09. MAY. 2025',
-    category: 'Marketing',
-    author: 'Michael Johnson',
-    tags: ['content-marketing', 'strategy', 'content-creation', 'branding', 'audience-engagement'],
+    title: "Content Marketing Strategies That Work",
+    slug: createSlug("Content Marketing Strategies That Work"),
+    date: "09. MAY. 2025",
+    category: "Marketing",
+    author: "Michael Johnson",
+    tags: [
+      "content-marketing",
+      "strategy",
+      "content-creation",
+      "branding",
+      "audience-engagement",
+    ],
     content: `<p>Effective content marketing in 2025 goes beyond producing generic blog posts and social media updates. It requires strategic planning, audience understanding, and consistent value delivery that positions brands as trusted authorities in their respective fields. The most successful content marketing strategies focus on solving real problems for target audiences while building long-term relationships based on trust and expertise.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Value-Driven Content Creation</h4>
@@ -346,7 +361,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_3.src}" alt="content-marketing" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">SEO-Integrated Content</h4>
@@ -358,17 +372,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 8,
     img: b_m_4,
-    title: 'Social Media Marketing Innovations',
-    slug: createSlug('Social Media Marketing Innovations'),
-    date: '30. AUG. 2025',
-    category: 'Marketing',
-    author: 'Sarah Williams',
-    tags: ['social-media', 'marketing-innovation', 'platform-strategy', 'community-building', 'engagement'],
+    title: "Social Media Marketing Innovations",
+    slug: createSlug("Social Media Marketing Innovations"),
+    date: "30. AUG. 2025",
+    category: "Marketing",
+    author: "Sarah Williams",
+    tags: [
+      "social-media",
+      "marketing-innovation",
+      "platform-strategy",
+      "community-building",
+      "engagement",
+    ],
     content: `<p>Social media marketing in 2025 requires more than posting regular updates and hoping for engagement. The landscape has evolved to prioritize community building, authentic interactions, and platform-specific strategies that leverage each channel's unique features. Successful brands are creating spaces where their audiences can connect not just with the brand, but with each other, fostering communities that drive long-term loyalty and advocacy.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Community-Centric Approach</h4>
@@ -383,7 +403,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${b_m_4.src}" alt="social-media-innovation" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Platform-Specific Strategies</h4>
@@ -395,19 +414,25 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
-  
+
   // Software Applications Development category
   {
     id: 9,
     img: se2,
-    title: 'Modern Web Development Frameworks',
-    slug: createSlug('Modern Web Development Frameworks'),
-    date: '11. JAN. 2025',
-    category: 'Software Applications Development',
-    author: 'Admin',
-    tags: ['web-development', 'frameworks', 'javascript', 'frontend', 'backend'],
+    title: "Modern Web Development Frameworks",
+    slug: createSlug("Modern Web Development Frameworks"),
+    date: "11. JAN. 2025",
+    category: "Software Applications Development",
+    author: "Admin",
+    tags: [
+      "web-development",
+      "frameworks",
+      "javascript",
+      "frontend",
+      "backend",
+    ],
     content: `<p>The landscape of web development frameworks continues to evolve rapidly, with 2025 bringing new tools and methodologies that prioritize developer experience, performance, and scalability. Modern frameworks are designed to handle complex applications while maintaining clean code architecture and efficient development workflows. Understanding these frameworks is crucial for developers looking to build robust, scalable web applications that meet today's demanding requirements.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Frontend Framework Evolution</h4>
@@ -422,7 +447,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${se2.src}" alt="web-development-frameworks" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Backend Integration</h4>
@@ -434,17 +458,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 10,
     img: se1,
-    title: 'Cloud-Native Development Practices',
-    slug: createSlug('Cloud-Native Development Practices'),
-    date: '15. OCT. 2025',
-    category: 'Software Applications Development',
-    author: 'David Chen',
-    tags: ['cloud-computing', 'devops', 'microservices', 'containerization', 'kubernetes'],
+    title: "Cloud-Native Development Practices",
+    slug: createSlug("Cloud-Native Development Practices"),
+    date: "15. OCT. 2025",
+    category: "Software Applications Development",
+    author: "David Chen",
+    tags: [
+      "cloud-computing",
+      "devops",
+      "microservices",
+      "containerization",
+      "kubernetes",
+    ],
     content: `<p>Cloud-native development has become the standard approach for building and running applications that take full advantage of cloud computing benefits. This methodology emphasizes building applications as collections of small, independent services that can be developed, deployed, and scaled independently. The 2025 landscape shows increased adoption of containerization, microservices, and automated deployment practices that enable rapid innovation and efficient resource utilization.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Containerization Benefits</h4>
@@ -459,7 +489,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${se1.src}" alt="cloud-native-development" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">DevOps Integration</h4>
@@ -471,17 +500,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 11,
     img: se3,
-    title: 'Progressive Web Apps (PWA) Development',
-    slug: createSlug('Progressive Web Apps Development'),
-    date: '20. NOV. 2025',
-    category: 'Software Applications Development',
-    author: 'Emma Rodriguez',
-    tags: ['pwa', 'web-apps', 'mobile-web', 'performance', 'offline-capability'],
+    title: "Progressive Web Apps (PWA) Development",
+    slug: createSlug("Progressive Web Apps Development"),
+    date: "20. NOV. 2025",
+    category: "Software Applications Development",
+    author: "Emma Rodriguez",
+    tags: [
+      "pwa",
+      "web-apps",
+      "mobile-web",
+      "performance",
+      "offline-capability",
+    ],
     content: `<p>Progressive Web Apps represent the evolution of web technology, combining the best aspects of web and mobile applications. PWAs provide app-like experiences directly through web browsers, offering offline functionality, push notifications, and device integration without requiring app store distribution. In 2025, PWAs have become a preferred solution for businesses seeking to reach users across multiple platforms while maintaining a single codebase.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">PWA Architecture</h4>
@@ -507,17 +542,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 12,
     img: se4,
-    title: 'API-First Development Strategy',
-    slug: createSlug('API-First Development Strategy'),
-    date: '01. FEB. 2025',
-    category: 'Software Applications Development',
-    author: 'Robert Kim',
-    tags: ['api-development', 'rest-api', 'graphql', 'backend-architecture', 'integration'],
+    title: "API-First Development Strategy",
+    slug: createSlug("API-First Development Strategy"),
+    date: "01. FEB. 2025",
+    category: "Software Applications Development",
+    author: "Robert Kim",
+    tags: [
+      "api-development",
+      "rest-api",
+      "graphql",
+      "backend-architecture",
+      "integration",
+    ],
     content: `<p>API-first development has become a fundamental principle in modern software architecture, emphasizing the design and documentation of application programming interfaces before implementing the actual functionality. This approach ensures that services can communicate effectively, supports multiple client applications, and facilitates integration with third-party systems. The 2025 development landscape shows increased adoption of GraphQL alongside traditional REST APIs, providing flexible data querying capabilities.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">API Design Principles</h4>
@@ -532,7 +573,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${se4.src}" alt="api-development" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">GraphQL Adoption</h4>
@@ -544,19 +584,25 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
-  
+
   // SEO Optimization category
   {
     id: 13,
     img: seo2,
-    title: 'Technical SEO Fundamentals',
-    slug: createSlug('Technical SEO Fundamentals'),
-    date: '09. MAY. 2025',
-    category: 'SEO Optimization',
-    author: 'Lisa Anderson',
-    tags: ['technical-seo', 'site-architecture', 'performance', 'crawling', 'indexing'],
+    title: "Technical SEO Fundamentals",
+    slug: createSlug("Technical SEO Fundamentals"),
+    date: "09. MAY. 2025",
+    category: "SEO Optimization",
+    author: "Lisa Anderson",
+    tags: [
+      "technical-seo",
+      "site-architecture",
+      "performance",
+      "crawling",
+      "indexing",
+    ],
     content: `<p>Technical SEO forms the foundation of successful search engine optimization, encompassing all the behind-the-scenes elements that enable search engines to crawl, index, and understand website content effectively. In 2025, technical SEO has become increasingly important as search engines prioritize page experience and core web vitals. Websites that neglect technical optimization struggle to achieve sustainable organic visibility regardless of content quality.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Site Speed and Performance</h4>
@@ -571,7 +617,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${seo2.src}" alt="technical-seo" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Crawlability and Indexability</h4>
@@ -583,17 +628,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 14,
     img: seo1,
-    title: 'Content SEO Strategy for 2025',
-    slug: createSlug('Content SEO Strategy for 2025'),
-    date: '30. AUG. 2025',
-    category: 'SEO Optimization',
-    author: 'Mark Davis',
-    tags: ['content-seo', 'keyword-strategy', 'topic-clusters', 'content-marketing', 'search-intent'],
+    title: "Content SEO Strategy for 2025",
+    slug: createSlug("Content SEO Strategy for 2025"),
+    date: "30. AUG. 2025",
+    category: "SEO Optimization",
+    author: "Mark Davis",
+    tags: [
+      "content-seo",
+      "keyword-strategy",
+      "topic-clusters",
+      "content-marketing",
+      "search-intent",
+    ],
     content: `<p>Content SEO in 2025 focuses on creating comprehensive, authoritative content that addresses user search intent while providing genuine value to readers. The approach has evolved beyond simple keyword optimization to encompass topic clusters, semantic search, and E-A-T (Expertise, Authoritativeness, Trustworthiness) considerations. Successful content SEO strategies now prioritize user satisfaction and engagement metrics as signals of content quality.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Topic Cluster Strategy</h4>
@@ -608,7 +659,6 @@ export const blog_modern: IBlogDT[] = [
       <div class="blog-details-thumb">
         <img class="w-100" src="${seo1.src}" alt="content-seo" />
       </div>
-<<<<<<< HEAD
     </div>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Search Intent Optimization</h4>
@@ -620,17 +670,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 15,
     img: seo3,
-    title: 'Local SEO Optimization Techniques',
-    slug: createSlug('Local SEO Optimization Techniques'),
-    date: '11. JAN. 2025',
-    category: 'SEO Optimization',
-    author: 'Jennifer Wilson',
-    tags: ['local-seo', 'google-my-business', 'local-citations', 'reviews', 'geographic-targeting'],
+    title: "Local SEO Optimization Techniques",
+    slug: createSlug("Local SEO Optimization Techniques"),
+    date: "11. JAN. 2025",
+    category: "SEO Optimization",
+    author: "Jennifer Wilson",
+    tags: [
+      "local-seo",
+      "google-my-business",
+      "local-citations",
+      "reviews",
+      "geographic-targeting",
+    ],
     content: `<p>Local SEO optimization is essential for businesses that serve specific geographic areas, helping them appear in local search results and Google Maps. With the increasing importance of location-based searches, businesses must optimize for local visibility to capture nearby customers. The 2025 local SEO landscape emphasizes consistency, relevance, and prominence across multiple local search factors.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Google My Business Optimization</h4>
@@ -656,17 +712,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 16,
     img: seo4,
-    title: 'SEO Analytics and Performance Tracking',
-    slug: createSlug('SEO Analytics and Performance Tracking'),
-    date: '15. OCT. 2025',
-    category: 'SEO Optimization',
-    author: 'Thomas Brown',
-    tags: ['seo-analytics', 'performance-tracking', 'google-analytics', 'search-console', 'conversion-optimization'],
+    title: "SEO Analytics and Performance Tracking",
+    slug: createSlug("SEO Analytics and Performance Tracking"),
+    date: "15. OCT. 2025",
+    category: "SEO Optimization",
+    author: "Thomas Brown",
+    tags: [
+      "seo-analytics",
+      "performance-tracking",
+      "google-analytics",
+      "search-console",
+      "conversion-optimization",
+    ],
     content: `<p>Effective SEO requires comprehensive analytics and performance tracking to measure success, identify opportunities, and make data-driven decisions. Modern SEO analytics goes beyond basic keyword rankings to encompass user behavior, conversion tracking, and business impact measurement. The 2025 SEO landscape emphasizes attribution modeling and ROI measurement to demonstrate SEO value to stakeholders.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Key Performance Indicators</h4>
@@ -692,19 +754,25 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
-  
+
   // Artificial Intelligence category
   {
     id: 17,
     img: ai1,
-    title: 'Machine Learning Applications in Business',
-    slug: createSlug('Machine Learning Applications in Business'),
-    date: '20. NOV. 2025',
-    category: 'Artificial Intelligence',
-    author: 'Dr. Sarah Johnson',
-    tags: ['machine-learning', 'business-applications', 'data-science', 'automation', 'predictive-analytics'],
+    title: "Machine Learning Applications in Business",
+    slug: createSlug("Machine Learning Applications in Business"),
+    date: "20. NOV. 2025",
+    category: "Artificial Intelligence",
+    author: "Dr. Sarah Johnson",
+    tags: [
+      "machine-learning",
+      "business-applications",
+      "data-science",
+      "automation",
+      "predictive-analytics",
+    ],
     content: `<p>Machine learning has revolutionized how businesses operate, providing predictive insights, automation capabilities, and enhanced decision-making processes. In 2025, ML applications span across industries, from customer service and marketing to supply chain management and financial forecasting. Organizations that effectively implement machine learning solutions gain significant competitive advantages through improved efficiency, reduced costs, and enhanced customer experiences.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Predictive Analytics</h4>
@@ -730,17 +798,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 18,
     img: ai2,
-    title: 'Natural Language Processing Advancements',
-    slug: createSlug('Natural Language Processing Advancements'),
-    date: '21. OCT. 2025',
-    category: 'Artificial Intelligence',
-    author: 'Dr. Michael Chen',
-    tags: ['nlp', 'natural-language-processing', 'text-analysis', 'language-models', 'conversational-ai'],
+    title: "Natural Language Processing Advancements",
+    slug: createSlug("Natural Language Processing Advancements"),
+    date: "21. OCT. 2025",
+    category: "Artificial Intelligence",
+    author: "Dr. Michael Chen",
+    tags: [
+      "nlp",
+      "natural-language-processing",
+      "text-analysis",
+      "language-models",
+      "conversational-ai",
+    ],
     content: `<p>Natural Language Processing (NLP) has achieved remarkable breakthroughs in 2025, enabling machines to understand, interpret, and generate human language with unprecedented accuracy. These advancements power virtual assistants, translation services, sentiment analysis tools, and content generation systems that transform how businesses interact with customers and process information. The integration of NLP technologies has become essential for companies seeking to automate communication and extract insights from textual data.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Conversational AI Systems</h4>
@@ -766,17 +840,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 19,
     img: ai3,
-    title: 'Computer Vision in Modern Applications',
-    slug: createSlug('Computer Vision in Modern Applications'),
-    date: '01. FEB. 2025',
-    category: 'Artificial Intelligence',
-    author: 'Dr. Lisa Park',
-    tags: ['computer-vision', 'image-recognition', 'object-detection', 'pattern-recognition', 'visual-analytics'],
+    title: "Computer Vision in Modern Applications",
+    slug: createSlug("Computer Vision in Modern Applications"),
+    date: "01. FEB. 2025",
+    category: "Artificial Intelligence",
+    author: "Dr. Lisa Park",
+    tags: [
+      "computer-vision",
+      "image-recognition",
+      "object-detection",
+      "pattern-recognition",
+      "visual-analytics",
+    ],
     content: `<p>Computer vision technology has reached new heights in 2025, enabling machines to interpret and understand visual information with accuracy that often exceeds human capabilities. From autonomous vehicles to medical imaging, computer vision applications are transforming industries by providing automated visual analysis, quality control, and safety monitoring. The integration of deep learning algorithms has made computer vision more accessible and powerful than ever before.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Quality Control and Inspection</h4>
@@ -802,17 +882,23 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 20,
     img: ai4,
-    title: 'AI Ethics and Responsible Implementation',
-    slug: createSlug('AI Ethics and Responsible Implementation'),
-    date: '09. MAY. 2025',
-    category: 'Artificial Intelligence',
-    author: 'Dr. Robert Taylor',
-    tags: ['ai-ethics', 'responsible-ai', 'bias-mitigation', 'data-privacy', 'algorithmic-transparency'],
+    title: "AI Ethics and Responsible Implementation",
+    slug: createSlug("AI Ethics and Responsible Implementation"),
+    date: "09. MAY. 2025",
+    category: "Artificial Intelligence",
+    author: "Dr. Robert Taylor",
+    tags: [
+      "ai-ethics",
+      "responsible-ai",
+      "bias-mitigation",
+      "data-privacy",
+      "algorithmic-transparency",
+    ],
     content: `<p>As artificial intelligence becomes more pervasive in society, ethical considerations and responsible implementation have become paramount concerns for developers, businesses, and policymakers. The 2025 AI landscape emphasizes fairness, transparency, accountability, and privacy protection in AI systems. Organizations must balance the benefits of AI technology with the responsibility to protect individual rights and prevent harmful biases.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Bias Detection and Mitigation</h4>
@@ -838,8 +924,8 @@ export const blog_modern: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
-  }
+    featured: undefined,
+  },
 ];
 
 export const blog_classic: IBlogDT[] = [
@@ -847,12 +933,12 @@ export const blog_classic: IBlogDT[] = [
     id: 21,
     title: "Relax while learning design and Be Connected",
     slug: createSlug("Relax while learning design and Be Connected"),
-    date: '27 JULY, 2022',
-    category: 'BRANDING',
-    author: 'Mark Hopkins',
+    date: "27 JULY, 2022",
+    category: "BRANDING",
+    author: "Mark Hopkins",
     avatar: avatar,
     blogHeroSlider: true,
-    tags: ['design', 'learning', 'creativity', 'relaxation', 'connection'],
+    tags: ["design", "learning", "creativity", "relaxation", "connection"],
     content: `<p>Learning design should be an enjoyable, stress-free experience that nurtures creativity and fosters meaningful connections. When approached with the right mindset, design education becomes less about mastering technical skills and more about developing a creative sensibility that permeates all aspects of life. This holistic perspective transforms design from a specialized discipline into a way of seeing and interacting with the world.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">The Psychology of Creative Learning</h4>
@@ -864,18 +950,24 @@ export const blog_classic: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 22,
     title: "Relax while learning design and Be Connected",
     slug: createSlug("Relax while learning design and Be Connected"),
-    date: '15 JUN, 2023',
-    category: 'DESIGN',
-    author: 'John Vincent',
+    date: "15 JUN, 2023",
+    category: "DESIGN",
+    author: "John Vincent",
     avatar: avatar,
     blogHeroSlider: true,
-    tags: ['design-education', 'creative-process', 'mindset', 'growth', 'inspiration'],
+    tags: [
+      "design-education",
+      "creative-process",
+      "mindset",
+      "growth",
+      "inspiration",
+    ],
     content: `<p>Design is both a technical skill and an artistic expression that benefits from a balanced approach to learning and practice. The most successful designers cultivate both their craft proficiency and their creative intuition, recognizing that mastery comes from persistent effort combined with reflective insight. This dual focus allows them to produce work that is both functionally effective and emotionally resonant.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Developing Design Sensibility</h4>
@@ -887,18 +979,24 @@ export const blog_classic: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 23,
     img: blog_post_1,
     title: "Design To Remember",
     slug: createSlug("Design To Remember"),
-    desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!',
-    date: '01 DEC, 2022',
-    category: 'WORK',
-    author: 'Mark Hopkins',
-    tags: ['memorable-design', 'branding', 'visual-impact', 'identity', 'recognition'],
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!",
+    date: "01 DEC, 2022",
+    category: "WORK",
+    author: "Mark Hopkins",
+    tags: [
+      "memorable-design",
+      "branding",
+      "visual-impact",
+      "identity",
+      "recognition",
+    ],
     content: `<p>Creating designs that leave lasting impressions requires understanding the psychological principles behind memory and recognition. Memorable visuals leverage contrast, simplicity, and emotional resonance to cut through the noise of everyday stimuli and establish strong mental associations. These powerful designs become embedded in viewers' minds, facilitating brand recall and influencing decision-making over time.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Principles of Visual Memorability</h4>
@@ -915,20 +1013,20 @@ export const blog_classic: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 24,
     img: blog_post_2,
     title: "Desert Treasure Hunt",
     slug: createSlug("Desert Treasure Hunt"),
-    desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!',
-    date: '12 OCT, 2023',
-    category: 'WORK',
-    author: 'Mark Hopkins',
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!",
+    date: "12 OCT, 2023",
+    category: "WORK",
+    author: "Mark Hopkins",
     video: true,
-    videoId: 'rVHxkxJM3rY',
-    tags: ['adventure', 'exploration', 'discovery', 'treasure-hunt', 'journey'],
+    videoId: "rVHxkxJM3rY",
+    tags: ["adventure", "exploration", "discovery", "treasure-hunt", "journey"],
     content: `<p>Adventure and exploration represent fundamental human drives that lead to discovery, growth, and transformation. Whether literal journeys through physical landscapes or metaphorical quests for knowledge and meaning, the pursuit of adventure expands our horizons and challenges our assumptions. These experiences teach resilience, adaptability, and appreciation for the unexpected turns that shape our lives.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">The Value of Exploration</h4>
@@ -945,18 +1043,24 @@ export const blog_classic: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 25,
     blogQuoteTwo: true,
     title: "MERGE DIFFERENT TO CREATE A PERFECT <br/> PLAYLIST FOR EACH.",
     slug: createSlug("MERGE DIFFERENT TO CREATE A PERFECT PLAYLIST FOR EACH."),
-    desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!',
-    date: '01 DEC, 2022',
-    category: 'WORK',
-    author: 'Mark Hopkins',
-    tags: ['music', 'playlists', 'curation', 'personalization', 'audio-experience'],
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!",
+    date: "01 DEC, 2022",
+    category: "WORK",
+    author: "Mark Hopkins",
+    tags: [
+      "music",
+      "playlists",
+      "curation",
+      "personalization",
+      "audio-experience",
+    ],
     content: `<p>Creating the perfect playlist involves understanding the nuanced relationship between music and mood, activity, and personal preferences. Effective playlist curation combines technical knowledge of musical structure with intuitive sense of emotional progression. The most successful playlists feel organic and purposeful, guiding listeners through carefully orchestrated sequences that enhance whatever they're doing.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">The Art of Musical Curation</h4>
@@ -968,7 +1072,7 @@ export const blog_classic: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 26,
@@ -976,11 +1080,17 @@ export const blog_classic: IBlogDT[] = [
     images: [blog_post_1, blog_post_2, blog_post_3],
     title: "Future Business Ideas.",
     slug: createSlug("Future Business Ideas."),
-    desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!',
-    date: '08 NOV, 2023',
-    category: 'WORK',
-    author: 'Mark Hopkins',
-    tags: ['business-innovation', 'entrepreneurship', 'startup-ideas', 'market-opportunities', 'future-trends'],
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!",
+    date: "08 NOV, 2023",
+    category: "WORK",
+    author: "Mark Hopkins",
+    tags: [
+      "business-innovation",
+      "entrepreneurship",
+      "startup-ideas",
+      "market-opportunities",
+      "future-trends",
+    ],
     content: `<p>Identifying viable business ideas for the future requires scanning multiple horizons—from emerging technologies and demographic shifts to environmental challenges and cultural movements. The most promising opportunities often exist at the intersection of different fields, combining innovations from one domain with needs from another. Successful entrepreneurs recognize these convergence points and develop solutions that address unmet demands in novel ways.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Innovation Frameworks</h4>
@@ -992,18 +1102,24 @@ export const blog_classic: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 27,
     blogQuote: true,
     title: "SEM SMITH, CREATIVE DIRECTOR",
     slug: createSlug("SEM SMITH, CREATIVE DIRECTOR"),
-    desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,uyam erat.!',
-    date: '12 OCT, 2023',
-    category: 'WORK',
-    author: 'Mark Hopkins',
-    tags: ['creative-leadership', 'design-management', 'team-building', 'vision', 'innovation-culture'],
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,uyam erat.!",
+    date: "12 OCT, 2023",
+    category: "WORK",
+    author: "Mark Hopkins",
+    tags: [
+      "creative-leadership",
+      "design-management",
+      "team-building",
+      "vision",
+      "innovation-culture",
+    ],
     content: `<p>Creative leadership requires balancing artistic vision with practical execution, inspiring teams while ensuring projects meet business objectives. Effective creative directors understand that innovation thrives in environments that combine freedom with focus, allowing experimentation while maintaining accountability for results. They serve as both mentors and managers, nurturing talent while maintaining accountability for results.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Leading Creative Teams</h4>
@@ -1015,18 +1131,24 @@ export const blog_classic: IBlogDT[] = [
       </p>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 28,
     img: blog_post_4,
     title: "Simplistic photo setup",
     slug: createSlug("Simplistic photo setup"),
-    desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!',
-    date: '18 DEC, 2023',
-    category: 'WORK',
-    author: 'Mark Hopkins',
-    tags: ['photography', 'minimalism', 'lighting', 'composition', 'creative-technique'],
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.!",
+    date: "18 DEC, 2023",
+    category: "WORK",
+    author: "Mark Hopkins",
+    tags: [
+      "photography",
+      "minimalism",
+      "lighting",
+      "composition",
+      "creative-technique",
+    ],
     content: `<p>Simplicity in photography often produces the most powerful images, eliminating distractions to focus on essential elements. Minimalist setups with limited equipment challenge photographers to rely on composition, lighting, and timing rather than technical complexity. This approach cultivates intentionality and forces careful consideration of each creative decision, resulting in more deliberate and impactful photographs.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Essential Photography Principles</h4>
@@ -1043,7 +1165,7 @@ export const blog_classic: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
 ];
 
@@ -1053,10 +1175,16 @@ export const blog_lists: IBlogDT[] = [
     img: blog_list_1,
     title: "Design To Remember",
     slug: createSlug("Design To Remember"),
-    date: '01 DEC, 2023',
-    category: 'Marketing',
-    author: 'Admin',
-    tags: ['brand-recognition', 'visual-memory', 'logo-design', 'identity', 'marketing'],
+    date: "01 DEC, 2023",
+    category: "Marketing",
+    author: "Admin",
+    tags: [
+      "brand-recognition",
+      "visual-memory",
+      "logo-design",
+      "identity",
+      "marketing",
+    ],
     content: `<p>Memorable design creates lasting impressions that influence consumer behavior and build brand equity over time. In a world saturated with visual stimuli, designs that stand out and stick in memory provide significant competitive advantages. These powerful visuals become mental shortcuts that trigger associations with quality, reliability, and emotional connections developed through repeated positive experiences.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Cognitive Principles of Recall</h4>
@@ -1073,17 +1201,23 @@ export const blog_lists: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 30,
     img: blog_list_2,
     title: "Simplistic photo setup",
     slug: createSlug("Simplistic photo setup"),
-    date: '09. MAY. 2023',
-    category: 'Branding',
-    author: 'Admin',
-    tags: ['simple-photography', 'product-photography', 'lighting-techniques', 'creative-setup', 'visual-content'],
+    date: "09. MAY. 2023",
+    category: "Branding",
+    author: "Admin",
+    tags: [
+      "simple-photography",
+      "product-photography",
+      "lighting-techniques",
+      "creative-setup",
+      "visual-content",
+    ],
     content: `<p>Professional-quality photography doesn't require elaborate studios or expensive equipment—many stunning images result from simple, thoughtfully arranged setups. Resourceful photographers leverage natural light, household items, and creative angles to produce compelling visuals that serve marketing and branding purposes effectively. This minimalist approach emphasizes technique and vision over material resources.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Creative Problem Solving</h4>
@@ -1100,17 +1234,23 @@ export const blog_lists: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 31,
     img: blog_list_3,
     title: "Future Business Ideas.",
     slug: createSlug("Future Business Ideas."),
-    date: '20. NOV. 2023',
-    category: 'Branding',
-    author: 'Admin',
-    tags: ['entrepreneurial-opportunities', 'emerging-markets', 'sustainable-business', 'tech-innovation', 'social-impact'],
+    date: "20. NOV. 2023",
+    category: "Branding",
+    author: "Admin",
+    tags: [
+      "entrepreneurial-opportunities",
+      "emerging-markets",
+      "sustainable-business",
+      "tech-innovation",
+      "social-impact",
+    ],
     content: `<p>The future economy will be shaped by businesses that address pressing global challenges while creating value for stakeholders. Climate change, resource scarcity, demographic shifts, and technological disruption present both risks and opportunities for innovative entrepreneurs. Companies that develop sustainable solutions, leverage emerging technologies ethically, and respond to evolving consumer values will lead the next wave of economic development.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Sustainability-Driven Innovation</h4>
@@ -1127,17 +1267,23 @@ export const blog_lists: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 32,
     img: blog_list_4,
     title: "Is It Time To Rebrand?",
     slug: createSlug("Is It Time To Rebrand?"),
-    date: '30. AUG. 2023',
-    category: 'Branding',
-    author: 'Admin',
-    tags: ['brand-evolution', 'identity-update', 'market-positioning', 'customer-perception', 'strategic-change'],
+    date: "30. AUG. 2023",
+    category: "Branding",
+    author: "Admin",
+    tags: [
+      "brand-evolution",
+      "identity-update",
+      "market-positioning",
+      "customer-perception",
+      "strategic-change",
+    ],
     content: `<p>Brand evolution represents a strategic response to changing market dynamics, customer expectations, and organizational growth. Rather than abrupt transformations, many successful rebrands occur gradually through consistent refinement of visual identity, messaging, and customer experience. This evolutionary approach maintains brand equity while ensuring relevance in contemporary contexts.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Phased Brand Refresh</h4>
@@ -1154,17 +1300,23 @@ export const blog_lists: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 33,
     img: blog_list_5,
     title: "Desert Treasure Hunt",
     slug: createSlug("Desert Treasure Hunt"),
-    date: '09. MAY. 2023',
-    category: 'Branding',
-    author: 'Admin',
-    tags: ['adventure-marketing', 'storytelling', 'experiential-branding', 'journey-narrative', 'emotional-engagement'],
+    date: "09. MAY. 2023",
+    category: "Branding",
+    author: "Admin",
+    tags: [
+      "adventure-marketing",
+      "storytelling",
+      "experiential-branding",
+      "journey-narrative",
+      "emotional-engagement",
+    ],
     content: `<p>Brands that incorporate adventure and discovery into their narratives create powerful emotional connections with audiences. The treasure hunt metaphor resonates across cultures, symbolizing the pursuit of valuable goals through perseverance and ingenuity. Marketing campaigns built around exploration themes engage customers as active participants rather than passive recipients of messages.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Narrative-Driven Campaigns</h4>
@@ -1181,17 +1333,23 @@ export const blog_lists: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
   {
     id: 34,
     img: blog_list_2,
     title: "Visualizing Your Brand",
     slug: createSlug("Visualizing Your Brand"),
-    date: '12. JAN. 2023',
-    category: 'Branding',
-    author: 'Admin',
-    tags: ['brand-identity', 'visual-strategy', 'graphic-design', 'consistency', 'brand-guidelines'],
+    date: "12. JAN. 2023",
+    category: "Branding",
+    author: "Admin",
+    tags: [
+      "brand-identity",
+      "visual-strategy",
+      "graphic-design",
+      "consistency",
+      "brand-guidelines",
+    ],
     content: `<p>A cohesive visual identity system ensures consistent brand representation across all touchpoints and media. This comprehensive framework includes logo variations, color specifications, typography standards, imagery styles, and application examples that guide internal teams and external partners. Well-documented brand guidelines maintain integrity while allowing flexibility for different contexts and formats.</p>
     <div class="blog-details-left-content">
       <h4 class="blog-details-left-title">Comprehensive Brand Architecture</h4>
@@ -1208,7 +1366,7 @@ export const blog_lists: IBlogDT[] = [
       </div>
     </div>`,
     status: "",
-    featured: undefined
+    featured: undefined,
   },
 ];
 

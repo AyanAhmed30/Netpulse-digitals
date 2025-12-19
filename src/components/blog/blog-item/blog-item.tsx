@@ -10,12 +10,32 @@ export default function BlogItem({ item }: { item: IBlogDT }) {
       <div className="tp-blog-thumb fix p-relative">
         <Image src={item.img!} alt="blog-img" style={{ height: "auto" }} />
         <div className="tp-blog-meta">
-          <span>{item.date}</span>
+          <span
+            style={{
+              backgroundColor: "#0047AB",
+              color: "#fff",
+              fontFamily: "var(--tp-ff-gelder)",
+            }}
+          >
+            {item.date}
+          </span>
         </div>
       </div>
       <div className="tp-blog-content">
-        <span>{item.category}</span>
-        <h4 className="tp-blog-title-sm">
+        <span
+          style={{
+            fontFamily: "var(--tp-ff-gelder)",
+          }}
+        >
+          {item.category}
+        </span>
+        <h4
+          className="tp-blog-title-sm"
+          style={{
+            color: "#0047AB",
+            fontFamily: "var(--tp-ff-gelder)",
+          }}
+        >
           <Link href={`/blog-details/${item.slug}`}>{item.title}</Link>
         </h4>
       </div>

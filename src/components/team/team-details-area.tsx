@@ -26,7 +26,7 @@ export default function TeamDetailsArea({ id }: IdProps) {
           <div className="col-xl-6 col-lg-6 col-md-7">
             <div className="tm-details-content-wrap z-index-5">
               <div className="tm-details-title-box mb-20">
-                <span className="tm-hero-subtitle">{item?.designation}</span>
+                <span className="tm-hero-subtitle text-white">{item?.designation}</span>
                 <h4 className="tm-details-title">{item?.name}</h4>
               </div>
               <div className="tm-details-text">
