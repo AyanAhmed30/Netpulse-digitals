@@ -23,7 +23,12 @@ export default function BigText({ cls = "" }: IProps) {
         </div>
         <div className="sv-big-text-box">
           <h4 className="sv-big-text tp-char-animation">
-            <Link href="/contact">Get in Touch</Link>
+            <Link
+              href="/contact"
+              style={{ color: "#0047AB" }}
+            >
+              Get in Touch
+            </Link>
           </h4>
         </div>
       </div>

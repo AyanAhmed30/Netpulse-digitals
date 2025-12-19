@@ -68,7 +68,7 @@ const serviceData: Record<string, ServiceData> = {
     heroSubtext:
       "From social media to SEO, paid ads, funnels, and content strategy — Netpulse Digital helps businesses across the USA, UK, Canada, and Australia attract more customers and convert more leads with data-driven marketing solutions.",
     heroCTA1: "Get a Free Marketing Strategy Call",
-    heroCTA2: "See Our Work",
+    heroCTA2: "Visit Our Portfolio",
 
     problemsTitle: "Why Most Businesses Fail to Grow Online",
     problemsIntro: "In today's digital landscape, businesses face significant challenges:",
@@ -85,45 +85,45 @@ const serviceData: Record<string, ServiceData> = {
     solutionsTitle: "Smart, Scalable Marketing Solutions That Actually Work",
     solutionsIntro: "We provide comprehensive solutions that directly address these challenges:",
     solutions: [
-      "⚡ Clear Marketing Strategy & Roadmap – We create a customized blueprint aligned with your business goals, audience, and budget.",
-      "📈 SEO + Keyword Strategy for High-Intent Traffic – Rank higher, attract better leads, and improve organic visibility.",
-      "🎯 Advanced Targeting for Quality Leads – We refine your audience using industry data, competitor analysis, and buyer psychology.",
-      "✨ Content That Builds Trust & Engagement – From design to messaging, we craft content that converts audiences into buyers.",
-      "📊 Analytics, Tracking & Performance Reporting – We use data — not guesswork — to optimize every campaign for growth.",
-      "💸 High-ROI Advertising Campaigns – Our Google, Facebook, and multi-platform ad strategies lower costs and increase conversions.",
-      "🤝 Full Transparency & Communication – You’re updated at every step — no confusion, no black-box marketing.",
+      " Clear Marketing Strategy & Roadmap – We create a customized blueprint aligned with your business goals, audience, and budget.",
+      " SEO + Keyword Strategy for High-Intent Traffic – Rank higher, attract better leads, and improve organic visibility.",
+      " Advanced Targeting for Quality Leads – We refine your audience using industry data, competitor analysis, and buyer psychology.",
+      " Content That Builds Trust & Engagement – From design to messaging, we craft content that converts audiences into buyers.",
+      " Analytics, Tracking & Performance Reporting – We use data — not guesswork — to optimize every campaign for growth.",
+      " High-ROI Advertising Campaigns – Our Google, Facebook, and multi-platform ad strategies lower costs and increase conversions.",
+      " Full Transparency & Communication – You’re updated at every step — no confusion, no black-box marketing.",
     ],
 
     featuresTitle: "Everything Your Business Needs to Grow Online",
     features: [
-      "⭐ Social Media Marketing – Strategic posting, content creation, engagement, and growth systems.",
-      "⭐ Paid Advertising (Facebook, Google, TikTok, Instagram) – High-ROI ad campaigns with weekly optimization.",
-      "⭐ Search Engine Optimization (SEO) – On-page, technical, and local SEO to improve rankings and traffic.",
-      "⭐ Content Creation & Brand Messaging – Premium content that builds trust and drives customer action.",
-      "⭐ Email Marketing & Automation – Personalized workflows that nurture leads and increase lifetime value.",
-      "⭐ Full Funnel Setup (Lead Magnet → CTA → Landing Page) – Complete systems designed for conversions, not random clicks.",
-      "⭐ Analytics & Reporting – Monthly performance, KPI tracking, and strategic adjustments.",
+      " Social Media Marketing – Strategic posting, content creation, engagement, and growth systems.",
+      " Paid Advertising (Facebook, Google, TikTok, Instagram) – High-ROI ad campaigns with weekly optimization.",
+      " Search Engine Optimization (SEO) – On-page, technical, and local SEO to improve rankings and traffic.",
+      " Content Creation & Brand Messaging – Premium content that builds trust and drives customer action.",
+      " Email Marketing & Automation – Personalized workflows that nurture leads and increase lifetime value.",
+      " Full Funnel Setup (Lead Magnet → CTA → Landing Page) – Complete systems designed for conversions, not random clicks.",
+      " Analytics & Reporting – Monthly performance, KPI tracking, and strategic adjustments.",
     ],
 
     processTitle: "A Proven Process That Scales With You",
     processSteps: [
       {
-        step: "1️⃣",
+        step: "",
         title: "Discovery & Audit",
         desc: "We analyze your current digital presence, competitors, and opportunities.",
       },
       {
-        step: "2️⃣",
+        step: "",
         title: "Strategy & Planning",
         desc: "We create a personalized, data-driven strategy tailored to your industry.",
       },
       {
-        step: "3️⃣",
+        step: "",
         title: "Execution & Optimization",
         desc: "Campaigns, content, SEO, ads, and funnels — managed and optimized weekly.",
       },
       {
-        step: "4️⃣",
+        step: "4",
         title: "Growth & Scaling",
         desc: "Once results are stable, we scale budgets, expand campaigns, and improve ROI.",
       },
@@ -205,22 +205,22 @@ const serviceData: Record<string, ServiceData> = {
     processTitle: "Our Creative Process (Designed for Clarity & Growth)",
     processSteps: [
       {
-        step: "1️⃣",
+        step: "",
         title: "Discovery & Brand Understanding",
         desc: "We learn your goals, audience, competitors, and brand personality.",
       },
       {
-        step: "2️⃣",
+        step: "",
         title: "Creative Direction & Concepting",
         desc: "We create concepts, color palettes, typography and visual direction.",
       },
       {
-        step: "3️⃣",
+        step: "",
         title: "Design & Refinement",
         desc: "We craft polished, strategic designs based on feedback and brand goals.",
       },
       {
-        step: "4️⃣",
+        step: "",
         title: "Delivery & Brand Activation",
         desc: "We package everything professionally so you can launch with confidence.",
       },
@@ -306,22 +306,22 @@ const serviceData: Record<string, ServiceData> = {
     processTitle: "A Smooth & Transparent Process From Start to Finish",
     processSteps: [
       {
-        step: "1️⃣",
+        step: "",
         title: "Discovery & Project Planning",
         desc: "Understand your audience, goals, and technical requirements.",
       },
       {
-        step: "2️⃣",
+        step: "",
         title: "Design & Prototyping",
         desc: "We craft UI/UX that aligns with your brand and enhances conversions.",
       },
       {
-        step: "3️⃣",
+        step: "",
         title: "Development & Testing",
         desc: "Building your site using modern technologies with quality assurance.",
       },
       {
-        step: "4️⃣",
+        step: "",
         title: "Launch, Optimization & Support",
         desc: "Deploy, test performance, integrate tracking, and provide ongoing support.",
       },
@@ -366,7 +366,7 @@ const serviceData: Record<string, ServiceData> = {
     heroSubtext:
       "From smart AI chatbots to workflow automation, CRM integrations, and GPT-powered assistants — Netpulse Digital helps businesses automate repetitive tasks, improve customer experience, and operate more efficiently across the USA, UK, Canada, and Australia.",
     heroCTA1: "Get a Free Automation Audit",
-    heroCTA2: "See How AI Can Transform Your Business",
+    heroCTA2: "Visit Our AI Portfolio",
 
     problemsTitle: "Businesses Lose Time & Money Every Day — Often Without Realizing It",
     problemsIntro: "",
@@ -406,22 +406,22 @@ const serviceData: Record<string, ServiceData> = {
     processTitle: "Our Proven Automation Workflow",
     processSteps: [
       {
-        step: "1️⃣",
+        step: "",
         title: "Business Analysis & Automation Audit",
         desc: "We analyze your processes and identify automation opportunities.",
       },
       {
-        step: "2️⃣",
+        step: "",
         title: "System Planning & AI Design",
         desc: "We map automations, build flows, and design your custom AI assistant.",
       },
       {
-        step: "3️⃣",
+        step: "",
         title: "Development & Integration",
         desc: "Chatbots, workflows, integrations — all built and tested.",
       },
       {
-        step: "4️⃣",
+        step: "",
         title: "Launch, Optimization & Support",
         desc: "We monitor usage, refine flows, and provide ongoing optimization.",
       },
@@ -466,7 +466,7 @@ const serviceData: Record<string, ServiceData> = {
     heroSubtext:
       "From idea to launch, we design and develop high-performance mobile apps for startups, growing businesses, and global brands. Whether you need iOS, Android, or a cross-platform solution, our mobile apps deliver seamless experiences and long-term scalability.",
     heroCTA1: "Start Your App Project",
-    heroCTA2: "Book a Free Consultation",
+    heroCTA2: "Visit Our Portfolio",
 
     problemsTitle: "Most Apps Fail — Not Because of Coding, But Because of Strategy",
     problemsIntro: "",
@@ -506,32 +506,32 @@ const serviceData: Record<string, ServiceData> = {
     processTitle: "A Streamlined Process That Reduces Risk & Maximizes Results",
     processSteps: [
       {
-        step: "1️⃣",
+        step: "",
         title: "Discovery & Strategy",
         desc: "Understanding your business goals, competition, and user expectations.",
       },
       {
-        step: "2️⃣",
+        step: "",
         title: "Wireframing & UI/UX Design",
         desc: "Crafting user flows and screens that ensure a smooth experience.",
       },
       {
-        step: "3️⃣",
+        step: "",
         title: "Development & Integration",
         desc: "Building the app using modern frameworks and optimized architecture.",
       },
       {
-        step: "4️⃣",
+        step: "",
         title: "Testing & Refinement",
         desc: "Bug fixing, performance optimization, device testing.",
       },
       {
-        step: "5️⃣",
+        step: "",
         title: "Launch & Deployment",
         desc: "Publishing your app on the Apple App Store & Google Play Store.",
       },
       {
-        step: "6️⃣",
+        step: "",
         title: "Post-Launch Support & Scaling",
         desc: "Feature enhancements, updates, monitoring, analytics & marketing support.",
       },
@@ -577,7 +577,7 @@ const serviceData: Record<string, ServiceData> = {
     heroSubtext:
       "From book writing, editing, formatting, and cover design to author websites, marketing, and affordable book printing, Netpulse Digital offers complete, end-to-end solutions for indie authors worldwide. We turn your manuscript into a polished, published, and market-ready book — all under one roof.",
     heroCTA1: "Start Your Book Project",
-    heroCTA2: "Get a Free Publishing Consultation",
+    heroCTA2: "View Our Portfolio",
 
     problemsTitle: "Most Authors Struggle With Publishing — Here’s Why",
     problemsIntro: "",
@@ -618,32 +618,32 @@ const serviceData: Record<string, ServiceData> = {
     processTitle: "A Smooth, Guided Process From Manuscript to Published Book",
     processSteps: [
       {
-        step: "1️⃣",
+        step: "",
         title: "Consultation & Manuscript Review",
         desc: "We understand your goals, genre, and publication requirements.",
       },
       {
-        step: "2️⃣",
+        step: "",
         title: "Design & Formatting",
         desc: "Professional cover + interior layout + eBook formatting.",
       },
       {
-        step: "3️⃣",
+        step: "",
         title: "Publishing Setup & Upload",
         desc: "Everything prepared & uploaded to KDP, IngramSpark, or your chosen platform.",
       },
       {
-        step: "4️⃣",
+        step: "",
         title: "Marketing & Promotion",
         desc: "We help you launch, promote, and build an author brand.",
       },
       {
-        step: "5️⃣",
+        step: "",
         title: "Printing & Delivery (Optional)",
         desc: "Affordable printing with high-quality paper & binding.",
       },
       {
-        step: "6️⃣",
+        step: "",
         title: "Ongoing Support",
         desc: "Updates, new editions, website changes, and marketing support.",
       },
@@ -693,6 +693,139 @@ const serviceImageMap: Record<keyof typeof serviceData, StaticImageData> = {
   "mobile-development": s33,
   "ai-automation": s55,
   ebooks: s66,
+};
+
+const SectionCard = ({ title, introText, items }: { title: string; introText?: string | null; items: string[] }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="p-4 rounded border transition-all duration-300 mb-4"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        backgroundColor: isHovered ? "#0047AB" : "#fafafa",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
+        fontSize: "0.95rem",
+        transition: "all 0.3s ease",
+        borderColor: isHovered ? "#0047AB" : "#dee2e6"
+      }}
+    >
+      <h5
+        className="mb-2"
+        style={{
+          fontSize: "1.15rem",
+          fontWeight: 600,
+          fontFamily: "var(--tp-ff-gelder)",
+          color: isHovered ? "#ffffff" : "#0047AB",
+          transition: "all 0.3s ease"
+        }}
+      >
+        {title}
+      </h5>
+      {introText && (
+        <p
+          className="mb-3"
+          style={{
+            fontFamily: "var(--tp-ff-body)",
+            color: isHovered ? "#ffffff" : "#4A5568",
+            transition: "all 0.3s ease"
+          }}
+        >
+          {introText}
+        </p>
+      )}
+      <ul className="mb-0" style={{ paddingLeft: "1.2rem" }}>
+        {items.map((item, index) => (
+          <li
+            key={index}
+            className="mb-1"
+            style={{
+              fontFamily: "var(--tp-ff-body)",
+              color: isHovered ? "#ffffff" : "#4A5568",
+              transition: "all 0.3s ease"
+            }}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const ProcessCard = ({ step, title, desc }: { step: string; title: string; desc: string }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="service-details__process-card p-4 h-100 border rounded text-center transition-all duration-300"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        backgroundColor: isHovered ? "#0047AB" : "#ffffff",
+        borderColor: isHovered ? "#0047AB" : "#dee2e6",
+        transition: "all 0.3s ease",
+        color: isHovered ? "#ffffff" : "inherit"
+      }}
+    >
+      <div className="mb-3" style={{ fontSize: "1.8rem", color: isHovered ? "#ffffff" : "inherit" }}>
+        {step}
+      </div>
+      <h5
+        className="mb-2"
+        style={{
+          fontFamily: "var(--tp-ff-gelder)",
+          color: isHovered ? "#ffffff" : "#0047AB",
+          transition: "all 0.3s ease"
+        }}
+      >
+        {title}
+      </h5>
+      <p
+        className="mb-0"
+        style={{
+          fontFamily: "var(--tp-ff-body)",
+          color: isHovered ? "#ffffff" : "#4A5568",
+          transition: "all 0.3s ease"
+        }}
+      >
+        {desc}
+      </p>
+    </div>
+  );
+};
+
+const WhyChooseItem = ({ value }: { value: string }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="p-3 rounded border transition-all duration-300 h-100"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        backgroundColor: isHovered ? "#0047AB" : "#ffffff",
+        borderColor: isHovered ? "#0047AB" : "#dee2e6",
+        transition: "all 0.3s ease",
+        display: "flex",
+        alignItems: "center",
+        boxShadow: isHovered ? "0 4px 12px rgba(0,71,171,0.2)" : "none"
+      }}
+    >
+      
+      <p
+        className="mb-0"
+        style={{
+          fontFamily: "var(--tp-ff-body)",
+          color: isHovered ? "#ffffff" : "#4A5568",
+          transition: "all 0.3s ease"
+        }}
+      >
+        {value}
+      </p>
+    </div>
+  );
 };
 
 export default function ServiceDetailsArea({ slug }: { slug: string }) {
@@ -746,52 +879,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
     key: string
   ) => {
     return (
-      <div key={key} className="service-details__left-text mb-4">
-        <div
-          className="p-4 rounded border"
-          style={{
-            backgroundColor: "#fafafa",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
-            fontSize: "0.95rem",
-          }}
-        >
-          <h5
-            className="mb-2"
-            style={{
-              fontSize: "1.15rem",
-              fontWeight: 600,
-              fontFamily: "var(--tp-ff-gelder)",
-              color: "#0047AB"
-            }}
-          >
-            {title}
-          </h5>
-          {introText && (
-            <p
-              className="mb-3"
-              style={{
-                fontFamily: "var(--tp-ff-body)",
-                color: "#4A5568"
-              }}
-            >
-              {introText}
-            </p>
-          )}
-          <ul className="mb-0" style={{ paddingLeft: "1.2rem" }}>
-            {items.map((item, index) => (
-              <li
-                key={index}
-                className="mb-1"
-                style={{
-                  fontFamily: "var(--tp-ff-body)",
-                  color: "#4A5568"
-                }}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div key={key} className="service-details__left-text">
+        <SectionCard title={title} introText={introText} items={items} />
       </div>
     );
   };
@@ -805,7 +894,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               className="sv-hero-title tp-char-animation mb-50"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
-                color: "#0047AB"
+                color: "#0047AB",
+                fontSize: "2rem"
               }}
             >
               {currentService.processTitle}
@@ -813,29 +903,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
             <div className="row g-4">
               {currentService.processSteps.map((item, i) => (
                 <div key={i} className="col-md-6 col-lg-3">
-                  <div className="service-details__process-card p-4 h-100 border rounded text-center">
-                    <div className="mb-3" style={{ fontSize: "1.8rem" }}>
-                      {item.step}
-                    </div>
-                    <h5
-                      className="mb-2"
-                      style={{
-                        fontFamily: "var(--tp-ff-gelder)",
-                        color: "#0047AB"
-                      }}
-                    >
-                      {item.title}
-                    </h5>
-                    <p
-                      className="mb-0"
-                      style={{
-                        fontFamily: "var(--tp-ff-body)",
-                        color: "#4A5568"
-                      }}
-                    >
-                      {item.desc}
-                    </p>
-                  </div>
+                  <ProcessCard step={item.step} title={item.title} desc={item.desc} />
                 </div>
               ))}
             </div>
@@ -854,7 +922,8 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               className="sv-hero-title tp-char-animation"
               style={{
                 fontFamily: "var(--tp-ff-gelder)",
-                color: "#0047AB"
+                color: "#0047AB",
+                fontSize: "2rem"
               }}
             >
               {currentService.whyChooseTitle}
@@ -864,20 +933,7 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
             <div className="row g-4">
               {currentService.whyChooseItems.map((value, i) => (
                 <div key={i} className="col-md-6 col-lg-4">
-                  <div className="d-flex align-items-start">
-                    <span className="me-3" style={{ fontSize: "1.2rem" }}>
-                      ⭐
-                    </span>
-                    <p
-                      className="mb-0"
-                      style={{
-                        fontFamily: "var(--tp-ff-body)",
-                        color: "#4A5568"
-                      }}
-                    >
-                      {value}
-                    </p>
-                  </div>
+                  <WhyChooseItem value={value} />
                 </div>
               ))}
             </div>
@@ -996,15 +1052,17 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
               >
                 {getDisplayTitle()}
               </span>
-              <h4
+              <h6
                 className="sv-hero-title tp-char-animation"
                 style={{
                   fontFamily: "var(--tp-ff-gelder)",
-                  color: "#0047AB"
+                  color: "#0047AB",
+                  fontSize: "4rem", // Reduced size
+                  lineHeight: "1.2"
                 }}
               >
                 {currentService.heroTitle}
-              </h4>
+              </h6>
             </div>
           </div>
         </div>
@@ -1015,21 +1073,70 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                 className="mb-30 tp_title_anim"
                 style={{
                   fontFamily: "var(--tp-ff-body)",
-                  color: "#4A5568"
+                  color: "#0047AB"
                 }}
               >
                 {currentService.heroSubtext}
               </p>
-              <p
-                className="tp_title_anim"
-                style={{
-                  fontFamily: "var(--tp-ff-body)",
-                  color: "#4A5568",
-                  fontWeight: 500
-                }}
+              <div
+                className="d-flex align-items-center"
+                style={{ gap: "20px" }}
               >
-                {currentService.heroCTA1} • {currentService.heroCTA2}
-              </p>
+                {/* CTA 1 – Contact */}
+                <Link
+                  href="/contact"
+                  style={{
+                    padding: "12px 30px",
+                    backgroundColor: "#0047AB",
+                    color: "#ffffff",
+                    fontFamily: "var(--tp-ff-body)",
+                    fontWeight: 600,
+                    border: "2px solid #0047AB",
+                    borderRadius: "50px",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                    whiteSpace: "nowrap"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = "#0047AB";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#0047AB";
+                    e.currentTarget.style.color = "#ffffff";
+                  }}
+                >
+                  {currentService.heroCTA1}
+                </Link>
+
+                {/* CTA 2 – Portfolio */}
+                <Link
+                  href="/portfolio-standard-main"
+                  style={{
+                    padding: "12px 30px",
+                    backgroundColor: "transparent",
+                    color: "#0047AB",
+                    fontFamily: "var(--tp-ff-body)",
+                    fontWeight: 600,
+                    border: "2px solid #0047AB",
+                    borderRadius: "50px",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                    whiteSpace: "nowrap"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#0047AB";
+                    e.currentTarget.style.color = "#ffffff";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = "#0047AB";
+                  }}
+                >
+                  {currentService.heroCTA2}
+                </Link>
+              </div>
+
             </div>
           </div>
         </div>
@@ -1104,8 +1211,23 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                     className={activeService === service ? "active" : ""}
                     style={{
                       fontFamily: "var(--tp-ff-body)",
-                      color: activeService === service ? "#0047AB" : "#4A5568",
-                      fontWeight: activeService === service ? 600 : 400
+                      color: activeService === service ? "white" : "#0047AB",
+                      backgroundColor: activeService === service ? "#0047AB" : "transparent",
+                      fontWeight: 600,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "2px solid #0047AB",
+                      borderRadius: "50px",
+                      padding: "14px 25px",
+                      marginBottom: "15px",
+                      textTransform: "uppercase",
+                      fontSize: "14px",
+                      letterSpacing: "1px",
+                      transition: "all 0.3s ease",
+                      textDecoration: "none",
+                      lineHeight: "1",
+                      height: "50px" // Explicit height for consistent pills
                     }}
                   >
                     {service
@@ -1114,11 +1236,20 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   </Link>
                 ))}
               </div>
-              <div className="service-details__right-text-box">
+              <div
+                className="service-details__right-text-box"
+                style={{
+                  backgroundColor: "#0047AB",
+                  padding: "40px",
+                  borderRadius: "20px",
+                  marginTop: "30px"
+                }}
+              >
                 <h4
                   style={{
                     fontFamily: "var(--tp-ff-gelder)",
-                    color: "#0047AB"
+                    color: "white",
+                    marginBottom: "15px"
                   }}
                 >
                   {currentService.sidebarTitle}
@@ -1127,12 +1258,24 @@ export default function ServiceDetailsArea({ slug }: { slug: string }) {
                   className="mb-20"
                   style={{
                     fontFamily: "var(--tp-ff-body)",
-                    color: "#4A5568"
+                    color: "white"
                   }}
                 >
                   {currentService.rightDescription}
                 </p>
-                <Link className="tp-btn-white background-black" href="/contact">
+                <Link
+                  href="/contact"
+                  style={{
+                    display: "inline-block",
+                    padding: "12px 25px",
+                    backgroundColor: "white",
+                    color: "#0047AB",
+                    borderRadius: "50px",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    transition: "all 0.3s ease"
+                  }}
+                >
                   {currentService.callToActionLinkText}
                 </Link>
               </div>
