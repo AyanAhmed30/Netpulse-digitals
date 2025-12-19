@@ -42,10 +42,13 @@ const brand_images = [
 export default function BrandFive() {
   return (
     <div
-      className="ab-brand-area pt-120 pb-120 black-bg-2"
+      className="ab-brand-area pt-120 pb-120"
       style={{
+        background: "linear-gradient(135deg, #0047AB 0%, #002D6B 100%)",
+        color: "white",
         backgroundImage:
           "url(/assets/img/inner-about/brand/brand-bg-shape.png)",
+        backgroundBlendMode: "overlay"
       }}
     >
       <div className="container">
@@ -55,7 +58,9 @@ export default function BrandFive() {
               <h4
                 className="ab-brand-title"
                 style={{
-                  fontFamily: "var(--tp-ff-gelder-p)",
+                  fontFamily: "var(--tp-ff-gelder)",
+                  color: "white",
+                  fontSize: "2.8rem"
                 }}
               >
                 Our clients
@@ -70,7 +75,7 @@ export default function BrandFive() {
                 <Marquee speed={100} loop={0} className="ab-brand-slide-wrap">
                   {brand_images.map((b, i) => (
                     <div key={i} className="ab-brand-item">
-                      <Image src={b} height={70} alt="brand" />
+                      <Image src={b} height={70} alt="brand" style={{ filter: "brightness(0) invert(1)" }} />
                     </div>
                   ))}
                 </Marquee>
@@ -83,7 +88,10 @@ export default function BrandFive() {
             <div className="ab-brand-content tp_title_anim">
               <p
                 style={{
-                  fontFamily: "var(--tp-ff-gelder-p)",
+                  fontFamily: "var(--tp-ff-body)",
+                  color: "white",
+                  fontSize: "1.1rem",
+                  lineHeight: "1.6"
                 }}
               >
                 A talented and passionate group of designers, developers,

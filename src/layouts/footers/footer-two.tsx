@@ -47,9 +47,9 @@ export default function FooterTwo({
   };
 
   return (
-    <footer className={`${topCls}`}>
+    <footer className={`${topCls}`} style={{ background: whiteFooter ? "" : "linear-gradient(135deg, #0047AB 0%, #002D6B 100%)", color: whiteFooter ? "" : "white" }}>
       <div
-        className={`tp-footer-2-area pt-100 pb-20 ${whiteFooter ? "tp-footer-white" : "black-bg"
+        className={`tp-footer-2-area pt-60 pb-20 ${whiteFooter ? "tp-footer-white" : ""
           }`}
       >
         <div className="container container-1480">
@@ -74,7 +74,7 @@ export default function FooterTwo({
                   </div>
                 )}
                 <div className="tp-footer-2-widget-text">
-                  <p>
+                  <p style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem", lineHeight: "1.5" }}>
                     Ready to boost your digital presence? Reach out and let’s make it happen.
                   </p>
                 </div>
@@ -84,22 +84,22 @@ export default function FooterTwo({
             <div className="col-xl-2 col-lg-3 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-2">
                 <div className="tp-footer-2-widget-menu">
-                  <h4 className="tp-footer-2-widget-title">Sitemap</h4>
-                  <ul>
-                    <li>
-                      <Link href="/">Home</Link>
+                  <h4 className="tp-footer-2-widget-title" style={{ color: "white", fontFamily: "var(--tp-ff-gelder)", fontSize: "1.4rem" }}>Sitemap</h4>
+                  <ul style={{ listStyle: "none", padding: 0 }}>
+                    <li className="mb-1">
+                      <Link href="/" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>Home</Link>
                     </li>
-                    <li>
-                      <Link href="/about-us">About</Link>
+                    <li className="mb-1">
+                      <Link href="/about-us" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>About</Link>
                     </li>
-                    <li>
-                      <Link href="/service">Services</Link>
+                    <li className="mb-1">
+                      <Link href="/service" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>Services</Link>
                     </li>
-                    <li>
-                      <Link href="/contact">Contact</Link>
+                    <li className="mb-1">
+                      <Link href="/contact" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>Contact</Link>
                     </li>
-                    <li>
-                      <Link href="/blog-modern">Blog</Link>
+                    <li className="mb-1">
+                      <Link href="/blog-modern" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>Blog</Link>
                     </li>
                   </ul>
                 </div>
@@ -108,12 +108,13 @@ export default function FooterTwo({
 
             <div className="col-xl-3 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-3">
-                <h4 className="tp-footer-2-widget-title">Office</h4>
+                <h4 className="tp-footer-2-widget-title" style={{ color: "white", fontFamily: "var(--tp-ff-gelder)", fontSize: "1.4rem" }}>Office</h4>
                 <div className="tp-footer-2-contact-item">
                   <span>
                     <Link
                       href="https://maps.app.goo.gl/WFVCTF3hBK2Bse8ZA"
                       target="_blank"
+                      style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}
                     >
                       15631 Blue Ash Dr, Houston, TX 77090, United States
                     </Link>
@@ -121,12 +122,12 @@ export default function FooterTwo({
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="tel:+18322208552">+1 832 220 8552</Link>
+                    <Link href="tel:+18322208552" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>+1 832 220 8552</Link>
                   </span>
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="mailto:netpulsedigitalS@gmail.com">
+                    <Link href="mailto:netpulsedigitalS@gmail.com" style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}>
                       netpulsedigitalS@gmail.com
                     </Link>
                   </span>
@@ -138,7 +139,7 @@ export default function FooterTwo({
             <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-4">
                 <div className="tp-footer-2-widget-newslatter">
-                  <h4 className="tp-footer-2-widget-title">
+                  <h4 className="tp-footer-2-widget-title" style={{ color: "white", fontFamily: "var(--tp-ff-gelder)", fontSize: "1.4rem" }}>
                     Subscribe to our newsletter
                   </h4>
 
@@ -147,6 +148,7 @@ export default function FooterTwo({
                       <input
                         type="email"
                         name="email"
+                        style={{ fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem" }}
                         placeholder="Enter your email..."
                         required
                       />
@@ -177,14 +179,15 @@ export default function FooterTwo({
       </div>
 
       <div
-        className={`tp-copyright-2-area tp-copyright-2-bdr-top ${whiteFooter ? "tp-copyright-white" : "black-bg"
+        className={`tp-copyright-2-area tp-copyright-2-bdr-top ${whiteFooter ? "tp-copyright-white" : ""
           }`}
+        style={{ background: whiteFooter ? "" : "rgba(0,0,0,0.1)", borderTop: "1px solid rgba(255,255,255,0.1)" }}
       >
         <div className="container container-1480">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5">
               <div className="tp-copyright-2-left text-center text-lg-start">
-                <p>
+                <p style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "0.9rem" }}>
                   All rights reserved — {new Date().getFullYear()} © Netpulse
                   Digital
                 </p>
@@ -196,6 +199,7 @@ export default function FooterTwo({
                   className="mb-10"
                   target="_blank"
                   href="https://www.facebook.com/NetpulseDigital"
+                  style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem", marginLeft: "25px", border: "none", background: "none", padding: 0, textTransform: "none" }}
                 >
                   Facebook
                 </Link>
@@ -203,6 +207,7 @@ export default function FooterTwo({
                   className="mb-10"
                   target="_blank"
                   href="https://www.instagram.com/netpulsedigitals/"
+                  style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem", marginLeft: "25px", border: "none", background: "none", padding: 0, textTransform: "none" }}
                 >
                   Instagram
                 </Link>
@@ -210,6 +215,7 @@ export default function FooterTwo({
                   target="_blank"
                   className="mb-10"
                   href="https://www.linkedin.com/company/net-pulse-digital"
+                  style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem", marginLeft: "25px", border: "none", background: "none", padding: 0, textTransform: "none" }}
                 >
                   Linkedin
                 </Link>
@@ -217,6 +223,7 @@ export default function FooterTwo({
                   target="_blank"
                   className="mb-10"
                   href="https://www.x.com/@netpulsedigital"
+                  style={{ color: "white", fontFamily: "var(--tp-ff-body)", fontSize: "1.1rem", marginLeft: "25px", border: "none", background: "none", padding: 0, textTransform: "none" }}
                 >
                   Twitter
                 </Link>
