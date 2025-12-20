@@ -851,7 +851,7 @@ const WhyChooseItem = ({ value }: { value: string }) => {
 
 const DeliverablesCard = ({ items }: { items: string[] }) => (
   <div className="service-details__deliverables-box p-4 rounded-4 bg-white shadow-sm mb-40 border">
-    <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>What You'll Get</h4>
+    <h4 style={{ fontFamily: "var(--tp-ff-gelder)", color: "#0047AB", marginBottom: "20px", fontSize: "1.2rem" }}>What You&apos;ll Get</h4>
     <div className="d-flex flex-column gap-3">
       {items.map((item, i) => (
         <div key={i} className="d-flex align-items-center">
