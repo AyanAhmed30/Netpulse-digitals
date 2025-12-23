@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 // images
-import s11 from "@/assets/img/inner-service/service/s11.png";
+import s11 from "@/assets/img/inner-service/service/s111.jpg";
 import s22 from "@/assets/img/inner-service/service/s22.png";
 import s33 from "@/assets/img/inner-service/service/s33.png";
-import s44 from "@/assets/img/inner-service/service/s44.png";
+import s44 from "@/assets/img/inner-service/service/s445.jpg";
 import s55 from "@/assets/img/inner-service/service/s55.png";
 import s66 from "@/assets/img/inner-service/service/s66.png";
 
@@ -125,7 +125,7 @@ const serviceData: Record<string, ServiceData> = {
         desc: "Campaigns, content, SEO, ads, and funnels — managed and optimized weekly.",
       },
       {
-        step: "4",
+        step: "",
         title: "Growth & Scaling",
         desc: "Once results are stable, we scale budgets, expand campaigns, and improve ROI.",
       },

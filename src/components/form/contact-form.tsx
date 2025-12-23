@@ -1,9 +1,9 @@
-'use client'
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import ErrorMsg from '../error-msg';
+import ErrorMsg from "../error-msg";
 
 type FormData = {
   name: string;
@@ -17,13 +17,18 @@ const schema = yup.object().shape({
   message: yup.string().required().label("Message"),
 });
 
-// prop type 
+// prop type
 type IProps = {
   btnCls?: string;
-}
+};
 
-export default function ContactForm({ btnCls = '' }: IProps) {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
+export default function ContactForm({ btnCls = "" }: IProps) {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
 
@@ -65,24 +70,47 @@ export default function ContactForm({ btnCls = '' }: IProps) {
   });
 
   return (
-    <form onSubmit={onSubmit}>
+    <form
+      onSubmit={onSubmit}
+      style={{
+        fontFamily: "var(--tp-ff-gelder)",
+      }}
+    >
       <div className="cn-contactform-input mb-25">
         <label>Name</label>
-        <input id='name' {...register("name")} type="text" placeholder="Netpulse Digital" />
+        <input
+          id="name"
+          {...register("name")}
+          type="text"
+          placeholder="Netpulse Digital"
+        />
         <ErrorMsg msg={errors.name?.message!} />
       </div>
       <div className="cn-contactform-input mb-25">
         <label>Subject</label>
-        <input id='subject' {...register("subject")} type="text" placeholder="Your@netpulsedigitals.com" />
+        <input
+          id="subject"
+          {...register("subject")}
+          type="text"
+          placeholder="Your@netpulsedigitals.com"
+        />
         <ErrorMsg msg={errors.subject?.message!} />
       </div>
       <div className="cn-contactform-input mb-25">
         <label>Message</label>
-        <textarea id='message' {...register("message")} placeholder="Tell Us About Your Project"></textarea>
+        <textarea
+          id="message"
+          {...register("message")}
+          placeholder="Tell Us About Your Project"
+        ></textarea>
         <ErrorMsg msg={errors.message?.message!} />
       </div>
       <div className="cn-contactform-btn">
-        <button className={`tp-btn-black-md ${btnCls} w-100`} type="submit" disabled={loading}>
+        <button
+          className={`tp-btn-black-md ${btnCls} w-100`}
+          type="submit"
+          disabled={loading}
+        >
           {loading ? "Sending..." : "Send Message"}
         </button>
       </div>
