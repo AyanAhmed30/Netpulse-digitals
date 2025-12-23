@@ -382,11 +382,12 @@
             color: rgba(255, 255, 255, 0.80);
         }
         & .cn-contactform-input input, 
+        & input, 
         & .cn-contactform-input textarea {
             color: var(--tp-common-white);
             border-bottom: 1px solid rgba(255, 255, 255, 0.20);
             @include placeholder{
-                color: #5F5F65;
+                color: rgba(255, 255, 255, 0.7);
             }
             &:focus{
                 border-bottom: 1px solid var(--tp-common-white);
