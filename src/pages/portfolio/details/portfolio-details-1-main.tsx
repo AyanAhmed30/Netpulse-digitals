@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { getCategoryById, PortfolioCategory } from "@/data/portfolio-data";
 import HeaderEleven from "@/layouts/headers/header-eleven";
-import FooterTwo from "@/layouts/footers/footer-three";
+import FooterTwo from "@/layouts/footers/footer-two";
 
 export default function PortfolioDetails() {
   const searchParams = useSearchParams();

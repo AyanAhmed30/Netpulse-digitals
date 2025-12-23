@@ -39,11 +39,11 @@ import ebook_4 from "@/assets/img/inner-project/portfolio-details-3/e4.png";
 import ebook_5 from "@/assets/img/inner-project/portfolio-details-3/e5.png";
 
 // Category thumbnails (for main portfolio page)
-import p_img_1 from "@/assets/img/home-01/project/fast.png";
+import p_img_1 from "@/assets/img/home-01/project/web.png";
 import p_img_2 from "@/assets/img/home-01/project/ai.png";
-import p_img_3 from "@/assets/img/home-01/project/design.png";
-import p_img_4 from "@/assets/img/home-01/project/digital.png";
-import p_img_5 from "@/assets/img/home-01/project/mobile.jpg";
+import p_img_3 from "@/assets/img/home-01/project/cd.png";
+import p_img_4 from "@/assets/img/home-01/project/dg-mk.png";
+import p_img_5 from "@/assets/img/home-01/project/mb-app.png";
 import p_img_6 from "@/assets/img/home-01/project/ebook.png";
 
 export interface Project {

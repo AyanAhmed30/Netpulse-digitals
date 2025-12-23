@@ -44,11 +44,8 @@ export default function BrandFive() {
     <div
       className="ab-brand-area pt-120 pb-120"
       style={{
-        background: "linear-gradient(135deg, #0047AB 0%, #002D6B 100%)",
-        color: "white",
-        backgroundImage:
-          "url(/assets/img/inner-about/brand/brand-bg-shape.png)",
-        backgroundBlendMode: "overlay"
+        backgroundColor: "#0047AB",
+        color: "white"
       }}
     >
       <div className="container">

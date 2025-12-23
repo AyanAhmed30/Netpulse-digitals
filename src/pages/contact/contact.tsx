@@ -44,10 +44,21 @@ const ContactMain = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="tm-hero-content">
-                        <span className="tm-hero-subtitle">
+                        <span
+                          className="tm-hero-subtitle"
+                          style={{
+                            fontFamily: "var(--tp-ff-gelder)",
+                          }}
+                        >
                           Netpulse Digital
                         </span>
-                        <h4 className="tm-hero-title-big tp-char-animation">
+                        <h4
+                          style={{
+                            fontFamily: "var(--tp-ff-gelder)",
+                            color: "#0047AB",
+                          }}
+                          className="tm-hero-title-big tp-char-animation"
+                        >
                           Get <br /> in touch
                         </h4>
                       </div>
@@ -75,7 +86,12 @@ const ContactMain = () => {
                       </div>
                       <div className="col-xl-6">
                         <div className="cn-contactform-wrap">
-                          <h4 className="cn-contactform-2-title">
+                          <h4
+                            className="cn-contactform-2-title"
+                            style={{
+                              fontFamily: "var(--tp-ff-gelder)",
+                            }}
+                          >
                             Send a Message
                           </h4>
                           <ContactForm btnCls="white-bg" />
@@ -100,7 +116,13 @@ const ContactMain = () => {
                         }}
                       >
                         <div className="cn-contactform-support-text text-center">
-                          <span>We respond within 24 hours</span>
+                          <span
+                            style={{
+                              fontFamily: "var(--tp-ff-gelder)",
+                            }}
+                          >
+                            We respond within 24 hours
+                          </span>
                         </div>
                       </div>
                     </div>
