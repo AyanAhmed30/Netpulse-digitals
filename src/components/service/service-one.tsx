@@ -103,8 +103,8 @@ const ServiceOne = () => {
               style={{
                 display: "inline-block",
                 padding: "16px 32px",
-                background: "white",
-                color: "#0047AB",
+                background: "#0047AB",
+                color: "white",
                 borderRadius: "8px",
                 fontSize: "1rem",
                 fontWeight: "600",

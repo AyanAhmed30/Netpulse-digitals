@@ -71,7 +71,7 @@ const ContactMain = () => {
               {/* contact area */}
               <div className="cn-contactform-area cn-contactform-style p-relative pb-100">
                 <div className="container container-1840">
-                  <div className="cn-contactform-2-bg black-bg">
+                  <div className="cn-contactform-2-bg" style={{ backgroundColor: "#0047AB" }}>
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="cn-contactform-2-map">
@@ -115,15 +115,17 @@ const ContactMain = () => {
                             "url(/assets/img/inner-contact/contact/contact-bg.png)",
                         }}
                       >
-                        <div className="cn-contactform-support-text text-center">
-                          <span
-                            style={{
-                              fontFamily: "var(--tp-ff-gelder)",
-                            }}
-                          >
-                            We respond within 24 hours
-                          </span>
-                        </div>
+                       <div className="cn-contactform-support-text text-center">
+  <span
+    style={{
+      fontFamily: "var(--tp-ff-gelder)",
+      color: "#0047AB",
+    }}
+  >
+    We respond within 24 hours
+  </span>
+</div>
+
                       </div>
                     </div>
                   </div>

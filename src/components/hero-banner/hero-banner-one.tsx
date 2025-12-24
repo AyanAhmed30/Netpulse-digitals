@@ -87,7 +87,7 @@ const HeroBannerOne = () => {
 
       <div className="container">
         <div className="row">
-          <div className="col-lg-8">
+          <div className="col-12 col-lg-8 hero-text-column">
             <div className="hero-content-wrapper" style={{ paddingTop: "130px", paddingBottom: "80px" }}>
               {/* Tagline */}
               <div className="hero-tagline" style={{
@@ -175,13 +175,11 @@ const HeroBannerOne = () => {
                   View Our Work
                 </Link>
               </div>
-
-
             </div>
           </div>
 
           {/* Hero Image Column */}
-          <div className="col-lg-4">
+          <div className="col-12 col-lg-4 hero-image-column">
             <div className="hero-image-wrapper" style={{
               paddingTop: "130px",
               paddingBottom: "80px",
@@ -274,27 +272,73 @@ const HeroBannerOne = () => {
           box-shadow: 0 10px 25px rgba(0, 71, 171, 0.2);
         }
 
+        @media (max-width: 991px) {
+          .tp-hero-ptb {
+            padding-top: 110px !important;
+          }
+          .hero-content-wrapper {
+            padding-top: 40px !important;
+            padding-bottom: 40px !important;
+          }
+          .hero-tagline {
+            margin-top: 22px;
+            margin-bottom: 20px;
+          }
+          .hero-cta-wrapper {
+            flex-direction: column !important;
+            align-items: stretch;
+          }
+          .hero-cta-wrapper a {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
         @media (max-width: 768px) {
           .hero-content-wrapper {
-            padding-top: 30px !important;
+            padding-top: 40px !important;
             padding-bottom: 40px !important;
           }
           
           .hero-main-title {
-            font-size: 2.5rem !important;
+            font-size: 2.3rem !important;
+            line-height: 1.3;
           }
           
           .hero-description {
             font-size: 1rem !important;
+            max-width: 100% !important;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .tp-hero-ptb {
+            padding-top: 130px !important;
+          }
+          .hero-tagline {
+            font-size: 0.85rem;
+            margin-top: 12px;
+          }
+          .hero-main-title {
+            font-size: 2rem !important;
+          }
+          .hero-description {
+            font-size: 0.95rem !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-content-wrapper {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
           }
           
-          .hero-cta-wrapper {
-            flex-direction: column !important;
+          .hero-main-title {
+            font-size: 1.8rem !important;
           }
           
-          .hero-cta-wrapper a {
-            width: 100%;
-            text-align: center;
+          .hero-description {
+            font-size: 0.9rem !important;
           }
         }
       `}</style>

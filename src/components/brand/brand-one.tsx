@@ -7,9 +7,15 @@ const BrandOne = () => {
         <div className="tp-brand-brd-top tp-brand-ptb">
           <div className="row align-items-center">
             <div className="col-xxl-2 col-xl-3 col-lg-3">
-              <div className="tp-brand-title-box">
-                <h4 className="tp-brand-title tp_fade_bottom">Trusted by startups, agencies, and global brands who want meaningful digital growth.</h4>
-              </div>
+            <div className="tp-brand-title-box">
+  <h4
+    className="tp-brand-title tp_fade_bottom"
+    style={{ color: "#0047AB" }}
+  >
+    Trusted by startups, agencies, and global brands who want meaningful digital growth.
+  </h4>
+</div>
+
             </div>
             <div className="col-xxl-10 col-xl-9 col-lg-9">
               <div className="row align-items-center">
