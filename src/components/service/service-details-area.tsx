@@ -10,23 +10,10 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 // images
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 978b9d9d0f941ccba81fc335fdc8135a89ec358f
 import s11 from "@/assets/img/inner-service/service/s111.jpg";
 import s22 from "@/assets/img/inner-service/service/s22.png";
 import s33 from "@/assets/img/inner-service/service/s33.png";
 import s44 from "@/assets/img/inner-service/service/s445.jpg";
-<<<<<<< HEAD
-=======
-import s11 from "@/assets/img/inner-service/service/s11.png";
-import s22 from "@/assets/img/inner-service/service/s221.jpeg";
-import s33 from "@/assets/img/inner-service/service/s331.jpeg";
-import s44 from "@/assets/img/inner-service/service/s44.png";
->>>>>>> 085e8fdaa2fee65226ab4edf14eadba6c5de98dd
-=======
->>>>>>> 978b9d9d0f941ccba81fc335fdc8135a89ec358f
 import s55 from "@/assets/img/inner-service/service/s55.png";
 import s66 from "@/assets/img/inner-service/service/s66.png";
 
@@ -131,8 +118,6 @@ const serviceData: Record<string, ServiceData> = {
 
     processTitle: "A Proven Process That Scales With You",
     processSteps: [
-<<<<<<< HEAD
-<<<<<<< HEAD
       {
         step: "",
         title: "Discovery & Audit",
@@ -153,18 +138,14 @@ const serviceData: Record<string, ServiceData> = {
         title: "Growth & Scaling",
         desc: "Once results are stable, we scale budgets, expand campaigns, and improve ROI.",
       },
-=======
       { step: "01", title: "Discovery & Audit", desc: "We analyze your digital presence and opportunities." },
       { step: "02", title: "Strategy & Planning", desc: "A personalized, data-driven roadmap for your industry." },
       { step: "03", title: "Execution & Optimization", desc: "Campaigns and content managed and optimized weekly." },
       { step: "04", title: "Growth & Scaling", desc: "Scaling budgets and improving ROI for long-term success." },
->>>>>>> 085e8fdaa2fee65226ab4edf14eadba6c5de98dd
-=======
       { step: "01", title: "Discovery & Audit", desc: "We analyze your current digital presence, competitors, and opportunities." },
       { step: "02", title: "Strategy & Planning", desc: "We create a personalized, data-driven strategy tailored to your industry." },
       { step: "03", title: "Execution & Optimization", desc: "Campaigns, content, SEO, ads, and funnels — managed and optimized weekly." },
       { step: "04", title: "Growth & Scaling", desc: "Once results are stable, we scale budgets, expand campaigns, and improve ROI." },
->>>>>>> 978b9d9d0f941ccba81fc335fdc8135a89ec358f
     ],
 
     whyChooseTitle: "Why Choose Netpulse Digital",
