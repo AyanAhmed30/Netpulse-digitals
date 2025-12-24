@@ -36,19 +36,6 @@ const ServiceCTA = () => {
 >
   <Link
     href="/contact"
-    style={{
-      display: "inline-block",
-      padding: "16px 32px",
-      background: "#0047AB",
-      color: "white",
-      borderRadius: "8px",
-      fontSize: "1rem",
-      fontWeight: "600",
-      textDecoration: "none",
-      fontFamily: "var(--tp-ff-body)",
-      transition: "all 0.3s ease",
-      border: "none",
-    }}
     className="hero-cta-primary"
   >
     Get a Free Strategy Call
@@ -56,19 +43,6 @@ const ServiceCTA = () => {
   
   <Link
     href="/contact"
-    style={{
-      display: "inline-block",
-      padding: "16px 32px",
-      background: "transparent",
-      color: "#0047AB",
-      borderRadius: "8px",
-      fontSize: "1rem",
-      fontWeight: "600",
-      textDecoration: "none",
-      fontFamily: "var(--tp-ff-body)",
-      transition: "all 0.3s ease",
-      border: "2px solid #0047AB",
-    }}
     className="hero-cta-secondary"
   >
     Contact with Our Team

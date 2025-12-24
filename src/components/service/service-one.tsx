@@ -50,27 +50,38 @@ const service_data = [
 const ServiceOne = () => {
   return (
     <div className="tp-service-area pt-180 pb-80 tp-btn-trigger position-relative">
-
-
       <div className="container position-relative" style={{ zIndex: 1 }}>
         {/* Centered Header Section */}
         <div className="row">
           <div className="col-12">
             <div className="text-center mb-5">
-              <h4 className="tp-section-title tp-char-animation" style={{
-                color: "#0047AB",
-                fontFamily: "var(--tp-ff-gelder)",
-                fontWeight: "700",
-                fontSize: "4rem",
-                marginBottom: "20px"
-              }}>What We Can Do for Your Business</h4>
-              <p style={{
-                color: "#4A5568",
-                fontFamily: "var(--tp-ff-body)",
-                fontSize: "1.15rem",
-                maxWidth: "700px",
-                margin: "0 auto"
-              }}> End-to-end creative, development, and marketing services strategically designed and executed to deliver measurable performance, drive growth, enhance brand impact, and achieve long-term business results.</p>
+              <h4
+                className="tp-section-title tp-char-animation"
+                style={{
+                  color: "#0047AB",
+                  fontFamily: "var(--tp-ff-gelder)",
+                  fontWeight: "700",
+                  fontSize: "4rem",
+                  marginBottom: "20px",
+                }}
+              >
+                What We Can Do for Your Business
+              </h4>
+              <p
+                style={{
+                  color: "#4A5568",
+                  fontFamily: "var(--tp-ff-body)",
+                  fontSize: "1.15rem",
+                  maxWidth: "700px",
+                  margin: "0 auto",
+                }}
+              >
+                {" "}
+                End-to-end creative, development, and marketing services
+                strategically designed and executed to deliver measurable
+                performance, drive growth, enhance brand impact, and achieve
+                long-term business results.
+              </p>
             </div>
           </div>
         </div>
@@ -100,30 +111,38 @@ const ServiceOne = () => {
           <div className="col-12 text-center mt-15">
             <Link
               href="/service"
-              style={{
-                display: "inline-block",
-                padding: "16px 32px",
-                background: "#0047AB",
-                color: "white",
-                borderRadius: "8px",
-                fontSize: "1rem",
-                fontWeight: "600",
-                textDecoration: "none",
-                fontFamily: "var(--tp-ff-body)",
-                transition: "all 0.3s ease",
-                border: "2px solid #0047AB" // ✅ Corrected: adds width + style + color
-              }}
-              className="service-cta-btn"
+              className="hero-cta-primary"
             >
               See All Services
             </Link>
-
           </div>
         </div>
       </div>
 
       {/* Card Styles */}
       <style jsx>{`
+
+      :global(.hero-cta-primary) {
+          display: inline-block;
+          padding: 16px 32px;
+          background: #0047ab;
+          color: white;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          text-decoration: none;
+          font-family: var(--tp-ff-body);
+          transition: all 0.3s ease;
+          border: 2px solid #0047ab;
+        }
+
+        :global(.hero-cta-primary:hover) {
+          background: white !important;
+          color: #0047ab !important;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0, 71, 171, 0.3);
+        }
+          
         .service-card {
           background: white;
           border-radius: 16px;
@@ -233,9 +252,6 @@ const ServiceOne = () => {
           }
         }
       `}</style>
-
-
-
     </div>
   );
 };

@@ -114,7 +114,7 @@ export default function ServiceSix() {
                       font-family: var(--tp-ff-gelder);
                       font-size: 3rem;
                       font-weight: 700;
-                      color: #0047AB;
+                      color: #fff;
                       line-height: 1.2;
                       margin-bottom: 25px;
                     }
@@ -122,7 +122,7 @@ export default function ServiceSix() {
                       font-family: var(--tp-ff-body);
                       font-size: 1rem;
                       font-weight: 600;
-                      color: #0047AB;
+                      color: #fff;
                       text-transform: uppercase;
                       letter-spacing: 2px;
                       display: flex;
@@ -138,20 +138,19 @@ export default function ServiceSix() {
                       font-family: var(--tp-ff-body);
                       font-size: 1.15rem;
                       line-height: 1.7;
-                      color: #4A5568;
+                      color: #fff;
                       margin-bottom: 30px;
                     }
                     .sv-service-list ul li {
                       font-family: var(--tp-ff-body);
                       font-size: 1rem;
-                      color: #4A5568;
+                      color: #fff;
                       margin-bottom: 10px;
                       list-style: none;
                       padding-left: 20px;
                       position: relative;
                     }
                     .sv-service-list ul li::before {
-                      content: "→";
                       position: absolute;
                       left: 0;
                       color: #0047AB;
@@ -172,7 +171,7 @@ export default function ServiceSix() {
                       <div className="sv-service-list">
                         <ul>
                           {item.lists.map((list, i) => (
-                            <li key={i}>{list}</li>
+                            <li key={i} >{list}</li>
                           ))}
                         </ul>
                       </div>

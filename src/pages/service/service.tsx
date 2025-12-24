@@ -46,7 +46,17 @@ const ServiceMain = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           {/* ✅ Animated gradient background for entire page */}
-          <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -2, background: "linear-gradient(to top, #dfe9f3 0%, white 100%)" }}></div>
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: -2,
+              background: "linear-gradient(to top, #dfe9f3 0%, white 100%)",
+            }}
+          ></div>
 
           <main>
             {/* service hero */}
@@ -60,7 +70,7 @@ const ServiceMain = () => {
                   font-family: var(--tp-ff-gelder);
                   font-size: 3rem;
                   font-weight: 700;
-                  color: #0047AB;
+                  color: #0047ab;
                   line-height: 1.2;
                   text-align: center;
                 }
@@ -68,7 +78,7 @@ const ServiceMain = () => {
                   font-family: var(--tp-ff-body);
                   font-size: 1rem;
                   font-weight: 600;
-                  color: #0047AB;
+                  color: #0047ab;
                   text-transform: uppercase;
                   letter-spacing: 2px;
                   display: flex;
@@ -87,8 +97,8 @@ const ServiceMain = () => {
                       </span>
                       <h4 className="tp-service-5-title">
                         We strongly believe that only design, development &
-                        marketing 
-                        reinforced by strategy can provide real results.
+                        marketing reinforced by strategy can provide real
+                        results.
                       </h4>
                     </div>
                   </div>
@@ -99,36 +109,27 @@ const ServiceMain = () => {
               </div>
 
               <div
-  className="hero-cta-wrapper"
-  style={{
-    display: "flex",
-    gap: "15px",
-    marginTop: "60px",
-    flexWrap: "wrap",
-    justifyContent: "center", // center horizontally
-  }}
->
-  <Link
-    href="/contact"
-    style={{
-      display: "inline-block",
-      padding: "20px 40px", // ✅ increased padding for bigger button
-      background: "#0047AB",
-      color: "white",
-      borderRadius: "10px",
-      fontSize: "1.2rem", // ✅ larger text
-      fontWeight: "700",  // slightly bolder
-      textDecoration: "none",
-      fontFamily: "var(--tp-ff-body)",
-      transition: "all 0.3s ease",
-      border: "none",
-    }}
-    className="hero-cta-primary"
-  >
-    Get Our Services
-  </Link>
-</div>
-
+                className="hero-cta-wrapper"
+                style={{
+                  display: "flex",
+                  gap: "15px",
+                  marginTop: "60px",
+                  flexWrap: "wrap",
+                  justifyContent: "center", // center horizontally
+                }}
+              >
+                <Link
+                  href="/contact"
+                  style={{
+                    display: "inline-block",
+                    padding: "20px 40px", // ✅ increased padding for bigger button
+                    fontSize: "1.2rem", // ✅ larger text
+                  }}
+                  className="hero-cta-primary"
+                >
+                  Get Our Services
+                </Link>
+              </div>
             </div>
             {/* service area */}
 
@@ -136,15 +137,23 @@ const ServiceMain = () => {
             <ServiceSix />
             {/* service area */}
 
+
+            <div className="tp-brand-4-area pt-120">
+              <div className="container">
+                <div className="row gx-0">
+            <ServiceProcess />
+                </div>
+              </div>
+            </div>
+
             {/* brand area */}
-            <div className="tp-brand-4-area pt-120 pb-120">
+            <div className="tp-brand-4-area">
               <div className="container">
                 <div className="row gx-0">
                   <BrandItems />
                 </div>
               </div>
             </div>
-            <ServiceProcess />
             <ServiceCTA />
             {/* Testimonils area */}
             <div className="my-5">
@@ -164,7 +173,6 @@ const ServiceMain = () => {
       </div>
 
       {/* ✅ Gradient background styles */}
-
     </Wrapper>
   );
 };

@@ -139,19 +139,6 @@ export default function AboutUsArea() {
                     >
                       <Link
                         href="/contact"
-                        style={{
-                          display: "inline-block",
-                          padding: "16px 32px",
-                          background: "#0047AB",
-                          color: "white",
-                          borderRadius: "8px",
-                          fontSize: "1rem",
-                          fontWeight: "600",
-                          textDecoration: "none",
-                          fontFamily: "var(--tp-ff-body)",
-                          transition: "all 0.3s ease",
-                          border: "none",
-                        }}
                         className="hero-cta-primary"
                       >
                         Talk to Our Experts{" "}

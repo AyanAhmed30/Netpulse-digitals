@@ -42,7 +42,7 @@ const brand_images = [
 export default function BrandFive() {
   return (
     <div
-      className="ab-brand-area pt-120 pb-120"
+      className="ab-brand-area pt-60 pb-60"
       style={{
         backgroundColor: "#0047AB",
         color: "white"

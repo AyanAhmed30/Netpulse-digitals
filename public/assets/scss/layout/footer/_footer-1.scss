@@ -5,8 +5,9 @@
 /*----------------------------------------*/
 
 .counter-row{
-    counter-reset: count;
+    counter-reset: none !important;
 }
+
 .tp-footer-2-widget-logo{
     & img{
         width: 85px;
@@ -83,52 +84,6 @@
                         &::after{
                             color: var(--tp-common-white);
                         }
-                    }
-                }
-                & a{
-                    font-weight: 400;
-                    font-size: 50px;
-                    line-height: 1;
-                    position: relative;
-                    padding-left: 50px;
-                    transition: .3s;
-                    display: block;
-                    color: rgba(245, 247, 245, 0.3);
-                    font-family: var(--tp-ff-gallery);
-                    & .tp-menu-text {
-                        display: inline-flex;
-                        overflow: hidden;
-                        text-shadow: 0 80px 0 var(--tp-common-white);
-                        height: 55px;
-                        span {
-                          display: block;
-                          backface-visibility: hidden;
-                          font-style: normal;
-                          transition: transform .4s ease;
-                          transform: translateY(var(--m)) translateZ(0);
-                          $i: 1;
-              
-                          @while $i < 50 {
-                            &:nth-child(#{$i}) {
-                              transition-delay: calc($i / 30);
-                            }
-              
-                            $i: $i + 1;
-                          }
-                        }
-                      }
-                    &::after{
-                        content: "0" counter(count);
-                        counter-increment: count;
-                        font-weight: 400;
-                        font-size: 18px;
-                        text-transform: uppercase;
-                        position: absolute;
-                        left: 0;
-                        bottom: 22px;
-                        color: rgba(245, 247, 245, 0.2);
-                        font-family: var(--tp-ff-body);
-                        transition: .3s;
                     }
                 }
                 &:hover{
